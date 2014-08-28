@@ -26,8 +26,15 @@ class LoginViewControllerTests: XCTestCase {
         super.tearDown()
     }
 
+    func testUsernameFieldConnection() {
+        XCTAssertNotNil(viewController.usernameField, "Username field not connected")
+    }
+    
+    func testPasswordFieldConnection() {
+        XCTAssertNotNil(viewController.passwordField, "Password field not connected")
+    }
+    
     func testLoginButtonConnection() {
         XCTAssertNotNil(viewController.loginButton, "Login button not connected")
     }
-
 }
