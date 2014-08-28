@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
+import iSchool
 import UIKit
 import XCTest
 
@@ -15,9 +16,10 @@ class LoginViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         viewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
-        
+        viewController.loadView()
+        viewController.viewDidLoad()
     }
     
     override func tearDown() {

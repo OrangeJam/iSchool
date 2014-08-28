@@ -9,10 +9,7 @@
 /* Begin PBXBuildFile section */
 		40E9D35EBF9746AEA9D1C5A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
-		9850A65D19AF7D08005EAB3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */; };
-		9850A66119AF7F78005EAB3B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
-		9850A66619AF98C6005EAB3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
@@ -273,7 +270,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9850A66619AF98C6005EAB3B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,9 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9850A66119AF7F78005EAB3B /* AppDelegate.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
-				9850A65D19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
