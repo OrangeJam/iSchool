@@ -3,7 +3,7 @@ Development Methodology
 =========
 
 We maintain a priority queue of user stories on trello.com.
-The stories are broken in to tasks which are directly implementable.
+The stories are broken into tasks which are directly implementable.
 When a story is selected for development it is moved into the "in progress"
 column, and tasks are checked off as they are completed. 
 When all tasks are completed and our definition of done is fulfilled, the task
@@ -55,7 +55,7 @@ Testing
 We practice Test-Driven development in order to force us to write properly
 encapsulated logic, and to avoid obvious bugs.
 
-Code is tested with the `CTest` unit testing framework in XCode.
+Code is tested with the `XCTest` unit testing framework in XCode.
 
 
 
