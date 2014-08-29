@@ -11,6 +11,10 @@ import XCTest
 
 class CredentialManagerTests: XCTestCase {
 
+    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let user = "user"
+    let pass = "lamepassword"
+    
     override func setUp() {
         super.setUp()
     }
@@ -20,24 +24,11 @@ class CredentialManagerTests: XCTestCase {
     }
     
     func testStoreCredentials() {
-        // Clear user defaults
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.removeObjectForKey("username")
-        userDefaults.removeObjectForKey("password")
-        userDefaults.synchronize()
-        
-        XCTAssertNil(userDefaults.stringForKey("username"), "Stored username is not nil in beginning of test")
-        XCTAssertNil(userDefaults.stringForKey("password"), "Stored password is not nil in beginning of test")
-        _credentialManager.storeCredentials("user", "lamepassword")
-        XCTAssertEqual("user", userDefaults.stringForKey("username")!, "Username not stored correctly")
-        XCTAssertEqual("lamepassword", userDefaults.stringForKey("password")!, "Password not stored correctly")
-        
-        // Tear down for this test case
-        // Clear user defaults
-        userDefaults.removeObjectForKey("username")
-        userDefaults.removeObjectForKey("password")
-        super.tearDown()
-        userDefaults.synchronize()
+        clearStoredCredentials()
+        CredentialManager.sharedInstance.storeCredentials(user, pass)
+        XCTAssertEqual(user, userDefaults.stringForKey("username")!, "Username not stored correctly")
+        XCTAssertEqual(pass, userDefaults.stringForKey("password")!, "Password not stored correctly")
+        clearStoredCredentials()
     }
     
     func testGetCredentials() {
@@ -45,7 +36,12 @@ class CredentialManagerTests: XCTestCase {
     }
     
     func testClearCredentials() {
-        clearCredentials()
         
+    }
+    
+    private func clearStoredCredentials() {
+        userDefaults.removeObjectForKey("username")
+        userDefaults.removeObjectForKey("password")
+        userDefaults.synchronize()
     }
 }
