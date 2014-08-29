@@ -16,7 +16,7 @@ class LoginViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
         viewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as LoginViewController
         viewController.loadView()
         viewController.viewDidLoad()
