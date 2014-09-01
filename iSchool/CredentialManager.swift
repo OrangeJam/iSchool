@@ -11,26 +11,26 @@ import UIKit
 private let _credentialManager = CredentialManager()
 
 class CredentialManager {
+    
+    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    
     class var sharedInstance: CredentialManager {
         return _credentialManager
     }
     
     func storeCredentials(username: String!, _ password: String!) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(username, forKey: "username")
         userDefaults.setObject(password, forKey: "password")
         userDefaults.synchronize()
     }
     
     func getCredentials() -> (String?, String?) {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
         let username = userDefaults.stringForKey("username")
         let password = userDefaults.stringForKey("password")
         return (username, password)
     }
     
     func clearCredentials() {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.removeObjectForKey("username")
         userDefaults.removeObjectForKey("password")
         userDefaults.synchronize()
