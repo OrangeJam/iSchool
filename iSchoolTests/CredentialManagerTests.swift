@@ -49,7 +49,7 @@ class CredentialManagerTests: XCTestCase {
         }
         
         if(password != nil) {
-            XCTAssertEqual(user, password!, "Password not retreived correctly")
+            XCTAssertEqual(pass, password!, "Password not retreived correctly")
         }
         clearStoredCredentials()
     }
