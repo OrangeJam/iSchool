@@ -47,11 +47,17 @@ class CredentialManagerTests: XCTestCase {
         if(username != nil) {
             XCTAssertEqual(user, username!, "Username not retreived correctly")
         }
-        
         if(password != nil) {
             XCTAssertEqual(pass, password!, "Password not retreived correctly")
         }
         clearStoredCredentials()
+    }
+    
+    func testGetCredentialsWhenNil() {
+        clearStoredCredentials()
+        let (username, password) = CredentialManager.sharedInstance.getCredentials()
+        XCTAssertNil(username, "getCredentials does not return nil when appropriate")
+        XCTAssertNil(password, "getCredentials does not return nil when appropriate")
     }
     
     func testClearCredentials() {
