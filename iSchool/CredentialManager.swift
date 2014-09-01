@@ -13,7 +13,7 @@ private let _credentialManager = CredentialManager()
 class CredentialManager {
     
     private let userDefaults = NSUserDefaults.standardUserDefaults()
-    
+
     class var sharedInstance: CredentialManager {
         return _credentialManager
     }
@@ -24,10 +24,13 @@ class CredentialManager {
         userDefaults.synchronize()
     }
     
-    func getCredentials() -> (String?, String?) {
+    func getCredentials() -> (String, String)? {
         let username = userDefaults.stringForKey("username")
         let password = userDefaults.stringForKey("password")
-        return (username, password)
+        if(username != nil && password != nil) {
+            return (username!, password!)
+        }
+        return nil
     }
     
     func clearCredentials() {
