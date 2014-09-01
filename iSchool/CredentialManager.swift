@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
+import UIKit
+
 private let _credentialManager = CredentialManager()
 
 class CredentialManager {
@@ -14,14 +16,23 @@ class CredentialManager {
     }
     
     func storeCredentials(username: String!, _ password: String!) {
-        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(username, forKey: "username")
+        userDefaults.setObject(password, forKey: "password")
+        userDefaults.synchronize()
     }
     
     func getCredentials() -> (String?, String?) {
-        return (nil, nil)
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        let username = userDefaults.stringForKey("username")
+        let password = userDefaults.stringForKey("password")
+        return (username, password)
     }
     
     func clearCredentials() {
-        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.removeObjectForKey("username")
+        userDefaults.removeObjectForKey("password")
+        userDefaults.synchronize()
     }
 }
