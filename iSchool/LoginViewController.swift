@@ -8,17 +8,17 @@
 
 import UIKit
 
-public class LoginViewController: UIViewController {
+class LoginViewController: UIViewController {
 
-    @IBOutlet public weak var usernameField: UITextField!
-    @IBOutlet public weak var passwordField: UITextField!
-    @IBOutlet public weak var loginButton: UIButton!
+    @IBOutlet weak var usernameField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     @IBAction func didPressLoginButton(sender: UIButton) {
         
     }
     
-    override public func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
     }
 }
