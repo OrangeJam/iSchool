@@ -23,8 +23,8 @@ class ParserTests: XCTestCase {
     }
     
     func testParseAssignments(){
-        let data = NSString.stringWithContentsOfFile(testDataPath, encoding: 0, error: nil) as String
-        NSLog(data)
+        let data = NSData(contentsOfFile: testDataPath)
+        let dueAssignments = Parser.parseAssignments(data)
         
     }
 }

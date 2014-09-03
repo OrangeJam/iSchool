@@ -10,4 +10,9 @@ import UIKit
 
 class Parser {
     
+    class func parseAssignments(data: NSData) {
+        let parser = TFHpple.hppleWithHTMLData(data)
+        let xpathQuery = ""
+    }
+    
 }
