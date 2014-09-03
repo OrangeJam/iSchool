@@ -6,4 +6,8 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Parser {
+    
+}
