@@ -12,7 +12,7 @@ import XCTest
 
 class NetworkClientTests: XCTestCase {
     
-    var nc = NetworkClient(username: "test", password: "test")
+    var networkClient = NetworkClient(username: "test", password: "test")
     
     override func setUp() {
         super.setUp()
@@ -25,7 +25,7 @@ class NetworkClientTests: XCTestCase {
     func testFetchAssignmentPage() {
         let expectation = expectationWithDescription("Fetch assignments")
         
-        nc.fetchPage(Page.Assignments, { (operation, response) in
+        networkClient.fetchPage(Page.Assignments, { (operation, response) in
             expectation.fulfill()
             XCTAssertNotNil(response)
         }, { (operation, error) in
@@ -33,7 +33,7 @@ class NetworkClientTests: XCTestCase {
             expectation.fulfill()
         })
         
-        waitForExpectationsWithTimeout(nc.timeoutInterval, handler: { error in
+        waitForExpectationsWithTimeout(networkClient.timeoutInterval, handler: { error in
             
         })
         
