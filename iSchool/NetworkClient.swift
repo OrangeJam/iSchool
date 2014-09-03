@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum Pages : String {
+enum Page : String {
     case Assignments = "https://myschool.ru.is/myschool/?Page=Exe&ID=1.12"
     case Timetable = "https://myschool.ru.is/myschool/?Page=Exe&ID=3.2"
     case Canteen = "http://malid.ru.is"
@@ -24,8 +24,8 @@ class NetworkClient {
     }
     
     
-    func fetchAssignmentsPageWithSuccessHandler(handler:(AFHTTPRequestOperation!, AnyObject!) -> Void) {
-        let data = manager.GET(Pages.Assignments.toRaw(), parameters: nil,
+    func fetchPage(page: Page, handler:(AFHTTPRequestOperation!, AnyObject!) -> Void) {
+        let data = manager.GET(page.toRaw(), parameters: nil,
             success: handler,
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
                 NSLog("Error: \(error)")
