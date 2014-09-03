@@ -25,6 +25,8 @@ class ParserTests: XCTestCase {
     func testParseAssignments(){
         let data = NSData(contentsOfFile: testDataPath)
         let dueAssignments = Parser.parseAssignments(data)
+        XCTAssertEqual(dueAssignments.count, 2, "There should be two assignments")
+        XCTAssertEqual(dueAssignments[0].name, "hw1", "The name of the first should be hw1")
         
     }
 }
