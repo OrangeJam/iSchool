@@ -22,11 +22,11 @@ class ParserTests: XCTestCase {
         super.tearDown()
     }
     
-    func testParseAssignments(){
+    func testParseAverageAssignments(){
         let data = NSData(contentsOfFile: testDataPath)
         let dueAssignments = Parser.parseAssignments(data)
         XCTAssertEqual(dueAssignments.count, 2, "There should be two assignments")
         XCTAssertEqual(dueAssignments[0].name, "hw1", "The name of the first should be hw1")
-        
+        XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
     }
 }
