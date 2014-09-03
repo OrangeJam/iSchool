@@ -19,6 +19,7 @@
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
+		F594C59B19B76808001C5AD4 /* assignmentsPage.html in Resources */ = {isa = PBXBuildFile; fileRef = F594C59A19B76808001C5AD4 /* assignmentsPage.html */; };
 		F59FE08719B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
 		F59FE08819B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
 		F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08919B752AD004F4151 /* ParserTests.swift */; };
@@ -52,6 +53,7 @@
 		F53B592019AB8E0200ACF507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F53B592619AB8E0200ACF507 /* iSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B592B19AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F594C59A19B76808001C5AD4 /* assignmentsPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentsPage.html; sourceTree = "<group>"; };
 		F59FE08619B752A3004F4151 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F59FE08919B752AD004F4151 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
 		F5C22B3E19B7233C00E4D595 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		F53B592919AB8E0200ACF507 /* iSchoolTests */ = {
 			isa = PBXGroup;
 			children = (
+				F594C59C19B7681B001C5AD4 /* TestData */,
 				F59FE08919B752AD004F4151 /* ParserTests.swift */,
 				9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */,
 				98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */,
@@ -148,6 +151,14 @@
 				F53B592B19AB8E0200ACF507 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F594C59C19B7681B001C5AD4 /* TestData */ = {
+			isa = PBXGroup;
+			children = (
+				F594C59A19B76808001C5AD4 /* assignmentsPage.html */,
+			);
+			name = TestData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +254,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F594C59B19B76808001C5AD4 /* assignmentsPage.html in Resources */,
 				F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
