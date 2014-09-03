@@ -10,6 +10,9 @@
 		40E9D35EBF9746AEA9D1C5A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */; };
+		98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
+		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
+		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
@@ -52,6 +55,8 @@
 		00B6F2DAEC204B62AF31AADE /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9850A65B19AF7D08005EAB3B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
+		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
+		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
 		B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +121,7 @@
 			children = (
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
+				98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */,
+				98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */,
 				F53B592A19AB8E0200ACF507 /* Supporting Files */,
 			);
 			path = iSchoolTests;
@@ -318,6 +325,7 @@
 			files = (
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
+				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,8 +333,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
+				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
