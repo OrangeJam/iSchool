@@ -29,6 +29,7 @@ class NetworkClientTests: XCTestCase {
             expectation.fulfill()
             XCTAssertNotNil(response)
         }, { (operation, error) in
+            XCTAssert(operation.response.statusCode == 401)
             expectation.fulfill()
         })
         
