@@ -25,9 +25,11 @@ class NetworkClientTests: XCTestCase {
     func testFetchAssignmentPage() {
         let expectation = expectationWithDescription("Fetch assignments")
         
-        nc.fetchAssignmentsPageWithSuccessHandler({ (operation, response) in
+        nc.fetchPage(Page.Assignments, { (operation, response) in
             expectation.fulfill()
             XCTAssertNotNil(response)
+        }, { (operation, error) in
+            expectation.fulfill()
         })
         
         waitForExpectationsWithTimeout(nc.timeoutInterval, handler: { error in
