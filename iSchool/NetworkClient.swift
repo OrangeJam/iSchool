@@ -24,12 +24,11 @@ class NetworkClient {
     }
     
     
-    func fetchPage(page: Page, handler:(AFHTTPRequestOperation!, AnyObject!) -> Void) {
+    func fetchPage(page: Page, successHandler:(AFHTTPRequestOperation!, AnyObject!) -> Void,
+        errorHandler:(AFHTTPRequestOperation!, NSError!) -> Void) {
         let data = manager.GET(page.toRaw(), parameters: nil,
-            success: handler,
-            failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
-                NSLog("Error: \(error)")
-            }
+            success: successHandler,
+            failure: errorHandler
         )
     }
     
