@@ -354,6 +354,7 @@
 /* Begin XCBuildConfiguration section */
 		F53B592E19AB8E0200ACF507 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -396,6 +397,7 @@
 		};
 		F53B592F19AB8E0200ACF507 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -472,6 +474,7 @@
 			baseConfigurationReference = B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -483,6 +486,8 @@
 				INFOPLIST_FILE = iSchoolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = iSchool/bridge.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSchool.app/iSchool";
 			};
 			name = Debug;
@@ -492,6 +497,7 @@
 			baseConfigurationReference = B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -499,6 +505,7 @@
 				INFOPLIST_FILE = iSchoolTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = iSchool/bridge.h;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iSchool.app/iSchool";
 			};
 			name = Release;

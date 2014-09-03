@@ -12,7 +12,7 @@ import XCTest
 
 class NetworkClientTests: XCTestCase {
     
-    var viewController: LoginViewController!
+    var nc = NetworkClient()
     
     override func setUp() {
         super.setUp()
@@ -20,6 +20,11 @@ class NetworkClientTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func testFetchAssignmentPage() {
+        let assignmentsPage = nc.fetchAssignmentPage()
+        
     }
     
 }

@@ -6,8 +6,14 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkClient {
+    
+    let manager = AFHTTPRequestOperationManager()
+    
+    func fetchAssignmentsPage() -> String? {
+        return "Björn"
+    }
     
 }
