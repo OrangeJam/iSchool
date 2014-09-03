@@ -6,4 +6,20 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
-import Foundation
+import iSchool
+import UIKit
+import XCTest
+
+class NetworkClientTests: XCTestCase {
+    
+    var viewController: LoginViewController!
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    override func tearDown() {
+        super.tearDown()
+    }
+    
+}
