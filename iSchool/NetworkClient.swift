@@ -21,6 +21,7 @@ class NetworkClient {
     
     init(username: String, password: String){
         manager.requestSerializer.setAuthorizationHeaderFieldWithUsername(username, password: password)
+        manager.responseSerializer = AFHTTPResponseSerializer()
     }
     
     
