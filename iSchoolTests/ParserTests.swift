@@ -12,11 +12,19 @@ import XCTest
 
 class ParserTests: XCTestCase {
     
+    let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
+    
     override func setUp() {
         super.setUp()
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func testParseAssignments(){
+        let data = NSString.stringWithContentsOfFile(testDataPath, encoding: 0, error: nil) as String
+        NSLog(data)
+        
     }
 }
