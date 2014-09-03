@@ -19,12 +19,16 @@ class NetworkClient {
     let manager = AFHTTPRequestOperationManager()
     let timeoutInterval = NSTimeInterval(10)
     
+    init(username: String, password: String){
+        manager.requestSerializer.setAuthorizationHeaderFieldWithUsername(username, password: password)
+    }
+    
     
     func fetchAssignmentsPageWithSuccessHandler(handler:(AFHTTPRequestOperation!, AnyObject!) -> Void) {
         let data = manager.GET(Pages.Assignments.toRaw(), parameters: nil,
             success: handler,
             failure: { (operation: AFHTTPRequestOperation!, error: NSError!) in
-                NSLog("Error =/")
+                NSLog("Error: \(error)")
             }
         )
     }

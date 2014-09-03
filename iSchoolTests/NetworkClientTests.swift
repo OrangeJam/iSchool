@@ -12,7 +12,7 @@ import XCTest
 
 class NetworkClientTests: XCTestCase {
     
-    var nc = NetworkClient()
+    var nc = NetworkClient(username: "test", password: "test")
     
     override func setUp() {
         super.setUp()
