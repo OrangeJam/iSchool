@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssignmentsTableViewController: UIViewController {
+class AssignmentsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
