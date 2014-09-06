@@ -10,7 +10,7 @@ import UIKit
 
 class Parser {
     
-    class func parseAssignments(data: NSData) -> [Assignment]{
+    class func parseAssignments(data: NSData) -> [Assignment] {
         let parser = TFHpple.hppleWithHTMLData(data)
         var assignments: [Assignment] = []
         let xpathQuery = "//table[@class='ruTable'][1]/tbody/tr[@class!='ruTableTitle']"
@@ -40,5 +40,10 @@ class Parser {
             assignments.append(Assignment(attrs: attributes))
         }
         return assignments
+    }
+    
+    class func parseClasses(data: NSData) -> [Class] {
+        var classes: [Class] = []
+        return classes
     }
 }
