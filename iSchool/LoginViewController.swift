@@ -34,7 +34,6 @@ class LoginViewController: UIViewController {
         NSLog("Success")
         let credentialManager = CredentialManager.sharedInstance
         credentialManager.storeCredentials(usernameField.text, passwordField.text)
-        performSegueWithIdentifier("showAssignmentsTable", sender: self)
     }
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
