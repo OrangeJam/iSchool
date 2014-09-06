@@ -16,17 +16,17 @@ enum ClassType : String {
 
 struct Class {
 
-    var course = ""
+    var course: String
     var type: ClassType
-    var location = ""
-    var startDate = NSDate()
-    var endDate = NSDate()
+    var location: String
+    var startDate: NSDate
+    var endDate: NSDate
     
     func isOver() -> Bool {
-        return false
+        return endDate.timeIntervalSinceNow <= 0.0
     }
     
     func isNow() -> Bool {
-        return false
+        return startDate.timeIntervalSinceNow <= 0.0 && endDate.timeIntervalSinceNow > 0.0
     }
 }
