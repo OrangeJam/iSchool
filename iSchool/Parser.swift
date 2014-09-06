@@ -133,12 +133,6 @@ class Parser {
             }
         }
         let sortedClasses = sorted(classes, {(class1: Class, class2: Class) -> Bool in return class1.startDate.timeIntervalSinceReferenceDate < class2.startDate.timeIntervalSinceReferenceDate})
-        for c in sortedClasses {
-            NSLog(c.course)
-            NSLog(c.location)
-            NSLog(toString(c.startDate))
-            NSLog(toString(c.endDate))
-        }
         return sortedClasses
     }
 }
