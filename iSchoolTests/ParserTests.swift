@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
-import iSchool
 import UIKit
 import XCTest
 
