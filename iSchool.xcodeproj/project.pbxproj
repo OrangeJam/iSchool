@@ -19,6 +19,10 @@
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
+		F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
+		F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
+		F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
+		F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */ = {isa = PBXBuildFile; fileRef = F594C59D19B76925001C5AD4 /* assignmentsPage.html */; };
 		F59FE08719B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
 		F59FE08819B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
@@ -53,6 +57,8 @@
 		F53B592019AB8E0200ACF507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F53B592619AB8E0200ACF507 /* iSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B592B19AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
+		F58176FA19BB5BF8002C66CD /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		F594C59D19B76925001C5AD4 /* assignmentsPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentsPage.html; sourceTree = "<group>"; };
 		F59FE08619B752A3004F4151 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		F59FE08919B752AD004F4151 /* ParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParserTests.swift; sourceTree = "<group>"; };
@@ -113,9 +119,11 @@
 			children = (
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
+				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
 				F5C22B3E19B7233C00E4D595 /* NetworkClient.swift */,
 				98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */,
 				F59FE08619B752A3004F4151 /* Parser.swift */,
+				F58176FA19BB5BF8002C66CD /* Assignment.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
@@ -330,9 +338,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
+				F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
+				F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
 				F5C22B3F19B7233C00E4D595 /* NetworkClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,9 +355,11 @@
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
+				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5C22B4219B7235100E4D595 /* NetworkClientTests.swift in Sources */,
+				F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */,
 				F59FE08819B752A3004F4151 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

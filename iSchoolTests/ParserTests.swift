@@ -12,11 +12,21 @@ import XCTest
 
 class ParserTests: XCTestCase {
     
+    let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
+    
     override func setUp() {
         super.setUp()
     }
     
     override func tearDown() {
         super.tearDown()
+    }
+    
+    func testParseAverageAssignments(){
+        let data = NSData(contentsOfFile: testDataPath)
+        let dueAssignments = Parser.parseAssignments(data)
+        XCTAssertEqual(dueAssignments.count, 2, "There should be two assignments")
+        XCTAssertEqual(dueAssignments[0].name, "hw1", "The name of the first should be hw1")
+        XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
     }
 }
