@@ -21,4 +21,18 @@ class DataStoreTests: XCTestCase {
         super.tearDown()
     }
     
+    func testPostsNotificationOnFetchAssignments() {
+        let expectation = expectationWithDescription("Should recieve notification")
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            Notification.assignment.toRaw(),
+            object: nil,
+            queue: NSOperationQueue.mainQueue(),
+            usingBlock: { _ in
+                expectation.fulfill()
+            }
+        )
+        waitForExpectationsWithTimeout(10, handler: { _ in
+            
+        })
+    }
 }
