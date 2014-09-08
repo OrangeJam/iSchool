@@ -132,7 +132,9 @@ class Parser {
                 }
             }
         }
-        let sortedClasses = sorted(classes, {(class1: Class, class2: Class) -> Bool in return class1.startDate.timeIntervalSinceReferenceDate < class2.startDate.timeIntervalSinceReferenceDate})
+        let sortedClasses = sorted(classes, {(class1: Class, class2: Class) -> Bool in
+            return class1.startDate.timeIntervalSinceReferenceDate < class2.startDate.timeIntervalSinceReferenceDate
+        })
         return sortedClasses
     }
 }
