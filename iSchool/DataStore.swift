@@ -12,6 +12,7 @@ private let _dataStore = DataStore()
 
 enum Notification: String {
     case assignment = "DataStoreDidFinishLoadingAssignmentsNotification"
+    case networkError = "DataStoreDidEncounterNetworkErrorNotification"
 }
 
 class DataStore {
@@ -22,7 +23,7 @@ class DataStore {
         return _dataStore
     }
     
-    func refreshAssignments() {
+    func fetchAssignments() {
         let credentialManager = CredentialManager.sharedInstance
         if let (username, password) = credentialManager.getCredentials() {
             let networkClient = NetworkClient(username: username, password: password)
@@ -34,8 +35,11 @@ class DataStore {
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                     NSLog("Error: \(error.description)")
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.networkError.toRaw(), object: nil)
                 }
             )
+        } else {
+            NSLog("Credentials were nil :(")
         }
     }
     

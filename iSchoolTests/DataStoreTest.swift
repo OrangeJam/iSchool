@@ -11,8 +11,6 @@ import XCTest
 
 class DataStoreTests: XCTestCase {
     
-    var networkClient = NetworkClient(username: "test", password: "test")
-    
     override func setUp() {
         super.setUp()
     }
@@ -23,14 +21,16 @@ class DataStoreTests: XCTestCase {
     
     func testPostsNotificationOnFetchAssignments() {
         let expectation = expectationWithDescription("Should recieve notification")
+        CredentialManager.sharedInstance.storeCredentials("test", "test")
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.assignment.toRaw(),
+            Notification.networkError.toRaw(),
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
                 expectation.fulfill()
             }
         )
+        DataStore.sharedInstance.fetchAssignments()
         waitForExpectationsWithTimeout(10, handler: { _ in
             
         })

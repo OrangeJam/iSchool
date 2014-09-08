@@ -26,6 +26,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
                 self.tableView.reloadData()
             }
         )
+        DataStore.sharedInstance.fetchAssignments()
         
     }
     
