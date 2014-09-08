@@ -15,13 +15,18 @@ class AssignmentsTableViewCell : UITableViewCell {
 
 class AssignmentsTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var tableData: [Assignment] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadData()
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            Notification.assignment.toRaw(),
+            object: nil,
+            queue: NSOperationQueue.mainQueue(),
+            usingBlock: { _ in
+                self.tableView.reloadData()
+            }
+        )
+        
     }
     
     
@@ -30,12 +35,13 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tableData.count
+        return DataStore.sharedInstance.getAssignments().count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let assignments = DataStore.sharedInstance.getAssignments()
         let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
-        cell.nameLabel.text = tableData[indexPath.row].name
+        cell.nameLabel.text = assignments[indexPath.row].name
         return cell
     }
     
@@ -44,21 +50,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         return 44
     }
     
-    func loadData() {
-        let credentialManager = CredentialManager.sharedInstance
-        if let (username, password) = credentialManager.getCredentials() {
-            let networkClient = NetworkClient(username: username, password: password)
-            networkClient.fetchPage(Page.Assignments,
-                successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
-                    let responseData = NSData(data: response as NSData)
-                    self.tableData = Parser.parseAssignments(responseData)
-                    dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
-                    self.refreshControl?.endRefreshing()
-                },
-                errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
-                    NSLog("Error: \(error.description)")
-                }
-            )
-        }
+    func refreshData() {
+        self.tableView.reloadData()
     }
 }
