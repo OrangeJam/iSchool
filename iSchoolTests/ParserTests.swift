@@ -29,6 +29,14 @@ class ParserTests: XCTestCase {
         XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
     }
     
+    func testParseGrades() {
+        let data = NSData(contentsOfFile: testDataPath)
+        let grades = Parser.parseGrades(data)
+        XCTAssertEqual(grades.count, 2, "There should be one grade")
+        XCTAssertEqual(grades[0].name, "Assignment 1", "The name should be Assignment 1")
+        XCTAssertEqual(grades[0].grade, 10.0, "The grade should be 10")
+    }
+    
     func testParseTimetableNormal() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("timetable_normal", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
