@@ -29,6 +29,9 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         
     }
     
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
