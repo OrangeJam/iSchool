@@ -18,9 +18,12 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     var tableData: [Assignment] = []
     
     override func viewDidLoad() {
-        loadData()
         super.viewDidLoad()
+        loadData()
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: "loadData", forControlEvents: UIControlEvents.ValueChanged)
     }
+    
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -32,11 +35,13 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
-        if (tableData.count > indexPath.row) {
-            let assignment = tableData[indexPath.row]
-            cell.nameLabel.text = "Sveppir"
-        }
+        cell.nameLabel.text = tableData[indexPath.row].name
         return cell
+    }
+    
+    // Hopefully this will not be required, might be an XCode 6 bug
+    override func tableView(tableView:UITableView, heightForRowAtIndexPath indexPath:NSIndexPath)-> CGFloat {
+        return 44
     }
     
     func loadData() {
@@ -47,7 +52,8 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
                     self.tableData = Parser.parseAssignments(responseData)
-                    self.tableView.reloadData()
+                    dispatch_async(dispatch_get_main_queue(), {self.tableView.reloadData()})
+                    self.refreshControl?.endRefreshing()
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                     NSLog("Error: \(error.description)")
