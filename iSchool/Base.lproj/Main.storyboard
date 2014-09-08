@@ -53,7 +53,6 @@
                         <outlet property="messageLabel" destination="2Yn-Qd-ucK" id="vKh-DT-fJ2"/>
                         <outlet property="passwordField" destination="yyW-VV-Esg" id="uAr-gm-adz"/>
                         <outlet property="usernameField" destination="eBs-cx-Mae" id="a0O-pW-5sY"/>
-                        <segue destination="uHq-x4-4Sx" kind="show" identifier="showAssignmentsTable" id="1yB-XM-w7B"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ViX-go-ZoR" userLabel="First Responder" sceneMemberID="firstResponder"/>
