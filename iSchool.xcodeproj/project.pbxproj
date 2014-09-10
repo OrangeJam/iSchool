@@ -21,6 +21,8 @@
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
+		F53870B019BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
+		F53870B119BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
@@ -62,6 +64,7 @@
 		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
 		B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F531C15219B71E1B00193A4F /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F53B591719AB8E0200ACF507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		9826BAC419B8ABE800E469F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F53870AF19BDF13F0070D6ED /* Grade.swift */,
 				F58176FA19BB5BF8002C66CD /* Assignment.swift */,
 				9826BAC519B8AC4200E469F7 /* Class.swift */,
 			);
@@ -370,6 +374,7 @@
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */,
+				F53870B019BDF13F0070D6ED /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
@@ -391,6 +396,7 @@
 				F5CD976219BDC41300CEF3ED /* DataStoreTest.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
 				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
+				F53870B119BDF13F0070D6ED /* Grade.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,
 				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,

@@ -137,4 +137,45 @@ class Parser {
         })
         return sortedClasses
     }
+    
+    class func parseGrades(data: NSData) -> [Grade] {
+        let parser = TFHpple.hppleWithHTMLData(data)
+        var grades: [Grade] = []
+        let xpathQuery = "//div[@class='ruContentPage']/center[2]/table/tbody/tr"
+        var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
+        // Ignore empty row at the end of table.
+        nodes.removeLast()
+        var currentCourse = ""
+        for node in nodes {
+            var attributes: [String] = ["the empty course"]
+            if node.hasChildren() {
+                for child in node.children as [TFHppleElement] {
+                    if child.tagName == "th" {
+                        currentCourse = child.text()
+                    } else {
+                        if let text = child.text() {
+                            if text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "" {
+                                attributes.append(text)
+                            }
+                        }
+                        if child.hasChildren() {
+                            for child in child.children as [TFHppleElement] {
+                                if let link = child.objectForKey("href") {
+                                    attributes.append(link)
+                                }
+                                if let text = child.text() {
+                                    attributes.append(text)
+                                }
+                            }
+                        }
+                    }
+                    attributes[0] = currentCourse
+                }
+            }
+            if attributes.count == 5 {
+                grades.append(Grade(attrs: attributes))
+            }
+        }
+        return grades
+    }
 }

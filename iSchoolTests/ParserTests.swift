@@ -32,9 +32,9 @@ class ParserTests: XCTestCase {
     func testParseGrades() {
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data)
-        XCTAssertEqual(grades.count, 2, "There should be one grade")
+        XCTAssertEqual(grades.count, 1, "There should be one grade")
         XCTAssertEqual(grades[0].name, "Assignment 1", "The name should be Assignment 1")
-        XCTAssertEqual(grades[0].grade, 10.0, "The grade should be 10")
+        XCTAssertEqual(grades[0].grade, 10, "The grade should be 10")
     }
     
     func testParseTimetableNormal() {
