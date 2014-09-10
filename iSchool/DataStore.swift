@@ -25,6 +25,17 @@ class DataStore {
         return _dataStore
     }
     
+    private func getNetworkClient() -> NetworkClient? {
+        let credentialManager = CredentialManager.sharedInstance
+        if let (username, password) = credentialManager.getCredentials() {
+            let networkClient = NetworkClient(username: username, password: password)
+            return networkClient
+        } else {
+            NSLog("Credentials were nil")
+            return nil
+        }
+    }
+    
     func getAssignments() -> [Assignment] {
         return assignments
     }
@@ -34,9 +45,7 @@ class DataStore {
     }
     
     func fetchAssignments() {
-        let credentialManager = CredentialManager.sharedInstance
-        if let (username, password) = credentialManager.getCredentials() {
-            let networkClient = NetworkClient(username: username, password: password)
+        if let networkClient = getNetworkClient() {
             networkClient.fetchPage(Page.Assignments,
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
@@ -49,14 +58,12 @@ class DataStore {
                 }
             )
         } else {
-            NSLog("Credentials were nil :(")
+            NSLog("Could not get network client")
         }
     }
     
     func fetchClasses() {
-        let credentialManager = CredentialManager.sharedInstance
-        if let (username, password) = credentialManager.getCredentials() {
-            let networkClient = NetworkClient(username: username, password: password)
+        if let networkClient = getNetworkClient() {
             networkClient.fetchPage(Page.Assignments,
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
@@ -69,7 +76,7 @@ class DataStore {
                 }
             )
         } else {
-            NSLog("Credentials were nil")
+            NSLog("Could not get network client")
         }
     }
 }
