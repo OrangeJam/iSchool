@@ -122,7 +122,10 @@ class Parser {
                                             }
                                             // Create the class and append it to the array
                                             let newClass = Class(course: course, type: type, location: location, startDate: startDate, endDate: endDate)
-                                            classes.append(newClass)
+                                            // Prevent duplicate classes that sometimes occur in MySchool
+                                            if !contains(classes, newClass) {
+                                                classes.append(newClass)
+                                            }
                                         }
                                     }
                                 }
@@ -133,6 +136,10 @@ class Parser {
             }
         }
         let sortedClasses = sorted(classes, {(class1: Class, class2: Class) -> Bool in return class1.startDate.timeIntervalSinceReferenceDate < class2.startDate.timeIntervalSinceReferenceDate})
+        for c in sortedClasses {
+            NSLog(c.course)
+            NSLog(c.location)
+        }
         return sortedClasses
     }
 }
