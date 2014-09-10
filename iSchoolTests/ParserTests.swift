@@ -53,8 +53,8 @@ class ParserTests: XCTestCase {
             XCTFail("Could not test class at index 6")
         }
         
-        // Test the class at index 8
-        if(classes.count > 8) {
+        // Test the class at index 7
+        if(classes.count > 7) {
             let startDate = dateFormatter.dateFromString("03.09.2014 13:10")
             let endDate = dateFormatter.dateFromString("03.09.2014 13:55")
             XCTAssertEqual(classes[7].course, "Stærðfræði I", "The course name of the class at index 7 should be Stærðfræði I")
