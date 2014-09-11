@@ -2,4 +2,66 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iSchoolTests/ParserTests.swift"
+            timestampString = "432123146.090055"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "testParseLotsOfGrades()"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iSchoolTests.ParserTests.testParseLotsOfGrades (iSchoolTests.ParserTests)() -&gt; ()"
+                  moduleName = "iSchoolTests"
+                  urlString = "file:///Users/kthelgason/Documents/Development/play/iSchool/iSchoolTests/ParserTests.swift"
+                  timestampString = "432123146.867783"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "2398">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iSchoolTests.ParserTests.(testParseLotsOfGrades (iSchoolTests.ParserTests) -&gt; () -&gt; ()).(closure #1)"
+                  moduleName = "iSchoolTests"
+                  urlString = "file:///Users/kthelgason/Documents/Development/play/iSchool/iSchoolTests/ParserTests.swift"
+                  timestampString = "432123146.868005"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "103">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reabstraction thunk helper from @callee_owned (@owned iSchoolTests.Grade) -&gt; (@unowned Swift.Bool) to @callee_owned (@in iSchoolTests.Grade) -&gt; (@unowned Swift.Bool)"
+                  moduleName = "iSchoolTests"
+                  urlString = "file:///Users/kthelgason/Documents/Development/play/iSchool/iSchoolTests/ParserTests.swift"
+                  timestampString = "432123146.868306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "4">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
