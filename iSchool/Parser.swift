@@ -13,10 +13,22 @@ class Parser {
     class func parseAssignments(data: NSData) -> [Assignment] {
         let parser = TFHpple.hppleWithHTMLData(data)
         var assignments: [Assignment] = []
-        let xpathQuery = "//table[@class='ruTable'][1]/tbody/tr[@class!='ruTableTitle']"
+        let xpathQuery = "//div[@class='ruContentPage']/center[1]/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
-        // Ignore empty row at the end of table.
+        // Bail out if there are no assignments
+        if nodes.count == 0 {
+            return []
+        }
+        let tableHeader = nodes[0]
+        if tableHeader.objectForKey("class") == "ruTableTitle" {
+            if tableHeader.children.count != 11 {
+                return []
+            }
+        }
+        
+        // Ignore empty row at the end of table and table header.
         nodes.removeLast()
+        nodes.removeAtIndex(0)
         // Fun times ahead
         for node in nodes {
             var attributes: [String] = []
@@ -141,22 +153,34 @@ class Parser {
     class func parseGrades(data: NSData) -> [Grade] {
         let parser = TFHpple.hppleWithHTMLData(data)
         var grades: [Grade] = []
-        let xpathQuery = "//div[@class='ruContentPage']/center[2]/table/tbody/tr"
+        let xpathQuery = "//div[@class='ruContentPage']/center/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
+        // Bail out if there are no assignments
+        if nodes.count == 0 {
+            return []
+        }
+        let tableHeader = nodes.removeAtIndex(0)
+        if tableHeader.objectForKey("class") == "ruTableTitle" {
+            if tableHeader.children.count == 11 {
+                var currentNode = tableHeader
+                do {
+                    currentNode = nodes.removeAtIndex(0)
+                } while(currentNode.objectForKey("class") != "ruTableTitle")
+            }
+        }
         // Ignore empty row at the end of table.
         nodes.removeLast()
         var currentCourse = ""
         for node in nodes {
             var attributes: [String] = ["the empty course"]
             if node.hasChildren() {
-                for child in node.children as [TFHppleElement] {
+                var children = node.children as [TFHppleElement]
+                for child in children {
                     if child.tagName == "th" {
                         currentCourse = child.text()
                     } else {
                         if let text = child.text() {
-                            if text.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet()) != "" {
                                 attributes.append(text)
-                            }
                         }
                         if child.hasChildren() {
                             for child in child.children as [TFHppleElement] {
@@ -172,9 +196,17 @@ class Parser {
                     attributes[0] = currentCourse
                 }
             }
-            if attributes.count == 5 {
+            if attributes.count == 6 {
                 grades.append(Grade(attrs: attributes))
             }
+        }
+        // Filter out grades not yet posted
+        grades = grades.filter({ (g: Grade) -> Bool in
+            return g.grade >= 0.0
+        })
+        
+        for g in grades {
+            println(g.course)
         }
         return grades
     }

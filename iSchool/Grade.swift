@@ -17,9 +17,11 @@ struct Grade {
     
     init(attrs: [String]){
         var gradeString = attrs[3] as NSString
-        //let startIndex = advance(gradeString.startIndex, 7)
-        //let range = startIndex..<gradeString.endIndex   // same as let range = Range(start: startIndex, end: endIndex)
-        grade = (gradeString.substringFromIndex(9) as NSString).floatValue
+        if gradeString.length > 9 {
+            grade = (gradeString.substringFromIndex(9) as NSString).floatValue
+        } else {
+            grade = -1
+        }
         course = attrs[0]
         order = attrs[4]
         URL = attrs[1]

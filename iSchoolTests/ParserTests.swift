@@ -28,6 +28,13 @@ class ParserTests: XCTestCase {
         XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
     }
     
+    func testParseNoAssignments() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
+        let data = NSData(contentsOfFile: testDataPath)
+        let dueAssignments = Parser.parseAssignments(data)
+        XCTAssertEqual(dueAssignments.count, 0, "There should be no assignments")
+    }
+    
     func testParseOneGrade() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
@@ -38,11 +45,11 @@ class ParserTests: XCTestCase {
     }
     
     func testParseLotsOfGrades() {
-        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfAssignments", ofType: "html")!
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data)
         let toorGrades = grades.filter({ (grade: Grade) -> Bool in
-            return grade.course == "T-417-TOOR TÖLVUÖRYGGI"
+            return grade.course == "T-417-TOOR Tölvuöryggi"
         })
         XCTAssertEqual(toorGrades.count, 11, "There should be 11 grades in toor")
     }
