@@ -56,6 +56,13 @@ class DataStore {
         return dayClasses
     }
     
+    func getClassesForToday() -> [Class] {
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate.date())
+        let today = components.weekday
+        return getClassesForDay(WeekDay.fromRaw(today)!)
+    }
+    
     private func getNetworkClient() -> NetworkClient? {
         let credentialManager = CredentialManager.sharedInstance
         if let (username, password) = credentialManager.getCredentials() {

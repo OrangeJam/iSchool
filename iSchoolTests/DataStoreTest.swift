@@ -62,4 +62,19 @@ class DataStoreTests: XCTestCase {
             XCTFail("Could not check individual classes in testGetClassesForDay")
         }
     }
+    
+    func testGetClassesForToday() {
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate.date())
+        let today = components.weekday
+        
+        let dataStore = DataStoreMock()
+        dataStore.fetchClasses()
+        let classes = dataStore.getClassesForToday()
+        for c in classes {
+            let classComponents = calendar.components(.WeekdayCalendarUnit, fromDate: c.startDate)
+            let classDay = classComponents.weekday
+            XCTAssertEqual(today, classDay, "getClassesForToday does not return the correct classes")
+        }
+    }
 }
