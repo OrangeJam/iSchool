@@ -28,7 +28,7 @@
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
 		F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
 		F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
-		F575808F19C1AAE500BE8F88 /* lotsOfAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfAssignments.html */; };
+		F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */; };
 		F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */ = {isa = PBXBuildFile; fileRef = F594C59D19B76925001C5AD4 /* assignmentsPage.html */; };
@@ -74,7 +74,7 @@
 		F53B592619AB8E0200ACF507 /* iSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B592B19AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
-		F575808E19C1AAE500BE8F88 /* lotsOfAssignments.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lotsOfAssignments.html; sourceTree = "<group>"; };
+		F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lotsOfGradesNoAssignments.html; sourceTree = "<group>"; };
 		F58176FA19BB5BF8002C66CD /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		F594C59D19B76925001C5AD4 /* assignmentsPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentsPage.html; sourceTree = "<group>"; };
 		F59FE08619B752A3004F4151 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 		F594C59C19B7681B001C5AD4 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
-				F575808E19C1AAE500BE8F88 /* lotsOfAssignments.html */,
+				F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */,
 				98D28A3019BB7731008B3EB9 /* timetable_exams.html */,
 				98D28A3119BB7731008B3EB9 /* timetable_normal.html */,
 				F594C59D19B76925001C5AD4 /* assignmentsPage.html */,
@@ -301,7 +301,7 @@
 				F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */,
 				F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */,
 				98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */,
-				F575808F19C1AAE500BE8F88 /* lotsOfAssignments.html in Resources */,
+				F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
