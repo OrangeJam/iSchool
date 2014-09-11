@@ -9,16 +9,25 @@
 import UIKit
 
 class ClassCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet weak var courseLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var endLabel: UILabel!
+    
+    func setClass(c: Class) {
+        // Format the date strings
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        let startString = dateFormatter.stringFromDate(c.startDate)
+        let endString = dateFormatter.stringFromDate(c.endDate)
+        
+        // Set the label texts
+        courseLabel.text = c.course
+        locationLabel.text = c.location
+        typeLabel.text = c.type.toRaw()
+        startLabel.text = startString
+        endLabel.text = endString
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
 }
