@@ -31,20 +31,20 @@ struct Class: Equatable {
     }
 }
 
-func == (rhs: Class, lhs: Class) -> Bool {
-    if(rhs.course != lhs.course) {
+func == (lhs: Class, rhs: Class) -> Bool {
+    if(lhs.course != rhs.course) {
         return false
     }
-    if(rhs.startDate != lhs.startDate) {
+    if(lhs.startDate != rhs.startDate) {
         return false
     }
-    if(rhs.endDate != lhs.endDate) {
+    if(lhs.endDate != rhs.endDate) {
         return false
     }
-    if(rhs.location != lhs.location) {
+    if(lhs.location != rhs.location) {
         return false
     }
-    if(rhs.type != lhs.type) {
+    if(lhs.type != rhs.type) {
         return false
     }
     return true
