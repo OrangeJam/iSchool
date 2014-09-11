@@ -35,7 +35,7 @@ class ParserTests: XCTestCase {
         let classes = Parser.parseClasses(data)
         
         // Test if all classes were parsed
-        XCTAssertEqual(classes.count, 22, "There should be 22 classes")
+        XCTAssertEqual(classes.count, 20, "There should be 20 classes")
         
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
@@ -53,17 +53,17 @@ class ParserTests: XCTestCase {
             XCTFail("Could not test class at index 6")
         }
         
-        // Test the class at index 8
-        if(classes.count > 8) {
+        // Test the class at index 7
+        if(classes.count > 7) {
             let startDate = dateFormatter.dateFromString("03.09.2014 13:10")
             let endDate = dateFormatter.dateFromString("03.09.2014 13:55")
-            XCTAssertEqual(classes[8].course, "Stærðfræði I", "The course name of the class at index 8 should be Stærðfræði I")
-            XCTAssertEqual(classes[8].type, ClassType.Discussion, "The class at index 8 should be a discussion class")
-            XCTAssertEqual(classes[8].location, "V105", "The location of the course at index 8 should be V105")
-            XCTAssertEqual(classes[8].startDate, startDate!, "The class at index 8 should start at 03.09.2014 13:10")
-            XCTAssertEqual(classes[8].endDate, endDate!, "The class at index 8 should end at 02.09.2014 13:55")
+            XCTAssertEqual(classes[7].course, "Stærðfræði I", "The course name of the class at index 7 should be Stærðfræði I")
+            XCTAssertEqual(classes[7].type, ClassType.Discussion, "The class at index 7 should be a discussion class")
+            XCTAssertEqual(classes[7].location, "V105", "The location of the course at index 8 should be V105")
+            XCTAssertEqual(classes[7].startDate, startDate!, "The class at index 7 should start at 03.09.2014 13:10")
+            XCTAssertEqual(classes[7].endDate, endDate!, "The class at index 7 should end at 02.09.2014 13:55")
         } else {
-            XCTFail("Could not test class at index 8")
+            XCTFail("Could not test class at index 7")
         }
     }
     
