@@ -10,6 +10,16 @@ import UIKit
 
 private let _dataStore = DataStore()
 
+enum WeekDay: Int {
+    case Sunday = 1
+    case Monday = 2
+    case Tuesday = 3
+    case Wednesday = 4
+    case Thursday = 5
+    case Friday = 6
+    case Saturday = 7
+}
+
 enum Notification: String {
     case classes = "DataStoreDidFinishLoadingClassesNotification"
     case assignment = "DataStoreDidFinishLoadingAssignmentsNotification"
@@ -18,11 +28,32 @@ enum Notification: String {
 
 class DataStore {
     
-    private var assignments: [Assignment] = []
-    private var classes: [Class] = []
+    var assignments: [Assignment] = []
+    var classes: [Class] = []
     
     class var sharedInstance: DataStore {
         return _dataStore
+    }
+    
+    func getAssignments() -> [Assignment] {
+        return assignments
+    }
+    
+    func getClasses() -> [Class] {
+        return classes
+    }
+    
+    func getClassesForDay(day: WeekDay) -> [Class] {
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        var dayClasses: [Class] = []
+        for c in classes {
+            let components = calendar.components(.WeekdayCalendarUnit, fromDate: c.startDate)
+            let classDay = components.weekday
+            if classDay == day.toRaw() {
+                dayClasses.append(c)
+            }
+        }
+        return dayClasses
     }
     
     private func getNetworkClient() -> NetworkClient? {
@@ -34,14 +65,6 @@ class DataStore {
             NSLog("Credentials were nil")
             return nil
         }
-    }
-    
-    func getAssignments() -> [Assignment] {
-        return assignments
-    }
-    
-    func getClasses() -> [Class] {
-        return classes
     }
     
     func fetchAssignments() {
