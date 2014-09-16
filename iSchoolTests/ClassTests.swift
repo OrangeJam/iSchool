@@ -11,13 +11,13 @@ import XCTest
 class ClassTests: XCTestCase {
     
     // Class from the past
-    let pastClass = Class(course: "Course1", type: ClassType.Lecture, location: "M101", startDate: NSDate.date().dateByAddingTimeInterval(-2 * 60 * 60), endDate: NSDate.date().dateByAddingTimeInterval(-1 * 60 * 60))
+    let pastClass = Class(course: "Course1", type: ClassType.Lecture, location: "M101", startDate: NSDate().dateByAddingTimeInterval(-2 * 60 * 60), endDate: NSDate().dateByAddingTimeInterval(-1 * 60 * 60))
     
     // Class that is going on right now
-    let currentClass = Class(course: "Course2", type: ClassType.Lecture, location: "V201", startDate: NSDate.date().dateByAddingTimeInterval(-1 * 60 * 30), endDate: NSDate.date().dateByAddingTimeInterval(1 * 60 * 30))
+    let currentClass = Class(course: "Course2", type: ClassType.Lecture, location: "V201", startDate: NSDate().dateByAddingTimeInterval(-1 * 60 * 30), endDate: NSDate().dateByAddingTimeInterval(1 * 60 * 30))
     
     // Future class
-    let futureClass = Class(course: "Course3", type: ClassType.Discussion, location: "M108", startDate: NSDate.date().dateByAddingTimeInterval(1 * 60 * 60), endDate: NSDate.date().dateByAddingTimeInterval(2 * 60 * 60))
+    let futureClass = Class(course: "Course3", type: ClassType.Discussion, location: "M108", startDate: NSDate().dateByAddingTimeInterval(1 * 60 * 60), endDate: NSDate().dateByAddingTimeInterval(2 * 60 * 60))
     
     override func setUp() {
         super.setUp()
