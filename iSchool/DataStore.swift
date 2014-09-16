@@ -18,6 +18,7 @@ enum Notification: String {
 class DataStore {
     
     private var assignments: [Assignment] = []
+    private var grades: [Grade] = []
     
     class var sharedInstance: DataStore {
         return _dataStore
@@ -45,6 +46,10 @@ class DataStore {
     
     func getAssignments() -> [Assignment] {
         return assignments
+    }
+    
+    func getGrades() -> [Grade] {
+        return grades
     }
     
 }
