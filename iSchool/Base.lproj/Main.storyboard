@@ -97,20 +97,31 @@
             </objects>
             <point key="canvasLocation" x="840" y="-460"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Grades Table View Controller-->
         <scene sceneID="uAZ-Xh-a1s">
             <objects>
-                <tableViewController id="t1w-Gb-QT5" sceneMemberID="viewController">
+                <tableViewController id="t1w-Gb-QT5" customClass="GradesTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5hD-82-sbv">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fRz-9k-FS2">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fRz-9k-FS2" customClass="GradesTableViewCell" customModule="iSchool" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fRz-9k-FS2" id="D1z-dr-Sw6">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbR-f7-YUf">
+                                            <rect key="frame" x="279" y="11" width="42" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="gw" destination="AbR-f7-YUf" id="axR-m6-lGE"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -121,7 +132,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="840" y="318"/>
+            <point key="canvasLocation" x="840" y="310"/>
         </scene>
     </scenes>
 </document>
