@@ -18,6 +18,15 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            Notification.grade.toRaw(),
+            object: nil,
+            queue: NSOperationQueue.mainQueue(),
+            usingBlock: { _ in
+                self.tableView.reloadData()
+            }
+        )
+        DataStore.sharedInstance.fetchAssignments()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
