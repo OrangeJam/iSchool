@@ -11,7 +11,7 @@ import UIKit
 class Parser {
     
     class func parseAssignments(data: NSData) -> [Assignment] {
-        let parser = TFHpple.hppleWithHTMLData(data)
+        let parser = TFHpple(HTMLData: data)
         var assignments: [Assignment] = []
         let xpathQuery = "//div[@class='ruContentPage']/center[1]/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
@@ -56,7 +56,7 @@ class Parser {
     
     // Kári, I know you will appreciate the beauty of this function :)
     class func parseClasses(data: NSData) -> [Class] {
-        let parser = TFHpple.hppleWithHTMLData(data)
+        let parser = TFHpple(HTMLData: data)
         var classes: [Class] = []
         let xpathQuery = "//div[@class='ruContentPage']/center[1]/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
@@ -151,7 +151,7 @@ class Parser {
     }
     
     class func parseGrades(data: NSData) -> [Grade] {
-        let parser = TFHpple.hppleWithHTMLData(data)
+        let parser = TFHpple(HTMLData: data)
         var grades: [Grade] = []
         let xpathQuery = "//div[@class='ruContentPage']/center/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
