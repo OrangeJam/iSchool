@@ -24,9 +24,23 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
                 self.tableView.reloadData()
+                NSLog("Reloading data")
+            }
+        )
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            Notification.networkError.toRaw(),
+            object: nil,
+            queue: NSOperationQueue.mainQueue(),
+            usingBlock: { _ in
+                let alert = UIAlertView(title: "Network Error", message: "Myschool has shit itself", delegate: self, cancelButtonTitle: "Fuck off")
+                alert.show()
             }
         )
         DataStore.sharedInstance.fetchAssignments()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
