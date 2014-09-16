@@ -12,6 +12,7 @@ private let _dataStore = DataStore()
 
 enum Notification: String {
     case assignment = "DataStoreDidFinishLoadingAssignmentsNotification"
+    case grade = "DataStoreDidFinishLoadingGradesNotification"
     case networkError = "DataStoreDidEncounterNetworkErrorNotification"
 }
 
@@ -24,6 +25,7 @@ class DataStore {
         return _dataStore
     }
     
+    // TODO: make improve betterness
     func fetchAssignments() {
         let credentialManager = CredentialManager.sharedInstance
         if let (username, password) = credentialManager.getCredentials() {
@@ -33,6 +35,8 @@ class DataStore {
                     let responseData = NSData(data: response as NSData)
                     self.assignments = Parser.parseAssignments(responseData)
                     NSNotificationCenter.defaultCenter().postNotificationName(Notification.assignment.toRaw(), object: nil)
+                    self.grades = Parser.parseGrades(responseData)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.grade.toRaw(), object: nil)
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                     NSLog("Error: \(error.description)")
