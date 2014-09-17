@@ -11,8 +11,6 @@ import XCTest
 
 class ParserTests: XCTestCase {
     
-    let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
-    
     override func setUp() {
         super.setUp()
     }
@@ -22,11 +20,38 @@ class ParserTests: XCTestCase {
     }
     
     func testParseAverageAssignments() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         let dueAssignments = Parser.parseAssignments(data)
         XCTAssertEqual(dueAssignments.count, 2, "There should be two assignments")
         XCTAssertEqual(dueAssignments[0].name, "hw1", "The name of the first should be hw1")
         XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
+    }
+    
+    func testParseNoAssignments() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
+        let data = NSData(contentsOfFile: testDataPath)
+        let dueAssignments = Parser.parseAssignments(data)
+        XCTAssertEqual(dueAssignments.count, 0, "There should be no assignments")
+    }
+    
+    func testParseOneGrade() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
+        let data = NSData(contentsOfFile: testDataPath)
+        let grades = Parser.parseGrades(data)
+        XCTAssertEqual(grades.count, 1, "There should be one grade")
+        XCTAssertEqual(grades[0].name, "Assignment 1", "The name should be Assignment 1")
+        XCTAssertEqual(grades[0].grade, 10, "The grade should be 10")
+    }
+    
+    func testParseLotsOfGrades() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
+        let data = NSData(contentsOfFile: testDataPath)
+        let grades = Parser.parseGrades(data)
+        let toorGrades = grades.filter({ (grade: Grade) -> Bool in
+            return grade.course == "T-417-TOOR Tölvuöryggi"
+        })
+        XCTAssertEqual(toorGrades.count, 11, "There should be 11 grades in toor")
     }
     
     func testParseTimetableNormal() {

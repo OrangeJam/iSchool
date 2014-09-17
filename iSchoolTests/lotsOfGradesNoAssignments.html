@@ -1,0 +1,925 @@
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  <meta http-equiv='Expires' content='-1'>
+  <title>Innranet Háskólans í Reykjavík</title>
+  <script type="text/javascript" src="./system/js/jquery-1.3.2.min.js"></script>
+<link href='./system/include/ruTabs/ruTabs2.css' rel='stylesheet' type='text/css'>
+<script type='text/javascript' language='JavaScript' src='./system/include/calendar/ruPanels_calendar1.js'></script>
+ <link rel='stylesheet' href='./system/include/ruTabs/ruTabs2.css' type='text/css'>
+ <link rel='stylesheet' href='./System/skins/HR4/ruStyle.css'  type='text/css' media='screen'>
+ <link rel='stylesheet' href='./system/skins/ruTables.css' type='text/css'>
+ <link rel='stylesheet' href='./System/skins/HR4/print.css'    type='text/css' media='print'>
+ <script type='text/javascript' src='./system/skins/HR4/ruScript.js'></script>
+ <script type='text/javascript' src='./system/skins/HR4/fontSizer2-2.js'></script>
+<link rel='icon'          href='./System/skins/HR4/fav.ico' type='image/x-icon'>
+<link rel='shortcut icon' href='./System/skins/HR4/fav.ico' type='image/x-icon'>
+
+<body style='margin: 0px'>
+<!-- Header BEGIN --><div class='ruHeader'>
+<table width='100%' height='120' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+  <td rowspan='2' class='ruHeader_left' ><a href='./'><img src='./System/skins/HR4/sitelogo.jpg' height='100px' border=0 alt=''></a></td>
+  <td align='right' valign='top'>
+<div class='qnav'>
+<h2 class='boxhead'>Stoðval</h2>
+<div class='boxbody'>
+<ul class='level1'>
+<li class='cat1'><span id='datetime' class='cat'>&nbsp;</span></li>
+<li class='cat2'><span id='nomessages' class='cat'>Engin skilaboð</span><span id='messagecount' class='cat' style='display:none'><a href='?Page=Messages&Tab=1&ID=1'><span></span> skilaboð</a></span></li>
+<li class='cat3'><span id='nochats' class='cat'>Ekkert spjall</span><span id='chatcount' class='cat' style='display:none'><a href='?Page=Chat'><span></span> spjall</a></span></li>
+<li class='cat4'><span class='cat'><div id='fontControls'></div></span></li>
+<li class='cat4'><span class='cat'><a href='?Page=Front&lang=EN' id='englishbtn'>English</a></span></li>
+</ul>
+</div>
+</div>
+</td></tr><tr><td align='right' valign='bottom'>
+<div class='mnav'>
+<h2 class='boxhead'>Háskólinn í Reykjavík: Forsíða</h2>
+<div class='boxbody'>
+<ul class='level1'>
+<li class='home current homecurrent'><a href='/myschool/'>Innranet</a></li>
+<li class='cat1 branch'><a class='cat1' href='http://www.hr.is/'>WWW.HR.IS</a></li>
+<li class='cat2 branch'><a class='cat2' href='http://esja.ru.is/'>ESJA</a></li>
+<li class='cat3 branch'><a class='cat3' href='http://malid.hr.is/'>MÁLIÐ</a></li>
+<li class='cat4 branch'><a class='cat4' href='http://webmail.ru.is/'>VEFPÓSTUR</a></li>
+<li class='cat5 branch'>
+<a href='?Page=Login&Out' class='cat5' onClick='return confirm("Hætta í MySchool?");'>HÆTTA</a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr><td align='center'></td></tr>
+<tr><td align='right' colspan=3 class='ruSep' >
+<div id='personname'><span>Kári Tristan Helgason</span>, Tölvunarfræðideild</div>
+<form action='?Page=Search' method='post'>
+<input id='headersearch' name='searchtext' type='text' value='Leita...'>
+</form>
+</td></tr>
+</table>
+</div><!-- Header END -->	<table class='ruPage' border='0' align='center' cellspacing='0' cellpadding='0'>
+<script type='text/javascript'>
+function ruMenu_ToggleSlide(ID_Sub){
+  var rows = document.getElementsByTagName('*'), i=0, row;
+  while (row=rows[i++]) {
+    if (row.id == 'ruLeft_Sub'+ ID_Sub) {
+      if (row.style.display == '') row.style.display = 'none';
+      else row.style.display = '';
+    }
+  }
+}
+</script>
+	<!-- LEFT SECTION BEGINS-->
+	<!-- LEFT SECTION BEGINS--><td class=ruLeft ><div class='ruNotPrintable'>
+		<table cellpadding='2' cellspacing='0' border='0' class='menuStyle-first'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(1)'>Námið</a></td></tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/?PageID=2919' target='_blank' class='subMenu'>Almanak HR...</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.13' class='subMenu'>Bókalisti</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.14' class='subMenu'>Einkunnir</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Front' class='subMenu'>Forsíða</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.11' class='subMenu'>Hópar</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=2.19&Prog=3' class='subMenu'>Klúbbar</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=7' class='subMenu'>Námsferill</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=2.10' class='subMenu'>Námskeið</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.17' class='subMenu'>Nýtt efni</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exams&ID=13' class='subMenu'>Próf</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.3' class='subMenu'>Próftafla</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Messages&Tab=1&ID=1' class='subMenu'>Skilaboð</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exchange' class='subMenu'>Skiptinám</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.2' class='subMenu'>Stundatafla</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=2.18&Prog=2' class='subMenu'>Stök námskeið</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_selected_cell'>&nbsp;</td>
+<td class='subMenu_selected_cell'><a href='?Page=Exe&ID=1.12' class='subMenu_selected'>Verkefni</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.3' class='subMenu'>Öll námskeið</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(2)'>Skólinn</a></td></tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.8' class='subMenu'>Aðilar skóla</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Jobs' class='subMenu'>Atvinnuþjónustan</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=QA' class='subMenu'>Ábendingar</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/bokasafn/' target='_blank' class='subMenu'>Bókasafn...</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.1' class='subMenu'>Deildarfréttir</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=TV' class='subMenu'>Kennslustofur</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/thjonusta/studentathjonusta/' target='_blank' class='subMenu'>Stúdentaþjónusta</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.9' class='subMenu'>Útskriftarnemendur</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.10' class='subMenu'>Þjóðskrá</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(3)'>Gögnin mín</a></td></tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr' class='subMenu'>Einkadrif</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.5' class='subMenu'>Persónuupplýsingar</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://webmail.ru.is' target='_blank' class='subMenu'>Tölvupóstur...</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr&ID=2' class='subMenu'>U drif</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr&ID=1' class='subMenu'>Vefsvæði</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://nemendur.ru.is/kari12/' target='_blank' class='subMenu'>Vefur...</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(4)'>Tæknileg aðstoð</a></td></tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='https://help.ru.is' target='_blank' class='subMenu'>Hjálp</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Help&Help=Mail' class='subMenu'>Hjálp v/MySchool</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Help&Help=docs' class='subMenu'>Leiðbeiningar</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='Help\Nemenda_Handbok.pdf' class='subMenu'>MySchool aðstoð - nemendur</a></td>
+</tr>
+</table>
+	</div></td><!-- LEFT SECTION ENDS-->
+	<!-- LEFT SECTION ENDS-->
+	<!-- CONTENT BEGINS--><td width='100%' valign='top'>
+<!-- table 1, ruContent_Begin -->
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr><td valign='top' width='100%'>
+<!-- table 2, content begin -->
+<table width='100%' border='0' cellspacing='0' cellpadding='0' >
+  <tr valign='top'>  
+    <td width='10' height='44'>&nbsp;</td>
+    <td class='ruTableText' width='100%'>
+      <br>
+    <!-- table 1.1 -->
+    <table width='100%' border='0' cellspacing='0' cellpadding='0' >
+      <tr>
+        <td width='10' height='32'>&nbsp;</td>
+        <td valign='top' colspan='2' width='100%'><span class='ruContent'>Verkefnin mín</span></td>
+      </tr>
+      <tr>
+        <td width='100%' colspan='3'>
+          <table border='0' width='100%'><tr><td><div class='ruTabs'>
+<table width='100%' border='0' cellspacing='0' cellpadding='0' >
+  <tr><td valign='top'>
+    <div id='ruTabsNewcontainer'>
+      <ul class='ruTabsNew'>
+          <li style='z-index:104;'><span title=''><a href='?Page=Exe&amp;ID=1.12&amp;Tab=1&amp;Sem=20143' class='ruTabs'><span>2014-3</span></a>
+</span></li>
+          <li style='z-index:105;' id='current'><span title=''><a href='?Page=Exe&amp;ID=1.12&amp;Tab=2&amp;Sem=20141' class='ruTabs'><span>2014-1</span></a>
+</span></li>
+          <li style='z-index:102;'><span title=''><a href='?Page=Exe&amp;ID=1.12&amp;Tab=3&amp;Sem=20133' class='ruTabs'><span>2013-3</span></a>
+</span></li>
+          <li style='z-index:101;'><span title=''><a href='?Page=Exe&amp;ID=1.12&amp;Tab=4&amp;Sem=20131' class='ruTabs'><span>2013-1</span></a>
+</span></li>
+          <li style='z-index:100;'><span title=''><a href='?Page=Exe&amp;ID=1.12&amp;Tab=5&amp;Sem=20123' class='ruTabs'><span>2012-3</span></a>
+</span></li>
+      </ul>
+    </div>
+  </td></tr>
+</table>
+</div>
+</td></tr></table>
+        </td>
+      </tr>
+    <!-- / table 1.1 -->
+    </table>
+<div class=ruContentPage>
+<br><h4>Verkefnum lokið á önn 2014-1</h4><center>
+	<table id='' class='ruTable' cellspacing=0 cellpadding=2 border=0 width='100%'>
+	    <tbody>
+		<tr class='ruTableTitle'>
+<th height='20' class='ruTableTitle' valign='top' title=''  nowrap align='left' Colspan=4>T-501-FMAL Forritunarmál</th>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45323" tabindex=32000>Skilaverkefni I</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45326" tabindex=32000>Forritunarverkefni I</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 73</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45348" tabindex=32000>Vika 2</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45530" tabindex=32000>Vika 3</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45663" tabindex=32000>Vika 4</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45815" tabindex=32000>Vika 5</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=45970" tabindex=32000>Vika 6</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46048" tabindex=32000>Skilaverkefni II</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 60 - 69</td>
+<td valign='top' align='left' height='20' title=''>1. (6 pts) 
+2/2 a) Static variables: x and k 
+2/2 b) Bound to memory on the stack: n, j 
+2/2 c) Bound to memory on the heap: *p, *i   
+
+2. (6 pts)
+2/3 a) Prints: 6 3 
+3/3 b) Prints: 2 4 
+
+3. (6 pts)
+2/2 a) Pass-by-value: 1 1
+2/2 b) Pass-by-reference: 3 1
+0/2 c) Pass-by-value-result: 2 1 
+
+Both the formal parameters x and y receive the value 1. These 
+values are incremented inside inc() to 2, and copied back to a[0] 
+when the function returns. 
+
+4. (8 pts)
+2/4 a) Activation records.
+
+Static chain and dynamic chain missing
+
+4/4 b) Difference of static and dynamic scope.
+
+5. (6/6 pts)
+
+6. (6 pts)
+2/2 a) 1  to: 5 do: [:i | i factorial printNl]. 
+
+4/4 b) 
+  myArr := Array new: 10. 
+  1 to: 10 do: [:i | myArr at: i put: i]. 
+  a select: [:i | i even]. 
+
+7. (6/6 pts.)
+
+Total 39/44
+
+Regards,
+&#211;lafur Da&#240;i (thorgeirk11@ru.is)
+</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46168" tabindex=32000>Vika 7</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46341" tabindex=32000>Vika 8</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46522" tabindex=32000>Vika 9</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46579" tabindex=32000>Forritunarverkefni II</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 74 - 76</td>
+<td valign='top' align='left' height='20' title=''>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+1. Scheme (27/28%)
+5/5% a) maxElement
+5/5% b) elementAtIndex
+4/5% c) compress (compress &amp;#39;(a a a a a a b b b b b c c c c c d d d d d e e e e a a a a e e e e)) fails
+
+5/5% d) maxofmax
+8/8% e) split
+
+2. Scheme (22/22%)
+4/4% a) sumList
+4/4% b) charactersPerWord
+6/6% c) charactersPerSentence
+4/4% d) wordsPerSentence
+4/4% e) statsDocument
+
+3. SML (25/25%)
+6/6% a) zip = fn : &amp;#39;a list -&gt; &amp;#39;b list -&gt; (&amp;#39;a * &amp;#39;b) list
+6/6% b) greaterThan = fn : int list -&gt; int -&gt; int list
+6/6% c) reduction = fn: (&amp;#39;a * &amp;#39;a -&gt; &amp;#39;a) -&gt; &amp;#39;a list -&gt; &amp;#39;a
+7/7% d) partition = fn : (&amp;#39;a -&gt; bool) -&gt; &amp;#39;a list -&gt; &amp;#39;a list * &amp;#39;a list
+
+4. SML (20/25%)
+5/5% a) insert = fn : real * real list -&gt; real list
+5/5% b) insertsort = fn : real list -&gt; real list s
+5/5% c) middle = fn : &amp;#39;a list -&gt; &amp;#39;a
+5/5% d) cartesian = fn : &amp;#39;a list -&gt; &amp;#39;b list -&gt; (&amp;#39;a * &amp;#39;b) list
+0/5% e) mymap = fn : (&amp;#39;a -&gt; &amp;#39;b) -&gt; &amp;#39;a list -&gt; &amp;#39;b list
+MyMap is not allowed to use map.
+</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46679" tabindex=32000>Vika 10</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46822" tabindex=32000>Vika 11</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46823" tabindex=32000>Forritunarverkefni III</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 59 - 73</td>
+<td valign='top' align='left' height='20' title=''>1a: 16 
+1b: 0 (Tom and John)
+1c: 2
+2a: 6
+2b: 6
+2c: 6
+2d: 6
+2e: 6
+3a: 6
+3b: 6
+3c: 6
+4a: 6
+4b: 6
+4c: 6
+5: 10 (almost)
+</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=46958" tabindex=32000>Vika 12</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=47397" tabindex=32000>Lokapróf</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 7</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25780&verkID=47845" tabindex=32000>Endurtektarpróf</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<th height='20' class='ruTableTitle' valign='top' title=''  nowrap align='left' Colspan=4>T-631-SOE2 Hugbúnaðarfræði II</th>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45216" tabindex=32000>HW 1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 6</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45220" tabindex=32000>HW 2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 18</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45238" tabindex=32000>HW 3</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 15 - 17</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45287" tabindex=32000>Quiz 1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 34</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45355" tabindex=32000>HW 4</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 15</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45356" tabindex=32000>HW 5</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 12</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45569" tabindex=32000>HW 5+</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 19 - 23</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45868" tabindex=32000>Mini-project 1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 27</td>
+<td valign='top' align='left' height='20' title=''>1.Flott, 2.Flott</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45904" tabindex=32000>HW6</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45951" tabindex=32000>Quiz 2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 13</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=45952" tabindex=32000>Quiz 3</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46020" tabindex=32000>HW 7</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 18</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46244" tabindex=32000>HW 8</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 20 - 21</td>
+<td valign='top' align='left' height='20' title=''>Vantar predicate coverage. Ert aðeins að prófa föllin sjálf en ekki test case-in fyrir predicate coverage.</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46257" tabindex=32000>Quiz 4</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46258" tabindex=32000>HW 9</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 17</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46534" tabindex=32000>Quiz 5</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 21 - 25</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46535" tabindex=32000>Quiz 6</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46780" tabindex=32000>Project1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 10 - 16</td>
+<td valign='top' align='left' height='20' title=''>Ex.1: Smá böggur í scriptunni. Þú sækir einvern file úr möppunni í forlykkjunni, en gerir ráð fyrir því að það sé gert sequentially í currentTestCase counternum. Þetta þýðir að sem dæmi þá var abs TC_2 mappað í exe TC_1. Skv. mínu fagráði þá er ekki hægt að kenna Tim Cook um þetta! (45/50), Ex.2: v_clockTab (10/10).  v_Timer (10/10). v_StopwatchTab (10/10). Ex.3: Keyrsla í lagi. (20/20)</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46809" tabindex=32000>Quiz 7</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 7 - 12</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46909" tabindex=32000>Project2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 6 - 10</td>
+<td valign='top' align='left' height='20' title=''>The models are good, but a little cluttered and thus a little hard to read into. Weights are used well in model. Overall model quality is good. Fair reasoning on path generator. Test suite compiles. Running the test cases was a bit challenging without a small change. In your v_Home, it is possible to select a favorite topic. This is a little "dangerous", since this depends entirely on the account you were using. The tests do not run on my account since I have other favorite topics. On the level of testing we are doing in this project, I would have recommended to skip this for now. Besides that, test cases run normally. Most questions answered properly (What about the stop criteria?). You get a bonus for embedding assertions that can find bugs! Overall, a good job!</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46962" tabindex=32000>Quiz 8</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=46963" tabindex=32000>Quiz 9</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 11</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=47334" tabindex=32000>Final Exam</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 8 - 9</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25786&verkID=47497" tabindex=32000>Final Grade</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 2 - 8</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<th height='20' class='ruTableTitle' valign='top' title=''  nowrap align='left' Colspan=4>T-215-STY1 Stýrikerfi</th>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45264" tabindex=32000>Homework I</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 12 - 19</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45335" tabindex=32000>Buflab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 3 - 77</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45574" tabindex=32000>Shlab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 7,7</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 76 - 79</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45905" tabindex=32000>Malloclab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,6</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 45 - 49</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45906" tabindex=32000>Malloclab (bonus for early progress)</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 128</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=45930" tabindex=32000>Homework II</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10,6</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 18 - 25</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=46431" tabindex=32000>Homework III</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,1</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 75 - 76</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=46432" tabindex=32000>Cachelab (optional)</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 7,9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 6</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=46452" tabindex=32000>Participation grade</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 99</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=46478" tabindex=32000>Proxylab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,91</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 34 - 40</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=46910" tabindex=32000>Kernellab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 52 - 64</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=47489" tabindex=32000>Final Exam</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 15 - 17</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25771&verkID=47789" tabindex=32000>Retake Exam</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<th height='20' class='ruTableTitle' valign='top' title=''  nowrap align='left' Colspan=4>T-417-TOOR Tölvuöryggi</th>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47380" tabindex=32000>Smashing the stack</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 11</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 22</td>
+<td valign='top' align='left' height='20' title=''>Stórfínt :-)</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47381" tabindex=32000>Presentation topic</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47382" tabindex=32000>Wirelab (optional)</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 25</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47386" tabindex=32000>Format string competition (optional)</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 0</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 6 - 8</td>
+<td valign='top' align='left' height='20' title=''>Þakka hreinskilnina!</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47390" tabindex=32000>Blackjack</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 30</td>
+<td valign='top' align='left' height='20' title=''>Flott!</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47391" tabindex=32000>Final exam</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10,7</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 5</td>
+<td valign='top' align='left' height='20' title=''>Vel gert!</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47433" tabindex=32000>Buflab++</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 11</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 8</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47574" tabindex=32000>Presentation quiz questions</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 30</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47584" tabindex=32000>Presentation slides</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47592" tabindex=32000>Tauntlab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 11</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 5</td>
+<td valign='top' align='left' height='20' title=''>Glæsilegt!</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47593" tabindex=32000>Presentation recording</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9,5</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 9</td>
+<td valign='top' align='left' height='20' title=''>Beautiful talk about botnets. I was about to ask a rhetrocail question near the end about whether we were not going to see a demo of botnet. But lo and behold -- you DID have a demo. I found that very impressive (even though it was very simple). Overall a very good presentation.</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47608" tabindex=32000>Winblab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 3</td>
+<td valign='top' align='left' height='20' title=''>frábært!</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25923&verkID=47698" tabindex=32000>Sandboxlab</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 7</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 2 - 26</td>
+<td valign='top' align='left' height='20' title=''>Nicely done! :D</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<th height='20' class='ruTableTitle' valign='top' title=''  nowrap align='left' Colspan=4>T-213-VEFF Vefforritun</th>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45207" tabindex=32000>Lab assignment 1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 225</td>
+<td valign='top' align='left' height='20' title=''>Flott
+</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45515" tabindex=32000>Lab assignment 2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 159</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45545" tabindex=32000>Project 1</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 64</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45748" tabindex=32000>Lab assignment 3</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 177</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45800" tabindex=32000>Project 2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 163 - 210</td>
+<td valign='top' align='left' height='20' title=''>Vantar getter/setter &#237; Student.cs
+Einnig er html skjali&#240; ekki XHTML valid.
+</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=45982" tabindex=32000>Lab assignment 4</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 185</td>
+<td valign='top' align='left' height='20' title=''>Flott
+-Snorri Örn</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46161" tabindex=32000>Project 3</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 173 - 201</td>
+<td valign='top' align='left' height='20' title=''>-1 vantar a&#240; f&#225; a&#240;eins 10 n&#253;justu fr&#233;ttirnar
+-1 vantar a&#240; ra&#240;a eftir n&#253;justu fr&#233;ttunum
+</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46380" tabindex=32000>Lab assignment 5</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 182</td>
+<td valign='top' align='left' height='20' title=''>1. Flott
+2. Flott
+3. Flott
+4. Flott
+5. Flott
+-Snorri &#214;rn
+</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46549" tabindex=32000>Project 4</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 160</td>
+<td valign='top' align='left' height='20' title=''>Djöfull hló ég af Chuck :) Fór glaðari yfir verkefnið.
+-Snorri ÖRn</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46686" tabindex=32000>Lab assignment 6</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 9</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 149 - 158</td>
+<td valign='top' align='left' height='20' title=''>-1 Vantar input element fyrir Jquery UI datepickerinn.
+-Snorri &#214;rn
+</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46799" tabindex=32000>Project 5</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 111 - 133</td>
+<td valign='top' align='left' height='20' title=''>-2 Gott practice er að hafa föllin JSONResult ef þú ert að skila JSON. Einnig er eitthvað rugl með þegar ég reyni að commenta þá fæ ég nýja síðu með JSON sem POST fallið er að skila.</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=46980" tabindex=32000>Lab assignment 7</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 8</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 45 - 50</td>
+<td valign='top' align='left' height='20' title=''>Admin er ekki í administrator grúppunni, því getur hann ekki skoðað About eða séð Delete takkann.
+
+Annars er lógíkin rétt.</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=47456" tabindex=32000>Final exam</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10,4</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 2</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=47522" tabindex=32000>Weekly online exam correction 1/2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 366</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=47524" tabindex=32000>Weekly online exam correction 2/2</a></td>
+<td  align='left' nowrap height='20' title='' valign='top' >Einkunn: 10</td>
+<td  align='left' nowrap height='20' title='' valign='top' >Röð: 1 - 366</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow2'>
+<td  align='left' nowrap height='20' title='' valign='top' ><a href="?Page=Exe&ID=2.4&ViewMode=2&fagid=25770&verkID=47861" tabindex=32000>Retake exam</a></td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+<td valign='top' align='left' height='20' title=''>&nbsp;</td>
+	</tr>
+	<tr id='' class='ruTableRow1'>
+	</tr>
+    </tbody>
+	</table>
+</center>
+</div>
+     </td>
+    <td width='10'>&nbsp;</td>
+  </tr>
+<!-- / table 2, content begin -->
+</table>
+    </td>
+  </tr>
+<!-- / table 1, ruContent_End -->
+</table>
+	</td><!-- CONTENT ENDS-->
+	</td></tr></table>
+<div id='footer' class='ruFooter'>Háskólinn í Reykjavík | Menntavegi 1 | 101 Reykjavík | Sími/Tel: +354 599 6200 | Fax: +354 599 6201 | <a href='mailto:ru@ru.is'>ru@ru.is</a> | © MySchool 2014</div>
+<script type='text/javascript'>
+$(function() {
+	if (document.forms.length < 1) { return; }
+	for (var j = 0; j < document.forms[0].length; j++) {
+		var elm = document.forms[0].elements[j];
+	  if (elm.type.toLowerCase() != 'hidden' && elm.disabled != true && elm.name !== 'searchtext') {
+	    elm.focus();
+	    j = document.forms[0].length;
+	  }
+	}
+});
+</script>
+</body>
+</html>
