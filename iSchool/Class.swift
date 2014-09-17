@@ -14,7 +14,7 @@ enum ClassType : String {
     case Other = "Annað"
 }
 
-struct Class {
+struct Class: Equatable {
 
     var course: String
     var type: ClassType
@@ -29,4 +29,23 @@ struct Class {
     func isNow() -> Bool {
         return startDate.timeIntervalSinceNow <= 0.0 && endDate.timeIntervalSinceNow > 0.0
     }
+}
+
+func == (lhs: Class, rhs: Class) -> Bool {
+    if(lhs.course != rhs.course) {
+        return false
+    }
+    if(lhs.startDate != rhs.startDate) {
+        return false
+    }
+    if(lhs.endDate != rhs.endDate) {
+        return false
+    }
+    if(lhs.location != rhs.location) {
+        return false
+    }
+    if(lhs.type != rhs.type) {
+        return false
+    }
+    return true
 }

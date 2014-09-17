@@ -29,14 +29,22 @@ enum Notification: String {
 
 class DataStore {
     
-    var grades: [Grade] = []
+<<<<<<< HEAD
+    private var assignments: [Assignment] = []
+    private var grades: [Grade] = []
+=======
     var assignments: [Assignment] = []
     var classes: [Class] = []
+>>>>>>> a667eabfecc425d7ae055e6f251f0bd52faf3bec
     
     class var sharedInstance: DataStore {
         return _dataStore
     }
     
+<<<<<<< HEAD
+    // TODO: make improve betterness
+    func fetchAssignments() {
+=======
     func getAssignments() -> [Assignment] {
         return assignments
     }
@@ -60,12 +68,13 @@ class DataStore {
     
     func getClassesForToday() -> [Class] {
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate.date())
         let today = components.weekday
         return getClassesForDay(WeekDay.fromRaw(today)!)
     }
     
     private func getNetworkClient() -> NetworkClient? {
+>>>>>>> a667eabfecc425d7ae055e6f251f0bd52faf3bec
         let credentialManager = CredentialManager.sharedInstance
         if let (username, password) = credentialManager.getCredentials() {
             let networkClient = NetworkClient(username: username, password: password)
@@ -113,9 +122,12 @@ class DataStore {
             NSLog("Could not get network client")
         }
     }
+<<<<<<< HEAD
     
     func getGrades() -> [Grade] {
         return grades
     }
     
+=======
+>>>>>>> a667eabfecc425d7ae055e6f251f0bd52faf3bec
 }
