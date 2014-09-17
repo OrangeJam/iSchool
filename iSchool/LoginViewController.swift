@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
         NSLog("Success")
         let credentialManager = CredentialManager.sharedInstance
         credentialManager.storeCredentials(usernameField.text, passwordField.text)
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
