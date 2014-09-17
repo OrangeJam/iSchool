@@ -58,6 +58,7 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        NSLog("login screen")
         super.viewDidLoad()
     }
     
