@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="-56" y="-876"/>
         </scene>
-        <!--Item-->
+        <!--Assignments Table View Controller-->
         <scene sceneID="MYc-9g-xZG">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="uHq-x4-4Sx" customClass="AssignmentsTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,13 +92,13 @@
                             <outlet property="delegate" destination="uHq-x4-4Sx" id="Yts-R1-ci5"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="iO4-N7-jwr"/>
+                    <navigationItem key="navigationItem" id="nko-1n-Wj7"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8y-3m-TIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="-458"/>
+            <point key="canvasLocation" x="1552" y="-514"/>
         </scene>
-        <!--Item-->
+        <!--Grades-->
         <scene sceneID="uAZ-Xh-a1s">
             <objects>
                 <tableViewController id="t1w-Gb-QT5" customClass="GradesTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
@@ -136,11 +136,11 @@
                             <outlet property="delegate" destination="t1w-Gb-QT5" id="jEZ-8e-y9k"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="Doj-rs-4AX"/>
+                    <tabBarItem key="tabBarItem" title="Grades" id="Doj-rs-4AX"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1054" y="286"/>
+            <point key="canvasLocation" x="740" y="158"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="zg4-u5-Uh5">
@@ -153,14 +153,36 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="uHq-x4-4Sx" kind="relationship" relationship="viewControllers" id="diG-aF-aPb"/>
+                        <segue destination="n0c-RC-i2L" kind="relationship" relationship="viewControllers" id="diG-aF-aPb"/>
                         <segue destination="t1w-Gb-QT5" kind="relationship" relationship="viewControllers" id="EhI-oE-d8E"/>
                         <segue destination="Oac-LQ-yT7" kind="presentation" identifier="presentLoginView" id="uEF-YM-YUb"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wCR-T3-qQn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="-54"/>
+            <point key="canvasLocation" x="-770" y="-90"/>
+        </scene>
+        <!--Assignments-->
+        <scene sceneID="5hk-E5-FaL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n0c-RC-i2L" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Assignments" image="first" id="iO4-N7-jwr"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="arN-2I-PiE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uHq-x4-4Sx" kind="relationship" relationship="rootViewController" id="LRR-cI-kOX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vK1-MG-3ut" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="-514"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+    </resources>
 </document>
