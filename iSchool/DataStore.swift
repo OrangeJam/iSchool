@@ -41,6 +41,10 @@ class DataStore {
         return assignments
     }
     
+    func getGrades() -> [Grade] {
+        return grades
+    }
+    
     func getClasses() -> [Class] {
         return classes
     }
@@ -98,7 +102,7 @@ class DataStore {
     
     func fetchClasses() {
         if let networkClient = getNetworkClient() {
-            networkClient.fetchPage(Page.Assignments,
+            networkClient.fetchPage(Page.Timetable,
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
                     self.classes = Parser.parseClasses(responseData)
@@ -113,9 +117,4 @@ class DataStore {
             NSLog("Could not get network client")
         }
     }
-    
-    func getGrades() -> [Grade] {
-        return grades
-    }
-    
 }
