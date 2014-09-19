@@ -38,4 +38,20 @@ class NetworkClientTests: XCTestCase {
         
     }
     
+    func testFetchDetailsForAssignment() {
+        let assignment = Assignment(attrs: ["test", "test", "test",
+            "?page=Exe&ID=2.4&ViewMode=2&View=52&verkID=49265&fagid=26706", "test", "test"])
+        let expectation = expectationWithDescription(
+            "It should fetch the detailview for the given assignment"
+        )
+        networkClient.fetchDetailsForAssignment(assignment, { (operation, response) in
+            expectation.fulfill()
+            XCTAssertNotNil(response)
+            }, { (operation, error) in
+                XCTAssert(operation.response.statusCode == 401)
+                expectation.fulfill()
+        })
+        
+    }
+    
 }

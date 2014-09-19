@@ -33,4 +33,13 @@ class NetworkClient {
         )
     }
     
+    func fetchDetailsForAssignment(assignment: Assignment, successHandler:(AFHTTPRequestOperation!, AnyObject!) -> Void,
+        errorHandler:(AFHTTPRequestOperation!, NSError!) -> Void) {
+            let data = manager.GET(assignment.URL, parameters: nil,
+                success: successHandler,
+                failure: errorHandler
+            )
+    }
+    
+    
 }
