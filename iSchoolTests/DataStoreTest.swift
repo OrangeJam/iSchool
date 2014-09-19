@@ -29,20 +29,23 @@ class DataStoreTests: XCTestCase {
     }
     
     func testPostsNotificationOnFetchAssignments() {
-        let expectation = expectationWithDescription("Should recieve notification")
+        let notificationExpectation = expectationWithDescription("Should recieve notification")
         CredentialManager.sharedInstance.storeCredentials("test", "test")
-        NSNotificationCenter.defaultCenter().addObserverForName(
+        let observer = NSNotificationCenter.defaultCenter().addObserverForName(
             Notification.networkError.toRaw(),
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
-                expectation.fulfill()
+                NSLog("notification recieved!")
+                notificationExpectation.fulfill()
             }
         )
         DataStore.sharedInstance.fetchAssignments()
         waitForExpectationsWithTimeout(10, handler: { _ in
             
         })
+        NSNotificationCenter.defaultCenter().removeObserver(observer)
+        
     }
     
     func testGetClassesForDay() {
