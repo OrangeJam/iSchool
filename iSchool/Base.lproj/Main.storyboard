@@ -59,7 +59,7 @@
             </objects>
             <point key="canvasLocation" x="-56" y="-876"/>
         </scene>
-        <!--Assignments Table View Controller-->
+        <!--Assignments-->
         <scene sceneID="MYc-9g-xZG">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="uHq-x4-4Sx" customClass="AssignmentsTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
@@ -92,11 +92,31 @@
                             <outlet property="delegate" destination="uHq-x4-4Sx" id="Yts-R1-ci5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="nko-1n-Wj7"/>
+                    <navigationItem key="navigationItem" title="Assignments" id="nko-1n-Wj7">
+                        <barButtonItem key="backBarButtonItem" title="back" id="SSa-3Y-51E"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8y-3m-TIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1552" y="-514"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O3p-8w-8fI">
+            <objects>
+                <viewController id="QoG-HO-DuX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FNl-Fb-Leb"/>
+                        <viewControllerLayoutGuide type="bottom" id="ziw-1q-vUw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2ZP-Ov-nc6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hKk-ig-o51" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2401" y="-514"/>
         </scene>
         <!--Grades-->
         <scene sceneID="uAZ-Xh-a1s">

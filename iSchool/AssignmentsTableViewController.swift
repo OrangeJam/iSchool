@@ -18,13 +18,10 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.assignment.toRaw(),
-            object: nil,
-            queue: NSOperationQueue.mainQueue(),
-            usingBlock: { _ in
-                self.tableView.reloadData()
-            }
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "refreshData",
+            name: Notification.assignment.toRaw(),
+            object: nil
         )
         DataStore.sharedInstance.fetchAssignments()
         

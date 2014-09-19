@@ -1,0 +1,560 @@
+<html>
+<head>
+  <meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'>
+  <meta http-equiv='Expires' content='-1'>
+  <title>Innranet Háskólans í Reykjavík</title>
+  <script type="text/javascript" src="./system/js/jquery-1.3.2.min.js"></script>
+<link href='./system/include/ruTabs/ruTabs2.css' rel='stylesheet' type='text/css'>
+<script type='text/javascript' language='JavaScript' src='./system/include/calendar/ruPanels_calendar1.js'></script>
+ <link rel='stylesheet' href='./system/include/ruTabs/ruTabs2.css' type='text/css'>
+ <link rel='stylesheet' href='./System/skins/HR4/ruStyle.css'  type='text/css' media='screen'>
+ <link rel='stylesheet' href='./system/skins/ruTables.css' type='text/css'>
+ <link rel='stylesheet' href='./System/skins/HR4/print.css'    type='text/css' media='print'>
+ <script type='text/javascript' src='./system/skins/HR4/ruScript.js'></script>
+ <script type='text/javascript' src='./system/skins/HR4/fontSizer2-2.js'></script>
+<link rel='icon'          href='./System/skins/HR4/fav.ico' type='image/x-icon'>
+<link rel='shortcut icon' href='./System/skins/HR4/fav.ico' type='image/x-icon'>
+
+<body style='margin: 0px'>
+<!-- Header BEGIN --><div class='ruHeader'>
+<table width='100%' height='120' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+  <td rowspan='2' class='ruHeader_left' ><a href='./'><img src='./System/skins/HR4/sitelogo.jpg' height='100px' border=0 alt=''></a></td>
+  <td align='right' valign='top'>
+<div class='qnav'>
+<h2 class='boxhead'>Stoðval</h2>
+<div class='boxbody'>
+<ul class='level1'>
+<li class='cat1'><span id='datetime' class='cat'>&nbsp;</span></li>
+<li class='cat2'><span id='nomessages' class='cat'>Engin skilaboð</span><span id='messagecount' class='cat' style='display:none'><a href='?Page=Messages&Tab=1&ID=1'><span></span> skilaboð</a></span></li>
+<li class='cat3'><span id='nochats' class='cat'>Ekkert spjall</span><span id='chatcount' class='cat' style='display:none'><a href='?Page=Chat'><span></span> spjall</a></span></li>
+<li class='cat4'><span class='cat'><div id='fontControls'></div></span></li>
+<li class='cat4'><span class='cat'><a href='?Page=Front&lang=EN' id='englishbtn'>English</a></span></li>
+</ul>
+</div>
+</div>
+</td></tr><tr><td align='right' valign='bottom'>
+<div class='mnav'>
+<h2 class='boxhead'>Háskólinn í Reykjavík: Forsíða</h2>
+<div class='boxbody'>
+<ul class='level1'>
+<li class='home current homecurrent'><a href='/myschool/'>Innranet</a></li>
+<li class='cat1 branch'><a class='cat1' href='http://www.hr.is/'>WWW.HR.IS</a></li>
+<li class='cat2 branch'><a class='cat2' href='http://esja.ru.is/'>ESJA</a></li>
+<li class='cat3 branch'><a class='cat3' href='http://malid.hr.is/'>MÁLIÐ</a></li>
+<li class='cat4 branch'><a class='cat4' href='http://webmail.ru.is/'>VEFPÓSTUR</a></li>
+<li class='cat5 branch'>
+<a href='?Page=Login&Out' class='cat5' onClick='return confirm("Hætta í MySchool?");'>HÆTTA</a>
+</li>
+</ul>
+</div>
+</div>
+</td>
+</tr>
+<tr><td align='center'></td></tr>
+<tr><td align='right' colspan=3 class='ruSep' >
+<div id='personname'><span>Kári Tristan Helgason</span>, Tölvunarfræðideild</div>
+<form action='?Page=Search' method='post'>
+<input id='headersearch' name='searchtext' type='text' value='Leita...'>
+</form>
+</td></tr>
+</table>
+</div><!-- Header END -->	<table class='ruPage' border='0' align='center' cellspacing='0' cellpadding='0'>
+<script type='text/javascript'>
+function ruMenu_ToggleSlide(ID_Sub){
+  var rows = document.getElementsByTagName('*'), i=0, row;
+  while (row=rows[i++]) {
+    if (row.id == 'ruLeft_Sub'+ ID_Sub) {
+      if (row.style.display == '') row.style.display = 'none';
+      else row.style.display = '';
+    }
+  }
+}
+</script>
+	<!-- LEFT SECTION BEGINS-->
+	<!-- LEFT SECTION BEGINS--><td class=ruLeft ><div class='ruNotPrintable'>
+		<table cellpadding='2' cellspacing='0' border='0' class='menuStyle-first'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(1)'>Námið</a></td></tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/?PageID=2919' target='_blank' class='subMenu'>Almanak HR...</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.13' class='subMenu'>Bókalisti</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.14' class='subMenu'>Einkunnir</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Front' class='subMenu'>Forsíða</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.11' class='subMenu'>Hópar</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=2.19&Prog=3' class='subMenu'>Klúbbar</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=7' class='subMenu'>Námsferill</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_selected_cell'>&nbsp;</td>
+<td class='subMenu_selected_cell'><a href='?Page=Exe&ID=2.10' class='subMenu_selected'>Námskeið</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.17' class='subMenu'>Nýtt efni</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exams&ID=13' class='subMenu'>Próf</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.3' class='subMenu'>Próftafla</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Messages&Tab=1&ID=1' class='subMenu'>Skilaboð</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exchange' class='subMenu'>Skiptinám</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.2' class='subMenu'>Stundatafla</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=2.18&Prog=2' class='subMenu'>Stök námskeið</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.12' class='subMenu'>Verkefni</a></td>
+</tr>
+<tr id='ruLeft_Sub1'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.3' class='subMenu'>Öll námskeið</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(2)'>Skólinn</a></td></tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.8' class='subMenu'>Aðilar skóla</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Jobs' class='subMenu'>Atvinnuþjónustan</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=QA' class='subMenu'>Ábendingar</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/bokasafn/' target='_blank' class='subMenu'>Bókasafn...</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=3.1' class='subMenu'>Deildarfréttir</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=TV' class='subMenu'>Kennslustofur</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://www.ru.is/thjonusta/studentathjonusta/' target='_blank' class='subMenu'>Stúdentaþjónusta</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.9' class='subMenu'>Útskriftarnemendur</a></td>
+</tr>
+<tr id='ruLeft_Sub2'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.10' class='subMenu'>Þjóðskrá</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(3)'>Gögnin mín</a></td></tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr' class='subMenu'>Einkadrif</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&ID=1.5' class='subMenu'>Persónuupplýsingar</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://webmail.ru.is' target='_blank' class='subMenu'>Tölvupóstur...</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr&ID=2' class='subMenu'>U drif</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=FileMgr&ID=1' class='subMenu'>Vefsvæði</a></td>
+</tr>
+<tr id='ruLeft_Sub3'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='http://nemendur.ru.is/kari12/' target='_blank' class='subMenu'>Vefur...</a></td>
+</tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu' href='#'OnClick='javascript:ruMenu_ToggleSlide(4)'>Tæknileg aðstoð</a></td></tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='https://help.ru.is' target='_blank' class='subMenu'>Hjálp</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Help&Help=Mail' class='subMenu'>Hjálp v/MySchool</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Help&Help=docs' class='subMenu'>Leiðbeiningar</a></td>
+</tr>
+<tr id='ruLeft_Sub4'><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='Help\Nemenda_Handbok.pdf' class='subMenu'>MySchool aðstoð - nemendur</a></td>
+</tr>
+</table>
+	</div></td><!-- LEFT SECTION ENDS-->
+	<!-- LEFT SECTION ENDS-->
+	<!-- CONTENT BEGINS--><td width='100%' valign='top'>
+
+
+<script language="javascript">
+	var originalTitle;
+	function mysPrintContent(url)
+	{
+		document.execCommand( 'print', true );
+	}
+</script>
+
+
+
+
+
+
+<script language='javascript'>
+		function Insert()
+		{
+			window.document.forms['Verk'].ActType.value = 'INSERT';
+			window.document.forms['Verk'].submit();
+			return false;
+		}
+		function Update()
+		{
+			window.document.forms['Verk'].ActType.value = 'UPDATE';
+			window.document.forms['Verk'].submit();
+    		return false;
+		}
+		function EydaFaerslu(skilad, id_faerslu)
+		{
+			if(confirm('Það hafa '+skilad+' nemendur skilað verkefninu.Viltu örugglega eyða því ?'))
+			{
+				window.location = id_faerslu;
+			}
+		}
+		function DeleteFile(sHref)
+		{
+			if (confirm('Viltu örugglega eyða þessari skrá?'))
+			{
+				window.location.href = sHref;
+				return false;
+			}
+		}
+		function DeleteStudent(id_group, student)
+		{
+			if (confirm('Viltu örugglega eyða nemanda úr þessum hóp?'))
+			{
+				window.document.forms['std'].DelID.value = id_group;
+				window.document.forms['std'].DelStd.value = student;
+				window.document.forms['std'].submit();
+				return false;
+			}
+		}
+		function Skila(sHref)
+		{
+			document.forms['frmSkil'].action = sHref;
+			document.forms['frmSkil'].submit();
+		}
+	</script>
+<!-- table 1, ruContent_Begin -->
+<table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr><td valign='top' width='100%'>
+<!-- table 2, content begin -->
+<table width='100%' border='0' cellspacing='0' cellpadding='0' >
+  <tr valign='top'>  
+    <td width='10' height='44'>&nbsp;</td>
+    <td class='ruTableText' width='100%'>
+      <br>
+    <!-- table 1.1 -->
+    <table width='100%' border='0' cellspacing='0' cellpadding='0' >
+      <tr>
+        <td width='10' height='32'>&nbsp;</td>
+        <td valign='top' colspan='2' width='100%'><span class='ruContent'>Verkefni í T-409-TSAM, Tölvusamskipti, 2014-3</span></td>
+      </tr>
+      <tr>
+        <td width='100%' colspan='3'>
+          <table border='0' width='100%'><tr><td><div class='ruTabs'>
+<table width='100%' border='0' cellspacing='0' cellpadding='0' >
+  <tr><td valign='top'>
+    <div id='ruTabsNewcontainer'>
+      <ul class='ruTabsNew'>
+          <li style='z-index:101;' id='current'><span title='20143, T-409-TSAM (Computer Networks)'><a class='ruTabs'><span>Tölvusamskipti T...</span></a>
+</span></li>
+      </ul>
+    </div>
+  </td></tr>
+</table>
+</div>
+</td></tr></table>
+        </td>
+      </tr>
+    <!-- / table 1.1 -->
+    </table>
+<div class=ruContentPage>
+<center>
+      <form name='' id='' method='post' action='' >
+        <table border='0' cellspacing='0' cellpadding='0' width='100%' class='ruPanels'>
+	  <tr >
+	    <th width='10' height='20' class='ruPanelsTitle'>&nbsp;</th>
+	    <th width='100%' class='ruPanelsTitle' height='20' colspan='4'>hw3</th>
+	  </tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Skiladagur:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 >
+21.09.2014 23:59	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Lýsing:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Nánari lýsing:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+<table width='100%' cellpadding='0' cellspacing='0' border='0'>
+<tr> 
+  <th height='20' align='left' width='5'><img src='./system/images/spacer.gif' width='0' height='5'></th>
+  <th height='20' align='left' width='150'>Skrá</th>
+  <th height='20' align='left'>Stærð</th>
+  <th height='20' align='left' width='120'>Móttekin</th>
+  <th height='20' width='10'><img src='./system/images/spacer.gif' width='10' height='1'></th>
+</tr>
+<tr bgcolor='#FFFFFF'>
+  <td style='border-top: #CCCCCC 1px solid'>&nbsp;</td>
+  <td style='border-top: #CCCCCC 1px solid'><a href='?Page=Download&act=2&fagID=26711&verkID=49185&file=hw3%2Epdf' target='_blank'>hw3.pdf</a></td>
+  <td style='border-top: #CCCCCC 1px solid'>106.113&nbsp;</td>
+  <td style='border-top: #CCCCCC 1px solid'>12.09.2014 16:06</td>
+<td>&nbsp;</td>
+</tr>
+<tr bgcolor='#FFFFFF'>
+  <td style='border-top: #CCCCCC 1px solid'>&nbsp;</td>
+  <td style='border-top: #CCCCCC 1px solid'><a href='?Page=Download&act=2&fagID=26711&verkID=49185&file=tcp%2Dethereal%2Dtrace%2D1' target='_blank'>tcp-ethereal-trace-1</a></td>
+  <td style='border-top: #CCCCCC 1px solid'>181.283&nbsp;</td>
+  <td style='border-top: #CCCCCC 1px solid'>12.09.2014 16:06</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Vægi verkefnis:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+3 %	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Leyfðar skrár:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Fjöldi skráa:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+1	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+        </table>
+      </form>
+</center>
+<br><br><center>
+      <form name='form1' id='form1' method='post' action='?Page=LMS&ID=16&fagID=26711&View=52&ViewMode=2&Tab=&Act=11&verkID=49185' ENCTYPE='multipart/form-data' >
+        <table border='0' cellspacing='0' cellpadding='0' width='100%' class='ruPanels'>
+	  <tr >
+	    <th width='10' height='20' class='ruPanelsTitle'>&nbsp;</th>
+	    <th width='100%' class='ruPanelsTitle' height='20' colspan='4'>Skil</th>
+	  </tr>
+	<input type='hidden' name='IDReg' id='IDReg' value=''>
+	<input type='hidden' name='VerkID' id='VerkID' value='49185'>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Athugasemd til kennara:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+	<input type='hidden' name='hathugasemdnemanda' id='hathugasemdnemanda' value=''>
+<textarea name='athugasemdnemanda' style='width: 350px; height: 250px' onKeyDown='javascript:textCounter(this.form.athugasemdnemanda,this.form.len_athugasemdnemanda,5000);' onKeyUp='javascript:textCounter(this.form.athugasemdnemanda,this.form.len_athugasemdnemanda,5000);'></textarea>
+<input readonly type=text name='len_athugasemdnemanda' size=7 maxlength=10 value='5000'> stafir eru eftir	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Skrá(r):&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+Engar skrár fundust	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	  <tr> 
+	    <td width='10'  align='left' height='20'>&nbsp;</td>
+	    <td width='100' align='right' height='20' valign='top' nowrap><div class='ruPanelsLabel'>Skrá til að skila:&nbsp;&nbsp;&nbsp;</div>
+</td>
+	    <td width='475' align='left'  height='20' valign='top' colspan=1 nowrap>
+	<input type='hidden' name='hFILE' id='hFILE' value='Student'>
+<input type='file'   name='FILE' size=39 style='width: 350px' Value='Student' >
+	  </td>
+	  <td  width='10' align='left' height='20'>&nbsp;</td>
+	</tr>
+	<input type='hidden' name='Student' id='Student' value='1'>
+	  <tr valign='top' >
+	    <td width='10'>&nbsp;</td>
+	    <td width='100' height='20'   >&nbsp;</td>
+	    <td width='475' align='left' > <br>
+	      <input type='submit'  value='Skrá' name='ruCommit' style='width:80px' >
+	      <br><br>
+	    </td>
+	    <td width='10' height='20'       >&nbsp;</td>
+	  </tr>
+        </table>
+      </form>
+</center>
+<script language='JavaScript'>
+function textCounter(field, countfield, maxlimit) {
+  if (field.value.length > maxlimit)
+    field.value = field.value.substring(0, maxlimit);
+  else 
+    countfield.value = maxlimit - field.value.length;
+}
+</script>
+<br></div>
+     </td>
+    <td width='10'>&nbsp;</td>
+  </tr>
+<!-- / table 2, content begin -->
+</table>
+    </td>
+	<!-- RIGHT MENU BEGINS --><td valign='top' class='ruRight'><div class='ruNotPrintable'>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle-first'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu'>Um námskeiðið</a></td></tr><tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=2.10&amp;FagID=26711&amp;View=10&amp;ViewMode=2&amp;Tab=' class='subMenu'>Forsíða</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=1&amp;FagID=26711&amp;View=11&amp;ViewMode=2&amp;Tab=' class='subMenu'>Tilkynningar</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=2&amp;FagID=26711&amp;View=21&amp;ViewMode=2&amp;Tab=' class='subMenu'>Hæfniviðmið <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=3&amp;FagID=26711&amp;View=22&amp;ViewMode=2&amp;Tab=' class='subMenu'>Lýsing <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=4&amp;FagID=26711&amp;View=25&amp;ViewMode=2&amp;Tab=' class='subMenu'>Kennsluaðferð <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=5&amp;FagID=26711&amp;View=24&amp;ViewMode=2&amp;Tab=' class='subMenu'>Námsmat <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=6&amp;FagID=26711&amp;View=26&amp;ViewMode=2&amp;Tab=' class='subMenu'>Kennsluáætlun <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=7&amp;FagID=26711&amp;View=23&amp;ViewMode=2&amp;Tab=' class='subMenu'>Stundaskrá</a></td></tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu'>Nemendur</a></td></tr><tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=8&amp;FagID=26711&amp;View=41&amp;ViewMode=2&amp;Tab=' class='subMenu'>Nemendalisti</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=9&amp;FagID=26711&amp;View=46&amp;ViewMode=2&amp;Tab=' class='subMenu'>Viðvera</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=11&amp;FagID=26711&amp;View=43&amp;ViewMode=2&amp;Tab=' class='subMenu'>Einkunnir <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=2.2&amp;FagID=26711&amp;View=44&amp;ViewMode=2&amp;Tab=' class='subMenu'>Senda póst</a></td></tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu'>Kennsluefni</a></td></tr><tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=14&amp;FagID=26711&amp;View=31&amp;ViewMode=2&amp;Tab=' class='subMenu'>Bækur</a></td></tr>
+<tr><td class='subMenu_selected_cell'>&nbsp;</td>
+<td class='subMenu_selected_cell'><a href='?Page=LMS&amp;ID=16&amp;FagID=26711&amp;View=52&amp;ViewMode=2&amp;Tab=' class='subMenu_selected'>Verkefni <b>*</b></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exams&amp;ID=25&amp;FagID=26711&amp;View=55&amp;ViewMode=2&amp;Tab=' class='subMenu'>Próf</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exams&amp;ID=3&amp;FagID=26711&amp;View=57&amp;ViewMode=2&amp;Tab=' class='subMenu'>Spurningar</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=20&amp;FagID=26711&amp;View=53&amp;ViewMode=2&amp;Tab=' class='subMenu'>Umræðuþræðir</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=23&amp;FagID=26711&amp;View=59&amp;ViewMode=2&amp;Tab=' class='subMenu'>Prófabanki</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=22&amp;FagID=26711&amp;View=58&amp;ViewMode=2&amp;Tab=' class='subMenu'>Glósur</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=15&amp;FagID=26711&amp;MenuID=0&amp;View=51&amp;ViewMode=2&amp;Tab=' class='subMenu'>Fyrirlestrar</a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=LMS&amp;ID=21&amp;FagID=26711&amp;MenuID=0&amp;View=54&amp;ViewMode=2&amp;Tab=' class='subMenu'>Annað efni</a></td></tr>
+<tr><td>&nbsp;</td>
+<td class='subMenu_cell'></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='javascript:mysPrintContent("")' class='subMenu'>[Prenta síðu]</a></td></tr>
+</table>
+	<table cellpadding='2' cellspacing='0' border='0' class='menuStyle'>
+<tr><td class='mainMenu_cell' align='center'>&nbsp;</td>
+<td class='mainMenu_cell' nowrap colspan=2>
+<a class='mainMenu'>Tengdur</a></td></tr><tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=316164&amp;iNami=True' class='subMenu'><small>Anna Berglind Jónsdó</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=176610&amp;iNami=True' class='subMenu'><small>Björn Halldór Helgas</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=2&amp;User=86267' class='subMenu'><small>Björn Orri Sæmundsso</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=325436&amp;iNami=True' class='subMenu'><small>Daníel Agnarsson</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=145903&amp;iNami=True' class='subMenu'><small>Freyr Friðfinnsson</small></a></td></tr>
+<tr><td class='subMenu_selected_cell'>&nbsp;</td>
+<td class='subMenu_selected_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=275588&amp;iNami=True' class='subMenu_selected'><small>Gadidjah Margrét Ögm</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=212363&amp;iNami=True' class='subMenu'><small>Gunnhildur Finnsdótt</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=101323&amp;iNami=True' class='subMenu'><small>Halldór Snær Kristjá</small></a></td></tr>
+<tr><td class='subMenu_selected_cell'>&nbsp;</td>
+<td class='subMenu_selected_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=138997&amp;iNami=True' class='subMenu_selected'><small>Kári Tristan Helgaso</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=96967&amp;iNami=True' class='subMenu'><small>Kristinn Björgvin Ár</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=60307&amp;iNami=True' class='subMenu'><small>Kristján Árni Gerhar</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=54455&amp;iNami=True' class='subMenu'><small>Kristrún Louise Ástv</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=94241&amp;iNami=True' class='subMenu'><small>Óli Þór Arnarson</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=148614&amp;iNami=True' class='subMenu'><small>Sigrún Inga Ólafsdót</small></a></td></tr>
+<tr><td class='subMenu_cell'>&nbsp;</td>
+<td class='subMenu_cell'><a href='?Page=Exe&amp;ID=1.8&amp;Action=1&amp;User=18265&amp;iNami=True' class='subMenu'><small>Þórhildur Guðný Sigþ</small></a></td></tr>
+</table>
+	</div></td><!-- RIGHT MENU ENDS -->
+  </tr>
+<!-- / table 1, ruContent_End -->
+</table>
+	</td><!-- CONTENT ENDS-->
+	</td></tr></table>
+<div id='footer' class='ruFooter'>Háskólinn í Reykjavík | Menntavegi 1 | 101 Reykjavík | Sími/Tel: +354 599 6200 | Fax: +354 599 6201 | <a href='mailto:ru@ru.is'>ru@ru.is</a> | © MySchool 2014</div>
+<script type='text/javascript'>
+$(function() {
+	if (document.forms.length < 1) { return; }
+	for (var j = 0; j < document.forms[0].length; j++) {
+		var elm = document.forms[0].elements[j];
+	  if (elm.type.toLowerCase() != 'hidden' && elm.disabled != true && elm.name !== 'searchtext') {
+	    elm.focus();
+	    j = document.forms[0].length;
+	  }
+	}
+});
+</script>
+</body>
+</html>

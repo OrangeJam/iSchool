@@ -19,23 +19,15 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.grade.toRaw(),
-            object: nil,
-            queue: NSOperationQueue.mainQueue(),
-            usingBlock: { _ in
-                self.tableView.reloadData()
-                NSLog("Reloading data")
-            }
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "reloadData",
+            name: Notification.classes.toRaw(),
+            object: nil
         )
-        NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.networkError.toRaw(),
-            object: nil,
-            queue: NSOperationQueue.mainQueue(),
-            usingBlock: { _ in
-                let alert = UIAlertView(title: "Network Error", message: "Myschool has shit itself", delegate: self, cancelButtonTitle: "Fuck off")
-                alert.show()
-            }
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "showNetworkErrorAlert",
+            name: Notification.networkError.toRaw(),
+            object: nil
         )
         DataStore.sharedInstance.fetchAssignments()
     }
@@ -58,6 +50,15 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         cell.nameLabel.text = grades[indexPath.row].name
         cell.gradeLabel.text = grades[indexPath.row].grade.description
         return cell
+    }
+    
+    func reloadData() {
+        self.tableView.reloadData()
+    }
+    
+    func showNetworkErrorAlert() {
+        let alert = UIAlertView(title: "Network Error", message: "Myschool has shit itself", delegate: self, cancelButtonTitle: "Fuck off")
+        alert.show()
     }
 
 }
