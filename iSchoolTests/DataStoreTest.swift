@@ -65,7 +65,7 @@ class DataStoreTests: XCTestCase {
     
     func testGetClassesForToday() {
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
-        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate.date())
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
         
         let dataStore = DataStoreMock()

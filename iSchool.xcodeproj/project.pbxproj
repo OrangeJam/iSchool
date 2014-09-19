@@ -22,13 +22,20 @@
 		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
 		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
+		F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
+		F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
+		F53870B019BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
+		F53870B119BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
+		F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */; };
+		F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */; };
 		F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
 		F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */; };
+		F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */; };
 		F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */ = {isa = PBXBuildFile; fileRef = F594C59D19B76925001C5AD4 /* assignmentsPage.html */; };
@@ -67,7 +74,9 @@
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManager.swift; sourceTree = "<group>"; };
 		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
 		B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
 		F531C15219B71E1B00193A4F /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
+		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F53B591719AB8E0200ACF507 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +84,9 @@
 		F53B592019AB8E0200ACF507 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F53B592619AB8E0200ACF507 /* iSchoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSchoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B592B19AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsTableViewController.swift; sourceTree = "<group>"; };
+		F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lotsOfGradesNoAssignments.html; sourceTree = "<group>"; };
 		F58176FA19BB5BF8002C66CD /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		F594C59D19B76925001C5AD4 /* assignmentsPage.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentsPage.html; sourceTree = "<group>"; };
 		F59FE08619B752A3004F4151 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -117,6 +128,7 @@
 		9826BAC419B8ABE800E469F7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F53870AF19BDF13F0070D6ED /* Grade.swift */,
 				F58176FA19BB5BF8002C66CD /* Assignment.swift */,
 				9826BAC519B8AC4200E469F7 /* Class.swift */,
 			);
@@ -167,6 +179,10 @@
 			children = (
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */,
+				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
+				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
+				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
+				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
 				F5C22B3E19B7233C00E4D595 /* NetworkClient.swift */,
 				98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */,
 				F59FE08619B752A3004F4151 /* Parser.swift */,
@@ -215,6 +231,7 @@
 		F594C59C19B7681B001C5AD4 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
+				F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */,
 				98D28A3019BB7731008B3EB9 /* timetable_exams.html */,
 				98D28A3119BB7731008B3EB9 /* timetable_normal.html */,
 				F594C59D19B76925001C5AD4 /* assignmentsPage.html */,
@@ -319,6 +336,7 @@
 				F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */,
 				F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */,
 				98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */,
+				F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,9 +410,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
+				F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */,
+				F53870B019BDF13F0070D6ED /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
 				98A9B9B419C1F24F00980124 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
@@ -418,13 +439,16 @@
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,
 				F5CD976219BDC41300CEF3ED /* DataStoreTest.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
+				F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
+				F53870B119BDF13F0070D6ED /* Grade.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,
 				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5C22B4219B7235100E4D595 /* NetworkClientTests.swift in Sources */,
 				F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */,
 				F59FE08819B752A3004F4151 /* Parser.swift in Sources */,
+				F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
