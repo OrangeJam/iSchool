@@ -15,6 +15,11 @@ class ParserTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
+        let filePath = NSBundle(forClass: self.dynamicType).pathForResource("TestCredentials", ofType: "plist")
+        let credentials = NSDictionary(contentsOfFile:filePath!)
+        let username = credentials.valueForKey("Username") as String
+        let password = credentials.valueForKey("Password") as String
+        CredentialManager.sharedInstance.storeCredentials(username, password)
     }
     
     override func tearDown() {
