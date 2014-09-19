@@ -21,6 +21,11 @@ class DataStoreTests: XCTestCase {
     }
     
     override func setUp() {
+        let filePath = NSBundle(forClass: self.dynamicType).pathForResource("TestCredentials", ofType:"plist")
+        let credentials = NSDictionary(contentsOfFile:filePath!)
+        let username = credentials.valueForKey("Username") as String
+        let password = credentials.valueForKey("Password") as String
+        CredentialManager.sharedInstance.storeCredentials(username, password)
         super.setUp()
     }
     
@@ -30,9 +35,8 @@ class DataStoreTests: XCTestCase {
     
     func testPostsNotificationOnFetchAssignments() {
         let notificationExpectation = expectationWithDescription("Should recieve notification")
-        CredentialManager.sharedInstance.storeCredentials("test", "test")
         let observer = NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.networkError.toRaw(),
+            Notification.assignment.toRaw(),
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
