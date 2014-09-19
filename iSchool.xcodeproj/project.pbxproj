@@ -21,6 +21,7 @@
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
 		F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */; };
+		F50296C419CC3C5200A12AF5 /* TestCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50296C319CC3C5200A12AF5 /* TestCredentials.plist */; };
 		F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
@@ -72,6 +73,7 @@
 		B54BB0D4308F4FF8B2624778 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		F50296BF19CC377300A12AF5 /* assignmentDetailView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailView.html; sourceTree = "<group>"; };
 		F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailViewWithDesc.html; sourceTree = "<group>"; };
+		F50296C319CC3C5200A12AF5 /* TestCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestCredentials.plist; sourceTree = "<group>"; };
 		F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
 		F531C15219B71E1B00193A4F /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bridge.h; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F53B592B19AB8E0200ACF507 /* Info.plist */,
+				F50296C319CC3C5200A12AF5 /* TestCredentials.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */,
 				98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */,
 				F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */,
+				F50296C419CC3C5200A12AF5 /* TestCredentials.plist in Resources */,
 				F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */,
 				F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */,
 			);
