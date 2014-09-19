@@ -16,7 +16,7 @@ class MainTabBarController : UITabBarController {
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
-                self.performSegueWithIdentifier("presentLoginView", sender: self)
+                self.presentLoginView()
             }
         )
         super.viewDidLoad()
@@ -24,10 +24,13 @@ class MainTabBarController : UITabBarController {
     
     override func viewDidAppear(animated: Bool) {
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
-            println("Creds: \(credentials)")
             DataStore.sharedInstance.fetchAssignments()
         } else {
-            performSegueWithIdentifier("presentLoginView", sender: self)
+            presentLoginView()
         }
+    }
+    
+    func presentLoginView() {
+        performSegueWithIdentifier("presentLoginView", sender: self)
     }
 }
