@@ -8,6 +8,8 @@
 
 import Foundation
 
+private let baseURL = "https://myschool.ru.is/myschool/"
+
 struct Assignment {
     var dueDate             = NSDate()
     var handedIn            = false
@@ -28,7 +30,7 @@ struct Assignment {
         }
         courseName = attrs[2]
         courseIdentifier = attrs[3]
-        URL = attrs[4]
+        URL = baseURL + attrs[4]
         name = attrs[5]
     }
 }
