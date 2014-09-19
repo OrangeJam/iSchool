@@ -14,6 +14,11 @@ class NetworkClientTests: XCTestCase {
     var networkClient = NetworkClient(username: "test", password: "test")
     
     override func setUp() {
+        let filePath = NSBundle(forClass: self.dynamicType).pathForResource("TestCredentials", ofType:"plist")
+        let credentials = NSDictionary(contentsOfFile:filePath!)
+        let username = credentials.valueForKey("Username") as String
+        let password = credentials.valueForKey("Password") as String
+        networkClient = NetworkClient(username: username, password: password)
         super.setUp()
     }
     
@@ -28,8 +33,7 @@ class NetworkClientTests: XCTestCase {
             expectation.fulfill()
             XCTAssertNotNil(response)
         }, { (operation, error) in
-            XCTAssert(operation.response.statusCode == 401)
-            expectation.fulfill()
+            NSLog("Error: \(error.description)")
         })
         
         waitForExpectationsWithTimeout(networkClient.timeoutInterval, handler: { error in
@@ -47,9 +51,8 @@ class NetworkClientTests: XCTestCase {
         networkClient.fetchDetailsForAssignment(assignment, { (operation, response) in
             expectation.fulfill()
             XCTAssertNotNil(response)
-            }, { (operation, error) in
-                XCTAssert(operation.response.statusCode == 401)
-                expectation.fulfill()
+        }, { (operation, error) in
+            NSLog("Error: \(error.description)")
         })
         
     }
