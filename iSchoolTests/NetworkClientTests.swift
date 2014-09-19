@@ -34,6 +34,7 @@ class NetworkClientTests: XCTestCase {
             XCTAssertNotNil(response)
         }, { (operation, error) in
             NSLog("Error: \(error.description)")
+            XCTFail("An error occured")
         })
         
         waitForExpectationsWithTimeout(networkClient.timeoutInterval, handler: { error in
@@ -43,8 +44,8 @@ class NetworkClientTests: XCTestCase {
     }
     
     func testFetchDetailsForAssignment() {
-        let assignment = Assignment(attrs: ["test", "test", "test",
-            "?page=Exe&ID=2.4&ViewMode=2&View=52&verkID=49265&fagid=26706", "test", "test"])
+        let assignment = Assignment(attrs: ["test", "test", "test", "test",
+            "?page=Exe&ID=2.4&ViewMode=2&View=52&verkID=49265&fagid=26706", "test"])
         let expectation = expectationWithDescription(
             "It should fetch the detailview for the given assignment"
         )
@@ -53,6 +54,10 @@ class NetworkClientTests: XCTestCase {
             XCTAssertNotNil(response)
         }, { (operation, error) in
             NSLog("Error: \(error.description)")
+            XCTFail("An error occured")
+        })
+        waitForExpectationsWithTimeout(networkClient.timeoutInterval, handler: { error in
+            
         })
         
     }
