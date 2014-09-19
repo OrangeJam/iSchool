@@ -10,6 +10,10 @@ import Foundation
 
 private let baseURL = "https://myschool.ru.is/myschool/"
 
+struct AssignmentDetails {
+    
+}
+
 struct Assignment {
     var dueDate             = NSDate()
     var handedIn            = false
@@ -17,6 +21,10 @@ struct Assignment {
     var courseIdentifier    = ""
     var URL                 = ""
     var name                = ""
+    var description: String?
+    var weight: String?
+    var attachedFiles: [String]?
+    
     
     // I wish I had a better way to do this
     init(attrs: [String]){
