@@ -8,12 +8,18 @@
 
 import UIKit
 
-class TimetablePageViewController: UIPageViewController {
+class TimetablePageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.dataSource = self
+        
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
+        let today = components.weekday
+        let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: today)!)
+        let viewControllers = [initialViewController]
+        self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +27,26 @@ class TimetablePageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
+       let viewController = storyboard.instantiateViewControllerWithIdentifier("TimetableTableViewController") as TimetableTableViewController
+        viewController.weekDay = weekDay
+        return viewController
     }
-    */
-
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+        let weekDay = (viewController as TimetableTableViewController).weekDay!
+        if weekDay == WeekDay.Sunday {
+            return nil;
+        }
+        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue - 1)!)
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+        let weekDay = (viewController as TimetableTableViewController).weekDay!
+        if weekDay == WeekDay.Saturday {
+            return nil;
+        }
+        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue + 1)!)
+    }
 }

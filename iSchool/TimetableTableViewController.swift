@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimetableTableViewController: UITableViewController {
+class TimetableTableViewController: UITableViewController, UITableViewDataSource {
 
     var weekDay: WeekDay? = nil
     

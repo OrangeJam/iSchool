@@ -10,8 +10,10 @@ import UIKit
 
 class MainTabBarController : UITabBarController {
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
+            DataStore.sharedInstance.fetchClasses()
             DataStore.sharedInstance.fetchAssignments()
         } else {
             performSegueWithIdentifier("presentLoginView", sender: self)
