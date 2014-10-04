@@ -20,7 +20,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.grade.toRaw(),
+            Notification.grade.rawValue,
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
@@ -29,7 +29,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             }
         )
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.networkError.toRaw(),
+            Notification.networkError.rawValue,
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in

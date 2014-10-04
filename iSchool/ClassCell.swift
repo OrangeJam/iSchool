@@ -26,7 +26,7 @@ class ClassCell: UITableViewCell {
         // Set the label texts
         courseLabel.text = c.course
         locationLabel.text = c.location
-        typeLabel.text = c.type.toRaw()
+        typeLabel.text = c.type.rawValue
         startLabel.text = startString
         endLabel.text = endString
     }
