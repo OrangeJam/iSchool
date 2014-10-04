@@ -15,6 +15,7 @@ class ClassCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var startLabel: UILabel!
     @IBOutlet weak var endLabel: UILabel!
+    @IBOutlet weak var typeImage: UIImageView!
     
     func setClass(c: Class) {
         // Format the date strings

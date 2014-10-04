@@ -21,11 +21,6 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
