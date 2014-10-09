@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40E9D35EBF9746AEA9D1C5A1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
-		6B3DFF76019CC2426532A8B7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		7118E20BA18C42F68B96C96C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
 		9826BAC619B8AC4200E469F7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826BAC519B8AC4200E469F7 /* Class.swift */; };
 		9826BAC719B8AC4200E469F7 /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826BAC519B8AC4200E469F7 /* Class.swift */; };
@@ -203,7 +201,6 @@
 			files = (
 				F588A3D319E5A20200106BC1 /* iSchoolFramework.framework in Frameworks */,
 				F50296CB19CC80FC00A12AF5 /* NotificationCenter.framework in Frameworks */,
-				6B3DFF76019CC2426532A8B7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +208,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40E9D35EBF9746AEA9D1C5A1 /* libPods.a in Frameworks */,
 				F56FC84C19E584F6005C1F1B /* iSchoolFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
