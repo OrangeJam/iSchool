@@ -20,6 +20,8 @@ class MainTabBarController : UITabBarController {
                 self.presentLoginView()
             }
         )
+    }
+    override func viewDidAppear(animated: Bool) {
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
             DataStore.sharedInstance.fetchAssignments()
         } else {
