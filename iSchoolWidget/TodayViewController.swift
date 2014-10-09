@@ -17,19 +17,42 @@ class TodayTableViewCell: UITableViewCell {
 class TodayViewController: UITableViewController, NCWidgetProviding {
     
     var items: [Assignment]?
+    
+    var loggedIn : Bool = {
+            if let _ = CredentialManager.sharedInstance.getCredentials() {
+                return true
+            } else {
+                return false
+            }
+        }()
+    
+    let loginButton = UIButton()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 40
+        loginButton.addTarget(self, action: "toggleExpand", forControlEvents: .TouchUpInside)
+        loginButton.setTitle("Login", forState: .Normal)
+        loginButton.titleLabel?.font = UIFont.systemFontOfSize(20)
+        updateFooterHeight()
         updatePreferredContentSize()
         // Do any additional setup after loading the view from its nib.
     }
     
     func updatePreferredContentSize() {
         preferredContentSize = CGSizeMake(CGFloat(0),
-            CGFloat(tableView(tableView, numberOfRowsInSection: 0)) * tableView.rowHeight
+            CGFloat(tableView(tableView, numberOfRowsInSection: 0)) * tableView.rowHeight +
+            tableView.sectionFooterHeight
         )
+    }
+    
+    func updateFooterHeight() {
+        tableView.sectionFooterHeight = loggedIn ? 0 : 40
+    }
+    
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return loggedIn ? nil : loginButton
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,12 +73,13 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
         if let (username, password) = CredentialManager.sharedInstance.getCredentials() {
             let networkClient = NetworkClient(username: username, password: password)
-            networkClient.fetchPage(Page.Assignments,
+            networkClient.fetchPage(.Assignments,
                 successHandler: { (operation, response) in
-                    let data = Parser.parseAssignments(response as NSData)
-                    if self.hasNewData(data) {
-                        self.items = data
-                        self.tableView .reloadData()
+                    let responseData = NSData(data: response as NSData)
+                    let assignments = Parser.parseAssignments(responseData)
+                    if self.hasNewData(assignments) {
+                        self.items = assignments
+                        self.tableView.reloadData()
                         self.updatePreferredContentSize()
                         completionHandler(.NewData)
                     } else {
@@ -63,10 +87,14 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
                     }
                 },
                 errorHandler: { (operation, error) in
-                    NSLog("AW =(")
+                    println("AW =(")
                     completionHandler(.Failed)
                 }
             )
+        } else {
+            println("No credentials stored.")
+            loggedIn = false
+            completionHandler(.Failed)
         }
 
     }
