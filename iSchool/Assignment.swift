@@ -10,11 +10,7 @@ import Foundation
 
 private let baseURL = "https://myschool.ru.is/myschool/"
 
-struct AssignmentDetails {
-    
-}
-
-struct Assignment {
+struct Assignment : Equatable {
     var dueDate             = NSDate()
     var handedIn            = false
     var courseName          = ""
@@ -41,4 +37,15 @@ struct Assignment {
         URL = baseURL + attrs[4]
         name = attrs[5]
     }
+}
+
+ // MARK: Equatable
+
+func == (lhs: Assignment, rhs: Assignment) -> Bool {
+    return  lhs.dueDate == rhs.dueDate &&
+        lhs.handedIn == rhs.handedIn &&
+        lhs.courseName == rhs.courseName &&
+        lhs.courseIdentifier == rhs.courseIdentifier &&
+        lhs.URL == rhs.URL &&
+        lhs.name == rhs.name
 }
