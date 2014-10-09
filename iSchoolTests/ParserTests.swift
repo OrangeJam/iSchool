@@ -129,18 +129,4 @@ class ParserTests: XCTestCase {
             XCTFail("Could not test class (exam) at index 6")
         }
     }
-    
-    func testParseAssignmentDetails() {
-        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentDetailView", ofType: "html")!
-        let data = NSData(contentsOfFile: testDataPath)
-        let assignment = Assignment(attrs: ["test", "test", "test", "test",
-            "?page=Exe&ID=2.4&ViewMode=2&View=52&verkID=49265&fagid=26706", "test"])
-        Parser.parseAssignmentDetails(data, assignment: assignment)
-        XCTAssertNil(assignment.description, "Description should be nil")
-        if let filecount = assignment.attachedFiles?.count {
-            XCTAssertEqual(assignment.attachedFiles!.count, 2, "There should be two attached files")
-        } else {
-            XCTFail("There were no attached files")
-        }
-    }
 }

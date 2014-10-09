@@ -9,15 +9,40 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>iSchoolFramework.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>iSchoolWidget.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>F50296C819CC80FC00A12AF5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>F53B591119AB8E0200ACF507</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>F53B592519AB8E0200ACF507</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F56FC82019E57ADC005C1F1B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F56FC82A19E57ADC005C1F1B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
