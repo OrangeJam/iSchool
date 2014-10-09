@@ -17,6 +17,7 @@ class TodayTableViewCell: UITableViewCell {
 class TodayViewController: UITableViewController, NCWidgetProviding {
     
     var items: [Assignment]?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,14 +48,46 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
-        let items = DataStore.sharedInstance.getAssignments()
-        completionHandler(.NewData)
+        if let (username, password) = CredentialManager.sharedInstance.getCredentials() {
+            let networkClient = NetworkClient(username: username, password: password)
+            networkClient.fetchPage(Page.Assignments,
+                successHandler: { (operation, response) in
+                    let data = Parser.parseAssignments(response as NSData)
+                    if self.hasNewData(data) {
+                        self.items = data
+                        self.tableView .reloadData()
+                        self.updatePreferredContentSize()
+                        completionHandler(.NewData)
+                    } else {
+                        completionHandler(.NoData)
+                    }
+                },
+                errorHandler: { (operation, error) in
+                    NSLog("AW =(")
+                    completionHandler(.Failed)
+                }
+            )
+        }
+
+    }
+    
+    func hasNewData(data: [Assignment]) -> Bool {
+        if let items = self.items {
+            if items.count == data.count {
+                for idx in 0..<items.count {
+                    if items[idx] != data[idx] {
+                        return false
+                    }
+                }
+            }
+        }
+        return true
     }
     
     // MARK: TableView data source
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return (items != nil) ? items!.count : 0
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -66,7 +99,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         if let data = items {
             cell.nameLabel.text = data[indexPath.row].name
         }
-        
         return cell
     }
     

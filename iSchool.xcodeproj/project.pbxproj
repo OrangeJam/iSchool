@@ -31,8 +31,6 @@
 		F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
-		F53870B019BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
-		F53870B119BDF13F0070D6ED /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
@@ -43,8 +41,6 @@
 		F56FC82C19E57ADC005C1F1B /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
 		F56FC83519E57ADC005C1F1B /* iSchoolFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F56FC83419E57ADC005C1F1B /* iSchoolFrameworkTests.swift */; };
 		F56FC84519E5809D005C1F1B /* Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9826BAC519B8AC4200E469F7 /* Class.swift */; };
-		F56FC84619E580A0005C1F1B /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
-		F56FC84719E580A3005C1F1B /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
 		F56FC84819E580A5005C1F1B /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
 		F56FC84919E580A8005C1F1B /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5C22B3E19B7233C00E4D595 /* NetworkClient.swift */; };
 		F56FC84A19E580AB005C1F1B /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */; };
@@ -52,11 +48,15 @@
 		F56FC84C19E584F6005C1F1B /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
 		F56FC84D19E584F6005C1F1B /* iSchoolFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */; };
-		F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
-		F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
 		F588A3CE19E5985000106BC1 /* iSchoolWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F50296C919CC80FC00A12AF5 /* iSchoolWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F588A3D219E598B300106BC1 /* iSchoolFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F56FC82519E57ADC005C1F1B /* iSchoolFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F588A3D319E5A20200106BC1 /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
+		F588A3D919E68F6B00106BC1 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
+		F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
+		F588A3DB19E68F6C00106BC1 /* Assignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58176FA19BB5BF8002C66CD /* Assignment.swift */; };
+		F588A3DC19E68F7100106BC1 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
+		F588A3DD19E68F7200106BC1 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
+		F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53870AF19BDF13F0070D6ED /* Grade.swift */; };
 		F594C59E19B76925001C5AD4 /* assignmentsPage.html in Resources */ = {isa = PBXBuildFile; fileRef = F594C59D19B76925001C5AD4 /* assignmentsPage.html */; };
 		F59FE08719B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
 		F59FE08819B752A3004F4151 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F59FE08619B752A3004F4151 /* Parser.swift */; };
@@ -762,9 +762,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F56FC84B19E580AD005C1F1B /* CredentialManager.swift in Sources */,
+				F588A3DC19E68F7100106BC1 /* Grade.swift in Sources */,
+				F588A3D919E68F6B00106BC1 /* Assignment.swift in Sources */,
 				F56FC84A19E580AB005C1F1B /* DataStore.swift in Sources */,
-				F56FC84619E580A0005C1F1B /* Assignment.swift in Sources */,
-				F56FC84719E580A3005C1F1B /* Grade.swift in Sources */,
 				F56FC84819E580A5005C1F1B /* Parser.swift in Sources */,
 				F56FC84519E5809D005C1F1B /* Class.swift in Sources */,
 				F50296D019CC80FC00A12AF5 /* TodayViewController.swift in Sources */,
@@ -779,9 +779,9 @@
 				F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
 				F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
+				F588A3DB19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
-				F58176FB19BB5BF8002C66CD /* Assignment.swift in Sources */,
-				F53870B019BDF13F0070D6ED /* Grade.swift in Sources */,
+				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
@@ -799,17 +799,17 @@
 				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
+				F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,
 				F5CD976219BDC41300CEF3ED /* DataStoreTest.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
 				F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
-				F53870B119BDF13F0070D6ED /* Grade.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
+				F588A3DD19E68F7200106BC1 /* Grade.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,
 				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5C22B4219B7235100E4D595 /* NetworkClientTests.swift in Sources */,
-				F58176FC19BB5BF8002C66CD /* Assignment.swift in Sources */,
 				F59FE08819B752A3004F4151 /* Parser.swift in Sources */,
 				F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 			);
