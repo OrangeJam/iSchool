@@ -18,6 +18,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 44
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.toRaw(),
@@ -44,11 +45,6 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
         cell.nameLabel.text = assignments[indexPath.row].name
         return cell
-    }
-    
-    // Hopefully this will not be required, might be an XCode 6 bug
-    override func tableView(tableView:UITableView, heightForRowAtIndexPath indexPath:NSIndexPath)-> CGFloat {
-        return 44
     }
     
     func refreshData() {
