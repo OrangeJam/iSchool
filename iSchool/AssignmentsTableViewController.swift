@@ -14,21 +14,26 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.tintColor = UIColor.redColor()
+        self.refreshControl?.tintColor = UIColor.grayColor()
         self.refreshControl?.addTarget(self,
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.toRaw(),
             object: nil
         )
-        tableView.tableFooterView = UIView(frame: CGRectZero)
         DataStore.sharedInstance.fetchAssignments()
     }
     
     override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
