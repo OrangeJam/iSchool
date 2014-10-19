@@ -18,17 +18,32 @@ class ClassCell: UITableViewCell {
     @IBOutlet weak var typeImage: UIImageView!
     
     func setClass(c: Class) {
-        // Format the date strings
+        // Format the date strings.
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "HH:mm"
         let startString = dateFormatter.stringFromDate(c.startDate)
         let endString = dateFormatter.stringFromDate(c.endDate)
         
-        // Set the label texts
+        // Set the label texts.
         courseLabel.text = c.course
         locationLabel.text = c.location
         typeLabel.text = c.type.toRaw()
         startLabel.text = startString
         endLabel.text = endString
+        
+        // Set the image.
+        var imageName: String!
+        switch(c.type) {
+        
+        case ClassType.Lecture:
+            imageName = "lecture.png"
+        case ClassType.Discussion:
+            imageName = "lab.png"
+        case ClassType.Assistance:
+            imageName = "help.png"
+        default:
+            imageName = "rulogo.png"
+        }
+        typeImage.image = UIImage(named: imageName)
     }
 }

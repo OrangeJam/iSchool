@@ -17,7 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet var scrollView: UIScrollView!
     
-    
     override func viewDidAppear(animated: Bool) {
         registerForKeyboardNotifications()
     }
