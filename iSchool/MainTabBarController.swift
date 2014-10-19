@@ -10,7 +10,6 @@ import UIKit
 
 class MainTabBarController : UITabBarController {
     
-    
     override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserverForName(
             Notification.networkError.toRaw(),
@@ -23,6 +22,7 @@ class MainTabBarController : UITabBarController {
     }
     override func viewDidAppear(animated: Bool) {
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
+            DataStore.sharedInstance.fetchClasses()
             DataStore.sharedInstance.fetchAssignments()
         } else {
             presentLoginView()

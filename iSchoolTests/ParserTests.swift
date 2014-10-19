@@ -70,8 +70,8 @@ class ParserTests: XCTestCase {
             let startDate = dateFormatter.dateFromString("02.09.2014 13:10")
             let endDate = dateFormatter.dateFromString("02.09.2014 13:55")
             XCTAssertEqual(classes[6].course, "Tölvusamskipti", "The course name of the class at index 6 should be Tölvusamskipti")
-            XCTAssertEqual(classes[6].type, ClassType.Lecture, "The course at index 6 should be a lecture")
-            XCTAssertEqual(classes[6].location, "V201", "The location of the course at index 6 should be V201")
+            XCTAssertEqual(classes[6].type, ClassType.Lecture, "The class at index 6 should be a lecture")
+            XCTAssertEqual(classes[6].location, "V201", "The location of the class at index 6 should be V201")
             XCTAssertEqual(classes[6].startDate, startDate!, "The class at index 6 should start at 02.09.2014 13:10")
             XCTAssertEqual(classes[6].endDate, endDate!, "The class at index 6 should end at 02.09.2014 13:55")
         } else {
@@ -84,9 +84,9 @@ class ParserTests: XCTestCase {
             let endDate = dateFormatter.dateFromString("03.09.2014 13:55")
             XCTAssertEqual(classes[7].course, "Stærðfræði I", "The course name of the class at index 7 should be Stærðfræði I")
             XCTAssertEqual(classes[7].type, ClassType.Discussion, "The class at index 7 should be a discussion class")
-            XCTAssertEqual(classes[7].location, "V105", "The location of the course at index 8 should be V105")
+            XCTAssertEqual(classes[7].location, "V105", "The location of the course at index 7 should be V105")
             XCTAssertEqual(classes[7].startDate, startDate!, "The class at index 7 should start at 03.09.2014 13:10")
-            XCTAssertEqual(classes[7].endDate, endDate!, "The class at index 7 should end at 02.09.2014 13:55")
+            XCTAssertEqual(classes[7].endDate, endDate!, "The class at index 7 should end at 03.09.2014 13:55")
         } else {
             XCTFail("Could not test class at index 7")
         }
