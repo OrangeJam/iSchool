@@ -83,14 +83,13 @@ class LoginViewController: UIViewController {
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
         activityIndicator.stopAnimating()
-        clearFields()
         if let response = operation.response {
             let statusCode = response.statusCode
             switch(statusCode) {
             case 401:
                 messageLabel.text = "Invalid username or password, try again."
             default:
-                messageLabel.text = "There seems to be a problem with MySchool."
+                messageLabel.text = "Network error."
             }
         } else {
             messageLabel.text = "Network error."
@@ -113,5 +112,13 @@ class LoginViewController: UIViewController {
     func dismissKeyboard() {
         usernameField.resignFirstResponder()
         passwordField.resignFirstResponder()
+    }
+    
+    @IBAction func textFieldDidEndEditing(sender: UITextField) {
+        if sender == usernameField {
+            passwordField.becomeFirstResponder()
+        } else {
+            sender.resignFirstResponder()
+        }
     }
 }

@@ -31,6 +31,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidEndEditing:" destination="Oac-LQ-yT7" eventType="editingDidEndOnExit" id="svl-DM-uOV"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E5g-6h-XL7">
                                 <rect key="frame" x="200" y="258" width="201" height="30"/>
@@ -38,6 +41,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <connections>
+                                    <action selector="textFieldDidEndEditing:" destination="Oac-LQ-yT7" eventType="editingDidEndOnExit" id="1Vb-HE-72N"/>
+                                </connections>
                             </textField>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Invalid authentication, try again." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxD-lW-pag">
                                 <rect key="frame" x="200" y="191" width="201" height="21"/>
@@ -59,7 +65,7 @@
                                     <action selector="didPressLoginButton:" destination="Oac-LQ-yT7" eventType="touchUpInside" id="b6H-tV-uI6"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-YA-liF">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-YA-liF">
                                 <rect key="frame" x="290" y="187" width="20" height="20"/>
                             </activityIndicatorView>
                         </subviews>
@@ -68,8 +74,10 @@
                             <constraint firstAttribute="centerX" secondItem="lxD-lW-pag" secondAttribute="centerX" constant="-0.5" id="0ay-AX-qlh"/>
                             <constraint firstItem="Omg-OD-V8p" firstAttribute="trailing" secondItem="2Hm-2Z-58L" secondAttribute="trailing" id="8aa-Ph-HfK"/>
                             <constraint firstAttribute="centerX" secondItem="Omg-OD-V8p" secondAttribute="centerX" constant="-0.5" id="KDp-78-tma"/>
+                            <constraint firstAttribute="centerX" secondItem="kR4-YA-liF" secondAttribute="centerX" id="WFF-Kb-sz9"/>
                             <constraint firstAttribute="centerX" secondItem="2Hm-2Z-58L" secondAttribute="centerX" constant="-0.5" id="eEc-GR-TLu"/>
                             <constraint firstAttribute="centerX" secondItem="8Vs-pC-8vx" secondAttribute="centerX" id="lfK-pX-0Dy"/>
+                            <constraint firstItem="Omg-OD-V8p" firstAttribute="top" secondItem="kR4-YA-liF" secondAttribute="bottom" constant="13" id="meT-9j-eos"/>
                             <constraint firstAttribute="centerX" secondItem="E5g-6h-XL7" secondAttribute="centerX" constant="-0.5" id="tr6-AF-OVj"/>
                         </constraints>
                     </view>
