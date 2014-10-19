@@ -34,6 +34,20 @@
                ReferencedContainer = "container:iSchool.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F56FC82A19E57ADC005C1F1B"
+               BuildableName = "iSchoolFrameworkTests.xctest"
+               BlueprintName = "iSchoolFrameworkTests"
+               ReferencedContainer = "container:iSchool.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -49,6 +63,16 @@
                BlueprintIdentifier = "F53B592519AB8E0200ACF507"
                BuildableName = "iSchoolTests.xctest"
                BlueprintName = "iSchoolTests"
+               ReferencedContainer = "container:iSchool.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F56FC82A19E57ADC005C1F1B"
+               BuildableName = "iSchoolFrameworkTests.xctest"
+               BlueprintName = "iSchoolFrameworkTests"
                ReferencedContainer = "container:iSchool.xcodeproj">
             </BuildableReference>
          </TestableReference>

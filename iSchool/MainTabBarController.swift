@@ -10,13 +10,26 @@ import UIKit
 
 class MainTabBarController : UITabBarController {
     
+    
+    override func viewWillAppear(animated: Bool) {
+        NSNotificationCenter.defaultCenter().addObserverForName(
+            Notification.networkError.toRaw(),
+            object: nil,
+            queue: NSOperationQueue.mainQueue(),
+            usingBlock: { _ in
+                self.presentLoginView()
+            }
+        )
+    }
     override func viewDidAppear(animated: Bool) {
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
             DataStore.sharedInstance.fetchAssignments()
         } else {
-            performSegueWithIdentifier("presentLoginView", sender: self)
+            presentLoginView()
         }
     }
     
-    
+    func presentLoginView() {
+        performSegueWithIdentifier("presentLoginView", sender: self)
+    }
 }

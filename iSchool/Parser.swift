@@ -207,10 +207,6 @@ class Parser {
         grades = grades.filter({ (g: Grade) -> Bool in
             return g.grade >= 0.0
         })
-        
-        for g in grades {
-            println(g.course)
-        }
         return grades
     }
 }

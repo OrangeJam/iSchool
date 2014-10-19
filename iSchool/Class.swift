@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 OrangeJam. All rights reserved.
 //
 
+import UIKit
+import Foundation
+
 enum ClassType : String {
     case Lecture = "Fyrirlestur"
     case Discussion = "Dæmatími"

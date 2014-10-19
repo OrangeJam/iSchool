@@ -12,7 +12,7 @@ private let _credentialManager = CredentialManager()
 
 class CredentialManager {
     
-    private let userDefaults = NSUserDefaults.standardUserDefaults()
+    private let userDefaults = NSUserDefaults(suiteName: "is.orangejam.ischool")
 
     class var sharedInstance: CredentialManager {
         return _credentialManager
@@ -27,7 +27,7 @@ class CredentialManager {
     func getCredentials() -> (String, String)? {
         let username = userDefaults.stringForKey("username")
         let password = userDefaults.stringForKey("password")
-        if(username != nil && password != nil) {
+        if(username != nil || password != nil) {
             return (username!, password!)
         }
         return nil

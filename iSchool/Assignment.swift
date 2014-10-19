@@ -8,13 +8,19 @@
 
 import Foundation
 
-struct Assignment {
+private let baseURL = "https://myschool.ru.is/myschool/"
+
+struct Assignment : Equatable {
     var dueDate             = NSDate()
     var handedIn            = false
     var courseName          = ""
     var courseIdentifier    = ""
     var URL                 = ""
     var name                = ""
+    var description: String?
+    var weight: String?
+    var attachedFiles: [String]?
+    
     
     // I wish I had a better way to do this
     init(attrs: [String]){
@@ -28,7 +34,18 @@ struct Assignment {
         }
         courseName = attrs[2]
         courseIdentifier = attrs[3]
-        URL = attrs[4]
+        URL = baseURL + attrs[4]
         name = attrs[5]
     }
+}
+
+ // MARK: Equatable
+
+func == (lhs: Assignment, rhs: Assignment) -> Bool {
+    return  lhs.dueDate == rhs.dueDate &&
+        lhs.handedIn == rhs.handedIn &&
+        lhs.courseName == rhs.courseName &&
+        lhs.courseIdentifier == rhs.courseIdentifier &&
+        lhs.URL == rhs.URL &&
+        lhs.name == rhs.name
 }
