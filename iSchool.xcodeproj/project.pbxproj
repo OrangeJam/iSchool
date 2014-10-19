@@ -13,9 +13,6 @@
 		9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */; };
 		9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9899BC0519B8AEFA00359C62 /* ClassTests.swift */; };
-		98A9B9B419C1F24F00980124 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9B9B319C1F24F00980124 /* ClassCell.swift */; };
-		98A9B9B719C1FC1D00980124 /* TimetablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9B9B619C1FC1D00980124 /* TimetablePageViewController.swift */; };
-		98A9B9B919C1FC4B00980124 /* TimetableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A9B9B819C1FC4B00980124 /* TimetableTableViewController.swift */; };
 		98D28A3219BB7731008B3EB9 /* timetable_exams.html in Resources */ = {isa = PBXBuildFile; fileRef = 98D28A3019BB7731008B3EB9 /* timetable_exams.html */; };
 		98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */ = {isa = PBXBuildFile; fileRef = 98D28A3119BB7731008B3EB9 /* timetable_normal.html */; };
 		98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
@@ -68,6 +65,14 @@
 		F5CD975E19BDC3EF00CEF3ED /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */; };
 		F5CD975F19BDC3EF00CEF3ED /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */; };
 		F5CD976219BDC41300CEF3ED /* DataStoreTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD976019BDC41300CEF3ED /* DataStoreTest.swift */; };
+		F5D8A4E319F40975005437E4 /* TimetablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E219F40975005437E4 /* TimetablePageViewController.swift */; };
+		F5D8A4E419F40975005437E4 /* TimetablePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E219F40975005437E4 /* TimetablePageViewController.swift */; };
+		F5D8A4E619F4097D005437E4 /* TimetableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */; };
+		F5D8A4E719F4097D005437E4 /* TimetableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */; };
+		F5D8A4E919F40983005437E4 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E819F40983005437E4 /* TimetableViewController.swift */; };
+		F5D8A4EA19F40983005437E4 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E819F40983005437E4 /* TimetableViewController.swift */; };
+		F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
+		F5D8A4EE19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,9 +159,6 @@
 		9850A65B19AF7D08005EAB3B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9850A65F19AF7D5B005EAB3B /* LoginViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTests.swift; sourceTree = "<group>"; };
 		9899BC0519B8AEFA00359C62 /* ClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
-		98A9B9B319C1F24F00980124 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
-		98A9B9B619C1FC1D00980124 /* TimetablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetablePageViewController.swift; sourceTree = "<group>"; };
-		98A9B9B819C1FC4B00980124 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
 		98D28A3019BB7731008B3EB9 /* timetable_exams.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_exams.html; sourceTree = "<group>"; };
 		98D28A3119BB7731008B3EB9 /* timetable_normal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_normal.html; sourceTree = "<group>"; };
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = ../iSchool/CredentialManager.swift; sourceTree = "<group>"; };
@@ -198,6 +200,10 @@
 		F5C22B4119B7235100E4D595 /* NetworkClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClientTests.swift; sourceTree = "<group>"; };
 		F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataStore.swift; path = ../iSchool/DataStore.swift; sourceTree = "<group>"; };
 		F5CD976019BDC41300CEF3ED /* DataStoreTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStoreTest.swift; sourceTree = "<group>"; };
+		F5D8A4E219F40975005437E4 /* TimetablePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetablePageViewController.swift; sourceTree = "<group>"; };
+		F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
+		F5D8A4E819F40983005437E4 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
+		F5D8A4EC19F409D1005437E4 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,25 +299,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		98A9B9B219C1F07D00980124 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				98A9B9B319C1F24F00980124 /* ClassCell.swift */,
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		98A9B9B519C1F35000980124 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
-				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
-				98A9B9B619C1FC1D00980124 /* TimetablePageViewController.swift */,
-				98A9B9B819C1FC4B00980124 /* TimetableTableViewController.swift */,
-			);
-			name = ViewControllers;
-			sourceTree = "<group>";
-		};
 		F53B590919AB8E0200ACF507 = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +328,10 @@
 		F53B591419AB8E0200ACF507 /* iSchool */ = {
 			isa = PBXGroup;
 			children = (
+				F5D8A4EB19F409C9005437E4 /* Cells */,
+				F5D8A4E819F40983005437E4 /* TimetableViewController.swift */,
+				F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */,
+				F5D8A4E219F40975005437E4 /* TimetablePageViewController.swift */,
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
 				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
@@ -436,6 +427,14 @@
 				F594C59D19B76925001C5AD4 /* assignmentsPage.html */,
 			);
 			name = TestData;
+			sourceTree = "<group>";
+		};
+		F5D8A4EB19F409C9005437E4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F5D8A4EC19F409D1005437E4 /* ClassCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -799,19 +798,20 @@
 			files = (
 				F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
+				F5D8A4E619F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
 				F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 				F588A3DB19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
-				98A9B9B419C1F24F00980124 /* ClassCell.swift in Sources */,
+				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
 				F5CD975E19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
-				98A9B9B719C1FC1D00980124 /* TimetablePageViewController.swift in Sources */,
+				F5D8A4E319F40975005437E4 /* TimetablePageViewController.swift in Sources */,
 				F5C22B3F19B7233C00E4D595 /* NetworkClient.swift in Sources */,
-				98A9B9B919C1FC4B00980124 /* TimetableTableViewController.swift in Sources */,
+				F5D8A4E919F40983005437E4 /* TimetableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,7 +821,9 @@
 			files = (
 				F5CD975F19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
 				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
+				F5D8A4EA19F40983005437E4 /* TimetableViewController.swift in Sources */,
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
+				F5D8A4E419F40975005437E4 /* TimetablePageViewController.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,
@@ -832,9 +834,11 @@
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				F588A3DD19E68F7200106BC1 /* Grade.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,
+				F5D8A4EE19F409D1005437E4 /* ClassCell.swift in Sources */,
 				98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5C22B4219B7235100E4D595 /* NetworkClientTests.swift in Sources */,
 				F59FE08819B752A3004F4151 /* Parser.swift in Sources */,
+				F5D8A4E719F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
 				F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
