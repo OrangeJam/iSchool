@@ -13,7 +13,12 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 50
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl?.tintColor = UIColor.redColor()
+        self.refreshControl?.addTarget(self,
+            action: "reloadData",
+            forControlEvents: .ValueChanged
+        )
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.toRaw(),
@@ -21,7 +26,6 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         )
         tableView.tableFooterView = UIView(frame: CGRectZero)
         DataStore.sharedInstance.fetchAssignments()
-        
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -41,6 +45,11 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
         cell.setAssignment(assignments[indexPath.row])
         return cell
+    }
+    
+    func reloadData() {
+        DataStore.sharedInstance.fetchAssignments()
+        refreshControl?.endRefreshing()
     }
     
     func refreshData() {
