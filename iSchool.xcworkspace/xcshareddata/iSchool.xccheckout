@@ -22,7 +22,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>2882EDCCCDCF7CFA545DF8461A3C2316DBD59C96</key>
-		<string>../../../../../../../tmp/MyRU-iOS</string>
+		<string>../../tmp/MyRU-iOS</string>
 		<key>67620B5EFA902936DF04070AF595B76AB0333747</key>
 		<string>..Alamofire</string>
 		<key>A324A6B3D4410A021BF9ABEC534948B305206EC2</key>

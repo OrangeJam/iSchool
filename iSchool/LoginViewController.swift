@@ -19,7 +19,7 @@ class LoginViewController: UIViewController {
     
     
     override func viewDidAppear(animated: Bool) {
-        registerForKeyboardNotification()
+        registerForKeyboardNotifications()
     }
     
     @IBAction func didPressLoginButton(sender: UIButton) {
@@ -35,28 +35,40 @@ class LoginViewController: UIViewController {
         )
     }
     
-    func registerForKeyboardNotification() {
+    func registerForKeyboardNotifications() {
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "keyboardDidAppear:",
-            name: UIKeyboardDidShowNotification,
+            selector: "keyboardWillAppear:",
+            name: UIKeyboardWillShowNotification,
+            object: nil
+        )
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "keyboardWillDisappear:",
+            name: UIKeyboardWillHideNotification,
             object: nil
         )
     }
     
-    func keyboardDidAppear(notification: NSNotification) {
-        let info: NSDictionary = notification.userInfo!
-        let value: NSValue = info.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
-        let keyboardSize: CGSize = value.CGRectValue().size
-        let contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+    func keyboardWillAppear(notification: NSNotification) {
+        var info: NSDictionary = notification.userInfo!
+        var value: NSValue = info[UIKeyboardFrameBeginUserInfoKey] as NSValue
+        var keyboardRect = value.CGRectValue()
+        var keyboardSize = keyboardRect.size
+        var contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
         scrollView.contentInset = contentInsets
         scrollView.scrollIndicatorInsets = contentInsets
         
         var aRect = self.view.frame
         aRect.size.height -= keyboardSize.height
-
-        if CGRectContainsPoint(aRect, loginButton.frame.origin) {
-            scrollView.scrollRectToVisible(loginButton.frame, animated: true)
+        
+        if !CGRectContainsPoint(aRect, CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.height + 6)) {
+            let scrollPoint = CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.size.height - aRect.height + 6)
+            scrollView.setContentOffset(scrollPoint, animated: true)
         }
+    }
+    
+    func keyboardWillDisappear(notification: NSNotification) {
+        let scrollPoint = CGPoint(x: 0, y: 0)
+        scrollView.setContentOffset(scrollPoint, animated: true)
     }
     
     func authenticationSucceeded(operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void {
@@ -91,6 +103,12 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         NSLog("login screen")
         super.viewDidLoad()
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        scrollView.addGestureRecognizer(tapRecognizer)
     }
     
+    func dismissKeyboard() {
+        usernameField.resignFirstResponder()
+        passwordField.resignFirstResponder()
+    }
 }
