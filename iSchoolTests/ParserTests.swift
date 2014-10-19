@@ -22,7 +22,7 @@ class ParserTests: XCTestCase {
     func testParseAverageAssignments() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let dueAssignments = Parser.parseAssignments(data!)
+        let dueAssignments = Parser.parseAssignments(data)
         XCTAssertEqual(dueAssignments.count, 2, "There should be two assignments")
         XCTAssertEqual(dueAssignments[0].name, "hw1", "The name of the first should be hw1")
         XCTAssertFalse(dueAssignments[1].handedIn, "The second assignment should not be handed in")
@@ -31,14 +31,14 @@ class ParserTests: XCTestCase {
     func testParseNoAssignments() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let dueAssignments = Parser.parseAssignments(data!)
+        let dueAssignments = Parser.parseAssignments(data)
         XCTAssertEqual(dueAssignments.count, 0, "There should be no assignments")
     }
     
     func testParseOneGrade() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let grades = Parser.parseGrades(data!)
+        let grades = Parser.parseGrades(data)
         XCTAssertEqual(grades.count, 1, "There should be one grade")
         XCTAssertEqual(grades[0].name, "Assignment 1", "The name should be Assignment 1")
         XCTAssertEqual(grades[0].grade, 10, "The grade should be 10")
@@ -47,7 +47,7 @@ class ParserTests: XCTestCase {
     func testParseLotsOfGrades() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let grades = Parser.parseGrades(data!)
+        let grades = Parser.parseGrades(data)
         let toorGrades = grades.filter({ (grade: Grade) -> Bool in
             return grade.course == "T-417-TOOR Tölvuöryggi"
         })
@@ -57,7 +57,7 @@ class ParserTests: XCTestCase {
     func testParseTimetableNormal() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("timetable_normal", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let classes = Parser.parseClasses(data!)
+        let classes = Parser.parseClasses(data)
         
         // Test if all classes were parsed
         XCTAssertEqual(classes.count, 20, "There should be 20 classes")
@@ -70,8 +70,8 @@ class ParserTests: XCTestCase {
             let startDate = dateFormatter.dateFromString("02.09.2014 13:10")
             let endDate = dateFormatter.dateFromString("02.09.2014 13:55")
             XCTAssertEqual(classes[6].course, "Tölvusamskipti", "The course name of the class at index 6 should be Tölvusamskipti")
-            XCTAssertEqual(classes[6].type, ClassType.Lecture, "The course at index 6 should be a lecture")
-            XCTAssertEqual(classes[6].location, "V201", "The location of the course at index 6 should be V201")
+            XCTAssertEqual(classes[6].type, ClassType.Lecture, "The class at index 6 should be a lecture")
+            XCTAssertEqual(classes[6].location, "V201", "The location of the class at index 6 should be V201")
             XCTAssertEqual(classes[6].startDate, startDate!, "The class at index 6 should start at 02.09.2014 13:10")
             XCTAssertEqual(classes[6].endDate, endDate!, "The class at index 6 should end at 02.09.2014 13:55")
         } else {
@@ -84,9 +84,9 @@ class ParserTests: XCTestCase {
             let endDate = dateFormatter.dateFromString("03.09.2014 13:55")
             XCTAssertEqual(classes[7].course, "Stærðfræði I", "The course name of the class at index 7 should be Stærðfræði I")
             XCTAssertEqual(classes[7].type, ClassType.Discussion, "The class at index 7 should be a discussion class")
-            XCTAssertEqual(classes[7].location, "V105", "The location of the course at index 8 should be V105")
+            XCTAssertEqual(classes[7].location, "V105", "The location of the course at index 7 should be V105")
             XCTAssertEqual(classes[7].startDate, startDate!, "The class at index 7 should start at 03.09.2014 13:10")
-            XCTAssertEqual(classes[7].endDate, endDate!, "The class at index 7 should end at 02.09.2014 13:55")
+            XCTAssertEqual(classes[7].endDate, endDate!, "The class at index 7 should end at 03.09.2014 13:55")
         } else {
             XCTFail("Could not test class at index 7")
         }
@@ -95,7 +95,7 @@ class ParserTests: XCTestCase {
     func testParseTimetableExams() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("timetable_exams", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
-        let classes = Parser.parseClasses(data!)
+        let classes = Parser.parseClasses(data)
         
         // Test if all classes (exams) were parsed
         XCTAssertEqual(classes.count, 8, "There should be 8 classes (exams)")

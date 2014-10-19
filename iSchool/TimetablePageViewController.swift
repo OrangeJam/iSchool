@@ -14,10 +14,10 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         super.viewDidLoad()
         self.dataSource = self
         
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
-        let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: today)!)
+        let initialViewController = viewControllerForWeekDay(WeekDay.fromRaw(today)!)
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
     }
@@ -34,7 +34,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         if weekDay == WeekDay.Sunday {
             return nil;
         }
-        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue - 1)!)
+        return viewControllerForWeekDay(WeekDay.fromRaw(weekDay.toRaw() - 1)!)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -42,6 +42,6 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         if weekDay == WeekDay.Saturday {
             return nil;
         }
-        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue + 1)!)
+        return viewControllerForWeekDay(WeekDay.fromRaw(weekDay.toRaw() + 1)!)
     }
 }

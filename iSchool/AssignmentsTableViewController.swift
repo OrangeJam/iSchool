@@ -19,7 +19,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.assignment.rawValue,
+            Notification.assignment.toRaw(),
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in

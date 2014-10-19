@@ -16,7 +16,7 @@ class DataStoreTests: XCTestCase {
         override func fetchClasses() {
             let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("timetable_normal", ofType: "html")!
             let data = NSData(contentsOfFile: testDataPath)
-            classes = Parser.parseClasses(data!)
+            classes = Parser.parseClasses(data)
         }
     }
     
@@ -32,7 +32,7 @@ class DataStoreTests: XCTestCase {
         let expectation = expectationWithDescription("Should recieve notification")
         CredentialManager.sharedInstance.storeCredentials("test", "test")
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.networkError.rawValue,
+            Notification.networkError.toRaw(),
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
@@ -64,7 +64,7 @@ class DataStoreTests: XCTestCase {
     }
     
     func testGetClassesForToday() {
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
         

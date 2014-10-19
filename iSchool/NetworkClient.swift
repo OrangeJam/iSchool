@@ -27,7 +27,7 @@ class NetworkClient {
     
     func fetchPage(page: Page, successHandler:(AFHTTPRequestOperation!, AnyObject!) -> Void,
         errorHandler:(AFHTTPRequestOperation!, NSError!) -> Void) {
-        let data = manager.GET(page.rawValue, parameters: nil,
+        let data = manager.GET(page.toRaw(), parameters: nil,
             success: successHandler,
             failure: errorHandler
         )
