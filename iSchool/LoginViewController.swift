@@ -15,6 +15,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet var scrollView: UIScrollView!
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        registerForKeyboardNotification()
+    }
     
     @IBAction func didPressLoginButton(sender: UIButton) {
         let username = usernameField.text
@@ -27,6 +33,30 @@ class LoginViewController: UIViewController {
             successHandler: authenticationSucceeded,
             errorHandler: authenticationFailed
         )
+    }
+    
+    func registerForKeyboardNotification() {
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "keyboardDidAppear:",
+            name: UIKeyboardDidShowNotification,
+            object: nil
+        )
+    }
+    
+    func keyboardDidAppear(notification: NSNotification) {
+        let info: NSDictionary = notification.userInfo!
+        let value: NSValue = info.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
+        let keyboardSize: CGSize = value.CGRectValue().size
+        let contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+        scrollView.contentInset = contentInsets
+        scrollView.scrollIndicatorInsets = contentInsets
+        
+        var aRect = self.view.frame
+        aRect.size.height -= keyboardSize.height
+
+        if CGRectContainsPoint(aRect, loginButton.frame.origin) {
+            scrollView.scrollRectToVisible(loginButton.frame, animated: true)
+        }
     }
     
     func authenticationSucceeded(operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void {
