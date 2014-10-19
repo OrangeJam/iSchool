@@ -8,22 +8,18 @@
 
 import UIKit
 
-class AssignmentsTableViewCell : UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-    
-}
-
 class AssignmentsTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.rowHeight = 44
+        self.tableView.rowHeight = 50
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.toRaw(),
             object: nil
         )
+        tableView.tableFooterView = UIView(frame: CGRectZero)
         DataStore.sharedInstance.fetchAssignments()
         
     }
@@ -43,7 +39,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let assignments = DataStore.sharedInstance.getAssignments()
         let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
-        cell.nameLabel.text = assignments[indexPath.row].name
+        cell.setAssignment(assignments[indexPath.row])
         return cell
     }
     

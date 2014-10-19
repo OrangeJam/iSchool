@@ -192,29 +192,59 @@
             </objects>
             <point key="canvasLocation" x="1878" y="-794"/>
         </scene>
-        <!--Assignments Table View Controller-->
+        <!--Assignments-->
         <scene sceneID="MYc-9g-xZG">
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="uHq-x4-4Sx" customClass="AssignmentsTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fNK-3t-kjB">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="fNK-3t-kjB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" id="vkp-hG-DxS" customClass="AssignmentsTableViewCell" customModule="iSchool" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="50" id="vkp-hG-DxS" customClass="AssignmentsTableViewCell" customModule="iSchool" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vkp-hG-DxS" id="1KY-dR-n0s">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTl-rv-cel">
-                                            <rect key="frame" x="35" y="11" width="254" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTl-rv-cel">
+                                            <rect key="frame" x="58" y="0.0" width="333" height="33.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="8vt-Vd-Hho"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greencheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Pw-wa-fhS">
+                                            <rect key="frame" x="13" y="10" width="29" height="29"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nul-9Y-uxN">
+                                            <rect key="frame" x="550" y="13" width="42" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="60" id="1gc-ZL-Bne"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-JN-MUH">
+                                            <rect key="frame" x="58" y="24" width="254" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LTl-rv-cel" firstAttribute="leading" secondItem="1KY-dR-n0s" secondAttribute="leadingMargin" constant="50" id="SMG-jq-AdL"/>
+                                        <constraint firstItem="Nul-9Y-uxN" firstAttribute="trailing" secondItem="1KY-dR-n0s" secondAttribute="trailingMargin" id="Xct-1e-h7Y"/>
+                                        <constraint firstItem="Nul-9Y-uxN" firstAttribute="leading" secondItem="LTl-rv-cel" secondAttribute="trailing" constant="40" id="fTD-52-GmG"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="courseLabel" destination="yzB-JN-MUH" id="Z0v-VL-XMJ"/>
+                                    <outlet property="doneImage" destination="4Pw-wa-fhS" id="VGI-EE-qPN"/>
+                                    <outlet property="dueDateLabel" destination="Nul-9Y-uxN" id="ClI-cp-8vQ"/>
                                     <outlet property="nameLabel" destination="LTl-rv-cel" id="n4T-ze-DG9"/>
                                 </connections>
                             </tableViewCell>
@@ -225,7 +255,7 @@
                             <outlet property="delegate" destination="uHq-x4-4Sx" id="Yts-R1-ci5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="K1m-bM-sXr"/>
+                    <navigationItem key="navigationItem" title="Assignments" id="K1m-bM-sXr"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t8y-3m-TIf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -315,11 +345,11 @@
             </objects>
             <point key="canvasLocation" x="1066" y="-794"/>
         </scene>
-        <!--Item-->
+        <!--Assignments-->
         <scene sceneID="QaU-BI-1Ra">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WiU-q3-I69" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="iO4-N7-jwr"/>
+                    <tabBarItem key="tabBarItem" title="Assignments" image="Files.png" id="iO4-N7-jwr"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ub7-Ml-tcs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -334,11 +364,11 @@
             </objects>
             <point key="canvasLocation" x="1066" y="-54"/>
         </scene>
-        <!--Item-->
+        <!--Grades-->
         <scene sceneID="drr-Wi-U4G">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Tbs-dc-M0I" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Doj-rs-4AX"/>
+                    <tabBarItem key="tabBarItem" title="Grades" image="Favorites.png" id="Doj-rs-4AX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4b0-7U-Yhw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -355,6 +385,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Favorites.png" width="27" height="26"/>
+        <image name="Files.png" width="22" height="27"/>
         <image name="centered_white.png" width="966" height="511"/>
+        <image name="greencheck.png" width="40" height="40"/>
     </resources>
 </document>

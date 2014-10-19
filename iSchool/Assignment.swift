@@ -32,8 +32,8 @@ struct Assignment : Equatable {
         if attrs[1] != "Óskilað" {
             handedIn = true
         }
-        courseName = attrs[2]
-        courseIdentifier = attrs[3]
+        courseName = attrs[3]
+        courseIdentifier = attrs[2]
         URL = baseURL + attrs[4]
         name = attrs[5]
     }

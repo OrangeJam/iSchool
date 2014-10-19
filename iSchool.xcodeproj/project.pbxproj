@@ -84,6 +84,8 @@
 		F5D8A4EA19F40983005437E4 /* TimetableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4E819F40983005437E4 /* TimetableViewController.swift */; };
 		F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 		F5D8A4EE19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
+		F5FBF8EB19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
+		F5FBF8EC19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -226,6 +228,7 @@
 		F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
 		F5D8A4E819F40983005437E4 /* TimetableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableViewController.swift; sourceTree = "<group>"; };
 		F5D8A4EC19F409D1005437E4 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
+		F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -474,6 +477,7 @@
 			isa = PBXGroup;
 			children = (
 				F5D8A4EC19F409D1005437E4 /* ClassCell.swift */,
+				F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -860,6 +864,7 @@
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
 				F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
+				F5FBF8EB19F4617E004E4141 /* AssignmentCell.swift in Sources */,
 				F5CD975E19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
 				F5D8A4E319F40975005437E4 /* TimetablePageViewController.swift in Sources */,
 				F5C22B3F19B7233C00E4D595 /* NetworkClient.swift in Sources */,
@@ -879,6 +884,7 @@
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,
+				F5FBF8EC19F4617E004E4141 /* AssignmentCell.swift in Sources */,
 				F5CD976219BDC41300CEF3ED /* DataStoreTest.swift in Sources */,
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
 				F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */,

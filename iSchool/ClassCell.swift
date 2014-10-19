@@ -34,7 +34,6 @@ class ClassCell: UITableViewCell {
         // Set the image.
         var imageName: String!
         switch(c.type) {
-        
         case ClassType.Lecture:
             imageName = "lecture.png"
         case ClassType.Discussion:
