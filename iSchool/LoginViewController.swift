@@ -23,6 +23,8 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didPressLoginButton(sender: UIButton) {
+        messageLabel.hidden = true
+        dismissKeyboard()
         let username = usernameField.text
         let password = passwordField.text
         let credentialManager = CredentialManager.sharedInstance
@@ -81,18 +83,19 @@ class LoginViewController: UIViewController {
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
         activityIndicator.stopAnimating()
-        let statusCode = operation.response.statusCode
         clearFields()
-        switch(statusCode){
-        // TODO: Add more cases for better error messages
-        case (401):
-            NSLog("Unauthenticated")
-            messageLabel.text = "Authentication Failed."
-        default:
-            NSLog("Myschool Error")
-            messageLabel.text = "Network Error."
+        if let response = operation.response {
+            let statusCode = response.statusCode
+            switch(statusCode) {
+            case 401:
+                messageLabel.text = "Invalid username or password, try again."
+            default:
+                messageLabel.text = "There seems to be a problem with MySchool."
+            }
+        } else {
+            messageLabel.text = "Network error."
         }
-        
+        messageLabel.hidden = false
     }
     
     func clearFields() -> Void {

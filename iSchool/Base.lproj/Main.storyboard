@@ -55,6 +55,9 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didPressLoginButton:" destination="Oac-LQ-yT7" eventType="touchUpInside" id="b6H-tV-uI6"/>
+                                </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="kR4-YA-liF">
                                 <rect key="frame" x="290" y="187" width="20" height="20"/>
@@ -255,7 +258,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Oac-LQ-yT7" kind="presentation" identifier="presentLoginView" id="uEF-YM-YUb"/>
+                        <segue destination="Oac-LQ-yT7" kind="presentation" identifier="presentLoginView" animates="NO" id="uEF-YM-YUb"/>
                         <segue destination="2Hk-yf-viC" kind="relationship" relationship="viewControllers" id="73X-U6-LfA"/>
                         <segue destination="uHq-x4-4Sx" kind="relationship" relationship="viewControllers" id="diG-aF-aPb"/>
                         <segue destination="t1w-Gb-QT5" kind="relationship" relationship="viewControllers" id="EhI-oE-d8E"/>
