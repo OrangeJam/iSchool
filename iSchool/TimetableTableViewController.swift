@@ -15,6 +15,7 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.tableFooterView = UIView(frame: CGRectZero)
     }
 
     // MARK: - Table view data source

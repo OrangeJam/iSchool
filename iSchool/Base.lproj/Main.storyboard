@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -133,13 +133,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="end" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNT-PV-JpY">
-                                            <rect key="frame" x="518" y="39" width="60" height="17"/>
+                                            <rect key="frame" x="532" y="39" width="60" height="17"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="start" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ich-Ds-v4s">
-                                            <rect key="frame" x="518" y="19" width="60" height="21"/>
+                                            <rect key="frame" x="532" y="19" width="60" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -153,9 +153,9 @@
                                         <constraint firstItem="p4W-7N-XFW" firstAttribute="leading" secondItem="h3X-me-lLo" secondAttribute="leadingMargin" id="8u3-Xx-yx6"/>
                                         <constraint firstItem="p4W-7N-XFW" firstAttribute="leading" secondItem="h3X-me-lLo" secondAttribute="leadingMargin" id="BFv-yz-Mrx"/>
                                         <constraint firstItem="wRN-0Y-6Dz" firstAttribute="top" secondItem="h3X-me-lLo" secondAttribute="topMargin" constant="1" id="Fev-D5-4d1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="xNT-PV-JpY" secondAttribute="trailing" constant="16" id="Jn7-g4-a8a"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="ich-Ds-v4s" secondAttribute="trailing" constant="16" id="RhE-Xw-aUN"/>
+                                        <constraint firstItem="ich-Ds-v4s" firstAttribute="trailing" secondItem="h3X-me-lLo" secondAttribute="trailingMargin" id="Rew-im-XHv"/>
                                         <constraint firstItem="ich-Ds-v4s" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wRN-0Y-6Dz" secondAttribute="trailing" constant="10" id="Sce-qz-imP"/>
+                                        <constraint firstItem="xNT-PV-JpY" firstAttribute="trailing" secondItem="h3X-me-lLo" secondAttribute="trailingMargin" id="YVi-Jq-rnB"/>
                                         <constraint firstAttribute="centerY" secondItem="p4W-7N-XFW" secondAttribute="centerY" constant="-3" id="e82-3t-T1n"/>
                                         <constraint firstItem="p4W-7N-XFW" firstAttribute="top" secondItem="h3X-me-lLo" secondAttribute="topMargin" constant="7" id="eMu-Sz-zOD"/>
                                         <constraint firstItem="Ffq-Is-bn5" firstAttribute="leading" secondItem="p4W-7N-XFW" secondAttribute="trailing" constant="8" id="ncc-3P-i1p"/>
@@ -180,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-yG-MRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-56" y="759"/>
+            <point key="canvasLocation" x="-46" y="837"/>
         </scene>
         <!--Timetable Page View Controller-->
         <scene sceneID="MpH-DE-eeH">
@@ -326,11 +326,11 @@
             </objects>
             <point key="canvasLocation" x="-46" y="-54"/>
         </scene>
-        <!--Item-->
+        <!--Timetable-->
         <scene sceneID="GGE-NH-6zU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ree-EW-3CQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Tys-8q-3rn"/>
+                    <tabBarItem key="tabBarItem" title="Timetable" image="timetable.png" id="Tys-8q-3rn"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="S4x-WQ-ZHW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -389,5 +389,6 @@
         <image name="Files.png" width="22" height="27"/>
         <image name="centered_white.png" width="966" height="511"/>
         <image name="greencheck.png" width="40" height="40"/>
+        <image name="timetable.png" width="24" height="24"/>
     </resources>
 </document>

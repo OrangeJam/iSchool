@@ -12,8 +12,11 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // This prevents the table view from going under the navigation bar.
+        if self.respondsToSelector("edgesForExtendedLayout") {
+            self.edgesForExtendedLayout = UIRectEdge.Bottom
+        }
         self.dataSource = self
-        
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday

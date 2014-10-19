@@ -14,6 +14,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.rowHeight = 50
+        self.refreshControl = UIRe
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.toRaw(),
