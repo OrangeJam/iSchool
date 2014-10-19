@@ -102,7 +102,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="wwK-V1-aav">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="ClassCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="ClassCell" rowHeight="70" id="Yrb-rH-50o" customClass="ClassCell" customModule="iSchool" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -177,16 +177,20 @@
                             <outlet property="delegate" destination="nzC-lT-lp7" id="j8a-tI-Wlk"/>
                         </connections>
                     </tableView>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="WK8-3E-4WH">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-yG-MRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-46" y="837"/>
         </scene>
-        <!--Timetable Page View Controller-->
+        <!--Timetable-->
         <scene sceneID="MpH-DE-eeH">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="2Hk-yf-viC" customClass="TimetablePageViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="5PF-33-PVK"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="min" id="2Hk-yf-viC" customClass="TimetablePageViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <navigationItem key="navigationItem" title="Timetable" id="5PF-33-PVK"/>
                 </pageViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNQ-14-yrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -199,7 +203,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="22" sectionFooterHeight="22" id="fNK-3t-kjB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="50" id="vkp-hG-DxS" customClass="AssignmentsTableViewCell" customModule="iSchool" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
@@ -208,7 +211,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTl-rv-cel">
-                                            <rect key="frame" x="58" y="0.0" width="333" height="33.5"/>
+                                            <rect key="frame" x="58" y="0.0" width="333" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="180" id="8vt-Vd-Hho"/>
                                             </constraints>
@@ -313,7 +316,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="vrs-Ts-7sP">
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="Oac-LQ-yT7" kind="presentation" identifier="presentLoginView" animates="NO" id="uEF-YM-YUb"/>
@@ -332,7 +334,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ree-EW-3CQ" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Timetable" image="timetable.png" id="Tys-8q-3rn"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S4x-WQ-ZHW">
+                    <navigationBar key="navigationBar" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="S4x-WQ-ZHW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

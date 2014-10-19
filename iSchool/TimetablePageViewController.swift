@@ -14,7 +14,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         super.viewDidLoad()
         // This prevents the table view from going under the navigation bar.
         if self.respondsToSelector("edgesForExtendedLayout") {
-            self.edgesForExtendedLayout = UIRectEdge.Bottom
+            self.edgesForExtendedLayout = UIRectEdge.None
         }
         self.dataSource = self
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
@@ -23,6 +23,12 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         let initialViewController = viewControllerForWeekDay(WeekDay.fromRaw(today)!)
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
+        
+        // Page control.
+        let pageControl = UIPageControl.appearance()
+        pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
+        pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
+        pageControl.backgroundColor = UIColor.clearColor()
     }
     
     func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
@@ -46,5 +52,13 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
             return nil;
         }
         return viewControllerForWeekDay(WeekDay.fromRaw(weekDay.toRaw() + 1)!)
+    }
+    
+    func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 7
+    }
+    
+    func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
+        return 0
     }
 }
