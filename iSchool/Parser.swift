@@ -102,7 +102,11 @@ class Parser {
                                         if let infoString = classSpan.attributes["title"] as? NSString as? String{
                                             let info = infoString.componentsSeparatedByString("\n")
                                             let course = info[0]
-                                            let typeString = info[2]
+                                            var typeString = info[2]
+                                            let length = countElements(typeString)
+                                            if length > 0 {
+                                                typeString = typeString.substringToIndex(typeString.endIndex.predecessor())
+                                            }
                                             var type: ClassType
                                             // Could fetch additional information here...
                                             // Set the type of the class based on the type string
