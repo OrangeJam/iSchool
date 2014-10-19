@@ -35,6 +35,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         loginButton.addTarget(self, action: "toggleExpand", forControlEvents: .TouchUpInside)
         loginButton.setTitle("Login", forState: .Normal)
         loginButton.titleLabel?.font = UIFont.systemFontOfSize(20)
+        items = DataStore.sharedInstance.assignments
         updateFooterHeight()
         updatePreferredContentSize()
         // Do any additional setup after loading the view from its nib.

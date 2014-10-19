@@ -5,3 +5,4 @@ link_with 'iSchoolFramework'
 
 pod 'hpple', '~> 0.2.0'
 pod 'AFNetworking', '~> 2.0'
+pod 'TMCache', '~> 1.2.0'

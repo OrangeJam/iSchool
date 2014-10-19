@@ -20,3 +20,4 @@ FOUNDATION_EXPORT const unsigned char iSchoolFrameworkVersionString[];
 
 #import <AFNetworking/AFNetworking.h>
 #import <hpple/TFHpple.h>
+#import <TMCache/TMCache.h>
