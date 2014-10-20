@@ -20,6 +20,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
             forControlEvents: .ValueChanged
         )
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        tableView.delegate = self
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,6 +52,19 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         cell.setAssignment(assignments[indexPath.row])
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
+            detail.navigationItem.title = "Back"
+            // detail.setAssignment(<#a: Assignment#>)
+            navigationController?.pushViewController(detail, animated: true)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.setSelected(false, animated: true)
+    }
+    
     
     func reloadData() {
         DataStore.sharedInstance.fetchAssignments()
