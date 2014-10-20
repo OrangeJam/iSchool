@@ -10,6 +10,11 @@ import UIKit
 
 class MainTabBarController : UITabBarController {
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.view.backgroundColor = UIColor.whiteColor()
+    }
+    
     override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserverForName(
             Notification.networkError.toRaw(),
