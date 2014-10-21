@@ -8,12 +8,6 @@
 
 import UIKit
 
-class GradesTableViewCell : UITableViewCell {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var gradeLabel: UILabel!
-}
-
 class GradesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -47,8 +41,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let grades = DataStore.sharedInstance.getGrades()
         let cell = tableView.dequeueReusableCellWithIdentifier("GradesTableViewCell") as GradesTableViewCell
-        cell.nameLabel.text = grades[indexPath.row].name
-        cell.gradeLabel.text = grades[indexPath.row].grade.description
+        cell.SetGrade(grades[indexPath.row])
         return cell
     }
     
