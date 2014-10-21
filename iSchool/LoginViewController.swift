@@ -50,20 +50,21 @@ class LoginViewController: UIViewController {
     }
     
     func keyboardWillAppear(notification: NSNotification) {
-        var info: NSDictionary = notification.userInfo!
-        var value: NSValue = info[UIKeyboardFrameBeginUserInfoKey] as NSValue
-        var keyboardRect = value.CGRectValue()
-        var keyboardSize = keyboardRect.size
-        var contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
-        scrollView.contentInset = contentInsets
-        scrollView.scrollIndicatorInsets = contentInsets
+        if let info: NSDictionary = notification.userInfo {
+            var value: NSValue = info[UIKeyboardFrameBeginUserInfoKey] as NSValue
+            var keyboardRect = value.CGRectValue()
+            var keyboardSize = keyboardRect.size
+            var contentInsets: UIEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0)
+            scrollView.contentInset = contentInsets
+            scrollView.scrollIndicatorInsets = contentInsets
         
-        var aRect = self.view.frame
-        aRect.size.height -= keyboardSize.height
+            var aRect = self.view.frame
+            aRect.size.height -= keyboardSize.height
         
-        if !CGRectContainsPoint(aRect, CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.height + 6)) {
-            let scrollPoint = CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.size.height - aRect.height + 6)
-            scrollView.setContentOffset(scrollPoint, animated: true)
+            if !CGRectContainsPoint(aRect, CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.height + 6)) {
+                let scrollPoint = CGPoint(x: 0, y: loginButton.frame.origin.y + loginButton.frame.size.height - aRect.height + 6)
+                scrollView.setContentOffset(scrollPoint, animated: true)
+            }
         }
     }
     

@@ -16,6 +16,24 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        self.refreshControl?.addTarget(self,
+            action: "reloadData",
+            forControlEvents: .ValueChanged
+        )
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "refreshData",
+            name: Notification.classes.toRaw(),
+            object: nil
+        )
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self)
     }
 
     // MARK: - Table view data source
@@ -40,5 +58,14 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             cell.setClass(c)
         }
         return cell
+    }
+    
+    func reloadData() {
+        DataStore.sharedInstance.fetchClasses()
+    }
+    
+    func refreshData() {
+        self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
     }
 }
