@@ -17,6 +17,6 @@ class GradesTableViewCell : UITableViewCell {
     func SetGrade(g: Grade) {
         nameLabel.text = g.name
         gradeLabel.text = g.gradeString
-        rankLabel.text = g.order
+        rankLabel.text = g.order // TODO: Remove "Röð: " to be able to change language
     }
 }

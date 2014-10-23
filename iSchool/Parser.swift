@@ -157,22 +157,22 @@ class Parser {
         return sortedClasses
     }
     
-    class func parseGrades(data: NSData) -> [Grade] {
+    class func parseGrades(data: NSData) -> ([[Grade]])? {
         let parser = TFHpple(HTMLData: data)
         var grades: [Grade] = []
         let xpathQuery = "//div[@class='ruContentPage']/center/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
         // Bail out if there are no assignments
         if nodes.count == 0 {
-            return []
+            return nil
         }
         let tableHeader = nodes.removeAtIndex(0)
         if tableHeader.objectForKey("class") == "ruTableTitle" {
             if tableHeader.children.count == 11 {
-                var currentNode = tableHeader
-                do {
+                var currentNode = nodes.removeAtIndex(0)
+                while(nodes.first?.objectForKey("class") != "ruTableTitle") {
                     currentNode = nodes.removeAtIndex(0)
-                } while(currentNode.objectForKey("class") != "ruTableTitle")
+                }
             }
         }
         // Ignore empty row at the end of table.
@@ -207,10 +207,23 @@ class Parser {
                 grades.append(Grade(attrs: attributes))
             }
         }
-        // Filter out grades not yet posted
-        grades = grades.filter({ (g: Grade) -> Bool in
-            return g.grade >= 0.0
-        })
-        return grades
+        
+        //💩💩💩
+        var gradesCoursesDict = Dictionary<String, [Grade]>()
+        for grade in grades {
+            if var courseGrades = gradesCoursesDict[grade.course] {
+                courseGrades.append(grade)
+                gradesCoursesDict[grade.course] = courseGrades
+            } else {
+                gradesCoursesDict[grade.course] = [grade]
+            }
+        }
+        
+        var gradesInCourses : [[Grade]] = []
+        for course in gradesCoursesDict.keys {
+            gradesInCourses.append(gradesCoursesDict[course]!)
+        }
+        
+        return gradesInCourses
     }
 }

@@ -24,7 +24,19 @@ func gradeToString(s: String) -> String {
         let gradePart = parts[parts.count - 1]
         return gradePart
     }
-    return "-1"
+    return ""
+}
+
+func prettifyCourse(s: String) -> String {
+    let parts = s.componentsSeparatedByString(" ")
+    var course = ""
+    if parts.count > 1 {
+        for var i = 1; i < parts.count; ++i {
+            course += parts[i] + " "
+        }
+    }
+    
+    return course
 }
 
 struct Grade {
@@ -35,10 +47,12 @@ struct Grade {
     var order: String
     var course: String
     
+    
     init(attrs: [String]){
+        println("Course = \(attrs[0])")
         grade = gradeToFloat(attrs[3])
         gradeString = gradeToString(attrs[3])
-        course = attrs[0]
+        course = prettifyCourse(attrs[0])
         order = attrs[4]
         URL = attrs[1]
         name = attrs[2]

@@ -17,7 +17,7 @@ class MainTabBarController : UITabBarController {
     
     override func viewWillAppear(animated: Bool) {
         NSNotificationCenter.defaultCenter().addObserverForName(
-            Notification.networkError.toRaw(),
+            Notification.networkError.rawValue,
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in

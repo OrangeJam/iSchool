@@ -32,7 +32,7 @@ class AssignmentDetailViewController : UIViewController, UIWebViewDelegate {
         let baseUrl = "https://myschool.ru.is/myschool/"
         if let a = assignment {
             let url = NSURL(string: baseUrl + a.URL)
-            let req = NSURLRequest(URL: url)
+            let req = NSURLRequest(URL: url!)
             self.webView.loadRequest(req)
         }
     }

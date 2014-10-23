@@ -28,7 +28,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
-            name: Notification.assignment.toRaw(),
+            name: Notification.assignment.rawValue,
             object: nil
         )
         DataStore.sharedInstance.fetchAssignments()

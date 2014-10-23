@@ -323,9 +323,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fRz-9k-FS2" id="D1z-dr-Sw6">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Grade" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOn-Ku-OVL">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Grade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOn-Ku-OVL">
                                             <rect key="frame" x="513" y="11" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -344,7 +344,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Fj6-DU-PKI" firstAttribute="leading" secondItem="D1z-dr-Sw6" secondAttribute="leadingMargin" constant="5" id="36Q-98-wHN"/>
-                                        <constraint firstItem="rOn-Ku-OVL" firstAttribute="trailing" secondItem="D1z-dr-Sw6" secondAttribute="trailingMargin" id="7Wb-ar-CIV"/>
+                                        <constraint firstItem="rOn-Ku-OVL" firstAttribute="trailing" secondItem="D1z-dr-Sw6" secondAttribute="trailingMargin" constant="1" id="7Wb-ar-CIV"/>
                                         <constraint firstItem="rOn-Ku-OVL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AbR-f7-YUf" secondAttribute="trailing" constant="40" id="Obh-I9-9Gu"/>
                                         <constraint firstItem="AbR-f7-YUf" firstAttribute="leading" secondItem="D1z-dr-Sw6" secondAttribute="leadingMargin" constant="5" id="RMb-X3-MnZ"/>
                                         <constraint firstAttribute="centerY" secondItem="rOn-Ku-OVL" secondAttribute="centerY" id="VHS-mI-XzI"/>
