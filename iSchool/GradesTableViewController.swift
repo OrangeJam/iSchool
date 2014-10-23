@@ -51,8 +51,6 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        
         let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
         view.backgroundColor = UIColor(white: 1.0, alpha: 0.95)
 
@@ -66,22 +64,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         
         view.addSubview(label)
         view.addSubview(redLine)
-        
 
-            
-//        UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
-//        [view setBackgroundColor:[UIColor whiteColor]];
-//        UILabel* label = [[UILabel alloc] initWithFrame:CGRectMake(20, 8, self.view.frame.size.width, 30)];
-//        NSString* title = [self tableView:self.tableView titleForHeaderInSection:section];
-//        [label setText:title];
-//        [label setBackgroundColor:[UIColor whiteColor]];
-//        
-//        UIFont* labelFont = [UIFont boldSystemFontOfSize:17.0];
-//        [label setFont:labelFont];
-//        UIView* redLine = [[UIView alloc] initWithFrame:CGRectMake(0, 39, self.view.frame.size.width, 1)];
-//        [redLine setBackgroundColor:[UIColor redColor]];
-//        [view addSubview:label];
-//        [view addSubview:redLine];
         return view;
 
     }
