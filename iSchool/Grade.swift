@@ -49,7 +49,6 @@ struct Grade {
     
     
     init(attrs: [String]){
-        println("Course = \(attrs[0])")
         grade = gradeToFloat(attrs[3])
         gradeString = gradeToString(attrs[3])
         course = prettifyCourse(attrs[0])
