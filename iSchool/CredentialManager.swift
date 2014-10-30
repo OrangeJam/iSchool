@@ -38,14 +38,4 @@ class CredentialManager {
         userDefaults.removeObjectForKey("password")
         userDefaults.synchronize()
     }
-    
-    func getBase64EncodedAuthString() -> String? {
-        if let (user, pass) = getCredentials() {
-            let authstring = user + ":" + pass
-            let data = authstring.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-            return data?.base64EncodedStringWithOptions(NSDataBase64EncodingOptions(0))
-        } else {
-            return nil
-        }
-    }
 }
