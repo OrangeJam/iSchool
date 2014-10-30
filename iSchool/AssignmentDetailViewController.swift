@@ -7,18 +7,25 @@
 //
 
 import UIKit
+import WebKit
 
-class AssignmentDetailViewController : UIViewController, UIWebViewDelegate {
+class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
 
     required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
     }
     
-    @IBOutlet weak var webView: UIWebView!
-    
     var assignment : Assignment?
+    var webView : WKWebView?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.webView = WKWebView()
+        self.view = webView!
+        webView!.navigationDelegate = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
         super.viewDidLoad()
         loadPage()
     }
@@ -29,26 +36,36 @@ class AssignmentDetailViewController : UIViewController, UIWebViewDelegate {
     }
     
     func loadPage() {
-        let baseUrl = "https://myschool.ru.is/myschool/"
         if let a = assignment {
-            let url = NSURL(string: baseUrl + a.URL)
-            let req = NSURLRequest(URL: url)
-            self.webView.loadRequest(req)
+            let url = NSURL(string: a.URL)
+            println("Url: \(url)")
+            let req = NSMutableURLRequest(URL: url)
+//            if let auth = CredentialManager.sharedInstance.getBase64EncodedAuthString() {
+//                req.setValue(auth, forHTTPHeaderField: "Authorization")
+//            }
+            self.webView!.loadRequest(req)
         }
     }
  
     // MARK: - WebView delegate
     
+    func webView(webView: WKWebView!, didReceiveAuthenticationChallenge challenge: NSURLAuthenticationChallenge!, completionHandler: ((NSURLSessionAuthChallengeDisposition, NSURLCredential!) -> Void)!) {
+        if let (user,pass) = CredentialManager.sharedInstance.getCredentials() {
+            let creds = NSURLCredential(user: user, password: pass, persistence: .None)
+            completionHandler(.UseCredential, creds)
+        }
+    }
+    
     func webViewDidStartLoad(webView: UIWebView) {
-        //FIXME
+        println("Started loading")
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        //FIXME
+        println("Finished loading")
     }
     
     func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        //FIXME
+        println("Error: \(error)")
     }
     
     

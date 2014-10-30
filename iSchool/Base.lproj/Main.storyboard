@@ -283,30 +283,12 @@
         <!--Assignment Details-->
         <scene sceneID="tLq-6c-ZWD">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-IZ-rG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AssignmentDetailView" id="pdD-z4-nyp" customClass="AssignmentDetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6k4-du-4gg"/>
-                        <viewControllerLayoutGuide type="bottom" id="dj9-WE-AZn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QtF-YP-RCN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9TH-Dz-nhD">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <navigationItem key="navigationItem" title="Assignment Details" id="VS7-4x-7c6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="til-f1-0Bc"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="webView" destination="9TH-Dz-nhD" id="eji-4a-WIi"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-IZ-rG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-54"/>
         </scene>

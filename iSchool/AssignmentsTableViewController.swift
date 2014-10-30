@@ -55,8 +55,8 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
-            detail.navigationItem.title = "Back"
-            // detail.setAssignment(<#a: Assignment#>)
+            let assignments = DataStore.sharedInstance.getAssignments()
+            detail.setAssignment(assignments[indexPath.row])
             navigationController?.pushViewController(detail, animated: true)
         }
     }
