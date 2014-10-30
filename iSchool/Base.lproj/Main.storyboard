@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -283,12 +283,40 @@
         <!--Assignment Details-->
         <scene sceneID="tLq-6c-ZWD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-IZ-rG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="AssignmentDetailView" id="pdD-z4-nyp" customClass="AssignmentDetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tkv-2R-ZM6"/>
+                        <viewControllerLayoutGuide type="bottom" id="YzC-L5-HSJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Veh-S4-d12">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-u4-Csk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tkv-2R-ZM6" firstAttribute="top" secondItem="aVd-u4-Csk" secondAttribute="bottom" constant="18" id="MWj-tI-dV2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aVd-u4-Csk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MWj-tI-dV2"/>
+                            </mask>
+                        </variation>
+                    </view>
                     <navigationItem key="navigationItem" title="Assignment Details" id="VS7-4x-7c6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="til-f1-0Bc"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="progressBar" destination="aVd-u4-Csk" id="cnP-OL-I1d"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-IZ-rG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2636" y="-54"/>
         </scene>

@@ -15,19 +15,38 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         super.init(coder: aDecoder)
     }
     
-    var assignment : Assignment?
-    var webView : WKWebView?
+    var assignment: Assignment?
+    var progressBar: UIProgressView?
+    var webView: WKWebView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.webView = WKWebView()
-        self.view = webView!
+        edgesForExtendedLayout = UIRectEdge.None
+        initializeWebView()
+        self.view.addSubview(webView!)
+        self.view.addSubview(progressBar!)
+    }
+    
+    func initializeWebView() {
+        webView = WKWebView()
+        progressBar = UIProgressView()
         webView!.navigationDelegate = self
+        webView!.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
+        webView?.frame = CGRectMake(0, 5, self.view.frame.width, self.view.frame.height - CGFloat(5))
+        println(self.topLayoutGuide)
+        progressBar?.frame = CGRectMake(0, 0, self.view.frame.width, CGFloat(5))
+        webView?.hidden = true
+        
     }
     
     override func viewDidAppear(animated: Bool) {
-        super.viewDidLoad()
+        super.viewDidAppear(animated)
         loadPage()
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        webView?.removeObserver(self, forKeyPath: "estimatedProgress")
+        super.viewDidDisappear(animated)
     }
     
     func setAssignment(a: Assignment) {
@@ -35,14 +54,16 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         navigationItem.title = a.name
     }
     
+    func doneLoading() {
+        webView?.hidden = false
+        progressBar?.hidden = true
+    }
+    
     func loadPage() {
         if let a = assignment {
             let url = NSURL(string: a.URL)
             println("Url: \(url)")
             let req = NSMutableURLRequest(URL: url!)
-//            if let auth = CredentialManager.sharedInstance.getBase64EncodedAuthString() {
-//                req.setValue(auth, forHTTPHeaderField: "Authorization")
-//            }
             self.webView!.loadRequest(req)
         }
     }
@@ -51,10 +72,21 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         if let jsPath = NSBundle.mainBundle().pathForResource("assignmentPrettifier", ofType: "js") {
             let js = NSString(contentsOfFile: jsPath, encoding: NSUTF8StringEncoding, error: nil)
             webView!.evaluateJavaScript(js!) { (obj, error) in
-                println("Ble")
+                self.doneLoading()
             }
         }
         
+    }
+    
+    override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
+        if keyPath == "estimatedProgress" && object as? NSObject == self.webView {
+            if let progress = self.webView?.estimatedProgress {
+                println("Progress: \(progress)")
+                progressBar?.setProgress(Float(progress), animated: true)
+            }
+        } else {
+            super.observeValueForKeyPath(keyPath, ofObject: object, change: change, context: context)
+        }
     }
  
     // MARK: - WebView delegate
@@ -66,8 +98,16 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         }
     }
     
+    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        println("Started!!")
+    }
+    
     func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
         prettifyPage()
+    }
+    
+    func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
+        println("Webview failed with error: \(error)")
     }
     
     

@@ -57,6 +57,8 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
             let assignments = DataStore.sharedInstance.getAssignments()
             detail.setAssignment(assignments[indexPath.row])
+            let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = bbItem
             navigationController?.pushViewController(detail, animated: true)
         }
     }
