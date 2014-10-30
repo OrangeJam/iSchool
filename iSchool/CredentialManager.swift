@@ -12,7 +12,7 @@ private let _credentialManager = CredentialManager()
 
 class CredentialManager {
     
-    private let userDefaults = NSUserDefaults(suiteName: "is.orangejam.ischool")
+    private let userDefaults = NSUserDefaults(suiteName: "is.orangejam.ischool")!
 
     class var sharedInstance: CredentialManager {
         return _credentialManager

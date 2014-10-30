@@ -15,7 +15,7 @@ func gradeFromString(s: String) -> Float {
     let gradeString = s as NSString
     if gradeString.length > 9 {
         if let g = numberFormatter.numberFromString(gradeString.substringFromIndex(9)) {
-            return g
+            return Float(g)
         }
     }
     return -1

@@ -15,7 +15,7 @@ class NetworkClientTests: XCTestCase {
     
     override func setUp() {
         let filePath = NSBundle(forClass: self.dynamicType).pathForResource("TestCredentials", ofType:"plist")
-        let credentials = NSDictionary(contentsOfFile:filePath!)
+        let credentials = NSDictionary(contentsOfFile:filePath!)!
         let username = credentials.valueForKey("Username") as String
         let password = credentials.valueForKey("Password") as String
         networkClient = NetworkClient(username: username, password: password)

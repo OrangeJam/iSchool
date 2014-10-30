@@ -21,12 +21,12 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "reloadData",
-            name: Notification.classes.toRaw(),
+            name: Notification.classes.rawValue,
             object: nil
         )
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "showNetworkErrorAlert",
-            name: Notification.networkError.toRaw(),
+            name: Notification.networkError.rawValue,
             object: nil
         )
         DataStore.sharedInstance.fetchAssignments()

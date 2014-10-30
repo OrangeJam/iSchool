@@ -39,7 +39,7 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         if let a = assignment {
             let url = NSURL(string: a.URL)
             println("Url: \(url)")
-            let req = NSMutableURLRequest(URL: url)
+            let req = NSMutableURLRequest(URL: url!)
 //            if let auth = CredentialManager.sharedInstance.getBase64EncodedAuthString() {
 //                req.setValue(auth, forHTTPHeaderField: "Authorization")
 //            }
@@ -49,8 +49,8 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
     
     func prettifyPage() {
         if let jsPath = NSBundle.mainBundle().pathForResource("assignmentPrettifier", ofType: "js") {
-            let js = NSString.stringWithContentsOfFile(jsPath, encoding: NSUTF8StringEncoding, error: nil)
-            webView!.evaluateJavaScript(js) { (obj, error) in
+            let js = NSString(contentsOfFile: jsPath, encoding: NSUTF8StringEncoding, error: nil)
+            webView!.evaluateJavaScript(js!) { (obj, error) in
                 println("Ble")
             }
         }

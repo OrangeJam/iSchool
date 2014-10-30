@@ -50,12 +50,12 @@ class DataStore {
     }
     
     func getClassesForDay(day: WeekDay) -> [Class] {
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         var dayClasses: [Class] = []
         for c in classes {
             let components = calendar.components(.WeekdayCalendarUnit, fromDate: c.startDate)
             let classDay = components.weekday
-            if classDay == day.toRaw() {
+            if classDay == day.rawValue {
                 dayClasses.append(c)
             }
         }
@@ -63,10 +63,10 @@ class DataStore {
     }
     
     func getClassesForToday() -> [Class] {
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
-        return getClassesForDay(WeekDay.fromRaw(today)!)
+        return getClassesForDay(WeekDay(rawValue: today)!)
     }
     
     private func getNetworkClient() -> NetworkClient? {
@@ -86,13 +86,13 @@ class DataStore {
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
                     self.assignments = Parser.parseAssignments(responseData)
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.assignment.toRaw(), object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.assignment.rawValue, object: nil)
                     self.grades = Parser.parseGrades(responseData)
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.grade.toRaw(), object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.grade.rawValue, object: nil)
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                     NSLog("Error: \(error.description)")
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.networkError.toRaw(), object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.networkError.rawValue, object: nil)
                 }
             )
         } else {
@@ -106,11 +106,11 @@ class DataStore {
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
                     self.classes = Parser.parseClasses(responseData)
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.classes.toRaw(), object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.classes.rawValue, object: nil)
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in
                     NSLog("Error: \(error.description)")
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.networkError.toRaw(), object: nil)
+                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.networkError.rawValue, object: nil)
                 }
             )
         } else {
