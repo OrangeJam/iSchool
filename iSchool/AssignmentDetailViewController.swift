@@ -46,6 +46,16 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
             self.webView!.loadRequest(req)
         }
     }
+    
+    func prettifyPage() {
+        if let jsPath = NSBundle.mainBundle().pathForResource("assignmentPrettifier", ofType: "js") {
+            let js = NSString.stringWithContentsOfFile(jsPath, encoding: NSUTF8StringEncoding, error: nil)
+            webView!.evaluateJavaScript(js) { (obj, error) in
+                println("Ble")
+            }
+        }
+        
+    }
  
     // MARK: - WebView delegate
     
@@ -56,16 +66,8 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         }
     }
     
-    func webViewDidStartLoad(webView: UIWebView) {
-        println("Started loading")
-    }
-    
-    func webViewDidFinishLoad(webView: UIWebView) {
-        println("Finished loading")
-    }
-    
-    func webView(webView: UIWebView, didFailLoadWithError error: NSError) {
-        println("Error: \(error)")
+    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+        prettifyPage()
     }
     
     

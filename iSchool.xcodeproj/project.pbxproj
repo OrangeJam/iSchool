@@ -58,6 +58,7 @@
 		F56FC84D19E584F6005C1F1B /* iSchoolFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */; };
 		F57B59981A0249220093E76C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B59971A0249220093E76C /* WebKit.framework */; };
+		F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F57B59991A0253B80093E76C /* assignmentPrettifier.js */; };
 		F588A3CE19E5985000106BC1 /* iSchoolWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F50296C919CC80FC00A12AF5 /* iSchoolWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F588A3D219E598B300106BC1 /* iSchoolFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F56FC82519E57ADC005C1F1B /* iSchoolFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F588A3D319E5A20200106BC1 /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
@@ -216,6 +217,7 @@
 		F56FC83419E57ADC005C1F1B /* iSchoolFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSchoolFrameworkTests.swift; sourceTree = "<group>"; };
 		F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lotsOfGradesNoAssignments.html; sourceTree = "<group>"; };
 		F57B59971A0249220093E76C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F57B59991A0253B80093E76C /* assignmentPrettifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = assignmentPrettifier.js; sourceTree = "<group>"; };
 		F58176FA19BB5BF8002C66CD /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		F588A3D519E5A80900106BC1 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -371,6 +373,7 @@
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
 				F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */,
+				F57B59991A0253B80093E76C /* assignmentPrettifier.js */,
 			);
 			path = iSchool;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9880071119F41DE90005266F /* Favorites@2x.png in Resources */,
+				F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */,
 				9880071519F41DE90005266F /* hnifapar@2x.png in Resources */,
 				9880071619F41DE90005266F /* lab@2x.png in Resources */,
 				9880071419F41DE90005266F /* help@2x.png in Resources */,
