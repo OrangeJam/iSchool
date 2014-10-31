@@ -191,6 +191,7 @@
 		98D28A3119BB7731008B3EB9 /* timetable_normal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_normal.html; sourceTree = "<group>"; };
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = ../iSchool/CredentialManager.swift; sourceTree = "<group>"; };
 		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
+		98FAFEAE1A03C5C300DCCDB2 /* iSchool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iSchool.entitlements; sourceTree = "<group>"; };
 		9BDEFD1A070A71AC3C9A297D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F50296BF19CC377300A12AF5 /* assignmentDetailView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailView.html; sourceTree = "<group>"; };
@@ -362,6 +363,7 @@
 		F53B591419AB8E0200ACF507 /* iSchool */ = {
 			isa = PBXGroup;
 			children = (
+				98FAFEAE1A03C5C300DCCDB2 /* iSchool.entitlements */,
 				F5770C7719F40DDD00602027 /* Images */,
 				F5D8A4EB19F409C9005437E4 /* Cells */,
 				F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */,
@@ -624,6 +626,12 @@
 					};
 					F53B591119AB8E0200ACF507 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5762VEA4LK;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					F53B592519AB8E0200ACF507 = {
 						CreatedOnToolsVersion = 6.0;
@@ -1095,6 +1103,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iSchool/iSchool.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = iSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1104,6 +1115,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = iSchool/BridgingHeader.h;
 			};
 			name = Debug;
@@ -1114,6 +1126,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iSchool/iSchool.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = iSchool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -1123,6 +1138,7 @@
 					"$(PROJECT_DIR)/Pods/build/Debug-iphoneos",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = iSchool/BridgingHeader.h;
 			};
 			name = Release;
