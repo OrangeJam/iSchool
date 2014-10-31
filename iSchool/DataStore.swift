@@ -29,7 +29,7 @@ enum Notification: String {
 
 class DataStore {
     
-    var grades: [Grade] = []
+    var grades: [[Grade]] = []
     var assignments: [Assignment] = []
     var classes: [Class] = []
     
@@ -41,7 +41,7 @@ class DataStore {
         return assignments
     }
     
-    func getGrades() -> [Grade] {
+    func getGrades() -> [[Grade]] {
         return grades
     }
     
@@ -87,7 +87,9 @@ class DataStore {
                     let responseData = NSData(data: response as NSData)
                     self.assignments = Parser.parseAssignments(responseData)
                     NSNotificationCenter.defaultCenter().postNotificationName(Notification.assignment.rawValue, object: nil)
-                    self.grades = Parser.parseGrades(responseData)
+                    if let g = Parser.parseGrades(responseData) {
+                        self.grades = g
+                    }
                     NSNotificationCenter.defaultCenter().postNotificationName(Notification.grade.rawValue, object: nil)
                 },
                 errorHandler: { (operation: AFHTTPRequestOperation!, error: NSError!) -> Void in

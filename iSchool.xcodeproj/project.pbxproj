@@ -30,6 +30,8 @@
 		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
 		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
+		F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
+		F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
 		F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */; };
 		F50296C419CC3C5200A12AF5 /* TestCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50296C319CC3C5200A12AF5 /* TestCredentials.plist */; };
@@ -190,6 +192,7 @@
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = ../iSchool/CredentialManager.swift; sourceTree = "<group>"; };
 		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
 		9BDEFD1A070A71AC3C9A297D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F50296BF19CC377300A12AF5 /* assignmentDetailView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailView.html; sourceTree = "<group>"; };
 		F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailViewWithDesc.html; sourceTree = "<group>"; };
 		F50296C319CC3C5200A12AF5 /* TestCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestCredentials.plist; sourceTree = "<group>"; };
@@ -485,6 +488,7 @@
 			children = (
 				F5D8A4EC19F409D1005437E4 /* ClassCell.swift */,
 				F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */,
+				F27BDE7D19F46F07009D1C58 /* GradeCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -863,6 +867,7 @@
 				F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
 				F5D8A4E619F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
+				F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */,
 				F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 				F588A3DB19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
@@ -897,6 +902,7 @@
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
 				F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
+				F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				F588A3DD19E68F7200106BC1 /* Grade.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,

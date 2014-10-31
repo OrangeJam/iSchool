@@ -110,7 +110,4 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
     func webView(webView: WKWebView, didFailNavigation navigation: WKNavigation!, withError error: NSError) {
         println("Webview failed with error: \(error)")
     }
-    
-    
-    
 }

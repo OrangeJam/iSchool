@@ -8,29 +8,50 @@
 
 import Foundation
 
-func gradeFromString(s: String) -> Float {
-    let numberFormatter = NSNumberFormatter()
-    numberFormatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
-    numberFormatter.decimalSeparator = ","
-    let gradeString = s as NSString
-    if gradeString.length > 9 {
-        if let g = numberFormatter.numberFromString(gradeString.substringFromIndex(9)) {
-            return Float(g)
-        }
+func gradeToFloat(s: String) -> Float {
+    let parts = s.componentsSeparatedByString(" ")
+    if parts.count > 1 {
+        let gradePart = parts[parts.count - 1]
+        let floatString = gradePart.stringByReplacingOccurrencesOfString(",", withString: ".", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        return (floatString as NSString).floatValue
     }
     return -1
+}
+
+func gradeToString(s: String) -> String {
+    let parts = s.componentsSeparatedByString(" ")
+    if parts.count > 1 {
+        let gradePart = parts[parts.count - 1]
+        return gradePart
+    }
+    return ""
+}
+
+func prettifyCourse(s: String) -> String {
+    let parts = s.componentsSeparatedByString(" ")
+    var course = ""
+    if parts.count > 1 {
+        for var i = 1; i < parts.count; ++i {
+            course += parts[i] + " "
+        }
+    }
+    
+    return course
 }
 
 struct Grade {
     var name: String
     var URL: String
     var grade: Float
+    var gradeString: String
     var order: String
     var course: String
     
+    
     init(attrs: [String]){
-        grade = gradeFromString(attrs[3])
-        course = attrs[0]
+        grade = gradeToFloat(attrs[3])
+        gradeString = gradeToString(attrs[3])
+        course = prettifyCourse(attrs[0])
         order = attrs[4]
         URL = attrs[1]
         name = attrs[2]

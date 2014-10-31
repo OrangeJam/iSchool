@@ -13,6 +13,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 50
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.tintColor = UIColor.grayColor()
         self.refreshControl?.addTarget(self,

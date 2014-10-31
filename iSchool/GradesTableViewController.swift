@@ -8,12 +8,6 @@
 
 import UIKit
 
-class GradesTableViewCell : UITableViewCell {
-    
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var gradeLabel: UILabel!
-}
-
 class GradesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     
@@ -37,19 +31,42 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
+        return DataStore.sharedInstance.getGrades().count
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.sharedInstance.getGrades().count
+        let grades = DataStore.sharedInstance.getGrades()
+        return grades[section].count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let grades = DataStore.sharedInstance.getGrades()
         let cell = tableView.dequeueReusableCellWithIdentifier("GradesTableViewCell") as GradesTableViewCell
-        cell.nameLabel.text = grades[indexPath.row].name
-        cell.gradeLabel.text = grades[indexPath.row].grade.description
+        cell.SetGrade(grades[indexPath.section][indexPath.row])
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat(40)
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
+        view.backgroundColor = UIColor(white: 1.0, alpha: 0.95)
+
+        
+        let label = UILabel(frame: CGRect(x: 20, y: 8, width: self.view.frame.size.width, height: 30))
+        let title = DataStore.sharedInstance.getGrades()[section].first?.course
+        label.text = title
+
+        let redLine = UIView(frame: CGRect(x: 0, y: 39, width: self.view.frame.size.width, height: 1))
+        redLine.backgroundColor = UIColor.redColor()
+        
+        view.addSubview(label)
+        view.addSubview(redLine)
+
+        return view;
+
     }
     
     func reloadData() {
