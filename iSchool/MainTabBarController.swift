@@ -21,10 +21,13 @@ class MainTabBarController : UITabBarController {
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
-                self.presentLoginView()
+                if !CredentialManager.sharedInstance.hasCredentials() {
+                    self.presentLoginView()
+                }
             }
         )
     }
+    
     override func viewDidAppear(animated: Bool) {
         if let credentials = CredentialManager.sharedInstance.getCredentials() {
             DataStore.sharedInstance.fetchClasses()
