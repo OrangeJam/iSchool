@@ -18,6 +18,14 @@ class CredentialManager {
         return _credentialManager
     }
     
+    func hasCredentials() -> Bool {
+        if let _ = getCredentials() {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func storeCredentials(username: String!, _ password: String!) {
         userDefaults.setObject(username, forKey: "username")
         userDefaults.setObject(password, forKey: "password")
