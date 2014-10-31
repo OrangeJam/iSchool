@@ -21,6 +21,7 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Don't put stuff under navigation bar
         edgesForExtendedLayout = UIRectEdge.None
         initializeWebView()
         self.view.addSubview(webView!)
@@ -32,8 +33,8 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         progressBar = UIProgressView()
         webView!.navigationDelegate = self
         webView!.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
-        webView?.frame = CGRectMake(0, 5, self.view.frame.width, self.view.frame.height - CGFloat(5))
-        println(self.topLayoutGuide)
+        webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        println(self.bottomLayoutGuide)
         progressBar?.frame = CGRectMake(0, 0, self.view.frame.width, CGFloat(5))
         webView?.hidden = true
         
