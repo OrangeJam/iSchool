@@ -22,6 +22,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             if let _ = CredentialManager.sharedInstance.getCredentials() {
                 return true
             } else {
+                println("Not logged in =(")
                 return false
             }
         }()
@@ -32,7 +33,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 40
-        loginButton.addTarget(self, action: "toggleExpand", forControlEvents: .TouchUpInside)
+        loginButton.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
         loginButton.setTitle("Login", forState: .Normal)
         loginButton.titleLabel?.font = UIFont.systemFontOfSize(20)
         items = DataStore.sharedInstance.assignments
@@ -46,6 +47,12 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             CGFloat(tableView(tableView, numberOfRowsInSection: 0)) * tableView.rowHeight +
             tableView.sectionFooterHeight
         )
+    }
+    
+    func openApp() {
+        println("HEHE ég ætla opna appið núna híhí")
+        let appURL = NSURL(string: "iSchool://")
+        self.extensionContext?.openURL(appURL!, completionHandler: nil)
     }
     
     func updateFooterHeight() {
