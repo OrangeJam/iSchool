@@ -68,7 +68,6 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         tableView.cellForRowAtIndexPath(indexPath)?.setSelected(false, animated: true)
     }
     
-    
     func reloadData() {
         DataStore.sharedInstance.fetchAssignments()
         refreshControl?.endRefreshing()
