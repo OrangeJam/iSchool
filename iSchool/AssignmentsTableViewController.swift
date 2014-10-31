@@ -13,22 +13,29 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.rowHeight = 50
         self.refreshControl = UIRefreshControl()
-        self.refreshControl?.tintColor = UIColor.redColor()
+        self.refreshControl?.tintColor = UIColor.grayColor()
         self.refreshControl?.addTarget(self,
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
+        tableView.tableFooterView = UIView(frame: CGRectZero)
+        tableView.delegate = self
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
-            name: Notification.assignment.toRaw(),
+            name: Notification.assignment.rawValue,
             object: nil
         )
-        tableView.tableFooterView = UIView(frame: CGRectZero)
         DataStore.sharedInstance.fetchAssignments()
     }
     
     override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
         NSNotificationCenter.defaultCenter().removeObserver(self)
     }
     
@@ -46,6 +53,21 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         cell.setAssignment(assignments[indexPath.row])
         return cell
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
+            let assignments = DataStore.sharedInstance.getAssignments()
+            detail.setAssignment(assignments[indexPath.row])
+            let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+            navigationItem.backBarButtonItem = bbItem
+            navigationController?.pushViewController(detail, animated: true)
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.cellForRowAtIndexPath(indexPath)?.setSelected(false, animated: true)
+    }
+    
     
     func reloadData() {
         DataStore.sharedInstance.fetchAssignments()

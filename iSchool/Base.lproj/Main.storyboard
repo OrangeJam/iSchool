@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A386a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -211,7 +211,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTl-rv-cel">
-                                            <rect key="frame" x="58" y="0.0" width="333" height="33.5"/>
+                                            <rect key="frame" x="58" y="0.0" width="333" height="34"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="8vt-Vd-Hho"/>
                                             </constraints>
@@ -280,6 +280,46 @@
             </objects>
             <point key="canvasLocation" x="1878" y="-54"/>
         </scene>
+        <!--Assignment Details-->
+        <scene sceneID="tLq-6c-ZWD">
+            <objects>
+                <viewController storyboardIdentifier="AssignmentDetailView" id="pdD-z4-nyp" customClass="AssignmentDetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tkv-2R-ZM6"/>
+                        <viewControllerLayoutGuide type="bottom" id="YzC-L5-HSJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Veh-S4-d12">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aVd-u4-Csk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tkv-2R-ZM6" firstAttribute="top" secondItem="aVd-u4-Csk" secondAttribute="bottom" constant="18" id="MWj-tI-dV2"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="aVd-u4-Csk"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="MWj-tI-dV2"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Assignment Details" id="VS7-4x-7c6">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="til-f1-0Bc"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="progressBar" destination="aVd-u4-Csk" id="cnP-OL-I1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FjO-IZ-rG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2636" y="-54"/>
+        </scene>
         <!--Grades Table View Controller-->
         <scene sceneID="uAZ-Xh-a1s">
             <objects>
@@ -293,23 +333,39 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fRz-9k-FS2" id="D1z-dr-Sw6">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbR-f7-YUf">
-                                            <rect key="frame" x="8" y="12" width="250" height="20"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Grade" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOn-Ku-OVL">
+                                            <rect key="frame" x="541" y="13" width="51" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOn-Ku-OVL">
-                                            <rect key="frame" x="179" y="15" width="79" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fj6-DU-PKI">
+                                            <rect key="frame" x="11" y="18" width="100" height="28"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AbR-f7-YUf">
+                                            <rect key="frame" x="11" y="8" width="250" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Fj6-DU-PKI" firstAttribute="leading" secondItem="D1z-dr-Sw6" secondAttribute="leadingMargin" constant="5" id="36Q-98-wHN"/>
+                                        <constraint firstItem="rOn-Ku-OVL" firstAttribute="trailing" secondItem="D1z-dr-Sw6" secondAttribute="trailingMargin" constant="1" id="7Wb-ar-CIV"/>
+                                        <constraint firstItem="Fj6-DU-PKI" firstAttribute="top" secondItem="AbR-f7-YUf" secondAttribute="bottom" id="Dzp-rK-Ndy"/>
+                                        <constraint firstItem="rOn-Ku-OVL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AbR-f7-YUf" secondAttribute="trailing" constant="40" id="Obh-I9-9Gu"/>
+                                        <constraint firstItem="AbR-f7-YUf" firstAttribute="leading" secondItem="D1z-dr-Sw6" secondAttribute="leadingMargin" constant="5" id="RMb-X3-MnZ"/>
+                                        <constraint firstAttribute="centerY" secondItem="rOn-Ku-OVL" secondAttribute="centerY" id="VHS-mI-XzI"/>
+                                        <constraint firstItem="AbR-f7-YUf" firstAttribute="top" secondItem="D1z-dr-Sw6" secondAttribute="topMargin" constant="1" id="ygz-j8-sLO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="gradeLabel" destination="rOn-Ku-OVL" id="vh3-nL-Vfl"/>
                                     <outlet property="nameLabel" destination="AbR-f7-YUf" id="ulb-Rl-Dzw"/>
+                                    <outlet property="rankLabel" destination="Fj6-DU-PKI" id="xlZ-XG-6SW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -322,7 +378,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1866" y="798"/>
+            <point key="canvasLocation" x="1866" y="794"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="zg4-u5-Uh5">
@@ -375,7 +431,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="uHq-x4-4Sx" kind="relationship" relationship="rootViewController" id="r1L-jL-CET"/>
+                        <segue destination="uHq-x4-4Sx" kind="relationship" relationship="rootViewController" id="WBg-3F-RaC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Bf-e5-yL7" userLabel="First Responder" sceneMemberID="firstResponder"/>

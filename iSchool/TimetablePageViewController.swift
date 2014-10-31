@@ -17,10 +17,10 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
             self.edgesForExtendedLayout = UIRectEdge.None
         }
         self.dataSource = self
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
-        let initialViewController = viewControllerForWeekDay(WeekDay.fromRaw(today)!)
+        let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: today)!)
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
@@ -43,7 +43,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         if weekDay == WeekDay.Sunday {
             return nil;
         }
-        return viewControllerForWeekDay(WeekDay.fromRaw(weekDay.toRaw() - 1)!)
+        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue - 1)!)
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
@@ -51,7 +51,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         if weekDay == WeekDay.Saturday {
             return nil;
         }
-        return viewControllerForWeekDay(WeekDay.fromRaw(weekDay.toRaw() + 1)!)
+        return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue + 1)!)
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {

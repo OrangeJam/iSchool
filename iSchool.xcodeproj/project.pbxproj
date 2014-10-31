@@ -30,6 +30,8 @@
 		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
 		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
+		F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
+		F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
 		F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */; };
 		F50296C419CC3C5200A12AF5 /* TestCredentials.plist in Resources */ = {isa = PBXBuildFile; fileRef = F50296C319CC3C5200A12AF5 /* TestCredentials.plist */; };
@@ -57,6 +59,8 @@
 		F56FC84C19E584F6005C1F1B /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
 		F56FC84D19E584F6005C1F1B /* iSchoolFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */ = {isa = PBXBuildFile; fileRef = F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */; };
+		F57B59981A0249220093E76C /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F57B59971A0249220093E76C /* WebKit.framework */; };
+		F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F57B59991A0253B80093E76C /* assignmentPrettifier.js */; };
 		F588A3CE19E5985000106BC1 /* iSchoolWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F50296C919CC80FC00A12AF5 /* iSchoolWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F588A3D219E598B300106BC1 /* iSchoolFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = F56FC82519E57ADC005C1F1B /* iSchoolFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F588A3D319E5A20200106BC1 /* iSchoolFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F56FC82119E57ADC005C1F1B /* iSchoolFramework.framework */; };
@@ -84,6 +88,8 @@
 		F5D8A4EE19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 		F5FBF8EB19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
 		F5FBF8EC19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
+		F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */; };
+		F5FBF8EF19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -187,6 +193,7 @@
 		98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CredentialManagerTests.swift; sourceTree = "<group>"; };
 		98FAFEAE1A03C5C300DCCDB2 /* iSchool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iSchool.entitlements; sourceTree = "<group>"; };
 		9BDEFD1A070A71AC3C9A297D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F50296BF19CC377300A12AF5 /* assignmentDetailView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailView.html; sourceTree = "<group>"; };
 		F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailViewWithDesc.html; sourceTree = "<group>"; };
 		F50296C319CC3C5200A12AF5 /* TestCredentials.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestCredentials.plist; sourceTree = "<group>"; };
@@ -213,6 +220,8 @@
 		F56FC83319E57ADC005C1F1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F56FC83419E57ADC005C1F1B /* iSchoolFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSchoolFrameworkTests.swift; sourceTree = "<group>"; };
 		F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = lotsOfGradesNoAssignments.html; sourceTree = "<group>"; };
+		F57B59971A0249220093E76C /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		F57B59991A0253B80093E76C /* assignmentPrettifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = assignmentPrettifier.js; sourceTree = "<group>"; };
 		F58176FA19BB5BF8002C66CD /* Assignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assignment.swift; sourceTree = "<group>"; };
 		F588A3D519E5A80900106BC1 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
@@ -227,6 +236,7 @@
 		F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
 		F5D8A4EC19F409D1005437E4 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
+		F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +253,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F57B59981A0249220093E76C /* WebKit.framework in Frameworks */,
 				F56FC84C19E584F6005C1F1B /* iSchoolFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +297,7 @@
 		96E0299E06FA47DE9EC9F696 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F57B59971A0249220093E76C /* WebKit.framework */,
 				00B6F2DAEC204B62AF31AADE /* libPods.a */,
 				F50296CA19CC80FC00A12AF5 /* NotificationCenter.framework */,
 			);
@@ -359,12 +371,14 @@
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
 				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
+				F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */,
 				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
 				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
 				F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */,
+				F57B59991A0253B80093E76C /* assignmentPrettifier.js */,
 			);
 			path = iSchool;
 			sourceTree = "<group>";
@@ -476,6 +490,7 @@
 			children = (
 				F5D8A4EC19F409D1005437E4 /* ClassCell.swift */,
 				F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */,
+				F27BDE7D19F46F07009D1C58 /* GradeCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -667,6 +682,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9880071119F41DE90005266F /* Favorites@2x.png in Resources */,
+				F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */,
 				9880071519F41DE90005266F /* hnifapar@2x.png in Resources */,
 				9880071619F41DE90005266F /* lab@2x.png in Resources */,
 				9880071419F41DE90005266F /* help@2x.png in Resources */,
@@ -859,11 +875,13 @@
 				F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				9826BAC619B8AC4200E469F7 /* Class.swift in Sources */,
 				F5D8A4E619F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
+				F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */,
 				F54A76DE19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 				F588A3DB19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
+				F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
 				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
@@ -883,6 +901,7 @@
 				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
 				F5D8A4E419F40975005437E4 /* TimetablePageViewController.swift in Sources */,
+				F5FBF8EF19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,
@@ -891,6 +910,7 @@
 				9850A66019AF7D5B005EAB3B /* LoginViewControllerTests.swift in Sources */,
 				F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */,
 				F5515F1D19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
+				F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */,
 				F59FE08A19B752AD004F4151 /* ParserTests.swift in Sources */,
 				F588A3DD19E68F7200106BC1 /* Grade.swift in Sources */,
 				9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */,

@@ -26,7 +26,7 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         super.viewWillAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
-            name: Notification.classes.toRaw(),
+            name: Notification.classes.rawValue,
             object: nil
         )
     }
