@@ -15,14 +15,15 @@ class GradesTableViewCell : UITableViewCell {
     
     var numberFormatter: NSNumberFormatter {
         let formatter = NSNumberFormatter()
+        formatter.locale = NSLocale.autoupdatingCurrentLocale()
         formatter.numberStyle = .DecimalStyle
         formatter.maximumFractionDigits = 2
         
         return formatter
     }
 
+
     func gradeToString(g : Float) -> String {
-//        println(g)
         if g != -1 {
             return numberFormatter.stringFromNumber(g)!
         }
@@ -35,7 +36,7 @@ class GradesTableViewCell : UITableViewCell {
         if s.rangeOfString("Röð") != nil {
             let parts = s.componentsSeparatedByString(":")
             // TODO: Do something to get the right text in the right language in front of rank.
-            rank += "Röð: "
+            rank += NSLocalizedString("Rank: ", comment: "The rank of the grade compared to the grade of other students")
             for var i = 1; i < parts.count; ++i {
                 rank += parts[i] + " "
             }

@@ -8,22 +8,20 @@
 
 import Foundation
 
-var numberFormatter: NSNumberFormatter {
-    let formatter = NSNumberFormatter()
-    formatter.numberStyle = .DecimalStyle
-    formatter.maximumFractionDigits = 2
-    
-    return formatter
-}
+
 
 func gradeFromString(s: String) -> Float {
+    let formatter = NSNumberFormatter()
+    formatter.locale = NSLocale(localeIdentifier: "is_IS")
+    formatter.numberStyle = .DecimalStyle
+    
     let parts = s.componentsSeparatedByString(" ")
     if parts.count > 1 {
         let gradePart = parts[parts.count - 1]
-        println(gradePart)
-        let floatString = gradePart.stringByReplacingOccurrencesOfString(",", withString: ".", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        println(floatString)
-        return (floatString as NSString).floatValue
+        
+        if let grade = formatter.numberFromString(gradePart) {
+            return grade.floatValue
+        }
     }
     return -1
 }

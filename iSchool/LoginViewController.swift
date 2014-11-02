@@ -104,6 +104,9 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         NSLog("login screen")
+        usernameField.placeholder = NSLocalizedString("Username", comment: "Placeholder in username field in login view")
+        passwordField.placeholder = NSLocalizedString("Password", comment: "Placeholder in password field in login view")
+        loginButton.setTitle(NSLocalizedString("Log In", comment: "Text on log in button"), forState: UIControlState.Normal)
         super.viewDidLoad()
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         scrollView.addGestureRecognizer(tapRecognizer)
