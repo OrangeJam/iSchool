@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -183,7 +183,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7N-yG-MRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-46" y="837"/>
+            <point key="canvasLocation" x="2636" y="-794"/>
         </scene>
         <!--Timetable-->
         <scene sceneID="MpH-DE-eeH">
@@ -320,7 +320,7 @@
             </objects>
             <point key="canvasLocation" x="2636" y="-54"/>
         </scene>
-        <!--Grades Table View Controller-->
+        <!--Grades-->
         <scene sceneID="uAZ-Xh-a1s">
             <objects>
                 <tableViewController id="t1w-Gb-QT5" customClass="GradesTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
@@ -374,7 +374,7 @@
                             <outlet property="delegate" destination="t1w-Gb-QT5" id="jEZ-8e-y9k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0h3-qb-U2I"/>
+                    <navigationItem key="navigationItem" title="Grades" id="0h3-qb-U2I"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

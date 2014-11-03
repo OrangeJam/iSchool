@@ -30,7 +30,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             object: nil
         )
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "showNetworkErrorAlert",
+            selector: "endRefresh",
             name: Notification.networkError.rawValue,
             object: nil
         )
@@ -101,9 +101,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         DataStore.sharedInstance.fetchAssignments()
     }
     
-    func showNetworkErrorAlert() {
-        let alert = UIAlertView(title: "Network Error", message: "Myschool has shit itself", delegate: self, cancelButtonTitle: "Fuck off")
-        alert.show()
+    func endRefresh() {
+        refreshControl?.endRefreshing()
     }
-
 }

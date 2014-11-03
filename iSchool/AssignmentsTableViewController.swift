@@ -32,7 +32,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
             object: nil
         )
         NSNotificationCenter.defaultCenter().addObserver(self,
-            selector: "showNetworkErrorAlert",
+            selector: "endRefresh",
             name: Notification.networkError.rawValue,
             object: nil
         )
@@ -75,19 +75,14 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     
     func reloadData() {
         DataStore.sharedInstance.fetchAssignments()
-        refreshControl?.endRefreshing()
+        endRefresh()
     }
     
     func refreshData() {
         self.tableView.reloadData()
     }
     
-    func showNetworkErrorAlert() {
-        let alert = UIAlertView(title: "Network Error",
-            message: "Myschool seems to be unreachable, try again later.",
-            delegate: self,
-            cancelButtonTitle: "Dismiss"
-        )
-        alert.show()
+    func endRefresh() {
+        refreshControl?.endRefreshing()
     }
 }

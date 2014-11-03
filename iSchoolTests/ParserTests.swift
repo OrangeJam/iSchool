@@ -52,10 +52,10 @@ class ParserTests: XCTestCase {
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data!)
         // TODO: fix tests 💩
-//        let toorGrades = grades.filter({ (grade: Grade) -> Bool in
-//            return grade.course == "T-417-TOOR Tölvuöryggi"
-//        })
-//        XCTAssertEqual(toorGrades.count, 11, "There should be 11 grades in toor")
+        let toorGrades = grades?.filter({ (course: [Grade]) -> Bool in
+            return course.first?.course == "Tölvuöryggi"
+        })
+        XCTAssertEqual(toorGrades!.count, 11, "There should be 11 grades in toor")
     }
     
     func testParseTimetableNormal() {

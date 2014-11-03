@@ -21,6 +21,7 @@ class MainTabBarController : UITabBarController {
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
+                self.showNetworkErrorAlert()
                 if !CredentialManager.sharedInstance.hasCredentials() {
                     self.presentLoginView()
                 }
@@ -39,5 +40,14 @@ class MainTabBarController : UITabBarController {
     
     func presentLoginView() {
         performSegueWithIdentifier("presentLoginView", sender: self)
+    }
+    
+    func showNetworkErrorAlert() {
+        let alert = UIAlertView(title: "Network Error",
+            message: "Myschool seems to be unreachable, try again later.",
+            delegate: self,
+            cancelButtonTitle: "Dismiss"
+        )
+        alert.show()
     }
 }
