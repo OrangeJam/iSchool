@@ -8,15 +8,17 @@
 
 import UIKit
 
-class TimetablePageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
-    
-    var dateFormatter : NSDateFormatter {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "is_IS")
-        formatter.dateFormat = "EEEE (dd.MM.yyyy)"
-        
-        return formatter
+class TimetablePageViewController: UIPageViewController, UIPageViewControllerDataSource {
+
+    let currentDate = NSDate()
+    var currentWeekDay: Int {
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
+        let today = components.weekday
+        return today
     }
+    
+    
     
     
     override func viewDidLoad() {
@@ -26,7 +28,6 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
             self.edgesForExtendedLayout = UIRectEdge.None
         }
         self.dataSource = self
-        self.delegate = self
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
@@ -34,21 +35,18 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
-        let currentWeek = NSDate()
-        
-        // Set the initial navigation bar title.
-        self.navigationItem.title = dateFormatter.stringFromDate(NSDate())
-        
         // Page control.
-        let pageControl = UIPageControl.appearance()
+        var pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
         pageControl.backgroundColor = UIColor.clearColor()
+        pageControl.numberOfPages = 7
+        pageControl.currentPage = initialViewController.weekDay!.rawValue - 1
     }
     
     func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-       let viewController = storyboard.instantiateViewControllerWithIdentifier("TimetableTableViewController") as TimetableTableViewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("TimetableTableViewController") as TimetableTableViewController
         viewController.weekDay = weekDay
         return viewController
     }
@@ -56,7 +54,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let weekDay = (viewController as TimetableTableViewController).weekDay!
         if weekDay == WeekDay.Sunday {
-            return nil;
+            return nil
         }
         return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue - 1)!)
     }
@@ -64,7 +62,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let weekDay = (viewController as TimetableTableViewController).weekDay!
         if weekDay == WeekDay.Saturday {
-            return nil;
+            return nil
         }
         return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue + 1)!)
     }
@@ -77,18 +75,4 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         return 0
     }
     
-    func pageViewController(pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [AnyObject], transitionCompleted completed: Bool) {
-        let prevVC = previousViewControllers.last as TimetableTableViewController!
-        let day = prevVC.weekDay!.rawValue
-        self.navigationItem.title = updateDateHeader(day+1)
-    }
-    
-    func updateDateHeader(delta: Int) -> String {
-        let deltaDay = NSDateComponents()
-        deltaDay.setValue(delta, forComponent: NSCalendarUnit.DayCalendarUnit)
-        
-        let otherDay = NSCalendar.currentCalendar().dateByAddingComponents(deltaDay, toDate: NSDate(), options: NSCalendarOptions(0))!
-
-        return dateFormatter.stringFromDate(otherDay)
-    }
 }
