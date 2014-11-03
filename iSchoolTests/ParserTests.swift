@@ -51,7 +51,6 @@ class ParserTests: XCTestCase {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data!)
-        // TODO: fix tests 💩
         let toorGrades = grades?.filter({ (course: [Grade]) -> Bool in
             return course.first?.course == "Tölvuöryggi"
         })
