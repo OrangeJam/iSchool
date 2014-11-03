@@ -40,6 +40,8 @@
 		F50296D219CC80FC00A12AF5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50296D119CC80FC00A12AF5 /* MainInterface.storyboard */; };
 		F509DC8319C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
+		F509E24B1A0778FB0038966B /* MoreMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24A1A0778FB0038966B /* MoreMenuController.swift */; };
+		F509E24C1A0778FB0038966B /* MoreMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24A1A0778FB0038966B /* MoreMenuController.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
@@ -204,6 +206,7 @@
 		F50296CF19CC80FC00A12AF5 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		F50296D119CC80FC00A12AF5 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
+		F509E24A1A0778FB0038966B /* MoreMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuController.swift; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -377,6 +380,7 @@
 				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
 				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
+				F509E24A1A0778FB0038966B /* MoreMenuController.swift */,
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
 				F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */,
@@ -893,6 +897,7 @@
 				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
+				F509E24B1A0778FB0038966B /* MoreMenuController.swift in Sources */,
 				F5515F1C19B9C65F000A23D1 /* AssignmentsTableViewController.swift in Sources */,
 				F5FBF8EB19F4617E004E4141 /* AssignmentCell.swift in Sources */,
 				F5CD975E19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
@@ -928,6 +933,7 @@
 				F59FE08819B752A3004F4151 /* Parser.swift in Sources */,
 				F5D8A4E719F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
 				F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
+				F509E24C1A0778FB0038966B /* MoreMenuController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
