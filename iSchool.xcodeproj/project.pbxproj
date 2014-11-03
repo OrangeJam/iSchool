@@ -42,6 +42,8 @@
 		F509DC8419C868FA00FABC8C /* GradesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */; };
 		F509E24B1A0778FB0038966B /* MoreMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24A1A0778FB0038966B /* MoreMenuController.swift */; };
 		F509E24C1A0778FB0038966B /* MoreMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24A1A0778FB0038966B /* MoreMenuController.swift */; };
+		F509E24E1A0789C70038966B /* FoodWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24D1A0789C70038966B /* FoodWebViewController.swift */; };
+		F509E24F1A0789C70038966B /* FoodWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24D1A0789C70038966B /* FoodWebViewController.swift */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
@@ -207,6 +209,7 @@
 		F50296D119CC80FC00A12AF5 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
 		F509E24A1A0778FB0038966B /* MoreMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuController.swift; sourceTree = "<group>"; };
+		F509E24D1A0789C70038966B /* FoodWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebViewController.swift; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -380,6 +383,7 @@
 				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
 				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
+				F509E24D1A0789C70038966B /* FoodWebViewController.swift */,
 				F509E24A1A0778FB0038966B /* MoreMenuController.swift */,
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
@@ -893,6 +897,7 @@
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
+				F509E24E1A0789C70038966B /* FoodWebViewController.swift in Sources */,
 				F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
 				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
@@ -934,6 +939,7 @@
 				F5D8A4E719F4097D005437E4 /* TimetableTableViewController.swift in Sources */,
 				F54A76DF19C9E1920099A1B2 /* MainTabBarController.swift in Sources */,
 				F509E24C1A0778FB0038966B /* MoreMenuController.swift in Sources */,
+				F509E24F1A0789C70038966B /* FoodWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

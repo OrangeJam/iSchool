@@ -473,6 +473,17 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7rV-d5-5af" id="qCE-Hq-yWS">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="hnifapar.png" translatesAutoresizingMaskIntoConstraints="NO" id="jYU-Nl-Yta">
+                                                    <rect key="frame" x="18" y="9" width="26" height="26"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Málið" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMh-Xb-AWp">
+                                                    <rect key="frame" x="52" y="11" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mVd-AK-7iW">
@@ -509,6 +520,24 @@
             </objects>
             <point key="canvasLocation" x="1870" y="1554"/>
         </scene>
+        <!--Food Web View Controller-->
+        <scene sceneID="kzm-jO-YPj">
+            <objects>
+                <viewController storyboardIdentifier="FoodWebView" id="mnR-N2-aYa" customClass="FoodWebViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ezp-UG-lfv"/>
+                        <viewControllerLayoutGuide type="bottom" id="aFL-kw-gNc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AXI-Jb-AlO">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sYN-O3-hLw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2697" y="1188"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="N47-yv-JjM">
             <objects>
@@ -534,6 +563,7 @@
         <image name="Files.png" width="22" height="27"/>
         <image name="centered_white.png" width="966" height="511"/>
         <image name="greencheck.png" width="40" height="40"/>
+        <image name="hnifapar.png" width="24" height="24"/>
         <image name="timetable.png" width="24" height="24"/>
     </resources>
 </document>
