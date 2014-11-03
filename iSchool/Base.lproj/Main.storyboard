@@ -458,7 +458,7 @@
             </objects>
             <point key="canvasLocation" x="1054" y="798"/>
         </scene>
-        <!--More-->
+        <!--Table View Controller-->
         <scene sceneID="P1a-Xl-TAx">
             <objects>
                 <tableViewController id="hVo-ek-Vaf" sceneMemberID="viewController">
@@ -479,7 +479,7 @@
                             <outlet property="delegate" destination="hVo-ek-Vaf" id="7ye-fP-1Xy"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="More" id="VFd-Oa-7b4"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="VFd-Oa-7b4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuV-9l-Fjb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
