@@ -44,6 +44,8 @@
 		F509E24C1A0778FB0038966B /* MoreMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24A1A0778FB0038966B /* MoreMenuController.swift */; };
 		F509E24E1A0789C70038966B /* FoodWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24D1A0789C70038966B /* FoodWebViewController.swift */; };
 		F509E24F1A0789C70038966B /* FoodWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F509E24D1A0789C70038966B /* FoodWebViewController.swift */; };
+		F509E2511A0794BC0038966B /* foodPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F509E2501A0794BC0038966B /* foodPrettifier.js */; };
+		F509E2521A0794BC0038966B /* foodPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F509E2501A0794BC0038966B /* foodPrettifier.js */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
@@ -210,6 +212,7 @@
 		F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesTableViewController.swift; sourceTree = "<group>"; };
 		F509E24A1A0778FB0038966B /* MoreMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuController.swift; sourceTree = "<group>"; };
 		F509E24D1A0789C70038966B /* FoodWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebViewController.swift; sourceTree = "<group>"; };
+		F509E2501A0794BC0038966B /* foodPrettifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = foodPrettifier.js; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -388,6 +391,7 @@
 				F53B592019AB8E0200ACF507 /* Images.xcassets */,
 				F53B591519AB8E0200ACF507 /* Supporting Files */,
 				F588A3D619E5A8FA00106BC1 /* BridgingHeader.h */,
+				F509E2501A0794BC0038966B /* foodPrettifier.js */,
 				F57B59991A0253B80093E76C /* assignmentPrettifier.js */,
 			);
 			path = iSchool;
@@ -709,6 +713,7 @@
 				F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */,
 				9880071919F41DE90005266F /* timetable@2x.png in Resources */,
 				9880071319F41DE90005266F /* greencheck.png in Resources */,
+				F509E2511A0794BC0038966B /* foodPrettifier.js in Resources */,
 				9880071819F41DE90005266F /* rulogo@2x.png in Resources */,
 				F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */,
 			);
@@ -724,6 +729,7 @@
 				98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */,
 				F575808F19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html in Resources */,
 				F50296C419CC3C5200A12AF5 /* TestCredentials.plist in Resources */,
+				F509E2521A0794BC0038966B /* foodPrettifier.js in Resources */,
 				F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */,
 				F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */,
 			);

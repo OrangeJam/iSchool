@@ -33,7 +33,9 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         progressBar = UIProgressView()
         webView!.navigationDelegate = self
         webView!.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
-        webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        let navbarHeight = self.navigationController != nil ? self.navigationController!.navigationBar.frame.height : 0
+        let tabbarHeight = self.tabBarController != nil ? self.tabBarController!.tabBar.frame.height : 0
+        webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height - tabbarHeight - navbarHeight)
         println(self.bottomLayoutGuide)
         progressBar?.frame = CGRectMake(0, 0, self.view.frame.width, CGFloat(5))
         webView?.hidden = true
@@ -76,7 +78,6 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
                 self.doneLoading()
             }
         }
-        
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
