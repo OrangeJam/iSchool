@@ -19,15 +19,16 @@ class ClassCell: UITableViewCell {
     
     func setClass(c: Class) {
         // Format the date strings.
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        let startString = dateFormatter.stringFromDate(c.startDate)
-        let endString = dateFormatter.stringFromDate(c.endDate)
+        let timeFormatter = NSDateFormatter()
+        timeFormatter.dateFormat = "HH:mm"
+        let startString = timeFormatter.stringFromDate(c.startDate)
+        let endString = timeFormatter.stringFromDate(c.endDate)
+
         
         // Set the label texts.
         courseLabel.text = c.course
         locationLabel.text = c.location
-        typeLabel.text = c.type.rawValue
+        typeLabel.text = c.type.description
         startLabel.text = startString
         endLabel.text = endString
         

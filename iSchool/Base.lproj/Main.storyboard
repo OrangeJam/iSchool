@@ -310,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="2636" y="-54"/>
         </scene>
-        <!--Grades Table View Controller-->
+        <!--Grades-->
         <scene sceneID="uAZ-Xh-a1s">
             <objects>
                 <tableViewController id="t1w-Gb-QT5" customClass="GradesTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
@@ -364,7 +364,10 @@
                             <outlet property="delegate" destination="t1w-Gb-QT5" id="jEZ-8e-y9k"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0h3-qb-U2I"/>
+                    <navigationItem key="navigationItem" title="Grades" id="0h3-qb-U2I"/>
+                    <connections>
+                        <outlet property="gradsTitle" destination="0h3-qb-U2I" id="dnq-OI-hog"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

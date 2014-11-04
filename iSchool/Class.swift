@@ -10,20 +10,28 @@ import UIKit
 import Foundation
 
 enum ClassType : String {
-    case Lecture = "Fyrirlestur"
-    case Discussion = "Dæmatími"
-    case Assistance = "Viðtalstími"
-    case Exam = "Próf"
-    case Other = "Annað"
+    case Lecture = "Lecture"
+    case Discussion = "Discussion"
+    case Assistance = "Assistance"
+    case Exam = "Exam"
+    case Other = "Other"
+    
+    var description : String {
+        get {
+            return NSLocalizedString(self.rawValue, comment: self.rawValue)
+        }
+    }
 }
 
-struct Class: Equatable {
 
+struct Class: Equatable {
+    
     var course: String
     var type: ClassType
     var location: String
     var startDate: NSDate
     var endDate: NSDate
+    
     
     func isOver() -> Bool {
         return endDate.timeIntervalSinceNow <= 0.0
@@ -51,4 +59,14 @@ func == (lhs: Class, rhs: Class) -> Bool {
         return false
     }
     return true
+}
+
+// 💩💩💩 This is some ugly hack to make the localization for the strings in ClassType work 
+// There has to be a better way but I found none.
+func NotAFunction() {
+    let Lecture = NSLocalizedString("Lecture", comment: "The word Lecture in the timeTable")
+    let Discussion = NSLocalizedString("Discussion", comment: "The word Discussion in the timeTable")
+    let Assistance = NSLocalizedString("Assistance", comment: "The word Assistance in the timeTable")
+    let Exam = NSLocalizedString("Exam", comment: "The word Exam in the timeTable")
+    let Other = NSLocalizedString("Other", comment: "The word Other in the timeTable")
 }

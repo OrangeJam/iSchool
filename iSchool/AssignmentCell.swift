@@ -16,7 +16,12 @@ class AssignmentsTableViewCell : UITableViewCell {
     
     func setAssignment(a: Assignment) {
         let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd.MM"
+//        if NSLocale.currentLocale().localeIdentifier == "en_US" {
+//            dateFormatter.dateFormat = "MM.dd"
+//        }
+//        else {
+            dateFormatter.dateFormat = "dd.MM"
+//        }
         dueDateLabel.text = dateFormatter.stringFromDate(a.dueDate)
         nameLabel.text = a.name
         courseLabel.text = a.courseName

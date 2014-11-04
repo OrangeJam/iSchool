@@ -1,0 +1,30 @@
+/* The word Assistance in the timeTable */
+"Assistance" = "Viðtalstími";
+
+/* The word Discussion in the timeTable */
+"Discussion" = "Dæmatími";
+
+/* The word Exam in the timeTable */
+"Exam" = "Próf";
+
+/* The title in the Grades view */
+"Grades" = "Einkunnir";
+
+/* The word Lecture in the timeTable */
+"Lecture" = "Fyrirlestur";
+
+/* Text on log in button */
+"Log In" = "Skrá Inn";
+
+/* The word Other in the timeTable */
+"Other" = "Annað";
+
+/* Placeholder in password field in login view */
+"Password" = "Lykilorð";
+
+/* The rank of the grade compared to the grade of other students */
+"Rank: " = "Röð: ";
+
+/* Placeholder in username field in login view */
+"Username" = "Notendanafn";
+

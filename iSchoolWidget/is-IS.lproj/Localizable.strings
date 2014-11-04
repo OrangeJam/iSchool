@@ -1,0 +1,15 @@
+/* The word Assistance in the timeTable */
+"Assistance" = "Viðtalstími";
+
+/* The word Discussion in the timeTable */
+"Discussion" = "Dæmatími";
+
+/* The word Exam in the timeTable */
+"Exam" = "Próf";
+
+/* The word Lecture in the timeTable */
+"Lecture" = "Fyrirlestur";
+
+/* The word Other in the timeTable */
+"Other" = "Annað";
+
