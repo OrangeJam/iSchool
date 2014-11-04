@@ -375,6 +375,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Grades" id="0h3-qb-U2I"/>
+                    <connections>
+                        <outlet property="gradsTitle" destination="0h3-qb-U2I" id="dnq-OI-hog"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sao-Wd-sKT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

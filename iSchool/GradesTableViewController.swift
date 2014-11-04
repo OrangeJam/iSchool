@@ -11,6 +11,7 @@ import UIKit
 class GradesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     var data: ([[Grade]])?
+    @IBOutlet weak var gradsTitle: UINavigationItem!
     
     override func viewDidLoad() {
         self.refreshControl = UIRefreshControl()
@@ -35,6 +36,8 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             object: nil
         )
         DataStore.sharedInstance.fetchAssignments()
+        gradsTitle.title = NSLocalizedString("Grades", comment: "The title in the Grades view")
+        
     }
     
     override func viewWillDisappear(animated: Bool) {

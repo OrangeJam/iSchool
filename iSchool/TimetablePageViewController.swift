@@ -10,16 +10,12 @@ import UIKit
 
 class TimetablePageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
-    let currentDate = NSDate()
     var currentWeekDay: Int {
         let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
         let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
         let today = components.weekday
         return today
     }
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,10 +24,8 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
             self.edgesForExtendedLayout = UIRectEdge.None
         }
         self.dataSource = self
-        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
-        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
-        let today = components.weekday
-        let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: today)!)
+        
+        let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: currentWeekDay)!)
         let viewControllers = [initialViewController]
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         

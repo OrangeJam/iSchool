@@ -13,7 +13,7 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
     var weekDay: WeekDay? = nil
     var dateFormatter: NSDateFormatter {
         let formatter = NSDateFormatter()
-        formatter.locale = NSLocale(localeIdentifier: "is_IS")
+//        formatter.locale = NSLocale(localeIdentifier: "is_IS")
         formatter.dateFormat = "EEE d. MMM"
         
         return formatter
@@ -86,7 +86,6 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         deltaDay.setValue(delta, forComponent: NSCalendarUnit.DayCalendarUnit)
         
         let otherDay = NSCalendar.currentCalendar().dateByAddingComponents(deltaDay, toDate: NSDate(), options: NSCalendarOptions(0))!
-        
         var date = dateFormatter.stringFromDate(otherDay)
         let firstLetter = date.substringToIndex(advance(date.startIndex,1)).uppercaseString
         date = firstLetter + date.substringFromIndex(advance(date.startIndex,1))
