@@ -30,6 +30,7 @@
 		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
 		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
+		F23954E119FEC1F000BFCB01 /* GradeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */; };
 		F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
@@ -200,6 +201,7 @@
 		98FAFEAE1A03C5C300DCCDB2 /* iSchool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iSchool.entitlements; sourceTree = "<group>"; };
 		98FAFEAF1A03C92C00DCCDB2 /* iSchoolWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iSchoolWidget.entitlements; sourceTree = "<group>"; };
 		9BDEFD1A070A71AC3C9A297D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeDetailViewController.swift; sourceTree = "<group>"; };
 		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F50296BF19CC377300A12AF5 /* assignmentDetailView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailView.html; sourceTree = "<group>"; };
 		F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = assignmentDetailViewWithDesc.html; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 				F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */,
 				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
 				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
+				F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */,
 				F53B591D19AB8E0200ACF507 /* Main.storyboard */,
 				F509E24D1A0789C70038966B /* FoodWebViewController.swift */,
 				F509E24A1A0778FB0038966B /* MoreMenuController.swift */,
@@ -914,6 +917,7 @@
 				F5CD975E19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
 				F5D8A4E319F40975005437E4 /* TimetablePageViewController.swift in Sources */,
 				F5C22B3F19B7233C00E4D595 /* NetworkClient.swift in Sources */,
+				F23954E119FEC1F000BFCB01 /* GradeDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

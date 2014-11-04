@@ -10,6 +10,17 @@ import UIKit
 
 class TimetablePageViewController: UIPageViewController, UIPageViewControllerDataSource {
 
+    let currentDate = NSDate()
+    var currentWeekDay: Int {
+        let calendar = NSCalendar(calendarIdentifier: NSGregorianCalendar)!
+        let components = calendar.components(.WeekdayCalendarUnit, fromDate: NSDate())
+        let today = components.weekday
+        return today
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // This prevents the table view from going under the navigation bar.
@@ -25,15 +36,17 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         self.setViewControllers(viewControllers, direction: .Forward, animated: false, completion: nil)
         
         // Page control.
-        let pageControl = UIPageControl.appearance()
+        var pageControl = UIPageControl.appearance()
         pageControl.pageIndicatorTintColor = UIColor.lightGrayColor()
         pageControl.currentPageIndicatorTintColor = UIColor.blackColor()
         pageControl.backgroundColor = UIColor.clearColor()
+        pageControl.numberOfPages = 7
+        pageControl.currentPage = initialViewController.weekDay!.rawValue - 1
     }
     
     func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: NSBundle(forClass: self.dynamicType))
-       let viewController = storyboard.instantiateViewControllerWithIdentifier("TimetableTableViewController") as TimetableTableViewController
+        let viewController = storyboard.instantiateViewControllerWithIdentifier("TimetableTableViewController") as TimetableTableViewController
         viewController.weekDay = weekDay
         return viewController
     }
@@ -41,7 +54,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
         let weekDay = (viewController as TimetableTableViewController).weekDay!
         if weekDay == WeekDay.Sunday {
-            return nil;
+            return nil
         }
         return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue - 1)!)
     }
@@ -49,7 +62,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let weekDay = (viewController as TimetableTableViewController).weekDay!
         if weekDay == WeekDay.Saturday {
-            return nil;
+            return nil
         }
         return viewControllerForWeekDay(WeekDay(rawValue: weekDay.rawValue + 1)!)
     }
@@ -61,4 +74,5 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
         return 0
     }
+    
 }

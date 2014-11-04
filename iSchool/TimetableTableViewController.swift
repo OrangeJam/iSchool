@@ -11,7 +11,13 @@ import UIKit
 class TimetableTableViewController: UITableViewController, UITableViewDataSource {
 
     var weekDay: WeekDay? = nil
-    
+    var dateFormatter: NSDateFormatter {
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale(localeIdentifier: "is_IS")
+        formatter.dateFormat = "EEE d. MMM"
+        
+        return formatter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +26,12 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        let pvc = self.parentViewController! as TimetablePageViewController
+        let deltaDays = weekDay!.rawValue - pvc.currentWeekDay
+        pvc.navigationItem.title = calculateDateTitle(deltaDays)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -68,4 +80,18 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
     }
+    
+    func calculateDateTitle(delta: Int) -> String {
+        let deltaDay = NSDateComponents()
+        deltaDay.setValue(delta, forComponent: NSCalendarUnit.DayCalendarUnit)
+        
+        let otherDay = NSCalendar.currentCalendar().dateByAddingComponents(deltaDay, toDate: NSDate(), options: NSCalendarOptions(0))!
+        
+        var date = dateFormatter.stringFromDate(otherDay)
+        let firstLetter = date.substringToIndex(advance(date.startIndex,1)).uppercaseString
+        date = firstLetter + date.substringFromIndex(advance(date.startIndex,1))
+        
+        return date
+    }
+
 }
