@@ -43,10 +43,10 @@ class MainTabBarController : UITabBarController {
     }
     
     func showNetworkErrorAlert() {
-        let alert = UIAlertView(title: "Network Error",
-            message: "Myschool seems to be unreachable, try again later.",
+        let alert = UIAlertView(title: NSLocalizedString("Network Error", comment: "Title in network error message box"),
+            message: NSLocalizedString("Myschool seems to be unreachable, try again later.", comment: "Message when there is a network error and MySchool can not be reached"),
             delegate: self,
-            cancelButtonTitle: "Dismiss"
+            cancelButtonTitle: NSLocalizedString("Dismiss", comment: "Button to dismiss network error message box")
         )
         alert.show()
     }

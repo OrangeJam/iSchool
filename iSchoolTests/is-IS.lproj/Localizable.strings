@@ -4,6 +4,9 @@
 /* The word Discussion in the timeTable */
 "Discussion" = "Dæmatími";
 
+/* Button to dismiss network error message box */
+"Dismiss" = "Loka";
+
 /* The word Exam in the timeTable */
 "Exam" = "Próf";
 
@@ -15,6 +18,12 @@
 
 /* Text on log in button */
 "Log In" = "Skrá Inn";
+
+/* Message when there is a network error and MySchool can not be reached */
+"Myschool seems to be unreachable, try again later." = "Ekki næst samband við MySchool, vinsamlegast reyndu aftur síðar.";
+
+/* Title in network error message box */
+"Network Error" = "Vandamál með netþjón";
 
 /* The word Other in the timeTable */
 "Other" = "Annað";
