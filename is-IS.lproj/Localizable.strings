@@ -1,6 +1,9 @@
 /* The word Assistance in the timeTable */
 "Assistance" = "Viðtalstími";
 
+/* Back button */
+"Back" = "Til baka";
+
 /* The word Discussion in the timeTable */
 "Discussion" = "Dæmatími";
 
@@ -24,6 +27,9 @@
 
 /* Title in network error message box */
 "Network Error" = "Vandamál með netþjón";
+
+/* (No Commment) */
+"Network error." = "Vandamál með netþjón.";
 
 /* The word Other in the timeTable */
 "Other" = "Annað";

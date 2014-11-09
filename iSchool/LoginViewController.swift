@@ -87,12 +87,12 @@ class LoginViewController: UIViewController {
             let statusCode = response.statusCode
             switch(statusCode) {
             case 401:
-                messageLabel.text = "Invalid username or password, try again."
+                messageLabel.text = NSLocalizedString("Invalid username or password, try again.", comment: "Message when username or password are wrong")
             default:
-                messageLabel.text = "Network error."
+                messageLabel.text = NSLocalizedString("Network error.", comment: "Message when responce is not 401, some other network error")
             }
         } else {
-            messageLabel.text = "Network error."
+            messageLabel.text = NSLocalizedString("Network error.", comment: "Some network error")
         }
         messageLabel.hidden = false
     }

@@ -1,6 +1,9 @@
 /* The word Assistance in the timeTable */
 "Assistance" = "Viðtalstími";
 
+/* Back button */
+"Back" = "Til baka";
+
 /* The word Discussion in the timeTable */
 "Discussion" = "Dæmatími";
 
