@@ -112,7 +112,7 @@ value to myschool.}
 \section*{Introduction}
 
 This report details the work done by the authors in the fall term of 2014. This work was done
-as an undergraduate research oppertunity (UROP). The authors are students at Reykjavik University
+as an undergraduate research opportunity (UROP). The authors are students at Reykjavik University
 in their last year of studies for a B.Sc. in software engineering. Kári and Björn are the authors
 of a previous version of the myschool app created in 2013. We set out to solve the problem of 
 making myschool easier to access and more pleasant to use on a mobile device. The current state
@@ -120,52 +120,45 @@ of the system is such that accessing information pertaining to ones studies is v
 situated in front of a desktop computer, making for frustrated students. 
 
 Our solution is an application for the iOS mobile operating system that makes all the relevant 
-information available instantly and in an easily digestable format.
-
-\begin{align}
-A = 
-\begin{bmatrix}
-A_{11} & A_{21} \\
-A_{21} & A_{22}
-\end{bmatrix}
-\end{align}
-
-\lipsum[4] % Dummy text
+information available instantly and in an easily digestible format.
 
 %------------------------------------------------
 
-\subsection*{Subsection 1}
+\subsection*{The iSchool App}
 
-\lipsum[5] % Dummy text
+The app is a native iOS application written in Apple's new programming language Swift.
+We use native Cocoa Touch controls to present a familiar user interface that ties in well with
+the rest of the operating system.
 
+The app provides the following subset of myschool functionality, selected for it's relevance to
+the mobile user.
 \begin{itemize}
-\item First item in a list 
-\item Second item in a list 
-\item Third item in a list
+    \item View schedule for the week.
+    \item A list of due assignments, and their status.
+    \item Grades achieved during the semester.
+    \item Málið's menu for the week.
 \end{itemize}
 
-\lipsum[6] % Dummy text
+Myschool does not currently present an API to program against, so the only option available to us
+is to parse the HTML page and extract relevant information. This presents some problems, as it's 
+impossible to make such an approach very robust, and the slightest change in how myschool presents
+it's data could break our application. There is little we can do to remedy that situation, and we
+rely on the fact that it's highly unlikely that myschool will change much in the foreseeable future.
+
+Having said that, there were two options open to us. We could create a web application that handles
+the parsing of myschool and presents an API to the mobile client. Choosing this route would mean that
+we could simply update the web application to handle changes in myschool without breaking the 
+clients. We decided against this approach as it comes with it's own set of drawbacks. We would have
+to keep track of and store user credentials in a database, which we feel is both dishonest to our
+fellow students and means we would have to shoulder a great deal of responsibility. It would also 
+complicate the project and potentially make it infeasible to complete within the time frame.
+
 
 %------------------------------------------------
 
 \subsection*{Subsection 2}
 
 \lipsum[7] % Dummy text
-
-\begin{table}
-\caption{Random table}
-\centering
-\begin{tabular}{llr}
-\toprule
-\multicolumn{2}{c}{Name} \\
-\cmidrule(r){1-2}
-First name & Last Name & Grade \\
-\midrule
-John & Doe & $7.5$ \\
-Richard & Miles & $2$ \\
-\bottomrule
-\end{tabular}
-\end{table}
 
 %------------------------------------------------
 

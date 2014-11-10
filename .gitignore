@@ -1,3 +1,4 @@
 TestCredentials.plist
 .DS_Store
-TestCredentials.plist
+report/*
+!report/report.tex
