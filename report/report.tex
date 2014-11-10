@@ -1,0 +1,199 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Large Colored Title Article
+% LaTeX Template
+% Version 1.1 (25/11/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[protrusion=true,expansion=true]{microtype} % Better typography
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[svgnames]{xcolor} % Enabling colors by their 'svgnames'
+\usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+
+\usepackage{sectsty} % Enables custom section titles
+\allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
+
+\usepackage{fancyhdr} % Needed to define custom headers/footers
+\pagestyle{fancy} % Enables the custom headers/footers
+\usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+
+% Headers - all currently empty
+\lhead{}
+\chead{}
+\rhead{}
+
+% Footers
+\lfoot{}
+\cfoot{}
+\rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}} % "Page 1 of 2"
+
+\renewcommand{\headrulewidth}{0.0pt} % No header rule
+\renewcommand{\footrulewidth}{0.4pt} % Thin footer rule
+
+\usepackage{lettrine} % Package to accentuate the first letter of the text
+\newcommand{\initial}[1]{ % Defines the command and style for the first letter
+\lettrine[lines=3,lhang=0.3,nindent=0em]{
+\color{DarkGray}
+{\textsf{#1}}}{}}
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\usepackage{titling} % Allows custom title configuration
+
+\newcommand{\HorRule}{\color{DarkGray} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+
+\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule \fontsize{50}{50} \color{DarkRed} \selectfont} % Horizontal rule before the title
+
+\title{UROP - iSchool App} % Your article title
+
+\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
+
+\preauthor{\begin{flushleft} \lineskip 0.5em \color{DarkRed}} % Author font configuration
+
+\author{Björn Orri Sæmundsson, Kári Tristan Helgason, Starkaður Hróbjartsson, } % Your name
+
+\postauthor{\footnotesize  \color{Black} % Configuration for the institution name
+Reykjavik University % Your institution
+
+\par\end{flushleft}\HorRule} % Horizontal rule after the title
+
+\date{} % Add a date here if you would like one to appear underneath the title block
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Print the title
+
+\thispagestyle{fancy} % Enabling the custom headers/footers for the first page 
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+\section*{Abstract}
+% The first character should be within \initial{}
+\initial{W}\textbf{e aim to make myschool more accessible to mobile clients by providing a native 
+    application for use with Apple's popular iOS operating system. The application shows information
+on upcoming classes, due assignments and grades achieved in an easily consumed format and simplifies
+the life of the highly mobile student. The problem we set out to solve was that accessing myschool 
+on a mobile device was very difficult. The login process requires entering of the username and 
+password on each visit and no way to store it in the browser. In addition the UI lends itself quite
+poorly to small screens, and information is higly ilegible. At a time when students demand easy
+and always-available access to information it is apparent to us that our solution adds significant
+value to myschool.}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction}
+
+This report details the work done by the authors in the fall term of 2014. This work was done
+as an undergraduate research oppertunity (UROP). The authors are students at Reykjavik University
+in their last year of studies for a B.Sc. in software engineering. Kári and Björn are the authors
+of a previous version of the myschool app created in 2013. We set out to solve the problem of 
+making myschool easier to access and more pleasant to use on a mobile device. The current state
+of the system is such that accessing information pertaining to ones studies is very tedious when not
+situated in front of a desktop computer, making for frustrated students. 
+
+Our solution is an application for the iOS mobile operating system that makes all the relevant 
+information available instantly and in an easily digestable format.
+
+\begin{align}
+A = 
+\begin{bmatrix}
+A_{11} & A_{21} \\
+A_{21} & A_{22}
+\end{bmatrix}
+\end{align}
+
+\lipsum[4] % Dummy text
+
+%------------------------------------------------
+
+\subsection*{Subsection 1}
+
+\lipsum[5] % Dummy text
+
+\begin{itemize}
+\item First item in a list 
+\item Second item in a list 
+\item Third item in a list
+\end{itemize}
+
+\lipsum[6] % Dummy text
+
+%------------------------------------------------
+
+\subsection*{Subsection 2}
+
+\lipsum[7] % Dummy text
+
+\begin{table}
+\caption{Random table}
+\centering
+\begin{tabular}{llr}
+\toprule
+\multicolumn{2}{c}{Name} \\
+\cmidrule(r){1-2}
+First name & Last Name & Grade \\
+\midrule
+John & Doe & $7.5$ \\
+Richard & Miles & $2$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%------------------------------------------------
+
+\section*{Section 2}
+
+\lipsum[8] % Dummy text
+
+\begin{description}
+\item[First] This is the first item
+\item[Last] This is the last item
+\end{description}
+
+\lipsum[9] % Dummy text
+
+%----------------------------------------------------------------------------------------
+%	REFERENCE LIST
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
