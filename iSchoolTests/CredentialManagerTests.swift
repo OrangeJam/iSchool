@@ -11,7 +11,7 @@ import XCTest
 
 class CredentialManagerTests: XCTestCase {
 
-    let userDefaults = NSUserDefaults.standardUserDefaults()
+    let userDefaults = NSUserDefaults(suiteName: "group.is.orangejam.iSchool")!
     let user = "user"
     let pass = "lamepassword"
     

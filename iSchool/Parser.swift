@@ -105,7 +105,7 @@ class Parser {
                                             var typeString = info[2]
                                             let length = countElements(typeString)
                                             if length > 0 {
-                                                typeString = typeString.substringToIndex(typeString.endIndex.predecessor())
+                                                typeString = typeString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
                                             }
                                             var type: ClassType
                                             // Could fetch additional information here...

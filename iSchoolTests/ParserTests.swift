@@ -39,7 +39,7 @@ class ParserTests: XCTestCase {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         if let grades = Parser.parseGrades(data!) {
-            XCTAssertEqual(grades[0].count, 1, "There should be one grade")
+            XCTAssertEqual(grades[0].count, 2, "There should be two grades")
             XCTAssertEqual(grades[0][0].name, "Assignment 1", "The name should be Assignment 1")
             // Got error: '@autoclosure () -> Float' does not conform to protocol 'FloatLiteralConvertible'
             // Commeting this line for the time being
@@ -51,10 +51,8 @@ class ParserTests: XCTestCase {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data!)
-        let toorGrades = grades?.filter({ (course: [Grade]) -> Bool in
-            return course.first?.course == "Tölvuöryggi"
-        })
-        XCTAssertEqual(toorGrades!.count, 11, "There should be 11 grades in toor")
+        let toorGrades = grades![4]
+        XCTAssertEqual(toorGrades.count, 13, "There should be 13 grades in toor")
     }
     
     func testParseTimetableNormal() {
