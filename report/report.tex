@@ -220,6 +220,37 @@ explicitly allocating and freeing memory, while also avoiding the runtime overhe
 garbage collection. It's also compiled to native code with LLVM, and is very fast, in some cases even
 faster than C.
 
+To ease the transition to Swift Apple made sure that interoperability with existing Objective-C 
+code was seamless. This allows developers to use a mix of Objective-C and Swift in their project.
+
+\subsection*{API changes}
+
+It's clear that Swift will be the programming language of choice for developing iOS applications
+in the future. We chose to use Swift for this project even though at the time of development the
+language was still in Beta. We found ourselves in the uncomfortable situation of developing for an
+operating system in Beta, in a language in Beta with development tools in Beta. As might be apparent
+this caused some difficulty and we encountered several pain points during development.
+
+Apple made clear when they announced Swift that the syntax would change until the language hit 1.0.
+Unfortunately this means that backwards-incompatible changes were made almost every week, and we had
+to go through the codebase and fix syntax errors repeatedly.
+
+One specific problem we encountered was with unit tests. We had written tests for most of our classes
+that worked fine until Apple introduced access modifiers to Swift. This means that classes and 
+functions had to be declared public in order to be visible outside the class they're defined in. We
+wrote a script to insert and remove these modifiers before and after the unit tests were run and
+the tests passed again. Apple then backtracked on the decision to add access modifiers and they were
+removed in the next version of the compiler. 
+
+Another problem that we faced was that the return value of standard library functions kept changing
+from values to optionals incrementally. This is a sensible change but it caused problems for us as
+we were expecting unwrapped values. Luckily due to Swifts strict typing these errors are caught by
+the compiler rather than causing runtime errors.
+
+We had to deal with all sorts of these problems during development, but now that the language has 
+been officially released these problems are hopefully a thing of the past.
+
+
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
