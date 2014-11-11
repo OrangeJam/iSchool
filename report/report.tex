@@ -65,11 +65,11 @@
 
 \newcommand{\HorRule}{\color{DarkGray} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
 
-\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule \fontsize{50}{50} \color{DarkRed} \selectfont} % Horizontal rule before the title
+\pretitle{\vspace{-30pt} \begin{center} \HorRule \fontsize{50}{50} \color{DarkRed} \selectfont} % Horizontal rule before the title
 
 \title{UROP - iSchool App} % Your article title
 
-\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
+\posttitle{\par\end{center}\vskip 0.5em} % Whitespace under the title
 
 \preauthor{\begin{flushleft} \lineskip 0.5em \color{DarkRed}} % Author font configuration
 
@@ -167,16 +167,58 @@ and finally present suggestions for future work and improvements.
 
 %------------------------------------------------
 
-\section*{Section 2}
+\section*{Previous work}
 
-\lipsum[8] % Dummy text
+Björn and Kári have previously created apps for myschool, both for iOS and Google's Android operating
+system, which has gained much traction among students enrolled at RU. At the time of writing 810 
+and 615 students have installed the iOS and Android apps respectively. The last available data 
+from RU is from 2011, and shows 2942 students enrolled in total. So nearly half of students at the 
+university have installed the app. This demonstrates the enormous interest in the project from
+students.
 
+The old version of the app did have some problems. Development was haphazard and the code was not
+properly tested. There were concurrency problems and in particular a certain race condition would
+cause the app to crash randomly. In light of the fact that the app had gained such popularity we 
+wanted to make sure that it would work well and reliably, in order to reflect positively on us and
+the university.
+
+We decided that rewriting the app in a more maintainable fashion, with proper structure and tests
+would be the best way to create a long term viable solution.
+
+%-------------------------------------------------
+
+\section*{Swift}
+
+At the WWDC conference in June Apple surprised everyone when they announced their new programming
+language Swift. Swift was designed to be a very modern programming language, and incorporates
+many innovations in programming language design.
+
+Some of the impressive features that swift offers are
 \begin{description}
-\item[First] This is the first item
-\item[Last] This is the last item
+    \item[Functional programming style] In Swift, functions are objects just like everything else.
+        This enables interesting programming patterns such as passing around callbacks. This feature
+        is the defining property of many functional languages. Swift incorporates other features 
+        of functional languages, such as the trio of functions \texttt{map}, \texttt{filter} and \texttt{fold}.
+    \item[Immutable by default] Variables are declared with the \texttt{let} or \texttt{var}
+        keywords. Variables declared with \texttt{let} are immutable. This allows the compiler to
+        do all sorts of clever optimisations and allows one to detect many mistakes at compile-time.
+    \item[Sensible Switch-Case] The switch statement in Swift allows programmers to pattern match on
+        a any value, not just integers as in many classic programming languages. This allows one 
+        to write nice and terse code, that's also very fast.
+    \item[Strict typing and type inference] The compiler enforces types to make errors apparent as
+        soon as possible, but frees the programmer from the burden of declaring a type for every
+        variable explicitly.
+    \item[Powerful enums and structures] In Swift, structures and enums can have methods associated with them. In addition, any value can be associated with an enum, not just integers.
+    \item[Optionals] This language feature makes it easy to implement nil checks and prevents the 
+        dreaded errors that occur when nils bubble up all over ones program. Functions that return 
+        optional types are wrapped in an optional that contains either nil or a value. 
 \end{description}
 
-\lipsum[9] % Dummy text
+These are just a few of the improvements that Swift brings. It's also appropriate to mention the fact
+that objects in Swift are reference-counted, freeing the programmer from the cognitive burden of
+explicitly allocating and freeing memory, while also avoiding the runtime overhead that comes with
+garbage collection. It's also compiled to native code with LLVM, and is very fast, in some cases even
+faster than C.
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
