@@ -51,6 +51,11 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             name: Notification.classes.rawValue,
             object: nil
         )
+        NSNotificationCenter.defaultCenter().addObserver(self,
+            selector: "endRefresh",
+            name: Notification.networkError.rawValue,
+            object: nil
+        )
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -86,9 +91,13 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         DataStore.sharedInstance.fetchClasses()
     }
     
+    func endRefresh() {
+        self.refreshControl?.endRefreshing()
+    }
+    
     func refreshData() {
         self.tableView.reloadData()
-        self.refreshControl?.endRefreshing()
+        endRefresh()
     }
     
     func calculateDateTitle(delta: Int) -> String {
