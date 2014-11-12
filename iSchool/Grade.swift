@@ -8,6 +8,11 @@
 
 import Foundation
 
+extension String {
+    subscript (i: Int) -> String {
+        return String(Array(self)[i])
+    }
+}
 
 
 func gradeFromString(s: String) -> Float {
@@ -62,6 +67,11 @@ struct Grade {
         course = prettifyCourse(attrs[0])
         rank = attrs[4]
         URL = attrs[1]
+        if countElements(URL) > 0 {
+            if URL[0] == "?" {
+                URL = "https://myschool.ru.is/myschool/" + URL
+            }
+        }
         name = attrs[2]
     }
 }
