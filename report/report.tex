@@ -18,7 +18,12 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+\documentclass[pdftex, DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage[scaled]{helvet}
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[english]{babel} % English language/hyphenation
@@ -37,6 +42,11 @@
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers
 \usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+
+
+
+
+
 
 % Headers - all currently empty
 \lhead{}
@@ -61,32 +71,19 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\usepackage{titling} % Allows custom title configuration
 
-\newcommand{\HorRule}{\color{DarkGray} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+\usepackage[pdftex]{graphicx}
+\usepackage{xcolor}
+\definecolor{dark-gray-Large}{RGB}{78,79,81}
+\definecolor{dark-gray}{RGB}{70,71,73}
 
-\pretitle{\vspace{-30pt} \begin{center} \HorRule \fontsize{50}{50} \color{DarkRed} \selectfont} % Horizontal rule before the title
-
-\title{UROP - iSchool App} % Your article title
-
-\posttitle{\par\end{center}\vskip 0.5em} % Whitespace under the title
-
-\preauthor{\begin{flushleft} \lineskip 0.5em \color{DarkRed}} % Author font configuration
-
-\author{Björn Orri Sæmundsson, Kári Tristan Helgason, Starkaður Hróbjartsson, } % Your name
-
-\postauthor{\footnotesize  \color{Black} % Configuration for the institution name
-Reykjavik University % Your institution
-
-\par\end{flushleft}\HorRule} % Horizontal rule after the title
-
-\date{} % Add a date here if you would like one to appear underneath the title block
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\maketitle % Print the title
+\input{title.tex}
 
 \thispagestyle{fancy} % Enabling the custom headers/footers for the first page 
 
