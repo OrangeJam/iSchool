@@ -54,7 +54,7 @@ class ParserTests: XCTestCase {
         for course in grades! {
             XCTAssertNotEqual(course.first!.course, "", "There should be a course name associated with each grade.")
         }
-        let toorGrades = grades![]
+        let toorGrades = grades![0]
         XCTAssertEqual(toorGrades.count, 13, "There should be 13 grades in toor")
     }
     
