@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
-//        CredentialManager.sharedInstance.clearCredentials()
+        self.window?.tintColor = UIColor(red: 204, green: 0, blue: 0, alpha: 1);
         return true
     }
 

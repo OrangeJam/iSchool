@@ -167,7 +167,6 @@ class Parser {
             return nil
         }
         let tableHeader = nodes[0]
-        println("Children: \(tableHeader.children.count)")
         if tableHeader.objectForKey("class") == "ruTableTitle" {
             if tableHeader.children.count == 11 {
                 // Remove table header if it's for the assignments table

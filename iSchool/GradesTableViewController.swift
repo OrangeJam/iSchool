@@ -69,7 +69,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return CGFloat(40)
+        return CGFloat(30)
     }
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -77,15 +77,15 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         view.backgroundColor = UIColor(white: 1.0, alpha: 0.95)
 
         
-        let label = UILabel(frame: CGRect(x: 20, y: 8, width: self.view.frame.size.width, height: 20))
+        let label = UILabel(frame: CGRect(x: 20, y: 6, width: self.view.frame.size.width, height: 20))
         if let title = data?[section].first?.course {
-            label.font = UIFont(name: "System", size: 11)
+            label.font = UIFont(name: "System", size: 10)
             label.text = title
         } else {
             return nil
         }
         let redLine = UIView(frame: CGRect(x: 0, y: 29, width: self.view.frame.size.width, height: 1))
-        redLine.backgroundColor = UIColor.redColor()
+        redLine.backgroundColor = UIColor(red: 204, green: 0, blue: 0, alpha: 1)
         
         view.addSubview(label)
         view.addSubview(redLine)
