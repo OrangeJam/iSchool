@@ -19,6 +19,14 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         return formatter
     }
     
+    var emptyLabel: UILabel {
+        let label = UILabel()
+        label.text = NSLocalizedString("No Classes today.",  comment: "Label indicating the lack of classes for the current day")
+        label.textColor = UIColor.darkGrayColor()
+        label.font = UIFont(name: "System", size: 24)
+        return label
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -26,6 +34,8 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
+        emptyLabel.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 50)
+        self.tableView.addSubview(emptyLabel)
     }
     
     override func viewDidAppear(animated: Bool) {

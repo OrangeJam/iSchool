@@ -17,7 +17,6 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         switch(indexPath.row) {
         case 0:
-            println("HMMM ég er forvitin um hvað sé nú eiginlega í málinu!?!?")
             presentFoodView()
         case 2:
             println("Logout")
