@@ -201,7 +201,7 @@
             <objects>
                 <tableViewController clearsSelectionOnViewWillAppear="NO" id="uHq-x4-4Sx" customClass="AssignmentsTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="46" sectionHeaderHeight="22" sectionFooterHeight="22" id="fNK-3t-kjB">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="46" id="vkp-hG-DxS" customClass="AssignmentsTableViewCell" customModule="iSchool" customModuleProvider="target">
@@ -325,7 +325,7 @@
             <objects>
                 <tableViewController id="t1w-Gb-QT5" customClass="GradesTableViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5hD-82-sbv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GradesTableViewCell" id="fRz-9k-FS2" customClass="GradesTableViewCell" customModule="iSchool" customModuleProvider="target">
@@ -389,7 +389,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="eF5-HJ-X9Z" customClass="MainTabBarController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="vrs-Ts-7sP">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="vrs-Ts-7sP">
                         <autoresizingMask key="autoresizingMask"/>
                     </tabBar>
                     <connections>
@@ -466,7 +466,7 @@
             <objects>
                 <tableViewController id="hVo-ek-Vaf" customClass="MoreMenuController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="x8b-MZ-psG">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
