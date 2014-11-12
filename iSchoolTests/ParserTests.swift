@@ -51,7 +51,10 @@ class ParserTests: XCTestCase {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("lotsOfGradesNoAssignments", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         let grades = Parser.parseGrades(data!)
-        let toorGrades = grades![4]
+        for course in grades! {
+            XCTAssertNotEqual(course.first!.course, "", "There should be a course name associated with each grade.")
+        }
+        let toorGrades = grades![]
         XCTAssertEqual(toorGrades.count, 13, "There should be 13 grades in toor")
     }
     

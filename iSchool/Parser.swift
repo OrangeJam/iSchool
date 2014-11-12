@@ -162,13 +162,16 @@ class Parser {
         var grades: [Grade] = []
         let xpathQuery = "//div[@class='ruContentPage']/center/table/tbody/tr"
         var nodes = parser.searchWithXPathQuery(xpathQuery) as [TFHppleElement]
-        // Bail out if there are no assignments
+        // Bail out if there is no data
         if nodes.count == 0 {
             return nil
         }
-        let tableHeader = nodes.removeAtIndex(0)
+        let tableHeader = nodes[0]
+        println("Children: \(tableHeader.children.count)")
         if tableHeader.objectForKey("class") == "ruTableTitle" {
             if tableHeader.children.count == 11 {
+                // Remove table header if it's for the assignments table
+                nodes.removeAtIndex(0)
                 var currentNode = nodes.removeAtIndex(0)
                 while(nodes.first?.objectForKey("class") != "ruTableTitle") {
                     currentNode = nodes.removeAtIndex(0)
