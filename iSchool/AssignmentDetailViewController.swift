@@ -15,7 +15,7 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         super.init(coder: aDecoder)
     }
     
-    var assignment: Assignment?
+    var url: NSURL?
     var progressBar: UIProgressView?
     var webView: WKWebView?
     
@@ -52,9 +52,9 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
         super.viewDidDisappear(animated)
     }
     
-    func setAssignment(a: Assignment) {
-        assignment = a
-        navigationItem.title = a.name
+    func setDetailForURL(url: NSURL, title: String) {
+        self.url = url
+        navigationItem.title = title
     }
     
     func doneLoading() {
@@ -63,10 +63,8 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
     }
     
     func loadPage() {
-        if let a = assignment {
-            let url = NSURL(string: a.URL)
-            println("Url: \(url)")
-            let req = NSMutableURLRequest(URL: url!)
+        if let url = self.url {
+            let req = NSMutableURLRequest(URL: url)
             self.webView!.loadRequest(req)
         }
     }

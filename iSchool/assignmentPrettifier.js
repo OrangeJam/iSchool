@@ -1,8 +1,13 @@
-$('.ruHeader a').click(function(e){e.preventDefault()});
-$('.ruLeft').hide();$('.ruRight').hide();
-$('.ruFooter').hide();$('#headersearch').hide();
-$('.level1').hide()
-$('.resetSize').click();
-$('.increaseSize').click();
-$('.increaseSize').click();
-$('.increaseSize').click();
+(function(){
+ $('.ruHeader img').hide();
+ $('.ruHeader tr:not(:last-child)').hide();
+ $('.ruLeft').hide();
+ $('.ruRight').hide();
+ $('.ruFooter').hide();
+ $('#headersearch').hide();
+ $('.level1').hide();
+ $('#ruTabsNewcontainer').hide();
+ $('.resetSize').click();
+ $('.increaseSize').click();
+ $('.increaseSize').click();
+ }());

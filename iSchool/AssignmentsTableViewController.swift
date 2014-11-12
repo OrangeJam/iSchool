@@ -62,7 +62,8 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
             let assignments = DataStore.sharedInstance.getAssignments()
-            detail.setAssignment(assignments[indexPath.row])
+            let a = assignments[indexPath.row]
+            detail.setDetailForURL(NSURL(string: a.URL)!, title: a.name)
             let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
             navigationItem.backBarButtonItem = bbItem
             navigationController?.pushViewController(detail, animated: true)
