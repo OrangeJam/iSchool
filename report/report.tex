@@ -282,6 +282,11 @@ the compiler rather than causing runtime errors.
 We had to deal with all sorts of these problems during development, but now that the language has 
 been officially released these problems are hopefully a thing of the past.
 
+To summarize, Swift is a very modern language that will be the language of choice for future 
+development on all of Apple's platforms. As with most new technologies, there were some initial
+growing pains, but these issues are sure to subside as the language matures. 
+We look forward to watching the community prosper around the language.
+
 \section*{Architecture}
 
 The app design follows the MVC (Model View Controller) pattern popular in iOS development.
@@ -289,6 +294,15 @@ The principles are that model classes are wrappers for data and contain methods 
 data, views are classes that own UI components and know how and when to render them to the screen
 and controllers are the interface between the two. They listen for events and react appropriately, 
 fetching data from a model and giving it to a view, or transition between views.
+
+We use external libraries for XML parsing and network communication. These external dependencies 
+are managed through Cocoapods, a dependency management tool for iOS and OS X development. Adding
+a dependency is as simple as adding a line to the \texttt{Podfile} and running the command
+\texttt{pod install}. This fetches the libraries and adds a build phase to link it. Since most
+external libraries out there are written in Objective-C we added a bridging header to interface
+with them. The compiler then automatically generates a Swift interface and casts return types to 
+proper Swift types. This is a fantastic feature of Swift mentioned briefly above, and really eases
+the transition over to Swift.
 
 The app involves 3 separate targets. iOS 8 introduces so called app-extensions. This is an extension
 of the app sandbox to allow a separate process to share data with the main application. We use
@@ -329,6 +343,9 @@ a message to the UI thread indicating that new data is available, or that an err
 then reacts appropriately while staying responsive the whole time. Controllers register themselves 
 to receive a notification, so more than one controller can react to the same message. iOS makes this
 very easy with the notification center API.
+
+To summarize, we tried our best to ensure separation of concerns and avoid code duplication as much
+as possible. This ensures the app will be maintainable in the future.
 
 
 \subsection*{Extension}
