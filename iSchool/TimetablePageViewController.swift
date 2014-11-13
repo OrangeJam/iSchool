@@ -34,6 +34,9 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
         pageControl.backgroundColor = UIColor.clearColor()
         pageControl.numberOfPages = 7
         pageControl.currentPage = initialViewController.weekDay!.rawValue - 1
+        
+        // Set title.
+        self.navigationItem.title = NSLocalizedString("Timetable", comment: "Header title for the timetable tab.")
     }
     
     func viewControllerForWeekDay(weekDay: WeekDay) -> TimetableTableViewController {
