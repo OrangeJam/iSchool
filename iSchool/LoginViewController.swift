@@ -83,6 +83,7 @@ class LoginViewController: UIViewController {
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
         activityIndicator.stopAnimating()
+        let localizer = LocalizationSystem.sharedInstance
         if let response = operation.response {
             let statusCode = response.statusCode
             switch(statusCode) {
@@ -106,9 +107,9 @@ class LoginViewController: UIViewController {
         NSLog("login screen")
         super.viewDidLoad()
         let localizer = LocalizationSystem.sharedInstance
-        usernameField.placeholder = localizer.localizedStringForKey("Username", comment: "Placeholder in username field in login view")
-        passwordField.placeholder = localizer.localizedStringForKey("Password", comment: "Placeholder in password field in login view")
-        loginButton.setTitle(localizer.localizedStringForKey("Log In", comment: "Text on log in button"), forState: UIControlState.Normal)
+        usernameField.placeholder = NSLocalizedString("Username", comment: "Placeholder in username field in login view")
+        passwordField.placeholder = NSLocalizedString("Password", comment: "Placeholder in password field in login view")
+        loginButton.setTitle(NSLocalizedString("Log In", comment: "Text on log in button"), forState: UIControlState.Normal)
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         scrollView.addGestureRecognizer(tapRecognizer)
     }
