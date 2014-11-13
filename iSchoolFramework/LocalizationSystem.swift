@@ -8,22 +8,20 @@
 
 import UIKit
 
-private let _localizer = LocalizationSystem()
+private var bundle: NSBundle = NSBundle.mainBundle()
 
 class LocalizationSystem {
     
-    var bundle: NSBundle = NSBundle.mainBundle()
     
-    
-    class var sharedInstance: LocalizationSystem {
-        return _localizer
-    }
-    
-    func localizedStringForKey(key: String, comment: String) -> String {
+    class func localizedStringForKey(key: String, comment: String) -> String {
+        if bundle == NSBundle.mainBundle() {
+            println("AY CARAMBA, VAYA CON DIOS")
+        }
         return bundle.localizedStringForKey(key, value: comment, table: nil)
     }
     
-    func setLanguage(language: String) {
+    class func setLanguage(language: String) {
+        println("Setting language to \(language)")
         if let path = NSBundle.mainBundle().pathForResource(language, ofType: "lproj") {
             bundle = NSBundle(path: path)!
         } else {
@@ -33,11 +31,13 @@ class LocalizationSystem {
         NSUserDefaults.standardUserDefaults().synchronize()
     }
     
-    func resetLocalization() {
+    class func resetLocalization() {
+        println("Resetting localisation")
         bundle = NSBundle.mainBundle()
     }
     
-    func getLanguage() -> String {
+    class func getLanguage() -> String {
+        println("Getting language")
         // If the app has a
         if let language = NSUserDefaults.standardUserDefaults().stringForKey("language") {
             return language

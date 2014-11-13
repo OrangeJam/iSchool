@@ -6,17 +6,32 @@
   Copyright (c) 2014 OrangeJam. All rights reserved.
 */
 
+/* (No Commment) */
+"Assignments" = "Assignments";
+
 /* The word Assistance in the timeTable */
 "Assistance" = "Assistance";
+
+/* (No Commment) */
+"Back" = "Back";
 
 /* The word Discussion in the timeTable */
 "Discussion" = "Discussion";
 
+/* Button to dismiss network error message box */
+"Dismiss" = "Dismiss";
+
 /* The word Exam in the timeTable */
 "Exam" = "Exam";
 
-/* The title in the Grades view */
+/* (No Commment) */
 "Grades" = "Grades";
+
+/* Message when username or password are wrong */
+"Invalid username or password, try again." = "Invalid username or password, try again.";
+
+/* (No Commment) */
+"Language" = "Language";
 
 /* The word Lecture in the timeTable */
 "Lecture" = "Lecture";
@@ -24,17 +39,42 @@
 /* Text on log in button */
 "Log In" = "Log In";
 
+/* Log out button */
+"Log out" = "Log out";
+
+/* Header title for málið webview */
+"Málið" = "Málið";
+
+/* Text on button to view the menu for Málið */
+"Málið Cafeteria" = "Málið Cafeteria";
+
+/* Tab title for more tab. */
+"More" = "More";
+
+/* Message when there is a network error and MySchool can not be reached */
+"Myschool seems to be unreachable, try again later." = "Myschool seems to be unreachable, try again later.";
+
+/* Title in network error message box */
+"Network Error" = "Network Error";
+
+/* (No Commment) */
+"Network error." = "Network error.";
+
+/* Label indicating the lack of classes for the current day */
+"No Classes today." = "No Classes today.";
+
 /* The word Other in the timeTable */
 "Other" = "Other";
 
 /* Placeholder in password field in login view */
 "Password" = "Password";
 
-/* The rank of the grade compared to the grade of other students */
+/* (No Commment) */
 "Rank: " = "Rank: ";
+
+/* (No Commment) */
+"Timetable" = "Timetable";
 
 /* Placeholder in username field in login view */
 "Username" = "Username";
 
-/* The title of the cell that toggles the language */
-"Language" = "Íslenska";

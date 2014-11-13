@@ -21,7 +21,6 @@ class AssignmentsTableViewCell : UITableViewCell {
         dueDateLabel.text = dateFormatter.stringFromDate(a.dueDate)
         nameLabel.text = a.name
         courseLabel.text = a.courseName
-        println(dateFormatter.stringFromDate(NSDate()))
         if dateFormatter.stringFromDate(NSDate()) == "01.04"{
             if a.handedIn {
                 doneImage.hidden = true
@@ -46,7 +45,6 @@ class AssignmentsTableViewCell : UITableViewCell {
     
     func assignmentStub() {
         let rand = Int(arc4random_uniform(2))
-        println(rand)
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "dd.MM"
         if dateFormatter.stringFromDate(NSDate()) == "13.11"{

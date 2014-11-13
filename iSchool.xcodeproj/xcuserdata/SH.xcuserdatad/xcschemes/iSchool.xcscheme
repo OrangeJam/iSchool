@@ -96,7 +96,6 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES"
-      showNonLocalizedStrings = "YES"
       language = "en"
       region = "IS">
       <BuildableProductRunnable>
