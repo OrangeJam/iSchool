@@ -1,3 +1,78 @@
 
-/* Class = "IBUIButton"; normalTitle = "Button"; ObjectID = "0Gs-Kg-UEv"; */
-"0Gs-Kg-UEv.normalTitle" = "Button";
+/* Class = "IBUINavigationItem"; title = "Grades"; ObjectID = "0h3-qb-U2I"; */
+"0h3-qb-U2I.title" = "Grades";
+
+/* Class = "IBUIButton"; normalTitle = "Log In"; ObjectID = "2Hm-2Z-58L"; */
+"2Hm-2Z-58L.normalTitle" = "Log In";
+
+/* Class = "IBUINavigationItem"; title = "Timetable"; ObjectID = "5PF-33-PVK"; */
+"5PF-33-PVK.title" = "Timetable";
+
+/* Class = "IBUILabel"; text = "Assignment"; ObjectID = "AbR-f7-YUf"; */
+"AbR-f7-YUf.text" = "Assignment";
+
+/* Class = "IBUITabBarItem"; title = "Grades"; ObjectID = "Doj-rs-4AX"; */
+"Doj-rs-4AX.title" = "Grades";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "E5g-6h-XL7"; */
+"E5g-6h-XL7.placeholder" = "Password";
+
+/* Class = "IBUILabel"; text = "locationLabel"; ObjectID = "Ffq-Is-bn5"; */
+"Ffq-Is-bn5.text" = "locationLabel";
+
+/* Class = "IBUILabel"; text = "Rank"; ObjectID = "Fj6-DU-PKI"; */
+"Fj6-DU-PKI.text" = "Rank";
+
+/* Class = "IBUILabel"; text = "typeLabel"; ObjectID = "Fnv-oH-gm0"; */
+"Fnv-oH-gm0.text" = "typeLabel";
+
+/* Class = "IBUINavigationItem"; title = "Assignments"; ObjectID = "K1m-bM-sXr"; */
+"K1m-bM-sXr.title" = "Assignments";
+
+/* Class = "IBUILabel"; text = "Assignment Name"; ObjectID = "LTl-rv-cel"; */
+"LTl-rv-cel.text" = "Assignment Name";
+
+/* Class = "IBUILabel"; text = "Log out"; ObjectID = "NUW-vN-Hmh"; */
+"NUW-vN-Hmh.text" = "Log out";
+
+/* Class = "IBUILabel"; text = "Date"; ObjectID = "Nul-9Y-uxN"; */
+"Nul-9Y-uxN.text" = "Date";
+
+/* Class = "IBUITextField"; placeholder = "Username"; ObjectID = "Omg-OD-V8p"; */
+"Omg-OD-V8p.placeholder" = "Username";
+
+/* Class = "IBUITabBarItem"; title = "Timetable"; ObjectID = "Tys-8q-3rn"; */
+"Tys-8q-3rn.title" = "Timetable";
+
+/* Class = "IBUINavigationItem"; title = "Assignment Details"; ObjectID = "VS7-4x-7c6"; */
+"VS7-4x-7c6.title" = "Assignment Details";
+
+/* Class = "IBUILabel"; text = "Málið"; ObjectID = "ZMh-Xb-AWp"; */
+"ZMh-Xb-AWp.text" = "Málið";
+
+/* Class = "IBUINavigationItem"; title = "More"; ObjectID = "aaD-tt-GbP"; */
+"aaD-tt-GbP.title" = "More";
+
+/* Class = "IBUITabBarItem"; title = "Assignments"; ObjectID = "iO4-N7-jwr"; */
+"iO4-N7-jwr.title" = "Assignments";
+
+/* Class = "IBUILabel"; text = "start"; ObjectID = "ich-Ds-v4s"; */
+"ich-Ds-v4s.text" = "start";
+
+/* Class = "IBUILabel"; text = "Invalid authentication, try again."; ObjectID = "lxD-lW-pag"; */
+"lxD-lW-pag.text" = "Invalid authentication, try again.";
+
+/* Class = "IBUILabel"; text = "Grade"; ObjectID = "rOn-Ku-OVL"; */
+"rOn-Ku-OVL.text" = "Grade";
+
+/* Class = "IBUIBarButtonItem"; title = "Back"; ObjectID = "til-f1-0Bc"; */
+"til-f1-0Bc.title" = "Back";
+
+/* Class = "IBUILabel"; text = "courseLabel"; ObjectID = "wRN-0Y-6Dz"; */
+"wRN-0Y-6Dz.text" = "courseLabel";
+
+/* Class = "IBUILabel"; text = "end"; ObjectID = "xNT-PV-JpY"; */
+"xNT-PV-JpY.text" = "end";
+
+/* Class = "IBUILabel"; text = "Course Name"; ObjectID = "yzB-JN-MUH"; */
+"yzB-JN-MUH.text" = "Course Name";
