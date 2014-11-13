@@ -36,6 +36,21 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         )
         emptyLabel.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 50)
         self.tableView.addSubview(emptyLabel)
+        
+        // Add listeners to make sure the red line is always in the correct position.
+        
+        // Add listener for foreground entering.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableView", name: UIApplicationWillEnterForegroundNotification, object: nil)
+        
+        // Add listener for significant time changes (e.g. when a new day starts).
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableView", name: UIApplicationSignificantTimeChangeNotification, object: nil)
+    }
+    
+    // Function that calls self.tableView.reloadData().
+    // The only purpose is to use it as a selector.
+    func reloadTableView() {
+        println("Yo")
+        self.tableView.reloadData()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -46,6 +61,10 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // This line is to prevent the red line animation from stopping.
+        self.tableView.reloadData()
+        
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.classes.rawValue,
@@ -83,6 +102,23 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             let dayClasses = DataStore.sharedInstance.getClassesForDay(day)
             let c = dayClasses[indexPath.row]
             cell.setClass(c)
+            
+            // Update the table view at the end of this class.
+            if c.isNow() {
+                let interval = c.endDate.timeIntervalSinceNow
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(interval * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                    self.tableView.reloadData()
+                })
+            }
+            // Update the table view at the beginning of the next class.
+            else if !c.isOver() {
+                if indexPath.row == 0 || dayClasses[indexPath.row - 1].isOver() {
+                    let interval = c.startDate.timeIntervalSinceNow
+                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(interval * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                        self.tableView.reloadData()
+                    })
+                }
+            }
         }
         return cell
     }

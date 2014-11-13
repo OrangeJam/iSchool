@@ -1,5 +1,5 @@
 //
-//  AssignmentDetailView.swift
+//  DetailView.swift
 //  iSchool
 //
 //  Created by Kári Helgason on 19/10/14.
@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
+class DetailViewController : UIViewController, WKNavigationDelegate {
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -22,7 +22,7 @@ class AssignmentDetailViewController : UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Don't put stuff under navigation bar
-        edgesForExtendedLayout = UIRectEdge.None
+        //edgesForExtendedLayout = UIRectEdge.None
         initializeWebView()
         self.view.addSubview(webView!)
         self.view.addSubview(progressBar!)

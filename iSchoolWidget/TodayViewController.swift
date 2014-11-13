@@ -9,11 +9,6 @@
 import UIKit
 import NotificationCenter
 
-
-class TodayTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-}
-
 class TodayViewController: UITableViewController, NCWidgetProviding {
     
     var items: [Assignment]?
@@ -27,25 +22,37 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             }
         }()
     
-    let loginButton = UIButton()
+    var loginButton: UIButton {
+        let b = UIButton()
+        b.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
+        b.setTitle("Login", forState: .Normal)
+        b.titleLabel?.font = UIFont.systemFontOfSize(20)
+        return b
+    }
+    var noAssignmentsLabel: UILabel {
+        let l = UILabel()
+        l.text = "No Assignments. Take a day off!"
+        l.textColor = UIColor.lightGrayColor()
+        return l
+    }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 40
-        loginButton.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
-        loginButton.setTitle("Login", forState: .Normal)
-        loginButton.titleLabel?.font = UIFont.systemFontOfSize(20)
+        tableView.sectionHeaderHeight = 0
+        tableView.rowHeight = 55
+        
         items = DataStore.sharedInstance.assignments
-        updateFooterHeight()
+        updateHeaderAndFooterHeight()
         updatePreferredContentSize()
         // Do any additional setup after loading the view from its nib.
     }
     
     func updatePreferredContentSize() {
+        println("Header: \(tableView.sectionHeaderHeight), Footer: \(tableView.sectionFooterHeight)")
         preferredContentSize = CGSizeMake(CGFloat(0),
             CGFloat(tableView(tableView, numberOfRowsInSection: 0)) * tableView.rowHeight +
-            tableView.sectionFooterHeight
+            tableView.sectionFooterHeight + tableView.sectionHeaderHeight
         )
     }
     
@@ -55,8 +62,20 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         self.extensionContext?.openURL(appURL!, completionHandler: nil)
     }
     
-    func updateFooterHeight() {
+    func updateHeaderAndFooterHeight() {
         tableView.sectionFooterHeight = loggedIn ? 0 : 40
+        if loggedIn {
+            if let items = self.items {
+                tableView.sectionHeaderHeight = items.count == 0 ? 40 : 0
+            } else {
+                tableView.sectionHeaderHeight = 40
+            }
+        }
+        println("\(tableView.sectionHeaderHeight)")
+    }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return noAssignmentsLabel
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -69,42 +88,22 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
-        // Perform any setup necessary in order to update the view.
-
-        // If an error is encountered, use NCUpdateResult.Failed
-        // If there's no update required, use NCUpdateResult.NoData
-        // If there's an update, use NCUpdateResult.NewData
-
         loadAssignments(completionHandler)
     }
     
     func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
-        if let (username, password) = CredentialManager.sharedInstance.getCredentials() {
-            let networkClient = NetworkClient(username: username, password: password)
-            networkClient.fetchPage(.Assignments,
-                successHandler: { (operation, response) in
-                    let responseData = NSData(data: response as NSData)
-                    let assignments = Parser.parseAssignments(responseData)
-                    if self.hasNewData(assignments) {
-                        self.items = assignments
-                        self.tableView.reloadData()
-                        self.updatePreferredContentSize()
-                        completionHandler(.NewData)
-                    } else {
-                        completionHandler(.NoData)
-                    }
-                },
-                errorHandler: { (operation, error) in
-                    println("AW =(")
-                    completionHandler(.Failed)
-                }
-            )
+        println("Loading")
+        let assignments = DataStore.sharedInstance.getAssignments()
+        if hasNewData(assignments) {
+            println("New data")
+            self.items = assignments
+            self.updateHeaderAndFooterHeight()
+            self.updatePreferredContentSize()
+            self.tableView.reloadData()
+            completionHandler(.NewData)
         } else {
-            println("No credentials stored.")
-            loggedIn = false
-            completionHandler(.Failed)
+            completionHandler(.NoData)
         }
-
     }
     
     func hasNewData(data: [Assignment]) -> Bool {
@@ -112,9 +111,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             if items.count == data.count {
                 for idx in 0..<items.count {
                     if items[idx] != data[idx] {
-                        return false
+                        return true
                     }
                 }
+                return false
             }
         }
         return true
@@ -123,6 +123,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     // MARK: TableView data source
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(items?.count)
         return (items != nil) ? items!.count : 0
     }
     
@@ -131,11 +132,19 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TodayTableViewCell")! as TodayTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell")! as AssignmentsTableViewCell
+        println("Getting cell for index \(indexPath.row)")
         if let data = items {
-            cell.nameLabel.text = data[indexPath.row].name
+            cell.setAssignment(data[indexPath.row])
         }
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        openApp()
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) {
+            cell.selected = false
+        }
     }
     
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eF5-HJ-X9Z">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -283,7 +283,7 @@
         <!--Assignment Details-->
         <scene sceneID="tLq-6c-ZWD">
             <objects>
-                <viewController storyboardIdentifier="AssignmentDetailView" id="pdD-z4-nyp" customClass="AssignmentDetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailView" id="pdD-z4-nyp" customClass="DetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tkv-2R-ZM6"/>
                         <viewControllerLayoutGuide type="bottom" id="YzC-L5-HSJ"/>
@@ -309,6 +309,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Assignment Details" id="VS7-4x-7c6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="til-f1-0Bc"/>
                     </navigationItem>
