@@ -18,7 +18,7 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
         switch(indexPath.row) {
         case 0:
             presentFoodView()
-        case 2:
+        case 1:
             println("Logout")
             logOutUser()
         default:
