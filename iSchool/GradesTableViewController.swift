@@ -35,7 +35,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             name: Notification.networkError.rawValue,
             object: nil
         )
-        DataStore.sharedInstance.fetchAssignments()
+        data = DataStore.sharedInstance.getGrades()
         gradsTitle.title = NSLocalizedString("Grades", comment: "The title in the Grades view")
         
     }
