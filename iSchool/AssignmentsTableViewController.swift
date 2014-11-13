@@ -22,6 +22,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         )
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.delegate = self
+        navigationItem.title = NSLocalizedString("Assignments", comment: "Title on Assignments page")
     }
     
     override func viewWillAppear(animated: Bool) {

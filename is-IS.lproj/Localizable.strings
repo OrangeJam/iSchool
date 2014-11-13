@@ -1,7 +1,10 @@
+/* Title on Assignments page */
+"Assignments" = "Verkefni";
+
 /* The word Assistance in the timeTable */
 "Assistance" = "Viðtalstími";
 
-/* Back button */
+/* (No Commment) */
 "Back" = "Til baka";
 
 /* The word Discussion in the timeTable */
@@ -15,6 +18,12 @@
 
 /* The title in the Grades view */
 "Grades" = "Einkunnir";
+
+/* Message when username or password are wrong */
+"Invalid username or password, try again." = "Rangt notendanafn eða lykilorð.";
+
+/* (No Commment) */
+"Language" = "English";
 
 /* The word Lecture in the timeTable */
 "Lecture" = "Fyrirlestur";
@@ -37,11 +46,9 @@
 /* Placeholder in password field in login view */
 "Password" = "Lykilorð";
 
-/* The rank of the grade compared to the grade of other students */
+/* (No Commment) */
 "Rank: " = "Röð: ";
 
 /* Placeholder in username field in login view */
 "Username" = "Notendanafn";
 
-/* The title of the cell that toggles the language */
-"Language" = "English";

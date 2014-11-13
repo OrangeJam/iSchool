@@ -1,7 +1,10 @@
+/* Title on Assignments page */
+"Assignments" = "Verkefni";
+
 /* The word Assistance in the timeTable */
 "Assistance" = "Viðtalstími";
 
-/* Back button */
+/* (No Commment) */
 "Back" = "Til baka";
 
 /* The word Discussion in the timeTable */
@@ -28,14 +31,17 @@
 /* Title in network error message box */
 "Network Error" = "Vandamál með netþjón";
 
+/* (No Commment) */
+"Network error." = "Vandamál með netþjón.";
+
+/* Label indicating the lack of classes for the current day */
+"No Classes today." = "Eingir tímar í dag.";
+
 /* The word Other in the timeTable */
 "Other" = "Annað";
 
 /* Placeholder in password field in login view */
 "Password" = "Lykilorð";
-
-/* The rank of the grade compared to the grade of other students */
-"Rank: " = "Röð: ";
 
 /* Placeholder in username field in login view */
 "Username" = "Notendanafn";
