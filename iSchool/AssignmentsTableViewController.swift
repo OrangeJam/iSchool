@@ -60,7 +60,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
+        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("DetailView") as? DetailViewController {
             let assignments = DataStore.sharedInstance.getAssignments()
             let a = assignments[indexPath.row]
             detail.setDetailForURL(NSURL(string: a.URL)!, title: a.name)

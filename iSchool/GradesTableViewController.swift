@@ -109,7 +109,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
+        if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("DetailView") as? DetailViewController {
             if let grade = data?[indexPath.section][indexPath.row] {
                 detail.setDetailForURL(NSURL(string: grade.URL)!, title: grade.name)
                 let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)

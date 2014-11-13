@@ -103,8 +103,8 @@
 		F5D8A4EE19F409D1005437E4 /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 		F5FBF8EB19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
 		F5FBF8EC19F4617E004E4141 /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
-		F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */; };
-		F5FBF8EF19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */; };
+		F5FBF8EE19F473E9004E4141 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* DetailViewController.swift */; };
+		F5FBF8EF19F473E9004E4141 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8ED19F473E9004E4141 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -266,7 +266,7 @@
 		F5D8A4E519F4097D005437E4 /* TimetableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimetableTableViewController.swift; sourceTree = "<group>"; };
 		F5D8A4EC19F409D1005437E4 /* ClassCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassCell.swift; sourceTree = "<group>"; };
 		F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentCell.swift; sourceTree = "<group>"; };
-		F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentDetailViewController.swift; sourceTree = "<group>"; };
+		F5FBF8ED19F473E9004E4141 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -404,7 +404,7 @@
 				F53B591719AB8E0200ACF507 /* AppDelegate.swift */,
 				9850A65B19AF7D08005EAB3B /* LoginViewController.swift */,
 				F5515F1B19B9C65F000A23D1 /* AssignmentsTableViewController.swift */,
-				F5FBF8ED19F473E9004E4141 /* AssignmentDetailViewController.swift */,
+				F5FBF8ED19F473E9004E4141 /* DetailViewController.swift */,
 				F54A76DD19C9E1920099A1B2 /* MainTabBarController.swift */,
 				F509DC8219C868FA00FABC8C /* GradesTableViewController.swift */,
 				F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */,
@@ -941,7 +941,7 @@
 				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
 				F509E24E1A0789C70038966B /* FoodWebViewController.swift in Sources */,
-				F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
+				F5FBF8EE19F473E9004E4141 /* DetailViewController.swift in Sources */,
 				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
 				F59FE08719B752A3004F4151 /* Parser.swift in Sources */,
 				98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */,
@@ -963,7 +963,7 @@
 				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
 				F5D8A4E419F40975005437E4 /* TimetablePageViewController.swift in Sources */,
-				F5FBF8EF19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
+				F5FBF8EF19F473E9004E4141 /* DetailViewController.swift in Sources */,
 				F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */,
 				F588A3DA19E68F6C00106BC1 /* Assignment.swift in Sources */,
 				9826BAC719B8AC4200E469F7 /* Class.swift in Sources */,

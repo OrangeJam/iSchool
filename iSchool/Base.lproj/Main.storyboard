@@ -283,7 +283,7 @@
         <!--Assignment Details-->
         <scene sceneID="tLq-6c-ZWD">
             <objects>
-                <viewController storyboardIdentifier="AssignmentDetailView" id="pdD-z4-nyp" customClass="AssignmentDetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailView" id="pdD-z4-nyp" customClass="DetailViewController" customModule="iSchool" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Tkv-2R-ZM6"/>
                         <viewControllerLayoutGuide type="bottom" id="YzC-L5-HSJ"/>
@@ -309,6 +309,7 @@
                             </mask>
                         </variation>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Assignment Details" id="VS7-4x-7c6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="til-f1-0Bc"/>
                     </navigationItem>
