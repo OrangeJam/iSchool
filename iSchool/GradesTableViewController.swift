@@ -35,7 +35,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             name: Notification.networkError.rawValue,
             object: nil
         )
-        DataStore.sharedInstance.fetchAssignments()
+        data = DataStore.sharedInstance.getGrades()
         gradsTitle.title = NSLocalizedString("Grades", comment: "The title in the Grades view")
         
     }
@@ -112,7 +112,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("AssignmentDetailView") as? AssignmentDetailViewController {
             if let grade = data?[indexPath.section][indexPath.row] {
                 detail.setDetailForURL(NSURL(string: grade.URL)!, title: grade.name)
-                let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+                let bbItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back button to go back to grades table view"), style: .Plain, target: nil, action: nil)
                 navigationItem.backBarButtonItem = bbItem
                 navigationController?.pushViewController(detail, animated: true)
             }
