@@ -18,7 +18,12 @@
 %	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
-\documentclass[DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+\documentclass[pdftex, DIV=calc, paper=a4, fontsize=11pt, twocolumn]{scrartcl}	 % A4 paper and 11pt font size
+
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage[scaled]{helvet}
 
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[english]{babel} % English language/hyphenation
@@ -30,6 +35,7 @@
 \usepackage[hang, small,labelfont=bf,up,textfont=it,up]{caption} % Custom captions under/above floats in tables or figures
 \usepackage{booktabs} % Horizontal rules in tables
 \usepackage{fix-cm}	 % Custom font sizes - used for the initial letter in the document
+\usepackage{hyperref}
 
 \usepackage{sectsty} % Enables custom section titles
 \allsectionsfont{\usefont{OT1}{phv}{b}{n}} % Change the font of all section commands
@@ -37,6 +43,7 @@
 \usepackage{fancyhdr} % Needed to define custom headers/footers
 \pagestyle{fancy} % Enables the custom headers/footers
 \usepackage{lastpage} % Used to determine the number of pages in the document (for "Page X of Total")
+
 
 % Headers - all currently empty
 \lhead{}
@@ -61,34 +68,23 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\usepackage{titling} % Allows custom title configuration
 
-\newcommand{\HorRule}{\color{DarkGray} \rule{\linewidth}{1pt}} % Defines the gold horizontal rule around the title
+\usepackage[pdftex]{graphicx}
+\usepackage{xcolor}
+\definecolor{dark-gray-Large}{RGB}{78,79,81}
+\definecolor{dark-gray}{RGB}{70,71,73}
 
-\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule \fontsize{50}{50} \color{DarkRed} \selectfont} % Horizontal rule before the title
-
-\title{UROP - iSchool App} % Your article title
-
-\posttitle{\par\end{flushleft}\vskip 0.5em} % Whitespace under the title
-
-\preauthor{\begin{flushleft} \lineskip 0.5em \color{DarkRed}} % Author font configuration
-
-\author{Björn Orri Sæmundsson, Kári Tristan Helgason, Starkaður Hróbjartsson, } % Your name
-
-\postauthor{\footnotesize  \color{Black} % Configuration for the institution name
-Reykjavik University % Your institution
-
-\par\end{flushleft}\HorRule} % Horizontal rule after the title
-
-\date{} % Add a date here if you would like one to appear underneath the title block
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 %----------------------------------------------------------------------------------------
 
 \begin{document}
 
-\maketitle % Print the title
+\input{title.tex}
 
 \thispagestyle{fancy} % Enabling the custom headers/footers for the first page 
+% Reset page count so as to not count the title page.
+\setcounter{page}{1}
 
 %----------------------------------------------------------------------------------------
 %	ABSTRACT
@@ -124,20 +120,53 @@ information available instantly and in an easily digestible format.
 
 %------------------------------------------------
 
-\subsection*{The iSchool App}
+
+\subsection*{Roadmap}
+
+In this report we will detail previous work done in this area, talk about the old myschool app
+and what has changed. We will go into detail about the Swift programming language, why we chose it
+and what our experience with it was like. We will tell the reader about the design of iSchool from
+an architecture standpoint. We will also give a report of the work done and the development process,
+and finally present suggestions for future work and improvements.
+
+
+\subsection*{Previous work}
+
+Björn and Kári have previously created apps for myschool, both for iOS and Google's Android operating
+system, which has gained much traction among students enrolled at RU. At the time of writing 810 
+and 615 students have installed the iOS and Android apps respectively. The last available data 
+from RU is from 2011, and shows 2942 students enrolled in total. So nearly half of students at the 
+university have installed the app. This demonstrates the enormous interest in the project from
+students.
+
+The old version of the app did have some problems. Development was haphazard and the code was not
+properly tested. There were concurrency problems and in particular a certain race condition would
+cause the app to crash randomly. In light of the fact that the app had gained such popularity we 
+wanted to make sure that it would work well and reliably, in order to reflect positively on us and
+the university.
+
+We decided that rewriting the app in a more maintainable fashion, with proper structure and tests
+would be the best way to create a long term viable solution.
+
+%------------------------------------------------
+
+\section*{The iSchool App}
 
 The app is a native iOS application written in Apple's new programming language Swift.
 We use native Cocoa Touch controls to present a familiar user interface that ties in well with
-the rest of the operating system.
+the rest of the operating system. The UI can be set to either Icelandic or English depending on a 
+users preference.
 
 The app provides the following subset of myschool functionality, selected for it's relevance to
 the mobile user.
+
 \begin{itemize}
     \item View schedule for the week.
     \item A list of due assignments, and their status.
     \item Grades achieved during the semester.
     \item Málið's menu for the week.
 \end{itemize}
+
 
 Myschool does not currently present an API to program against, so the only option available to us
 is to parse the HTML page and extract relevant information. This presents some problems, as it's 
@@ -153,44 +182,234 @@ to keep track of and store user credentials in a database, which we feel is both
 fellow students and means we would have to shoulder a great deal of responsibility. It would also 
 complicate the project and potentially make it infeasible to complete within the time frame.
 
+\subsection*{Schedule}
+
+This tab in the application displays the users upcoming classes, when they start, what room they
+are in and what sort of class it is. We display the data in a table, and a moving red line indicates
+how far in to the current class the user is. One can swipe left or right to examine schedule for
+the surrounding days as well. This functionality has been significantly improved from the old app,
+where it was only possible to view the schedule for the current day.
+
+\subsection*{Assignments}
+
+A list of due assignments is presented in this tab, along with the due date for each and a check-mark
+indicating whether it has been handed in. If a user selects an assignment from the list, he or she
+is presented with a view containing the myschool page for that assignment, and will be able to hand
+it in or mark it as such from within the app with a single tap. The assignment details page contains
+data that is infeasible to parse, so we choose to render the myschool page within a web view. Ideally
+we would define our own UI for presenting this information but that is not feasible with the current
+situation. If myschool were to have an API this situation would be very different and we would be
+able to provide our users the complete experience they really want.
+
+\subsection*{Grades}
+
+Grades are presented in an analogous manner to the assignments, with a web view shown once a 
+user selects a grade. 
+
+\subsection*{More}
+
+In the more tab a user can view the weeks menu in Málið, update his language preferences and log out.
+This menu will come to contain more in the future, but currently it's limited to the items mentioned
+above. In the section on future work we will discuss in detail many of the other features the app 
+could have, but to mention one that would be relevant to this section we planned to implement
+myschool's phonebook lookup feature in the app and have it under the More tab. Unfortunately this, as
+many other ideas, proved infeasible without a proper API.
 
 %------------------------------------------------
 
-\subsection*{Roadmap}
+%-------------------------------------------------
 
-In this report we will detail previous work done in this area, talk about the old myschool app
-and what has changed. We will go into detail about the Swift programming language, why we chose it
-and what our experience with it was like. We will tell the reader about the design of iSchool from
-an architecture standpoint. We will also give a report of the work done and the development process,
-and finally present suggestions for future work and improvements.
+\section*{Swift}
 
+At the WWDC conference in June Apple surprised everyone when they announced their new programming
+language Swift. Swift was designed to be a very modern programming language, and incorporates
+many innovations in programming language design.
 
-%------------------------------------------------
-
-\section*{Section 2}
-
-\lipsum[8] % Dummy text
-
+Some of the impressive features that swift offers are
 \begin{description}
-\item[First] This is the first item
-\item[Last] This is the last item
+    \item[Functional programming style] In Swift, functions are objects just like everything else.
+        This enables interesting programming patterns such as passing around callbacks. This feature
+        is the defining property of many functional languages. Swift incorporates other features 
+        of functional languages, such as the trio of functions \texttt{map}, \texttt{filter} and \texttt{fold}.
+    \item[Immutable by default] Variables are declared with the \texttt{let} or \texttt{var}
+        keywords. Variables declared with \texttt{let} are immutable. This allows the compiler to
+        do all sorts of clever optimisations and allows one to detect many mistakes at compile-time.
+    \item[Sensible Switch-Case] The switch statement in Swift allows programmers to pattern match on
+        a any value, not just integers as in many classic programming languages. This allows one 
+        to write nice and terse code, that's also very fast.
+    \item[Strict typing and type inference] The compiler enforces types to make errors apparent as
+        soon as possible, but frees the programmer from the burden of declaring a type for every
+        variable explicitly.
+    \item[Powerful enums and structures] In Swift, structures and enums can have methods associated with them. In addition, any value can be associated with an enum, not just integers.
+    \item[Optionals] This language feature makes it easy to implement nil checks and prevents the 
+        dreaded errors that occur when nils bubble up all over ones program. Functions that return 
+        optional types are wrapped in an optional that contains either nil or a value. 
 \end{description}
 
-\lipsum[9] % Dummy text
+These are just a few of the improvements that Swift brings. It's also appropriate to mention the fact
+that objects in Swift are reference-counted, freeing the programmer from the cognitive burden of
+explicitly allocating and freeing memory, while also avoiding the runtime overhead that comes with
+garbage collection. It's also compiled to native code with LLVM, and is very fast, in some cases even
+faster than C.
+
+To ease the transition to Swift Apple made sure that interoperability with existing Objective-C 
+code was seamless. This allows developers to use a mix of Objective-C and Swift in their project.
+
+\subsection*{API changes}
+
+It's clear that Swift will be the programming language of choice for developing iOS applications
+in the future. We chose to use Swift for this project even though at the time of development the
+language was still in Beta. We found ourselves in the uncomfortable situation of developing for an
+operating system in Beta, in a language in Beta with development tools in Beta. As might be apparent
+this caused some difficulty and we encountered several pain points during development.
+
+Apple made clear when they announced Swift that the syntax would change until the language hit 1.0.
+Unfortunately this means that backwards-incompatible changes were made almost every week, and we had
+to go through the codebase and fix syntax errors repeatedly.
+
+One specific problem we encountered was with unit tests. We had written tests for most of our classes
+that worked fine until Apple introduced access modifiers to Swift. This means that classes and 
+functions had to be declared public in order to be visible outside the class they're defined in. We
+wrote a script to insert and remove these modifiers before and after the unit tests were run and
+the tests passed again. Apple then backtracked on the decision to add access modifiers and they were
+removed in the next version of the compiler. 
+
+Another problem that we faced was that the return value of standard library functions kept changing
+from values to optionals incrementally. This is a sensible change but it caused problems for us as
+we were expecting unwrapped values. Luckily due to Swift's strict typing these errors are caught by
+the compiler rather than causing runtime errors.
+
+We had to deal with all sorts of these problems during development, but now that the language has 
+been officially released these problems are hopefully a thing of the past.
+
+\section*{Architecture}
+
+The app design follows the MVC (Model View Controller) pattern popular in iOS development.
+The principles are that model classes are wrappers for data and contain methods to manipulate that
+data, views are classes that own UI components and know how and when to render them to the screen
+and controllers are the interface between the two. They listen for events and react appropriately, 
+fetching data from a model and giving it to a view, or transition between views.
+
+The app involves 3 separate targets. iOS 8 introduces so called app-extensions. This is an extension
+of the app sandbox to allow a separate process to share data with the main application. We use
+this to implement a Today-view extension, a plugin for the iOS Today-view that shows upcoming classes
+and assignments at a glance. In order to share common code between the app and the extension we
+create a framework called \texttt{iSchool.framework} that contains all the shared logic. In this 
+section we describe the design of each of the three targets.
+
+\subsection*{Framework}
+The framework target contains the components that need to be shared between the app and the extension.
+This includes the various model classes and components to handle parsing, authentication, credential
+management and data storage.
+
+Having all of this shared code in a framework makes future work very easy. For example a desktop Mac
+application could be created with minimal work by linking with the framework. This also simplifies
+maintenance work as changes affecting both the app and the extension need only be made in one place.
+
+\subsection*{App}
+
+\begin{figure}
+    \includegraphics[width=0.45\textwidth]{view-tree.png}
+    \caption{A diagram showing the relationship between views (simplified)}
+    \label{fig:hierarchy}
+\end{figure}
+
+The app target includes all the views and controllers for the various UI components. 
+The main design concern with the app is the view controller hierarchy. The first view the app 
+presents when it opens is called the root view. It then has other views as subviews and so forth
+creating a tree of views. The way we design this tree is by having the tab bar at the root of the
+tree, and it's subviews are navigation views. Each of the navigation views then has several subviews
+of it's own for each tab. Figure \ref{fig:hierarchy} shows the relationship between the views
+graphically.
+
+One of the main problems with the old app was concurrency. We were doing a lot of computation on 
+the main thread, causing the UI to lock up. To solve this in the new app we have one thread for 
+network communication, and one for processing. When data is ready to be displayed that thread sends
+a message to the UI thread indicating that new data is available, or that an error occurred. The UI
+then reacts appropriately while staying responsive the whole time. Controllers register themselves 
+to receive a notification, so more than one controller can react to the same message. iOS makes this
+very easy with the notification center API.
+
+
+\subsection*{Extension}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.25\textwidth]{Todayview-ph.png}
+    \caption{The Today-view with the iSchool extension}
+    \label{fig:today}
+\end{figure}
+
+The extension consists of a single view and a corresponding controller. It communicates with the
+main app for data and renders it in a table in the Today view. It links against the framework for 
+credential management and communication with myschool. Figure \ref{fig:today} shows what the
+extension looks like in the Today-view.
+
+%--------------------------------------------------------------------
+%   Progress Section
+%--------------------------------------------------------------------
+
+\section*{Progress}
+
+Work began on the app on August 28. We began by creating a backlog of tasks, maintained online in
+Trello. We came up with several requirements and broke them down into actionable tasks so we could
+have an overview of the development progress. Learning the Swift language was easy, as the syntax
+is familiar, and we mostly learned on the job so to speak. The development went smoothly for the
+most part, although we ran into some trouble due to API changes as discussed earlier. The language
+is so new that documentation online was lacking and we were left to fend for ourselves in a lot of 
+cases. This turned out alright though and we managed to overcome all hurdles we encountered.
+
+We used git for source control and all code is stored in an open github repository and released
+to the public under a BSD licence. Anyone is free to clone the repository and do with the code what
+they please. We welcome all pull-requests to extend the app's functionality.
+
+Work progressed according to the absolute-value sine-wave model, which I believe we pioneered. This 
+involves doing nothing for extended periods and then suddenly doing a lot of work at once. Due to 
+other courses interfering with the work from time to time this development model was deemed 
+appropriate.
+
+We left most of the UI design up to the last minute, preferring to focus initially on the app logic
+and designing the interface when we had a better idea of what the finished product would look like.
+
+We had to scrap a few ideas that we wanted to include initially due to limitations of how myschool
+presents some data.
+
+%--------------------------------------------------------------------
+%   Progress Section
+%--------------------------------------------------------------------
+
+\section*{Future work}
+
+We believe this project presents a lot of potential for further development. If myschool were to
+present an API sometime in the future the functionality of the app could be significantly extended.
+
+Some of the ideas that we wanted to include but deemed infeasible or impractical due to a lack
+of API were:
+
+\begin{itemize}
+    \item View upcoming events such as "Science trips" and online exams.
+    \item Push notifications for upcoming events.
+    \item Statistics and historical overview of grades in previous courses.
+    \item Sign up for events through myschool
+    \item Redeem print codes through \texttt{hrprint.ru.is}.
+    \item Look up students and staff in the myschool phonebook.
+    \item Toggle reminders on specific classes.
+\end{itemize}
+
+We consider further work on the app to be a good potential project for other students wishing to 
+familiarize themselves with iOS app development and those interested in potentially improving the
+lives of their fellow students. 
 
 %----------------------------------------------------------------------------------------
 %	REFERENCE LIST
 %----------------------------------------------------------------------------------------
 
-\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+\section*{Links}
 
-\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
-Figueredo, A.~J. and Wolf, P. S.~A. (2009).
-\newblock Assortative pairing and life history strategy - a cross-cultural
-  study.
-\newblock {\em Human Nature}, 20:317--330.
- 
-\end{thebibliography}
+\begin{description}
+    \item[Trello board] \url{https://trello.com/b/1p1iXHCd/ischool}
+    \item[Github repository] \url{https://github.com/OrangeJam/iSchool}
+\end{description}
 
 %----------------------------------------------------------------------------------------
 

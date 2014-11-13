@@ -10,6 +10,9 @@ import UIKit
 
 class MainTabBarController : UITabBarController {
     
+    // Ensure first alert is always shown
+    var lastAlertTime = NSDate(timeIntervalSince1970: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -21,7 +24,9 @@ class MainTabBarController : UITabBarController {
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
-                self.showNetworkErrorAlert()
+                if NSDate().timeIntervalSinceDate(self.lastAlertTime) > NSTimeInterval(5) {
+                    self.showNetworkErrorAlert()
+                }
                 if !CredentialManager.sharedInstance.hasCredentials() {
                     self.presentLoginView()
                 }
@@ -48,6 +53,7 @@ class MainTabBarController : UITabBarController {
             delegate: self,
             cancelButtonTitle: NSLocalizedString("Dismiss", comment: "Button to dismiss network error message box")
         )
+        lastAlertTime = NSDate()
         alert.show()
     }
 }
