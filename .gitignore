@@ -3,3 +3,4 @@ TestCredentials.plist
 report/*
 !report/*.tex
 !report/*.png
+!report/*.jpg
