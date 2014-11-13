@@ -64,7 +64,8 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
             let assignments = DataStore.sharedInstance.getAssignments()
             let a = assignments[indexPath.row]
             detail.setDetailForURL(NSURL(string: a.URL)!, title: a.name)
-            let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+            let bbItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back button"),
+                style: .Plain, target: nil, action: nil)
             navigationItem.backBarButtonItem = bbItem
             navigationController?.pushViewController(detail, animated: true)
         }

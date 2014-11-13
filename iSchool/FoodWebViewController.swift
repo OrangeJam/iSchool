@@ -19,10 +19,12 @@ class FoodWebViewController: UIViewController, WKNavigationDelegate {
         edgesForExtendedLayout = UIRectEdge.None
         webView = WKWebView()
         webView!.navigationDelegate = self
-        println("\(self.navigationController?.navigationBar.frame.height)")
+        navigationItem.title = "Málið"
+        
         let navbarHeight = self.navigationController != nil ? self.navigationController!.navigationBar.frame.height : 0
         let tabbarHeight = self.tabBarController != nil ? self.tabBarController!.tabBar.frame.height : 0
         webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height - tabbarHeight - navbarHeight)
+        
         self.view.addSubview(webView!)
     }
 
