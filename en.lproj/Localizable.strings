@@ -36,3 +36,5 @@
 /* Placeholder in username field in login view */
 "Username" = "Username";
 
+/* The title of the cell that toggles the language */
+"Language" = "Íslenska";

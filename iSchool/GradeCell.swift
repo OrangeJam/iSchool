@@ -36,7 +36,7 @@ class GradesTableViewCell : UITableViewCell {
         if s.rangeOfString("Röð") != nil {
             let parts = s.componentsSeparatedByString(":")
             // TODO: Do something to get the right text in the right language in front of rank.
-            rank += NSLocalizedString("Rank: ", comment: "The rank of the grade compared to the grade of other students")
+            rank += LocalizationSystem.sharedInstance.localizedStringForKey("Rank: ", comment: "The rank of the grade compared to the grade of other students")
             for var i = 1; i < parts.count; ++i {
                 rank += parts[i] + " "
             }

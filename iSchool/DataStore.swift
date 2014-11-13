@@ -38,7 +38,12 @@ class DataStore {
     }
     
     func getAssignments() -> [Assignment] {
-        return assignments
+        let assignment = [
+            Assignment(attrs: ["14.11.2014 20:20", "Slerp", "T-403-Arnar", "Advanced Arnar", "google.com", "gildra"]),
+            Assignment(attrs: ["14.11.2014 20:20", "Óskilað", "T-403-Arnar", "Advanced Arnar", "google.com", "gildra1"]),
+            Assignment(attrs: ["14.11.2014 20:20", "Óskilað", "T-403-Arnar", "Advanced Arnar", "google.com", "gluggi"])
+        ]
+        return assignment
     }
     
     func getGrades() -> [[Grade]] {

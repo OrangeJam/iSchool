@@ -8,10 +8,13 @@
 
 import UIKit
 
-class MoreMenuController: UITableViewController, UITableViewDelegate {
+class MoreMenuController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        
+        // Set localized cell titles.
+        
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
@@ -19,11 +22,25 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
         case 0:
             println("HMMM ég er forvitin um hvað sé nú eiginlega í málinu!?!?")
             presentFoodView()
+        case 1:
+            toggleLanguage()
         case 2:
             println("Logout")
             logOutUser()
         default:
             println("HEHE flippari selectaði röð")
+        }
+    }
+    
+    func toggleLanguage() {
+        println("Changing language")
+        let localizer = LocalizationSystem.sharedInstance
+        if localizer.getLanguage() == "is-IS" {
+            localizer.setLanguage("en")
+            println("Now in English!")
+        } else if localizer.getLanguage() == "en" {
+            localizer.setLanguage("is-IS")
+            println("Now in Icelandic!")
         }
     }
     
