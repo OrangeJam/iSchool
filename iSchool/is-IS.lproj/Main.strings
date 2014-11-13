@@ -31,7 +31,7 @@
 /* Class = "IBUILabel"; text = "Assignment Name"; ObjectID = "LTl-rv-cel"; */
 "LTl-rv-cel.text" = "Assignment Name";
 
-/* Class = "IBUILabel"; text = "Log out"; ObjectID = "NUW-vN-Hmh"; */
+/* (No Commment) */
 "NUW-vN-Hmh.text" = "Útskráning";
 
 /* Class = "IBUILabel"; text = "Date"; ObjectID = "Nul-9Y-uxN"; */
@@ -49,7 +49,7 @@
 /* Class = "IBUINavigationItem"; title = "Assignment Details"; ObjectID = "VS7-4x-7c6"; */
 "VS7-4x-7c6.title" = "Upplýsingar um verkefni";
 
-/* Class = "IBUILabel"; text = "Málið cafeteria"; ObjectID = "ZMh-Xb-AWp"; */
+/* Class = "IBUILabel"; text = "Menu Item"; ObjectID = "ZMh-Xb-AWp"; */
 "ZMh-Xb-AWp.text" = "Málið";
 
 /* Class = "IBUINavigationItem"; title = "More"; ObjectID = "aaD-tt-GbP"; */

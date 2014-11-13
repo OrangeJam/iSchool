@@ -1,4 +1,4 @@
-/* Title on Assignments page */
+/* (No Commment) */
 "Assignments" = "Verkefni";
 
 /* The word Assistance in the timeTable */
@@ -16,7 +16,7 @@
 /* The word Exam in the timeTable */
 "Exam" = "Próf";
 
-/* The title in the Grades view */
+/* (No Commment) */
 "Grades" = "Einkunnir";
 
 /* Message when username or password are wrong */
@@ -31,6 +31,18 @@
 /* Text on log in button */
 "Log In" = "Skrá Inn";
 
+/* Log out button */
+"Log out" = "Útskrá";
+
+/* Header title for málið webview */
+"Málið" = "Málið";
+
+/* Text on button to view the menu for Málið */
+"Málið Cafeteria" = "Málið";
+
+/* Tab title for more tab. */
+"More" = "Meira";
+
 /* Message when there is a network error and MySchool can not be reached */
 "Myschool seems to be unreachable, try again later." = "Ekki næst samband við MySchool, vinsamlegast reyndu aftur síðar.";
 
@@ -40,6 +52,9 @@
 /* (No Commment) */
 "Network error." = "Vandamál með netþjón.";
 
+/* Label indicating the lack of classes for the current day */
+"No Classes today." = "Eingir tímar í dag.";
+
 /* The word Other in the timeTable */
 "Other" = "Annað";
 
@@ -48,6 +63,9 @@
 
 /* (No Commment) */
 "Rank: " = "Röð: ";
+
+/* (No Commment) */
+"Timetable" = "Stundatafla";
 
 /* Placeholder in username field in login view */
 "Username" = "Notendanafn";
