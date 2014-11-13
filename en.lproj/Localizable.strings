@@ -5,3 +5,34 @@
   Created by Starkadur Hrobjartsson on 3.11.2014.
   Copyright (c) 2014 OrangeJam. All rights reserved.
 */
+
+/* The word Assistance in the timeTable */
+"Assistance" = "Assistance";
+
+/* The word Discussion in the timeTable */
+"Discussion" = "Discussion";
+
+/* The word Exam in the timeTable */
+"Exam" = "Exam";
+
+/* The title in the Grades view */
+"Grades" = "Grades";
+
+/* The word Lecture in the timeTable */
+"Lecture" = "Lecture";
+
+/* Text on log in button */
+"Log In" = "Log In";
+
+/* The word Other in the timeTable */
+"Other" = "Other";
+
+/* Placeholder in password field in login view */
+"Password" = "Password";
+
+/* The rank of the grade compared to the grade of other students */
+"Rank: " = "Rank: ";
+
+/* Placeholder in username field in login view */
+"Username" = "Username";
+

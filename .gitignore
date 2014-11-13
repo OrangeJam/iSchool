@@ -1,4 +1,6 @@
 TestCredentials.plist
 .DS_Store
 report/*
-!report/report.tex
+!report/*.tex
+!report/*.png
+!report/*.jpg

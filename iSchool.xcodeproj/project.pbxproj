@@ -37,6 +37,9 @@
 		F24577EC1A08F33A00005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577EE1A08F33A00005F4E /* InfoPlist.strings */; };
 		F24577F11A08F33A00005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577F31A08F33A00005F4E /* InfoPlist.strings */; };
 		F24577F61A08F40F00005F4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577F81A08F40F00005F4E /* Localizable.strings */; };
+		F27275EF1A150C4900095D9E /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27275EB1A150BCD00095D9E /* LocalizationSystem.swift */; };
+		F27275F01A150C4A00095D9E /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27275EB1A150BCD00095D9E /* LocalizationSystem.swift */; };
+		F27275F11A150C4A00095D9E /* LocalizationSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27275EB1A150BCD00095D9E /* LocalizationSystem.swift */; };
 		F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F2BB34311A140EEC0031CB8C /* grades.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB342F1A140EEC0031CB8C /* grades.png */; };
@@ -224,6 +227,8 @@
 		F24577ED1A08F33A00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577F21A08F33A00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577F71A08F40F00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F27275EB1A150BCD00095D9E /* LocalizationSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizationSystem.swift; sourceTree = "<group>"; };
+		F27275F31A15156600095D9E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F2BB342F1A140EEC0031CB8C /* grades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grades.png; sourceTree = "<group>"; };
 		F2BB34301A140EEC0031CB8C /* grades@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grades@2x.png"; sourceTree = "<group>"; };
@@ -479,6 +484,7 @@
 				F5C22B3E19B7233C00E4D595 /* NetworkClient.swift */,
 				F5CD975D19BDC3EF00CEF3ED /* DataStore.swift */,
 				98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */,
+				F27275EB1A150BCD00095D9E /* LocalizationSystem.swift */,
 				F56FC82519E57ADC005C1F1B /* iSchoolFramework.h */,
 				F56FC82319E57ADC005C1F1B /* Supporting Files */,
 			);
@@ -951,6 +957,7 @@
 				F56FC84A19E580AB005C1F1B /* DataStore.swift in Sources */,
 				F56FC84819E580A5005C1F1B /* Parser.swift in Sources */,
 				F56FC84519E5809D005C1F1B /* Class.swift in Sources */,
+				F27275F11A150C4A00095D9E /* LocalizationSystem.swift in Sources */,
 				F50296D019CC80FC00A12AF5 /* TodayViewController.swift in Sources */,
 				F56FC84919E580A8005C1F1B /* NetworkClient.swift in Sources */,
 			);
@@ -969,6 +976,7 @@
 				9850A65C19AF7D08005EAB3B /* LoginViewController.swift in Sources */,
 				F588A3DE19E68F7300106BC1 /* Grade.swift in Sources */,
 				F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */,
+				F27275EF1A150C4900095D9E /* LocalizationSystem.swift in Sources */,
 				F509E24E1A0789C70038966B /* FoodWebViewController.swift in Sources */,
 				F5FBF8EE19F473E9004E4141 /* AssignmentDetailViewController.swift in Sources */,
 				F5D8A4ED19F409D1005437E4 /* ClassCell.swift in Sources */,
@@ -989,6 +997,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5CD975F19BDC3EF00CEF3ED /* DataStore.swift in Sources */,
+				F27275F01A150C4A00095D9E /* LocalizationSystem.swift in Sources */,
 				98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */,
 				F5C22B4019B7233C00E4D595 /* NetworkClient.swift in Sources */,
 				F5D8A4E419F40975005437E4 /* TimetablePageViewController.swift in Sources */,
@@ -1144,6 +1153,7 @@
 			children = (
 				F53B591E19AB8E0200ACF507 /* Base */,
 				F2E352C21A08080800C9F9B4 /* is-IS */,
+				F27275F31A15156600095D9E /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1359,6 +1369,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1373,6 +1384,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1385,6 +1397,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
