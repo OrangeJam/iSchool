@@ -59,17 +59,7 @@ class DataStore {
                 dayClasses.append(c)
             }
         }
-        //return dayClasses
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = "dd.MM.yyyy HH:mm"
-        let start = dateFormatter.dateFromString("13.11.2014 14:27")!
-        let end = dateFormatter.dateFromString("13.11.2014 14:28")!
-        let start2 = dateFormatter.dateFromString("13.11.2014 14:29")!
-        let end2 = dateFormatter.dateFromString("13.11.2014 14:30")!
-        let c = Class(course: "Life", type: ClassType.Lecture, location: "Everywhere", startDate: start, endDate: end)
-        let c2 = Class(course: "Tölvusamskipti", type: ClassType.Discussion, location: "M101", startDate: start2, endDate: end2)
-        
-        return [c, c2]
+        return dayClasses
     }
     
     func getClassesForToday() -> [Class] {
