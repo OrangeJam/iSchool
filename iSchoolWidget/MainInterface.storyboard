@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="6Dm-Zy-GdP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Today View Controller-->
@@ -13,26 +14,67 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodayTableViewCell" id="ILe-Ms-hqO" customClass="TodayTableViewCell" customModule="iSchoolWidget" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="46" id="b9z-Qd-a3f" customClass="AssignmentsTableViewCell" customModule="iSchoolWidget" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ILe-Ms-hqO" id="Gsk-LD-3rX">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b9z-Qd-a3f" id="tRs-le-xb9">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scJ-5M-IWX">
-                                            <rect key="frame" x="8" y="4" width="230" height="36"/>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-Gh-lBS">
+                                            <rect key="frame" x="58" y="0.0" width="333" height="34"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="34" id="3fF-BT-szS"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Qif-G7-Q6m"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="Qif-G7-Q6m"/>
+                                                </mask>
+                                            </variation>
+                                        </label>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greencheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-tC-RIy">
+                                            <rect key="frame" x="13" y="10" width="29" height="29"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-CA-sXS">
+                                            <rect key="frame" x="550" y="13" width="42" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBR-bz-ei5">
+                                            <rect key="frame" x="58" y="29" width="254" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="nvg-Gh-lBS" firstAttribute="top" secondItem="tRs-le-xb9" secondAttribute="topMargin" constant="2" id="2sP-yp-9fv"/>
+                                        <constraint firstItem="FZP-CA-sXS" firstAttribute="trailing" secondItem="tRs-le-xb9" secondAttribute="trailingMargin" id="AIW-gp-Nas"/>
+                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="PlY-w6-CfK"/>
+                                        <constraint firstItem="nvg-Gh-lBS" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="SO3-MW-W2p"/>
+                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="cuW-dz-Aus"/>
+                                        <constraint firstAttribute="centerY" secondItem="FZP-CA-sXS" secondAttribute="centerY" constant="-0.25" id="eIw-P8-5m7"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="pBR-bz-ei5" secondAttribute="bottom" constant="2" id="fSH-wH-gM3"/>
+                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="top" secondItem="nvg-Gh-lBS" secondAttribute="bottom" constant="2" id="gjm-Np-YNR"/>
+                                        <constraint firstItem="FZP-CA-sXS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nvg-Gh-lBS" secondAttribute="trailing" constant="40" id="w2k-nM-Udc"/>
+                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="top" secondItem="nvg-Gh-lBS" secondAttribute="bottom" constant="1" id="yLz-K6-uw4"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="fSH-wH-gM3"/>
+                                            <exclude reference="gjm-Np-YNR"/>
+                                            <exclude reference="cuW-dz-Aus"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameLabel" destination="scJ-5M-IWX" id="HfC-ry-ugV"/>
+                                    <outlet property="courseLabel" destination="pBR-bz-ei5" id="wXr-3s-mwa"/>
+                                    <outlet property="doneImage" destination="jrH-tC-RIy" id="Rbu-xH-tP9"/>
+                                    <outlet property="dueDateLabel" destination="FZP-CA-sXS" id="kS9-Pv-Xey"/>
+                                    <outlet property="nameLabel" destination="nvg-Gh-lBS" id="Yi0-8t-xKm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -47,6 +89,9 @@
             <point key="canvasLocation" x="297" y="296"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="greencheck.png" width="40" height="40"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

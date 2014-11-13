@@ -10,4 +10,5 @@
  $('.resetSize').click();
  $('.increaseSize').click();
  $('.increaseSize').click();
+  $('.increaseSize').click();
  }());

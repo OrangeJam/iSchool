@@ -20,9 +20,7 @@ class TimetablePageViewController: UIPageViewController, UIPageViewControllerDat
     override func viewDidLoad() {
         super.viewDidLoad()
         // This prevents the table view from going under the navigation bar.
-        if self.respondsToSelector("edgesForExtendedLayout") {
-            self.edgesForExtendedLayout = UIRectEdge.None
-        }
+        self.edgesForExtendedLayout = UIRectEdge.None
         self.dataSource = self
         
         let initialViewController = viewControllerForWeekDay(WeekDay(rawValue: currentWeekDay)!)

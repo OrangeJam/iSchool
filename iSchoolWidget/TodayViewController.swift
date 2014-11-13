@@ -9,11 +9,6 @@
 import UIKit
 import NotificationCenter
 
-
-class TodayTableViewCell: UITableViewCell {
-    @IBOutlet weak var nameLabel: UILabel!
-}
-
 class TodayViewController: UITableViewController, NCWidgetProviding {
     
     var items: [Assignment]?
@@ -32,7 +27,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.rowHeight = 40
+        tableView.rowHeight = 55
         loginButton.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
         loginButton.setTitle("Login", forState: .Normal)
         loginButton.titleLabel?.font = UIFont.systemFontOfSize(20)
@@ -79,32 +74,17 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
-        if let (username, password) = CredentialManager.sharedInstance.getCredentials() {
-            let networkClient = NetworkClient(username: username, password: password)
-            networkClient.fetchPage(.Assignments,
-                successHandler: { (operation, response) in
-                    let responseData = NSData(data: response as NSData)
-                    let assignments = Parser.parseAssignments(responseData)
-                    if self.hasNewData(assignments) {
-                        self.items = assignments
-                        self.tableView.reloadData()
-                        self.updatePreferredContentSize()
-                        completionHandler(.NewData)
-                    } else {
-                        completionHandler(.NoData)
-                    }
-                },
-                errorHandler: { (operation, error) in
-                    println("AW =(")
-                    completionHandler(.Failed)
-                }
-            )
+        println("Loading")
+        let assignments = DataStore.sharedInstance.getAssignments()
+        if hasNewData(assignments) {
+            println("New data")
+            self.items = assignments
+            self.tableView.reloadData()
+            self.updatePreferredContentSize()
+            completionHandler(.NewData)
         } else {
-            println("No credentials stored.")
-            loggedIn = false
-            completionHandler(.Failed)
+            completionHandler(.NoData)
         }
-
     }
     
     func hasNewData(data: [Assignment]) -> Bool {
@@ -112,9 +92,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             if items.count == data.count {
                 for idx in 0..<items.count {
                     if items[idx] != data[idx] {
-                        return false
+                        return true
                     }
                 }
+                return false
             }
         }
         return true
@@ -123,6 +104,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     // MARK: TableView data source
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        println(items?.count)
         return (items != nil) ? items!.count : 0
     }
     
@@ -131,9 +113,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TodayTableViewCell")! as TodayTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell")! as AssignmentsTableViewCell
+        println("Getting cell for index \(indexPath.row)")
         if let data = items {
-            cell.nameLabel.text = data[indexPath.row].name
+            cell.setAssignment(data[indexPath.row])
         }
         return cell
     }
