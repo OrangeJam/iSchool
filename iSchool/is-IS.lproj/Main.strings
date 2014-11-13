@@ -43,6 +43,9 @@
 /* Class = "IBUITabBarItem"; title = "Timetable"; ObjectID = "Tys-8q-3rn"; */
 "Tys-8q-3rn.title" = "Stundatafla";
 
+/* Class = "IBUITabBarItem"; title = "More"; ObjectID = "VFd-Oa-7b4"; */
+"VFd-Oa-7b4.title" = "Fleira";
+
 /* Class = "IBUINavigationItem"; title = "Assignment Details"; ObjectID = "VS7-4x-7c6"; */
 "VS7-4x-7c6.title" = "Upplýsingar um verkefni";
 
