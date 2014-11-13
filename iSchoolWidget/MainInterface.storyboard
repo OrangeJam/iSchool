@@ -64,9 +64,9 @@
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
+                                            <exclude reference="cuW-dz-Aus"/>
                                             <exclude reference="fSH-wH-gM3"/>
                                             <exclude reference="gjm-Np-YNR"/>
-                                            <exclude reference="cuW-dz-Aus"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>

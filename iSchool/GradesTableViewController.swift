@@ -10,6 +10,8 @@ import UIKit
 
 class GradesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var emptyLabel: UILabel!
+    
     var data: ([[Grade]])?
     @IBOutlet weak var gradsTitle: UINavigationItem!
     

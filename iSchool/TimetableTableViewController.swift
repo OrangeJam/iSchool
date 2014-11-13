@@ -10,6 +10,7 @@ import UIKit
 
 class TimetableTableViewController: UITableViewController, UITableViewDataSource {
 
+    @IBOutlet weak var emptyLabel: UILabel!
     var weekDay: WeekDay? = nil
     var dateFormatter: NSDateFormatter {
         let formatter = NSDateFormatter()
@@ -19,14 +20,6 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         return formatter
     }
     
-    var emptyLabel: UILabel {
-        let label = UILabel()
-        label.text = NSLocalizedString("No Classes today.",  comment: "Label indicating the lack of classes for the current day")
-        label.textColor = UIColor.darkGrayColor()
-        label.font = UIFont(name: "System", size: 24)
-        return label
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView(frame: CGRectZero)
@@ -34,7 +27,6 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
-        emptyLabel.frame = CGRect(x: 0, y: 150, width: self.view.frame.width, height: 50)
         self.tableView.addSubview(emptyLabel)
         
         // Add listeners to make sure the red line is always in the correct position.
@@ -44,12 +36,16 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
         
         // Add listener for significant time changes (e.g. when a new day starts).
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reloadTableView", name: UIApplicationSignificantTimeChangeNotification, object: nil)
+        
+        // Set the width of the empty label to be the width of the screen.
+        self.emptyLabel.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.emptyLabel.frame.height)
+        // Set the text of the empty label.
+        emptyLabel.text = NSLocalizedString("No classes", comment: "Text for the empty label when there are no classes")
     }
     
     // Function that calls self.tableView.reloadData().
     // The only purpose is to use it as a selector.
     func reloadTableView() {
-        println("Yo")
         self.tableView.reloadData()
     }
     
@@ -90,8 +86,11 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if let day = weekDay {
-            return DataStore.sharedInstance.getClassesForDay(day).count
+            let count =  DataStore.sharedInstance.getClassesForDay(day).count
+            self.emptyLabel.hidden = !(count == 0)
+            return count
         } else {
+            self.emptyLabel.hidden = false
             return 0
         }
     }

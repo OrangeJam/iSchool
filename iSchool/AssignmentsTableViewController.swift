@@ -10,6 +10,7 @@ import UIKit
 
 class AssignmentsTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var emptyLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,13 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
-        tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.delegate = self
+        
+        // Set the width of the empty label to be the width of the screen.
+        self.emptyLabel.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.emptyLabel.frame.height)
+        // Set the text of the empty label.
+        self.emptyLabel.text = NSLocalizedString("No assignments", comment: "Text for the empty label when there are no assignments")
+        self.emptyLabel.hidden = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -49,7 +55,9 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DataStore.sharedInstance.getAssignments().count
+        let count = DataStore.sharedInstance.getAssignments().count
+        self.emptyLabel.hidden = !(count == 0)
+        return count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -81,6 +89,7 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     }
     
     func refreshData() {
+        println("Refreshing data")
         self.tableView.reloadData()
     }
     
