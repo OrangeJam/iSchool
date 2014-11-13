@@ -19,7 +19,7 @@ class FoodWebViewController: UIViewController, WKNavigationDelegate {
         edgesForExtendedLayout = UIRectEdge.None
         webView = WKWebView()
         webView!.navigationDelegate = self
-        navigationItem.title = "Málið"
+        navigationItem.title = NSLocalizedString("Málið", comment: "Header title for málið webview")
         
         let navbarHeight = self.navigationController != nil ? self.navigationController!.navigationBar.frame.height : 0
         let tabbarHeight = self.tabBarController != nil ? self.tabBarController!.tabBar.frame.height : 0

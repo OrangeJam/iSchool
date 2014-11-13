@@ -21,6 +21,9 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             forControlEvents: .ValueChanged
         )
         tableView.delegate = self
+        
+        // Set title.
+        self.navigationItem.title = NSLocalizedString("Grades", comment: "Header title for the grades tab.")
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -36,7 +39,6 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             object: nil
         )
         data = DataStore.sharedInstance.getGrades()
-        gradsTitle.title = NSLocalizedString("Grades", comment: "The title in the Grades view")
         
     }
     

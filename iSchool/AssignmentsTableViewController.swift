@@ -22,6 +22,9 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         )
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.delegate = self
+        
+        // Set title.
+        self.navigationItem.title = NSLocalizedString("Assignments", comment: "Header title for the assignments tab.")
     }
     
     override func viewWillAppear(animated: Bool) {
