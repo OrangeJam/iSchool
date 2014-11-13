@@ -43,3 +43,5 @@
 /* Placeholder in username field in login view */
 "Username" = "Notendanafn";
 
+/* The title of the cell that toggles the language */
+"Language" = "English";

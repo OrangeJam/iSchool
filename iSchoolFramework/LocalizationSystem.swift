@@ -29,6 +29,8 @@ class LocalizationSystem {
         } else {
             self.resetLocalization()
         }
+        NSUserDefaults.standardUserDefaults().setObject(language, forKey: "language")
+        NSUserDefaults.standardUserDefaults().synchronize()
     }
     
     func resetLocalization() {
@@ -36,6 +38,11 @@ class LocalizationSystem {
     }
     
     func getLanguage() -> String {
+        // If the app has a
+        if let language = NSUserDefaults.standardUserDefaults().stringForKey("language") {
+            return language
+        }
+        // Return the preferred language of the phone.
         let languages = NSUserDefaults.standardUserDefaults().objectForKey("AppleLanguages") as [String]
         let preferredLanguage = languages[0]
         return preferredLanguage
