@@ -112,7 +112,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("DetailView") as? DetailViewController {
             if let grade = data?[indexPath.section][indexPath.row] {
                 detail.setDetailForURL(NSURL(string: grade.URL)!, title: grade.name)
-                let bbItem = UIBarButtonItem(title: "Back", style: .Plain, target: nil, action: nil)
+                let bbItem = UIBarButtonItem(title: NSLocalizedString("Back", comment: "Back button to go back to grades table view"), style: .Plain, target: nil, action: nil)
                 navigationItem.backBarButtonItem = bbItem
                 navigationController?.pushViewController(detail, animated: true)
             }

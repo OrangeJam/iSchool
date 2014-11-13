@@ -59,6 +59,19 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         return cell
     }
     
+//    // Test when no assignments are due for user.
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 4
+//    }
+//    
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        let assignments = DataStore.sharedInstance.getAssignments()
+//        let cell = tableView.dequeueReusableCellWithIdentifier("AssignmentsTableViewCell") as AssignmentsTableViewCell
+//        cell.assignmentStub()
+//        return cell
+//    }
+//    // Test ends
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if let detail = self.storyboard?.instantiateViewControllerWithIdentifier("DetailView") as? DetailViewController {
             let assignments = DataStore.sharedInstance.getAssignments()
