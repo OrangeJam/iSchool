@@ -28,7 +28,7 @@ class MainTabBarController : UITabBarController {
                     self.showNetworkErrorAlert()
                 }
                 if !CredentialManager.sharedInstance.hasCredentials() {
-                    self.presentLoginView()
+                    self.presentLoginView(false)
                 }
             }
         )
@@ -50,7 +50,6 @@ class MainTabBarController : UITabBarController {
                     if childVC.isKindOfClass(UITableViewController.self) {
                         let tableVC = childVC as UITableViewController
                         tableVC.tableView.reloadData()
-                        println("Reloaded table view from tab VC")
                     }
                 }
             }
@@ -62,12 +61,16 @@ class MainTabBarController : UITabBarController {
             DataStore.sharedInstance.fetchClasses()
             DataStore.sharedInstance.fetchAssignments()
         } else {
-            presentLoginView()
+            presentLoginView(false)
         }
     }
     
-    func presentLoginView() {
-        performSegueWithIdentifier("presentLoginView", sender: self)
+    func presentLoginView(animated: Bool) {
+        if animated {
+            performSegueWithIdentifier("presentLoginViewAnimated", sender: self)
+        } else {
+            performSegueWithIdentifier("presentLoginView", sender: self)
+        }
     }
     
     func showNetworkErrorAlert() {

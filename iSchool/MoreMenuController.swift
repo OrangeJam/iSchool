@@ -34,7 +34,7 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
         CredentialManager.sharedInstance.clearCredentials()
         DataStore.sharedInstance.clearData()
         if let tabbar = self.tabBarController as? MainTabBarController {
-            tabbar.presentLoginView()
+            tabbar.presentLoginView(true)
         }
     }
     
