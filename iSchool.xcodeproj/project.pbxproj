@@ -25,6 +25,7 @@
 		98B82A681A157B8100C3ABC6 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A641A157B8100C3ABC6 /* checkmark@2x.png */; };
 		98B82A691A157B8100C3ABC6 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A651A157B8100C3ABC6 /* minus.png */; };
 		98B82A6A1A157B8100C3ABC6 /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A661A157B8100C3ABC6 /* minus@2x.png */; };
+		98B82A6C1A157E5700C3ABC6 /* rocket-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A6B1A157E5700C3ABC6 /* rocket-100.png */; };
 		98C1F7F51A15006000397D3E /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 		98C1F7F61A15006000397D3E /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
 		98C1F7F71A15006000397D3E /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
@@ -71,7 +72,6 @@
 		F509E2521A0794BC0038966B /* foodPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F509E2501A0794BC0038966B /* foodPrettifier.js */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
-		F52C7DE81A15737900093249 /* rocket-100.png in Resources */ = {isa = PBXBuildFile; fileRef = F52C7DE71A15737900093249 /* rocket-100.png */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
@@ -218,6 +218,7 @@
 		98B82A641A157B8100C3ABC6 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		98B82A651A157B8100C3ABC6 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		98B82A661A157B8100C3ABC6 /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
+		98B82A6B1A157E5700C3ABC6 /* rocket-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket-100.png"; sourceTree = "<group>"; };
 		98D28A3019BB7731008B3EB9 /* timetable_exams.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_exams.html; sourceTree = "<group>"; };
 		98D28A3119BB7731008B3EB9 /* timetable_normal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_normal.html; sourceTree = "<group>"; };
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = ../iSchool/CredentialManager.swift; sourceTree = "<group>"; };
@@ -260,7 +261,6 @@
 		F509E24A1A0778FB0038966B /* MoreMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuController.swift; sourceTree = "<group>"; };
 		F509E24D1A0789C70038966B /* FoodWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebViewController.swift; sourceTree = "<group>"; };
 		F509E2501A0794BC0038966B /* foodPrettifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = foodPrettifier.js; sourceTree = "<group>"; };
-		F52C7DE71A15737900093249 /* rocket-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rocket-100.png"; path = "../../../../../Downloads/rocket-100.png"; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -532,7 +532,7 @@
 		F5770C7719F40DDD00602027 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F52C7DE71A15737900093249 /* rocket-100.png */,
+				98B82A6B1A157E5700C3ABC6 /* rocket-100.png */,
 				9880070419F41DE90005266F /* centered_white.png */,
 				9880070519F41DE90005266F /* default_white.png */,
 				F2BB34331A140FB90031CB8C /* checklist.png */,
@@ -799,7 +799,7 @@
 				F509E2511A0794BC0038966B /* foodPrettifier.js in Resources */,
 				9880071819F41DE90005266F /* rulogo@2x.png in Resources */,
 				F2BB343E1A14C5F20031CB8C /* checkmark.png in Resources */,
-				F52C7DE81A15737900093249 /* rocket-100.png in Resources */,
+				98B82A6C1A157E5700C3ABC6 /* rocket-100.png in Resources */,
 				F2BB34441A14CC9E0031CB8C /* checkmark@2x.png in Resources */,
 				F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */,
 			);

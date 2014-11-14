@@ -14,7 +14,6 @@ class TimetableTableViewController: UITableViewController, UITableViewDataSource
     var weekDay: WeekDay? = nil
     var dateFormatter: NSDateFormatter {
         let formatter = NSDateFormatter()
-//        formatter.locale = NSLocale(localeIdentifier: "is_IS")
         formatter.dateFormat = "EEE d. MMM"
         
         return formatter

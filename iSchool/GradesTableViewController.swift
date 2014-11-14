@@ -11,7 +11,6 @@ import UIKit
 class GradesTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var emptyLabel: UILabel!
-    
     var data: ([[Grade]])?
     @IBOutlet weak var gradsTitle: UINavigationItem!
     
@@ -22,6 +21,9 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
             action: "reloadData",
             forControlEvents: .ValueChanged
         )
+        self.emptyLabel.frame = CGRect(x: 0, y: 0, width: self.tableView.bounds.width, height: self.emptyLabel.frame.height)
+        // Set the text of the empty label.
+        self.emptyLabel.text = NSLocalizedString("No grades", comment: "Text for the empty label when there are no grades")
         tableView.delegate = self
     }
     
@@ -48,8 +50,13 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if let data = self.data {
+            self.emptyLabel.hidden = !(data[0].count == 0)
+            if(data[0].count == 0) {
+                return 0
+            }
             return data.count
         } else {
+            self.emptyLabel.hidden = false
             return 0
         }
     }

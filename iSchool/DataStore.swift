@@ -38,11 +38,11 @@ class DataStore {
     }
     
     func getAssignments() -> [Assignment] {
-        let assignments = [
+        /*let assignments = [
             Assignment(attrs: ["12.12.2014 22:22", "Óskilað", "asdfsf", "asdfsfd", "Kúkur", "Penis"]),
             Assignment(attrs: ["12.12.2014 22:22", "asdfsa", "asdfsf", "asdfsfd", "Kúkur", "Vajin"]),
             Assignment(attrs: ["12.12.2014 22:22", "asdfsa", "asdfsf", "asdfsfd", "Kúkur", "Vegans"])
-        ]
+        ]*/
         return assignments
     }
     
