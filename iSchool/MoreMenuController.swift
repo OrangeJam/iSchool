@@ -12,6 +12,10 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         tableView.tableFooterView = UIView(frame: CGRectZero)
+        let rocket = UIImageView(image: UIImage(contentsOfFile: NSBundle.mainBundle().pathForResource("rocket-100", ofType: "png")!))
+        rocket.frame = CGRect(x: tableView.frame.width/2 - 50, y: 300, width: 100, height: 100)
+        rocket.alpha = 0.4
+        tableView.addSubview(rocket)
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
