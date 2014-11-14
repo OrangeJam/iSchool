@@ -83,16 +83,17 @@ class LoginViewController: UIViewController {
     
     func authenticationFailed(operation: AFHTTPRequestOperation!, error: NSError!) -> Void {
         activityIndicator.stopAnimating()
+        let localizer = LocalizationSystem.sharedInstance
         if let response = operation.response {
             let statusCode = response.statusCode
             switch(statusCode) {
             case 401:
-                messageLabel.text = LocalizationSystem.localizedStringForKey("Invalid username or password", comment: "Message when username or password are wrong")
+                messageLabel.text = localizer.localizedStringForKey("Invalid username or password", comment: "Message when username or password are wrong")
             default:
-                messageLabel.text = LocalizationSystem.localizedStringForKey("Network error.", comment: "Message when responce is not 401, some other network error")
+                messageLabel.text = localizer.localizedStringForKey("Network error.", comment: "Message when responce is not 401, some other network error")
             }
         } else {
-            messageLabel.text = LocalizationSystem.localizedStringForKey("Network error.", comment: "Some network error")
+            messageLabel.text = localizer.localizedStringForKey("Network error.", comment: "Some network error")
         }
         messageLabel.hidden = false
     }
@@ -104,10 +105,11 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         NSLog("login screen")
+        let localizer = LocalizationSystem.sharedInstance
         super.viewDidLoad()
-        usernameField.placeholder = LocalizationSystem.localizedStringForKey("Username", comment: "Placeholder in username field in login view")
-        passwordField.placeholder = LocalizationSystem.localizedStringForKey("Password", comment: "Placeholder in password field in login view")
-        loginButton.setTitle(LocalizationSystem.localizedStringForKey("Log In", comment: "Text on log in button"), forState: UIControlState.Normal)
+        usernameField.placeholder = localizer.localizedStringForKey("Username", comment: "Placeholder in username field in login view")
+        passwordField.placeholder = localizer.localizedStringForKey("Password", comment: "Placeholder in password field in login view")
+        loginButton.setTitle(localizer.localizedStringForKey("Log In", comment: "Text on log in button"), forState: UIControlState.Normal)
         let tapRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         scrollView.addGestureRecognizer(tapRecognizer)
     }

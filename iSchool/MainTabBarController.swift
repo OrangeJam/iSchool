@@ -14,21 +14,7 @@ class MainTabBarController : UITabBarController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         
-        // Set the titles of the tabs.
-        for tab in self.tabBar.items as [UITabBarItem] {
-            switch(tab.tag) {
-            case 0:
-                tab.title = NSLocalizedString("Timetable", comment: "Tab title for timetable tab.")
-            case 1:
-                tab.title = NSLocalizedString("Assignments", comment: "Tab title for assignments tab.")
-            case 2:
-                tab.title = NSLocalizedString("Grades", comment: "Tab title for grades tab.")
-            case 3:
-                tab.title = NSLocalizedString("More", comment: "Tab title for more tab.")
-            default:
-                tab.title = ""
-            }
-        }
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -43,6 +29,23 @@ class MainTabBarController : UITabBarController {
                 }
             }
         )
+        
+        // Set the titles of the tabs.
+        for tab in self.tabBar.items as [UITabBarItem] {
+            switch(tab.tag) {
+            case 0:
+                tab.title = LocalizationSystem.sharedInstance.localizedStringForKey("Timetable", comment: "Tab title for timetable tab.")
+            case 1:
+                tab.title = LocalizationSystem.sharedInstance.localizedStringForKey("Assignments", comment: "Tab title for assignments tab.")
+            case 2:
+                tab.title = LocalizationSystem.sharedInstance.localizedStringForKey("Grades", comment: "Tab title for grades tab.")
+            case 3:
+                tab.title = LocalizationSystem.sharedInstance.localizedStringForKey("More", comment: "Tab title for more tab.")
+            default:
+                tab.title = ""
+            }
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -52,6 +55,8 @@ class MainTabBarController : UITabBarController {
         } else {
             presentLoginView()
         }
+        
+        self.navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey("More", comment: "Header title for the more tab bara menu.")
     }
     
     func presentLoginView() {

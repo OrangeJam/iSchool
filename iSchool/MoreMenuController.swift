@@ -45,16 +45,17 @@ class MoreMenuController: UITableViewController, UITableViewDelegate, UITableVie
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let localizer = LocalizationSystem.sharedInstance
         var labelText: String = ""
         let cell = tableView.dequeueReusableCellWithIdentifier("moreMenuCell") as MoreMenuCell
         switch(indexPath.row) {
         case 0:
-            labelText = LocalizationSystem.localizedStringForKey("Málið Cafeteria", comment: "Text on button to view the menu for Málið")
+            labelText = localizer.localizedStringForKey("Málið Cafeteria", comment: "Text on button to view the menu for Málið")
             cell.malidImage.hidden = false
         case 1:
             labelText = NSLocalizedString("LANGUAGE", comment: "Button to change language")
         case 2:
-            labelText = LocalizationSystem.localizedStringForKey("Log out", comment: "Log out button")
+            labelText = localizer.localizedStringForKey("Log out", comment: "Log out button")
         default:
             println("Some thing strange is happening in MoreMenu tableView")
         }
@@ -64,11 +65,11 @@ class MoreMenuController: UITableViewController, UITableViewDelegate, UITableVie
     
     func toggleLanguage() {
         println("Changing language")
-        if LocalizationSystem.getLanguage() == "is-IS" {
-            LocalizationSystem.setLanguage("en")
+        if LocalizationSystem.sharedInstance.getLanguage() == "is-IS" {
+            LocalizationSystem.sharedInstance.setLanguage("en")
             println("Now in English!")
-        } else if LocalizationSystem.getLanguage() == "en" {
-            LocalizationSystem.setLanguage("is-IS")
+        } else if LocalizationSystem.sharedInstance.getLanguage() == "en" {
+            LocalizationSystem.sharedInstance.setLanguage("is-IS")
             println("Now in Icelandic!")
         }
     }

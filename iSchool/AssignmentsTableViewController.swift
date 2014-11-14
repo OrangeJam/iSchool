@@ -22,13 +22,13 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
         )
         tableView.tableFooterView = UIView(frame: CGRectZero)
         tableView.delegate = self
-        // Set title.
-        
-        self.navigationItem.title = LocalizationSystem.localizedStringForKey("Assignments", comment: "Header title for the assignments tab.")
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.navigationItem.title = LocalizationSystem.sharedInstance.localizedStringForKey("Assignments", comment: "Header title for the assignments tab.")
+        
         NSNotificationCenter.defaultCenter().addObserver(self,
             selector: "refreshData",
             name: Notification.assignment.rawValue,
