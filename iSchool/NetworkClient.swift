@@ -27,10 +27,14 @@ class NetworkClient {
     
     func fetchPage(page: Page, successHandler:(AFHTTPRequestOperation!, AnyObject!) -> Void,
         errorHandler:(AFHTTPRequestOperation!, NSError!) -> Void) {
-        let data = manager.GET(page.rawValue, parameters: nil,
-            success: successHandler,
-            failure: errorHandler
-        )
+            let cookies = NSHTTPCookieStorage.sharedHTTPCookieStorage().cookies
+            for c in cookies as [NSHTTPCookie] {
+                NSHTTPCookieStorage.sharedHTTPCookieStorage().deleteCookie(c)
+            }
+            let data = manager.GET(page.rawValue, parameters: nil,
+                success: successHandler,
+                failure: errorHandler
+            )
     }
     
     func fetchDetailsForAssignment(assignment: Assignment, successHandler:(AFHTTPRequestOperation!, AnyObject!) -> Void,

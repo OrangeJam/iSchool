@@ -32,6 +32,29 @@ class MainTabBarController : UITabBarController {
                 }
             }
         )
+        self.reset()
+    }
+    
+    func reset() {
+        // Reload all the data.
+        reloadAllTableViews()
+        // Set the leftmost tab as the selected tab.
+        self.selectedIndex = 0
+    }
+    
+    func reloadAllTableViews() {
+        // Reload data in all table views.
+        for vc in self.viewControllers as [UIViewController] {
+            if vc.isKindOfClass(UINavigationController.self) {
+                for childVC in vc.childViewControllers as [UIViewController] {
+                    if childVC.isKindOfClass(UITableViewController.self) {
+                        let tableVC = childVC as UITableViewController
+                        tableVC.tableView.reloadData()
+                        println("Reloaded table view from tab VC")
+                    }
+                }
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
