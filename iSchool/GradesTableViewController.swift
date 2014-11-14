@@ -50,10 +50,7 @@ class GradesTableViewController: UITableViewController, UITableViewDataSource, U
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         if let data = self.data {
-            self.emptyLabel.hidden = !(data[0].count == 0)
-            if(data[0].count == 0) {
-                return 0
-            }
+            self.emptyLabel.hidden = !(data.count == 0)
             return data.count
         } else {
             self.emptyLabel.hidden = false

@@ -13,14 +13,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     
     var items: [Assignment]?
     
-    var loggedIn : Bool = {
-            if let _ = CredentialManager.sharedInstance.getCredentials() {
-                return true
-            } else {
-                println("Not logged in =(")
-                return false
-            }
-        }()
+    var loggedIn = false
     
     var loginButton: UIButton {
         let b = UIButton()
@@ -41,11 +34,24 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         super.viewDidLoad()
         tableView.sectionHeaderHeight = 0
         tableView.rowHeight = 55
-        
-        items = DataStore.sharedInstance.assignments
+        loggedIn = getLoggedInStatus()
+        println("Logged in: \(loggedIn)")
+        items = DataStore.sharedInstance.getAssignments()
+        if !loggedIn {
+            items = nil
+        }
         updateHeaderAndFooterHeight()
         updatePreferredContentSize()
         // Do any additional setup after loading the view from its nib.
+    }
+    
+    func getLoggedInStatus() -> Bool {
+        if let _ = CredentialManager.sharedInstance.getCredentials() {
+            return true
+        } else {
+            println("Not logged in =(")
+            return false
+        }
     }
     
     func updatePreferredContentSize() {
@@ -92,17 +98,21 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
-        println("Loading")
-        let assignments = DataStore.sharedInstance.getAssignments()
-        if hasNewData(assignments) {
-            println("New data")
-            self.items = assignments
-            self.updateHeaderAndFooterHeight()
-            self.updatePreferredContentSize()
-            self.tableView.reloadData()
-            completionHandler(.NewData)
+        if !loggedIn {
+            completionHandler(.Failed)
         } else {
-            completionHandler(.NoData)
+            println("Loading")
+            let assignments = DataStore.sharedInstance.getAssignments()
+            if hasNewData(assignments) {
+                println("New data")
+                self.items = assignments
+                self.updateHeaderAndFooterHeight()
+                self.updatePreferredContentSize()
+                self.tableView.reloadData()
+                completionHandler(.NewData)
+            } else {
+                completionHandler(.NoData)
+            }
         }
     }
     
