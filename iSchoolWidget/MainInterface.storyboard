@@ -14,67 +14,73 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="46" id="b9z-Qd-a3f" customClass="AssignmentsTableViewCell" customModule="iSchoolWidget" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AssignmentsTableViewCell" rowHeight="46" id="Bdc-IJ-jvj" customClass="AssignmentsTableViewCell" customModule="iSchool" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b9z-Qd-a3f" id="tRs-le-xb9">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bdc-IJ-jvj" id="4qd-0R-7p7">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nvg-Gh-lBS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Assignment Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUY-Q0-kh0">
                                             <rect key="frame" x="58" y="0.0" width="333" height="34"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Qif-G7-Q6m"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GGB-Mg-eth"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="Qif-G7-Q6m"/>
+                                                    <exclude reference="GGB-Mg-eth"/>
                                                 </mask>
                                             </variation>
                                         </label>
-                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="greencheck.png" translatesAutoresizingMaskIntoConstraints="NO" id="jrH-tC-RIy">
-                                            <rect key="frame" x="13" y="10" width="29" height="29"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FZP-CA-sXS">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsZ-7r-arx">
                                             <rect key="frame" x="550" y="13" width="42" height="24"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBR-bz-ei5">
-                                            <rect key="frame" x="58" y="29" width="254" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Course Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5hI-NK-hDO">
+                                            <rect key="frame" x="58" y="29" width="254" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="checkmark.png" translatesAutoresizingMaskIntoConstraints="NO" id="muD-oT-vvn">
+                                            <rect key="frame" x="13" y="10" width="29" height="29"/>
+                                        </imageView>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="minus.png" translatesAutoresizingMaskIntoConstraints="NO" id="mFd-ax-mxf">
+                                            <rect key="frame" x="13" y="10" width="29" height="29"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="nvg-Gh-lBS" firstAttribute="top" secondItem="tRs-le-xb9" secondAttribute="topMargin" constant="2" id="2sP-yp-9fv"/>
-                                        <constraint firstItem="FZP-CA-sXS" firstAttribute="trailing" secondItem="tRs-le-xb9" secondAttribute="trailingMargin" id="AIW-gp-Nas"/>
-                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="PlY-w6-CfK"/>
-                                        <constraint firstItem="nvg-Gh-lBS" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="SO3-MW-W2p"/>
-                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="leading" secondItem="tRs-le-xb9" secondAttribute="leadingMargin" constant="50" id="cuW-dz-Aus"/>
-                                        <constraint firstAttribute="centerY" secondItem="FZP-CA-sXS" secondAttribute="centerY" constant="-0.25" id="eIw-P8-5m7"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="pBR-bz-ei5" secondAttribute="bottom" constant="2" id="fSH-wH-gM3"/>
-                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="top" secondItem="nvg-Gh-lBS" secondAttribute="bottom" constant="2" id="gjm-Np-YNR"/>
-                                        <constraint firstItem="FZP-CA-sXS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nvg-Gh-lBS" secondAttribute="trailing" constant="40" id="w2k-nM-Udc"/>
-                                        <constraint firstItem="pBR-bz-ei5" firstAttribute="top" secondItem="nvg-Gh-lBS" secondAttribute="bottom" constant="1" id="yLz-K6-uw4"/>
+                                        <constraint firstItem="5hI-NK-hDO" firstAttribute="leading" secondItem="4qd-0R-7p7" secondAttribute="leadingMargin" constant="50" id="1sa-16-tjJ"/>
+                                        <constraint firstItem="5hI-NK-hDO" firstAttribute="top" secondItem="YUY-Q0-kh0" secondAttribute="bottom" constant="1" id="Oo4-Cz-tyT"/>
+                                        <constraint firstItem="5hI-NK-hDO" firstAttribute="top" secondItem="YUY-Q0-kh0" secondAttribute="bottom" constant="2" id="Pnh-eY-yUN"/>
+                                        <constraint firstItem="5hI-NK-hDO" firstAttribute="leading" secondItem="4qd-0R-7p7" secondAttribute="leadingMargin" constant="50" id="RLs-iV-tVL"/>
+                                        <constraint firstAttribute="centerY" secondItem="muD-oT-vvn" secondAttribute="centerY" constant="-2" id="ZCU-BE-BVP"/>
+                                        <constraint firstItem="YUY-Q0-kh0" firstAttribute="leading" secondItem="4qd-0R-7p7" secondAttribute="leadingMargin" constant="50" id="bPO-5d-gfs"/>
+                                        <constraint firstItem="YUY-Q0-kh0" firstAttribute="top" secondItem="4qd-0R-7p7" secondAttribute="topMargin" constant="2" id="gYu-yH-wk5"/>
+                                        <constraint firstItem="xsZ-7r-arx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YUY-Q0-kh0" secondAttribute="trailing" constant="40" id="gne-8E-U1Q"/>
+                                        <constraint firstItem="xsZ-7r-arx" firstAttribute="trailing" secondItem="4qd-0R-7p7" secondAttribute="trailingMargin" id="hxC-93-1Md"/>
+                                        <constraint firstAttribute="centerY" secondItem="xsZ-7r-arx" secondAttribute="centerY" constant="-0.25" id="taX-5b-oJI"/>
+                                        <constraint firstAttribute="centerY" secondItem="mFd-ax-mxf" secondAttribute="centerY" constant="-2" id="vuE-vu-XAP"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="5hI-NK-hDO" secondAttribute="bottom" constant="2" id="xS3-kQ-lPg"/>
                                     </constraints>
                                     <variation key="default">
                                         <mask key="constraints">
-                                            <exclude reference="cuW-dz-Aus"/>
-                                            <exclude reference="fSH-wH-gM3"/>
-                                            <exclude reference="gjm-Np-YNR"/>
+                                            <exclude reference="1sa-16-tjJ"/>
+                                            <exclude reference="Pnh-eY-yUN"/>
+                                            <exclude reference="xS3-kQ-lPg"/>
                                         </mask>
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="courseLabel" destination="pBR-bz-ei5" id="wXr-3s-mwa"/>
-                                    <outlet property="doneImage" destination="jrH-tC-RIy" id="Rbu-xH-tP9"/>
-                                    <outlet property="dueDateLabel" destination="FZP-CA-sXS" id="kS9-Pv-Xey"/>
-                                    <outlet property="nameLabel" destination="nvg-Gh-lBS" id="Yi0-8t-xKm"/>
+                                    <outlet property="courseLabel" destination="5hI-NK-hDO" id="1O1-ju-7J6"/>
+                                    <outlet property="doneImage" destination="muD-oT-vvn" id="cLW-oY-ufQ"/>
+                                    <outlet property="dueDateLabel" destination="xsZ-7r-arx" id="eca-VV-Old"/>
+                                    <outlet property="nameLabel" destination="YUY-Q0-kh0" id="agN-hK-vCo"/>
+                                    <outlet property="notDoneImage" destination="mFd-ax-mxf" id="k0o-Nt-7Iw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -90,7 +96,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="greencheck.png" width="40" height="40"/>
+        <image name="checkmark.png" width="50" height="50"/>
+        <image name="minus.png" width="50" height="50"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

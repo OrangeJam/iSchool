@@ -21,10 +21,13 @@
 		9880071819F41DE90005266F /* rulogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9880070D19F41DE90005266F /* rulogo@2x.png */; };
 		9880071919F41DE90005266F /* timetable@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9880070E19F41DE90005266F /* timetable@2x.png */; };
 		9899BC0619B8AEFA00359C62 /* ClassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9899BC0519B8AEFA00359C62 /* ClassTests.swift */; };
+		98B82A671A157B8100C3ABC6 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A631A157B8100C3ABC6 /* checkmark.png */; };
+		98B82A681A157B8100C3ABC6 /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A641A157B8100C3ABC6 /* checkmark@2x.png */; };
+		98B82A691A157B8100C3ABC6 /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A651A157B8100C3ABC6 /* minus.png */; };
+		98B82A6A1A157B8100C3ABC6 /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98B82A661A157B8100C3ABC6 /* minus@2x.png */; };
 		98C1F7F51A15006000397D3E /* ClassCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D8A4EC19F409D1005437E4 /* ClassCell.swift */; };
 		98C1F7F61A15006000397D3E /* AssignmentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FBF8EA19F4617E004E4141 /* AssignmentCell.swift */; };
 		98C1F7F71A15006000397D3E /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
-		98C1F7F91A1506E700397D3E /* greencheck.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1F7F81A1506E700397D3E /* greencheck.png */; };
 		98D28A3219BB7731008B3EB9 /* timetable_exams.html in Resources */ = {isa = PBXBuildFile; fileRef = 98D28A3019BB7731008B3EB9 /* timetable_exams.html */; };
 		98D28A3319BB7731008B3EB9 /* timetable_normal.html in Resources */ = {isa = PBXBuildFile; fileRef = 98D28A3119BB7731008B3EB9 /* timetable_normal.html */; };
 		98DB0F6119B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
@@ -211,7 +214,10 @@
 		9880070D19F41DE90005266F /* rulogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rulogo@2x.png"; sourceTree = "<group>"; };
 		9880070E19F41DE90005266F /* timetable@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timetable@2x.png"; sourceTree = "<group>"; };
 		9899BC0519B8AEFA00359C62 /* ClassTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClassTests.swift; sourceTree = "<group>"; };
-		98C1F7F81A1506E700397D3E /* greencheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greencheck.png; sourceTree = "<group>"; };
+		98B82A631A157B8100C3ABC6 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark.png; sourceTree = "<group>"; };
+		98B82A641A157B8100C3ABC6 /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		98B82A651A157B8100C3ABC6 /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		98B82A661A157B8100C3ABC6 /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
 		98D28A3019BB7731008B3EB9 /* timetable_exams.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_exams.html; sourceTree = "<group>"; };
 		98D28A3119BB7731008B3EB9 /* timetable_normal.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = timetable_normal.html; sourceTree = "<group>"; };
 		98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CredentialManager.swift; path = ../iSchool/CredentialManager.swift; sourceTree = "<group>"; };
@@ -370,7 +376,10 @@
 		F50296CC19CC80FC00A12AF5 /* iSchoolWidget */ = {
 			isa = PBXGroup;
 			children = (
-				98C1F7F81A1506E700397D3E /* greencheck.png */,
+				98B82A631A157B8100C3ABC6 /* checkmark.png */,
+				98B82A641A157B8100C3ABC6 /* checkmark@2x.png */,
+				98B82A651A157B8100C3ABC6 /* minus.png */,
+				98B82A661A157B8100C3ABC6 /* minus@2x.png */,
 				98FAFEAF1A03C92C00DCCDB2 /* iSchoolWidget.entitlements */,
 				F50296CF19CC80FC00A12AF5 /* TodayViewController.swift */,
 				F50296D119CC80FC00A12AF5 /* MainInterface.storyboard */,
@@ -754,10 +763,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98C1F7F91A1506E700397D3E /* greencheck.png in Resources */,
 				F50296D219CC80FC00A12AF5 /* MainInterface.storyboard in Resources */,
+				98B82A671A157B8100C3ABC6 /* checkmark.png in Resources */,
+				98B82A691A157B8100C3ABC6 /* minus.png in Resources */,
 				F24577F61A08F40F00005F4E /* Localizable.strings in Resources */,
 				F24577D81A08F33900005F4E /* InfoPlist.strings in Resources */,
+				98B82A6A1A157B8100C3ABC6 /* minus@2x.png in Resources */,
+				98B82A681A157B8100C3ABC6 /* checkmark@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
