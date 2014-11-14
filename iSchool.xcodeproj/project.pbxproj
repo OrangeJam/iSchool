@@ -44,7 +44,6 @@
 		F24577EC1A08F33A00005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577EE1A08F33A00005F4E /* InfoPlist.strings */; };
 		F24577F11A08F33A00005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577F31A08F33A00005F4E /* InfoPlist.strings */; };
 		F24577F61A08F40F00005F4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577F81A08F40F00005F4E /* Localizable.strings */; };
-		F275800D1A1570E7006092F1 /* rocket-100.png in Resources */ = {isa = PBXBuildFile; fileRef = F275800C1A1570E7006092F1 /* rocket-100.png */; };
 		F27BDE7E19F46F07009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F27BDE7F19F46F68009D1C58 /* GradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F27BDE7D19F46F07009D1C58 /* GradeCell.swift */; };
 		F2BB34311A140EEC0031CB8C /* grades.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB342F1A140EEC0031CB8C /* grades.png */; };
@@ -72,6 +71,7 @@
 		F509E2521A0794BC0038966B /* foodPrettifier.js in Resources */ = {isa = PBXBuildFile; fileRef = F509E2501A0794BC0038966B /* foodPrettifier.js */; };
 		F50AC33E19B08B49001506B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F50AC34019B08B4C001506B7 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9850A65B19AF7D08005EAB3B /* LoginViewController.swift */; };
+		F52C7DE81A15737900093249 /* rocket-100.png in Resources */ = {isa = PBXBuildFile; fileRef = F52C7DE71A15737900093249 /* rocket-100.png */; };
 		F53B591819AB8E0200ACF507 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53B591719AB8E0200ACF507 /* AppDelegate.swift */; };
 		F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F53B591D19AB8E0200ACF507 /* Main.storyboard */; };
 		F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F53B592019AB8E0200ACF507 /* Images.xcassets */; };
@@ -236,7 +236,6 @@
 		F24577ED1A08F33A00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577F21A08F33A00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577F71A08F40F00005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		F275800C1A1570E7006092F1 /* rocket-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rocket-100.png"; sourceTree = "<group>"; };
 		F27BDE7D19F46F07009D1C58 /* GradeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeCell.swift; sourceTree = "<group>"; };
 		F2BB342F1A140EEC0031CB8C /* grades.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grades.png; sourceTree = "<group>"; };
 		F2BB34301A140EEC0031CB8C /* grades@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grades@2x.png"; sourceTree = "<group>"; };
@@ -261,6 +260,7 @@
 		F509E24A1A0778FB0038966B /* MoreMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreMenuController.swift; sourceTree = "<group>"; };
 		F509E24D1A0789C70038966B /* FoodWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodWebViewController.swift; sourceTree = "<group>"; };
 		F509E2501A0794BC0038966B /* foodPrettifier.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = foodPrettifier.js; sourceTree = "<group>"; };
+		F52C7DE71A15737900093249 /* rocket-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rocket-100.png"; path = "../../../../../Downloads/rocket-100.png"; sourceTree = "<group>"; };
 		F53870AF19BDF13F0070D6ED /* Grade.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		F53B591219AB8E0200ACF507 /* iSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53B591619AB8E0200ACF507 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -532,7 +532,7 @@
 		F5770C7719F40DDD00602027 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				F275800C1A1570E7006092F1 /* rocket-100.png */,
+				F52C7DE71A15737900093249 /* rocket-100.png */,
 				9880070419F41DE90005266F /* centered_white.png */,
 				9880070519F41DE90005266F /* default_white.png */,
 				F2BB34331A140FB90031CB8C /* checklist.png */,
@@ -797,9 +797,9 @@
 				F53B591F19AB8E0200ACF507 /* Main.storyboard in Resources */,
 				9880071919F41DE90005266F /* timetable@2x.png in Resources */,
 				F509E2511A0794BC0038966B /* foodPrettifier.js in Resources */,
-				F275800D1A1570E7006092F1 /* rocket-100.png in Resources */,
 				9880071819F41DE90005266F /* rulogo@2x.png in Resources */,
 				F2BB343E1A14C5F20031CB8C /* checkmark.png in Resources */,
+				F52C7DE81A15737900093249 /* rocket-100.png in Resources */,
 				F2BB34441A14CC9E0031CB8C /* checkmark@2x.png in Resources */,
 				F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */,
 			);
