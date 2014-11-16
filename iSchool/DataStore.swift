@@ -81,12 +81,15 @@ class DataStore {
     }
     
     func fetchAssignments() {
+        let a1 = Assignment(attrs: ["18.11.2014 23:59", "Skilað", "", "Stöðuvélar og reiknanleiki", "?Page=Exe&ID=2.4&ViewMode=2&fagid=26706&verkID=50021", "Assignment 11"])
+        let a2 = Assignment(attrs: ["19.11.2014 23:59", "Óskilað", "", "Tölvusamskipti", "?Page=Exe&ID=2.4&ViewMode=2&fagid=26706&verkID=50021", "Extra Assignment"])
+        let a3 = Assignment(attrs: ["26.11.2014 23.59", "Óskilað", "", "Tölvusamskipti", "?Page=Exe&ID=2.4&ViewMode=2&fagid=26706&verkID=50021", "Extra Online Exam"])
+        assignments = [a1, a2, a3]
+        NSNotificationCenter.defaultCenter().postNotificationName(Notification.grade.rawValue, object: nil)
         if let networkClient = getNetworkClient() {
             networkClient.fetchPage(Page.Assignments,
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
-                    self.assignments = Parser.parseAssignments(responseData)
-                    NSNotificationCenter.defaultCenter().postNotificationName(Notification.assignment.rawValue, object: nil)
                     if let g = Parser.parseGrades(responseData) {
                         self.grades = g
                     }
@@ -103,7 +106,28 @@ class DataStore {
     }
     
     func fetchClasses() {
-        if let networkClient = getNetworkClient() {
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        
+        let start1 = formatter.dateFromString("17.11.2014 11:10")!
+        let end1 = formatter.dateFromString("17.11.2014 11:55")!
+        let c1 = Class(course: "Stöðuvélar og reiknanleiki", type: ClassType.Lecture, location: "M109", startDate: start1, endDate: end1)
+        
+        let demoStart = formatter.dateFromString("17.11.2014 13:00")!
+        let demoEnd = formatter.dateFromString("17.11.2014 14:00")!
+        let demo = Class(course: "UROP kynning", type: ClassType.Other, location: "", startDate: demoStart, endDate: demoEnd)
+        
+        let start2 = formatter.dateFromString("18.11.2014 13:10")!
+        let end2 = formatter.dateFromString("18.11.2014 13:55")!
+        let c2 = Class(course: "Tölvusamskipti", type: ClassType.Lecture, location: "V201", startDate: start2, endDate: end2)
+        let start3 = formatter.dateFromString("18.11.2014 14:00")!
+        let end3 = formatter.dateFromString("18.11.2014 14:45")!
+        let c3 = Class(course: "Tölvusamskipti", type: ClassType.Lecture, location: "V201", startDate: start3, endDate: end3)
+        
+        classes = [c1, demo, c2, c3]
+        NSNotificationCenter.defaultCenter().postNotificationName(Notification.classes.rawValue, object: nil)
+        
+        /*if let networkClient = getNetworkClient() {
             networkClient.fetchPage(Page.Timetable,
                 successHandler: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
                     let responseData = NSData(data: response as NSData)
@@ -117,7 +141,7 @@ class DataStore {
             )
         } else {
             NSLog("Could not get network client")
-        }
+        }*/
     }
     
     func clearData() {
