@@ -35,9 +35,10 @@
 		98DB0F6219B4BF5F00354DB9 /* CredentialManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6019B4BF5F00354DB9 /* CredentialManager.swift */; };
 		98DB0F6619B4BF7100354DB9 /* CredentialManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98DB0F6419B4BF7100354DB9 /* CredentialManagerTests.swift */; };
 		B27D50AB41014FF9B1CD0E35 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B6F2DAEC204B62AF31AADE /* libPods.a */; };
-		F208E4F31A140BC700CFFC36 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = F208E4F11A140BC700CFFC36 /* more.png */; };
 		F208E4F41A140BC700CFFC36 /* more@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F208E4F21A140BC700CFFC36 /* more@2x.png */; };
 		F23954E119FEC1F000BFCB01 /* GradeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */; };
+		F2442D271A65821A008F2891 /* more@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2442D261A65821A008F2891 /* more@3x.png */; };
+		F2442D291A658221008F2891 /* more.png in Resources */ = {isa = PBXBuildFile; fileRef = F2442D281A658221008F2891 /* more.png */; };
 		F24577D81A08F33900005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577DA1A08F33900005F4E /* InfoPlist.strings */; };
 		F24577DD1A08F33900005F4E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577DF1A08F33900005F4E /* InfoPlist.strings */; };
 		F24577E21A08F33900005F4E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F24577E41A08F33900005F4E /* Localizable.strings */; };
@@ -57,6 +58,10 @@
 		F2BB34441A14CC9E0031CB8C /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB34431A14CC9E0031CB8C /* checkmark@2x.png */; };
 		F2DC29941A657E1600F73E68 /* noGradesOneAssignment.html in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29931A657E1600F73E68 /* noGradesOneAssignment.html */; };
 		F2DC29961A65802500F73E68 /* grades@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29951A65802500F73E68 /* grades@3x.png */; };
+		F2DC29981A6580AB00F73E68 /* checklist@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29971A6580AB00F73E68 /* checklist@3x.png */; };
+		F2DC299A1A6580C500F73E68 /* checkmark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29991A6580C500F73E68 /* checkmark@3x.png */; };
+		F2DC299C1A65812400F73E68 /* timetable@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC299B1A65812400F73E68 /* timetable@3x.png */; };
+		F2DC299E1A65812A00F73E68 /* timetable.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC299D1A65812A00F73E68 /* timetable.png */; };
 		F2E352C51A0809D800C9F9B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2E352C71A0809D800C9F9B4 /* Localizable.strings */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
 		F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */; };
@@ -229,9 +234,10 @@
 		98FAFEAF1A03C92C00DCCDB2 /* iSchoolWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iSchoolWidget.entitlements; sourceTree = "<group>"; };
 		9BDEFD1A070A71AC3C9A297D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		F208E4E81A1406DB00CFFC36 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		F208E4F11A140BC700CFFC36 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 		F208E4F21A140BC700CFFC36 /* more@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@2x.png"; sourceTree = "<group>"; };
 		F23954E019FEC1F000BFCB01 /* GradeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradeDetailViewController.swift; sourceTree = "<group>"; };
+		F2442D261A65821A008F2891 /* more@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "more@3x.png"; sourceTree = "<group>"; };
+		F2442D281A658221008F2891 /* more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = more.png; sourceTree = "<group>"; };
 		F24577D91A08F33900005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577DE1A08F33900005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		F24577E31A08F33900005F4E /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Localizable.strings"; sourceTree = "<group>"; };
@@ -250,6 +256,10 @@
 		F2BB34431A14CC9E0031CB8C /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
 		F2DC29931A657E1600F73E68 /* noGradesOneAssignment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = noGradesOneAssignment.html; sourceTree = "<group>"; };
 		F2DC29951A65802500F73E68 /* grades@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grades@3x.png"; sourceTree = "<group>"; };
+		F2DC29971A6580AB00F73E68 /* checklist@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checklist@3x.png"; sourceTree = "<group>"; };
+		F2DC29991A6580C500F73E68 /* checkmark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@3x.png"; sourceTree = "<group>"; };
+		F2DC299B1A65812400F73E68 /* timetable@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timetable@3x.png"; sourceTree = "<group>"; };
+		F2DC299D1A65812A00F73E68 /* timetable.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timetable.png; sourceTree = "<group>"; };
 		F2E352C21A08080800C9F9B4 /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Main.strings"; sourceTree = "<group>"; };
 		F2E352C61A0809D800C9F9B4 /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F2E352C81A0809DF00C9F9B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -541,13 +551,16 @@
 				9880070519F41DE90005266F /* default_white.png */,
 				F2BB34331A140FB90031CB8C /* checklist.png */,
 				F2BB34351A14100A0031CB8C /* checklist@2x.png */,
+				F2DC29971A6580AB00F73E68 /* checklist@3x.png */,
 				F2BB342F1A140EEC0031CB8C /* grades.png */,
 				F2BB34301A140EEC0031CB8C /* grades@2x.png */,
 				F2DC29951A65802500F73E68 /* grades@3x.png */,
-				F208E4F11A140BC700CFFC36 /* more.png */,
+				F2442D281A658221008F2891 /* more.png */,
 				F208E4F21A140BC700CFFC36 /* more@2x.png */,
+				F2442D261A65821A008F2891 /* more@3x.png */,
 				F2BB343D1A14C5F20031CB8C /* checkmark.png */,
 				F2BB34431A14CC9E0031CB8C /* checkmark@2x.png */,
+				F2DC29991A6580C500F73E68 /* checkmark@3x.png */,
 				F2BB343F1A14C8560031CB8C /* minus.png */,
 				F2BB34411A14CC990031CB8C /* minus@2x.png */,
 				9880070919F41DE90005266F /* help@2x.png */,
@@ -555,7 +568,9 @@
 				9880070B19F41DE90005266F /* lab@2x.png */,
 				9880070C19F41DE90005266F /* lecture@2x.png */,
 				9880070D19F41DE90005266F /* rulogo@2x.png */,
+				F2DC299D1A65812A00F73E68 /* timetable.png */,
 				9880070E19F41DE90005266F /* timetable@2x.png */,
+				F2DC299B1A65812400F73E68 /* timetable@3x.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -785,18 +800,22 @@
 			files = (
 				F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */,
 				F2BB34341A140FB90031CB8C /* checklist.png in Resources */,
-				F208E4F31A140BC700CFFC36 /* more.png in Resources */,
 				F2DC29961A65802500F73E68 /* grades@3x.png in Resources */,
 				9880071519F41DE90005266F /* hnifapar@2x.png in Resources */,
 				9880071619F41DE90005266F /* lab@2x.png in Resources */,
 				F2E352C51A0809D800C9F9B4 /* Localizable.strings in Resources */,
 				F2BB34311A140EEC0031CB8C /* grades.png in Resources */,
 				F2BB34361A14100A0031CB8C /* checklist@2x.png in Resources */,
+				F2442D291A658221008F2891 /* more.png in Resources */,
 				F24577E71A08F33A00005F4E /* InfoPlist.strings in Resources */,
 				F2BB34321A140EEC0031CB8C /* grades@2x.png in Resources */,
+				F2DC299C1A65812400F73E68 /* timetable@3x.png in Resources */,
+				F2DC299A1A6580C500F73E68 /* checkmark@3x.png in Resources */,
+				F2442D271A65821A008F2891 /* more@3x.png in Resources */,
 				9880071419F41DE90005266F /* help@2x.png in Resources */,
 				F2BB34401A14C8560031CB8C /* minus.png in Resources */,
 				9880070F19F41DE90005266F /* centered_white.png in Resources */,
+				F2DC29981A6580AB00F73E68 /* checklist@3x.png in Resources */,
 				9880071019F41DE90005266F /* default_white.png in Resources */,
 				9880071719F41DE90005266F /* lecture@2x.png in Resources */,
 				F208E4F41A140BC700CFFC36 /* more@2x.png in Resources */,
@@ -809,6 +828,7 @@
 				98B82A6C1A157E5700C3ABC6 /* rocket-100.png in Resources */,
 				F2BB34441A14CC9E0031CB8C /* checkmark@2x.png in Resources */,
 				F53B592119AB8E0200ACF507 /* Images.xcassets in Resources */,
+				F2DC299E1A65812A00F73E68 /* timetable.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
