@@ -35,6 +35,14 @@ class ParserTests: XCTestCase {
         XCTAssertEqual(dueAssignments.count, 0, "There should be no assignments")
     }
     
+    func testParseNoGrades() {
+        let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("noGradesOneAssignment", ofType: "html")!
+        let data = NSData(contentsOfFile: testDataPath)
+        if let grades = Parser.parseGrades(data!) {
+            XCTAssertEqual(grades.count, 0, "There should not be any grades")
+        }
+    }
+    
     func testParseOneGrade() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("assignmentsPage", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)

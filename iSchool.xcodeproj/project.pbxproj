@@ -55,6 +55,8 @@
 		F2BB34401A14C8560031CB8C /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB343F1A14C8560031CB8C /* minus.png */; };
 		F2BB34421A14CC990031CB8C /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB34411A14CC990031CB8C /* minus@2x.png */; };
 		F2BB34441A14CC9E0031CB8C /* checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2BB34431A14CC9E0031CB8C /* checkmark@2x.png */; };
+		F2DC29941A657E1600F73E68 /* noGradesOneAssignment.html in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29931A657E1600F73E68 /* noGradesOneAssignment.html */; };
+		F2DC29961A65802500F73E68 /* grades@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DC29951A65802500F73E68 /* grades@3x.png */; };
 		F2E352C51A0809D800C9F9B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F2E352C71A0809D800C9F9B4 /* Localizable.strings */; };
 		F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296BF19CC377300A12AF5 /* assignmentDetailView.html */; };
 		F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */ = {isa = PBXBuildFile; fileRef = F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */; };
@@ -246,6 +248,8 @@
 		F2BB343F1A14C8560031CB8C /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
 		F2BB34411A14CC990031CB8C /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
 		F2BB34431A14CC9E0031CB8C /* checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "checkmark@2x.png"; sourceTree = "<group>"; };
+		F2DC29931A657E1600F73E68 /* noGradesOneAssignment.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = noGradesOneAssignment.html; sourceTree = "<group>"; };
+		F2DC29951A65802500F73E68 /* grades@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grades@3x.png"; sourceTree = "<group>"; };
 		F2E352C21A08080800C9F9B4 /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Main.strings"; sourceTree = "<group>"; };
 		F2E352C61A0809D800C9F9B4 /* is-IS */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "is-IS"; path = "is-IS.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		F2E352C81A0809DF00C9F9B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -539,6 +543,7 @@
 				F2BB34351A14100A0031CB8C /* checklist@2x.png */,
 				F2BB342F1A140EEC0031CB8C /* grades.png */,
 				F2BB34301A140EEC0031CB8C /* grades@2x.png */,
+				F2DC29951A65802500F73E68 /* grades@3x.png */,
 				F208E4F11A140BC700CFFC36 /* more.png */,
 				F208E4F21A140BC700CFFC36 /* more@2x.png */,
 				F2BB343D1A14C5F20031CB8C /* checkmark.png */,
@@ -558,6 +563,7 @@
 		F594C59C19B7681B001C5AD4 /* TestData */ = {
 			isa = PBXGroup;
 			children = (
+				F2DC29931A657E1600F73E68 /* noGradesOneAssignment.html */,
 				F50296BF19CC377300A12AF5 /* assignmentDetailView.html */,
 				F50296C019CC377300A12AF5 /* assignmentDetailViewWithDesc.html */,
 				F575808E19C1AAE500BE8F88 /* lotsOfGradesNoAssignments.html */,
@@ -780,6 +786,7 @@
 				F57B599B1A0253B80093E76C /* assignmentPrettifier.js in Resources */,
 				F2BB34341A140FB90031CB8C /* checklist.png in Resources */,
 				F208E4F31A140BC700CFFC36 /* more.png in Resources */,
+				F2DC29961A65802500F73E68 /* grades@3x.png in Resources */,
 				9880071519F41DE90005266F /* hnifapar@2x.png in Resources */,
 				9880071619F41DE90005266F /* lab@2x.png in Resources */,
 				F2E352C51A0809D800C9F9B4 /* Localizable.strings in Resources */,
@@ -820,6 +827,7 @@
 				F50296C119CC377300A12AF5 /* assignmentDetailView.html in Resources */,
 				F50296C219CC377300A12AF5 /* assignmentDetailViewWithDesc.html in Resources */,
 				F24577F11A08F33A00005F4E /* InfoPlist.strings in Resources */,
+				F2DC29941A657E1600F73E68 /* noGradesOneAssignment.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

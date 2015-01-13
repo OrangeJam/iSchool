@@ -172,13 +172,16 @@ class Parser {
                 // Remove table header if it's for the assignments table
                 nodes.removeAtIndex(0)
                 var currentNode = nodes.removeAtIndex(0)
-                while(nodes.first?.objectForKey("class") != "ruTableTitle") {
+                while(nodes.first?.objectForKey("class") != "ruTableTitle" && nodes.count > 0) {
                     currentNode = nodes.removeAtIndex(0)
                 }
             }
         }
         // Ignore empty row at the end of table.
-        nodes.removeLast()
+        if(nodes.count > 0) {
+            nodes.removeLast()
+        }
+
         var currentCourse = ""
         for node in nodes {
             var attributes: [String] = ["the empty course"]
