@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>Pods-NewRelicAgent.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>Pods-TMCache.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,7 +37,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1BBEF3A345C3DAFEAE849D4A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>373E04B196525663EBB1168D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3BF6ABCFA7410D064F5E1134</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>68F33E8C05A9865CF7A36344</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,7 +77,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>9BBE6110282CC4C441D60747</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A1E691596FBD09BBBCA84A10</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3D9CC59939AAE435F931075</key>
 		<dict>
 			<key>primary</key>
 			<true/>
