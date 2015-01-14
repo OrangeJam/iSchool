@@ -2,24 +2,57 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Pods-AFNetworking.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-NewRelicAgent.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-TMCache.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-hpple.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B5D628B8E4FF0BFEF0D5FF5</key>
+		<key>1BBEF3A345C3DAFEAE849D4A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>373E04B196525663EBB1168D</key>
+		<key>3BF6ABCFA7410D064F5E1134</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FDE1827B27CA895BF5008BA</key>
+		<key>68F33E8C05A9865CF7A36344</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1E691596FBD09BBBCA84A10</key>
+		<key>9BBE6110282CC4C441D60747</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C3D9CC59939AAE435F931075</key>
 		<dict>
 			<key>primary</key>
 			<true/>

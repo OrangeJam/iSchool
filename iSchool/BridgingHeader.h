@@ -7,4 +7,5 @@
 //
 
 #import <AFNetworking/AFNetworking.h>
+#import <NewRelicAgent/NewRelic.h>
 #import <hpple/TFHpple.h>
