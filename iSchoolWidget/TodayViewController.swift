@@ -19,7 +19,7 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         let b = UIButton()
         b.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
         b.setTitle("Login", forState: .Normal)
-        b.titleLabel?.font = UIFont.systemFontOfSize(20)
+        b.titleLabel?.font = UIFont.systemFontOfSize(14)
         return b
     }
     var noAssignmentsLabel: UILabel {
@@ -97,25 +97,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         loadAssignments(completionHandler)
     }
     
-    func loadAssignments(completionHandler: (NCUpdateResult -> Void)!) {
-        if !loggedIn {
-            completionHandler(.Failed)
-        } else {
-            println("Loading")
-            let assignments = DataStore.sharedInstance.getAssignments()
-            if hasNewData(assignments) {
-                println("New data")
-                self.items = assignments
-                self.updateHeaderAndFooterHeight()
-                self.updatePreferredContentSize()
-                self.tableView.reloadData()
-                completionHandler(.NewData)
-            } else {
-                completionHandler(.NoData)
-            }
-        }
-    }
-    
     func hasNewData(data: [Assignment]) -> Bool {
         if let items = self.items {
             if items.count == data.count {
@@ -128,6 +109,35 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
             }
         }
         return true
+    }
+    
+    func loadAssignments(completionHandler: ((NCUpdateResult) -> Void!)) {
+        if let (user, pass) = CredentialManager.sharedInstance.getCredentials() {
+            let nc = NetworkClient(username: user, password: pass)
+            nc.fetchPage(.Assignments,
+            successHandler: { (resp, data) in
+                println("Nettöööööör")
+                let newItems = Parser.parseAssignments(data as NSData)
+                if self.hasNewData(newItems) {
+                    println("new data")
+                    self.items = newItems
+                    self.updateHeaderAndFooterHeight()
+                    self.updatePreferredContentSize()
+                    self.tableView.reloadData()
+                    completionHandler(.NewData)
+                } else {
+                    completionHandler(.NoData)
+                }
+                
+            },
+            errorHandler: { error in
+                println("Nei Björn.")
+                println(error)
+                completionHandler(.Failed)
+            })
+        } else {
+            completionHandler(.Failed)
+        }
     }
     
     // MARK: TableView data source
