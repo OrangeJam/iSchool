@@ -35,7 +35,7 @@ class ParserTests: XCTestCase {
         XCTAssertEqual(dueAssignments.count, 0, "There should be no assignments")
     }
     
-    func testParseNoGrades() {
+    func testParseNoGradesOneAssignment() {
         let testDataPath = NSBundle(forClass: ParserTests.self).pathForResource("noGradesOneAssignment", ofType: "html")!
         let data = NSData(contentsOfFile: testDataPath)
         if let grades = Parser.parseGrades(data!) {
@@ -49,9 +49,9 @@ class ParserTests: XCTestCase {
         if let grades = Parser.parseGrades(data!) {
             XCTAssertEqual(grades[0].count, 2, "There should be two grades")
             XCTAssertEqual(grades[0][0].name, "Assignment 1", "The name should be Assignment 1")
-            // Got error: '@autoclosure () -> Float' does not conform to protocol 'FloatLiteralConvertible'
-            // Commeting this line for the time being
-            //XCTAssertEqual(grades[0][0].grade, 10.0, "The grade should be 10")
+//             Got error: '@autoclosure () -> Float' does not conform to protocol 'FloatLiteralConvertible'
+//             Commeting this line for the time being
+            XCTAssertEqual(grades[0][0].grade, 10.0 as Float, "The grade should be 10")
         }
     }
     
