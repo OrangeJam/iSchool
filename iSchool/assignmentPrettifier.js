@@ -10,5 +10,6 @@
  $('.resetSize').click();
  $('.increaseSize').click();
  $('.increaseSize').click();
-  $('.increaseSize').click();
+ $('.increaseSize').click();
+ $('.ruContentPage a').attr("target", "");
  }());
