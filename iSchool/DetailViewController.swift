@@ -26,13 +26,13 @@ class DetailViewController : UIViewController, WKNavigationDelegate {
         initializeWebView()
         self.view.addSubview(webView!)
         self.view.addSubview(progressBar!)
+        loadPage()
     }
     
     func initializeWebView() {
         webView = WKWebView()
         progressBar = UIProgressView()
         webView!.navigationDelegate = self
-        webView!.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
         let navbarHeight = self.navigationController != nil ? self.navigationController!.navigationBar.frame.height : 0
         let tabbarHeight = self.tabBarController != nil ? self.tabBarController!.tabBar.frame.height : 0
         webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height - tabbarHeight - navbarHeight)
@@ -43,8 +43,8 @@ class DetailViewController : UIViewController, WKNavigationDelegate {
     }
     
     override func viewDidAppear(animated: Bool) {
+        webView!.addObserver(self, forKeyPath: "estimatedProgress", options: .New, context: nil)
         super.viewDidAppear(animated)
-        loadPage()
     }
     
     override func viewDidDisappear(animated: Bool) {
