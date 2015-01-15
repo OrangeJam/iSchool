@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
         NewRelicAgent.startWithApplicationToken("AA00af0ba31638a97f2409890220ed7c51fbf274ef");
-        self.window?.tintColor = UIColor(red: 204, green: 0, blue: 0, alpha: 1);
+        self.window?.tintColor = UIColor(red: (204.0/255.0), green: 0, blue: 0, alpha: 1);
         return true
     }
 
