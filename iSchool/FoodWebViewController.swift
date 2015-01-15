@@ -26,13 +26,13 @@ class FoodWebViewController: UIViewController, WKNavigationDelegate {
         webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height - tabbarHeight - navbarHeight)
         
         self.view.addSubview(webView!)
+        let url = NSURL(string: "http://malid.ru.is")
+        let req = NSMutableURLRequest(URL: url!)
+        self.webView!.loadRequest(req)
     }
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        let url = NSURL(string: "http://malid.ru.is")
-        let req = NSMutableURLRequest(URL: url!)
-        self.webView!.loadRequest(req)
     }
     
     func prettifyPage() {
