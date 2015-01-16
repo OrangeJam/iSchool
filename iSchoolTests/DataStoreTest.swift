@@ -40,7 +40,6 @@ class DataStoreTests: XCTestCase {
             object: nil,
             queue: NSOperationQueue.mainQueue(),
             usingBlock: { _ in
-                NSLog("notification recieved!")
                 notificationExpectation.fulfill()
             }
         )

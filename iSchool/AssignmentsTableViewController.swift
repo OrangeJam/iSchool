@@ -102,7 +102,6 @@ class AssignmentsTableViewController: UITableViewController, UITableViewDataSour
     }
     
     func refreshData() {
-        println("Refreshing data")
         self.tableView.reloadData()
     }
     

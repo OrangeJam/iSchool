@@ -66,7 +66,6 @@ class ClassCell: UITableViewCell {
         if c.isOver() {
             self.contentView.alpha = 0.3
         } else if c.isNow() {
-            println("Updating animation!")
             // Calculate how far down the cell the mask and line layers should be.
             let classDuration = c.endDate.timeIntervalSinceDate(c.startDate)
             let classTime = NSDate().timeIntervalSinceDate(c.startDate)

@@ -28,7 +28,6 @@ class LoginViewController: UIViewController {
         let password = passwordField.text
         let credentialManager = CredentialManager.sharedInstance
         let networkClient = NetworkClient(username: username, password: password);
-        NSLog("Button pressed")
         activityIndicator.startAnimating()
         networkClient.fetchPage(Page.Assignments,
             successHandler: authenticationSucceeded,
@@ -75,7 +74,6 @@ class LoginViewController: UIViewController {
     
     func authenticationSucceeded(operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void {
         activityIndicator.stopAnimating()
-        NSLog("Success")
         let credentialManager = CredentialManager.sharedInstance
         credentialManager.storeCredentials(usernameField.text, passwordField.text)
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -103,7 +101,6 @@ class LoginViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        NSLog("login screen")
         super.viewDidLoad()
         usernameField.placeholder = NSLocalizedString("Username", comment: "Placeholder in username field in login view")
         passwordField.placeholder = NSLocalizedString("Password", comment: "Placeholder in password field in login view")

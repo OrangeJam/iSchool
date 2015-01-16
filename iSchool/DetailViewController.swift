@@ -36,7 +36,6 @@ class DetailViewController : UIViewController, WKNavigationDelegate {
         let navbarHeight = self.navigationController != nil ? self.navigationController!.navigationBar.frame.height : 0
         let tabbarHeight = self.tabBarController != nil ? self.tabBarController!.tabBar.frame.height : 0
         webView?.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height - tabbarHeight - navbarHeight)
-        println(self.bottomLayoutGuide)
         progressBar?.frame = CGRectMake(0, 0, self.view.frame.width, CGFloat(5))
         webView?.hidden = true
         
@@ -81,7 +80,6 @@ class DetailViewController : UIViewController, WKNavigationDelegate {
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
         if keyPath == "estimatedProgress" && object as? NSObject == self.webView {
             if let progress = self.webView?.estimatedProgress {
-                println("Progress: \(progress)")
                 progressBar?.setProgress(Float(progress), animated: true)
             }
         } else {
@@ -98,9 +96,6 @@ class DetailViewController : UIViewController, WKNavigationDelegate {
         }
     }
     
-    func webView(webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
-        println("Started!!")
-    }
     
     func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
         prettifyPage()

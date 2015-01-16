@@ -75,7 +75,6 @@ class DataStore {
             let networkClient = NetworkClient(username: username, password: password)
             return networkClient
         } else {
-            NSLog("Credentials were nil")
             return nil
         }
     }

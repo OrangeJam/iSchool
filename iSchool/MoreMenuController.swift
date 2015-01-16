@@ -24,10 +24,9 @@ class MoreMenuController: UITableViewController, UITableViewDelegate {
         case 0:
             presentFoodView()
         case 1:
-            println("Logout")
             logOutUser()
         default:
-            println("HEHE flippari selectaði röð")
+            return
         }
     }
     
