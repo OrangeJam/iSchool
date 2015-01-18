@@ -8,6 +8,7 @@
 
 import UIKit
 import NotificationCenter
+import QuartzCore
 
 class TodayViewController: UITableViewController, NCWidgetProviding {
     
@@ -19,9 +20,13 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         let b = UIButton()
         b.addTarget(self, action: "openApp", forControlEvents: .TouchUpInside)
         b.setTitle("Login", forState: .Normal)
+        b.setTitleColor(UIColor.blackColor(), forState: .Normal)
         b.titleLabel?.font = UIFont.systemFontOfSize(14)
+        b.layer.backgroundColor = UIColor(white: 1.0, alpha: 0.5).CGColor
+        b.layer.cornerRadius = 3
         return b
     }
+    
     var noAssignmentsLabel: UILabel {
         let l = UILabel()
         l.text = "No Assignments. Take a day off!"
@@ -29,7 +34,6 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
         return l
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.sectionHeaderHeight = 0
@@ -85,7 +89,10 @@ class TodayViewController: UITableViewController, NCWidgetProviding {
     }
     
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        return loggedIn ? nil : loginButton
+        let footerView = UIView()
+        footerView.addSubview(loginButton)
+        println(loginButton.frame)
+        return loggedIn ? nil : footerView
     }
     
     override func didReceiveMemoryWarning() {
